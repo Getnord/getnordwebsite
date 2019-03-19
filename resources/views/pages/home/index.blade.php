@@ -41,6 +41,7 @@
                                 data-item-image="img/Lynx_with_screen_cart.png"
                                 data-item-description="Getnord Lynx Smartphone"
                                 >Buy</button>
+                            
                             <p>Or</p>
                         </div>
                         <div class="section_text2">
@@ -58,7 +59,7 @@
                         {{-- We only want this link to show up in the us and ca page --}}
                         @if (app()->getLocale() == 'us' || app()->getLocale() == 'ca')
                             <div class="section_text2">
-                                <a href="compatibility_us.php" style="text-decoration:none">*Check carrier compatibility</a>
+                                <a href="{{ route('compatibility', ['locale' => app()->getLocale()]) }}" style="text-decoration:none">*Check carrier compatibility</a>
                             </div>
                         @endif
                     </div>
@@ -571,35 +572,5 @@
             </div>
         </div>
     </section>
-    
-
-    <div id="popup_overlay" class="popup_overlay">
-        <div id="popup" class="popup">
-            <a id="popup_close" class="popup_close" href="javascript:void(0);" onclick="popup_close();"><svg class="icon icon_close"><use xlink:href="img/icons.svg#icon_close"></use></svg></a>
-            <div id="popup_content" class="popup_content">
-                <div class="section_heading">Contact Us</div>
-                <div class="section_text">
-                    <span class="notice">Any Questions?<br /></span>
-                    Have any questions about Getnord Lynx? Feel free to fill up the form and we'll get back to you shortly.
-                </div>
-                <form id="contact_form" class="section_form" action="actions.php">
-                    <div class="form_result hidden"></div>
-                    <div class="form_error hidden"></div>
-                    <div class="form_data">
-                        <div class="form_row clearfix">
-                            <div class="form_col col_2 bbox"><input type="text" class="textbox" maxlength="100" name="name" placeholder="Your name" /></div>
-                            <div class="form_col col_2 bbox"><input type="text" class="textbox" maxlength="100" name="email" placeholder="Your email address" /></div>
-                        </div>
-                        <div class="form_row clearfix">
-                            <div class="form_col col_1 bbox"><textarea class="textarea" name="message" placeholder="Your message"></textarea></div>
-                        </div>
-                        <div class="form_row clearfix">
-                            <div class="form_col col_1 bbox"><button type="button" id="send_button" class="button">Send Now</button></div>
-                        </div>
-                    </div>
-                </form>
-            </div>
-        </div>
-    </div>
     
 @endsection('content')

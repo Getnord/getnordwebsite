@@ -30,6 +30,23 @@ function navWatcher() {
             };
         });
 
+        //Make country flag names clickable
+        $('.floating-selector').find('h3').on('click', function(e){
+            // get the parent of the clicked element
+            $this = $(this).parent();
+            // get the link of the anchor tag within the parent element
+            const link = $this.find('a').attr('href');
+            // redirect to the clicked link
+            window.location.href = link;
+        });
+
+        //nav toggle for mobile
+        $('.top_menu_toggle').click(function(e) {
+            e.preventDefault();
+            $('.top_menu').toggleClass('on');
+            $('.page_header').toggleClass('on');
+        });
+
     });
 };
 

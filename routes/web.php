@@ -14,6 +14,9 @@
  * prefix works like a wild card instead of manually settin each prefix 
  * on its own
  */
+Route::get('/test', function() {
+    return view('pages.test.index');
+});
 Route::prefix('{locale?}')->group(function() {
     Route::get('/', 'PagesController@home')->name('home');
     Route::get('/contact', 'PagesController@contact')->name('contact');

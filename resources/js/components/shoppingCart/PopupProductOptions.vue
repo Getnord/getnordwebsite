@@ -2,88 +2,103 @@
     <div class="wrapper wrapper--dark">
         <div class="card">
             <h1 class="card__title">
-                Available Options
+                {{ trans('shoppingCart.options_popup_title') }}
             </h1>
             <div class="card__hide" @click="close">
 
+            </div>
+            <div class="card__validation" v-show="showValidationErreur">
+                <p>Please select an option</p>
             </div>
             <div class="card__option">
                 <h3 class="card__option__title">
                     Version <span>*</span>
                 </h3>
-                <v-select :options="providerOptions" v-model="selectedProvider" :searchable="false"></v-select>
-                {{ selectedProvider }}
+                <select name="provider" v-model="selectedProvider" class="card__option__select" required>
+                    <option value="17"> AT&T </option>
+                    <option value="18"> Verizon </option>
+                </select>
             </div>
             <div class="card__option">
                 <h3 class="card__option__title">
                     color <span>*</span>
                 </h3>
-                <v-select :options="colorOptions" v-model="selectedColor" :searchable="false"></v-select>
-                {{ selectedColor }}
+                <select name="provider" v-model="selectedColor" class="card__option__select" required>
+                    <option value="20"> Black </option>
+                    <option value="18"> Red and black </option>
+                </select>
             </div>
             <div class="card__option">
                 <h3 class="card__option__title">
                     quantity <span>*</span>
                 </h3>
-                <input class="card__option__input" type="number" v-model="quantity">
+                <input class="card__option__input" type="number" v-model="quantity" min="1" max="5">
             </div>
-            <button class="card__btn cart__bt--blue">
+            <button class="card__btn cart__bt--blue" @click="addToCart">
                 ADD TO CART
             </button>
         </div>
     </div>
 </template>
 <script>
-import vSelect from 'vue-select';
 
 export default {
     props: {
         product: {
             type: Object,
             required: true
-        }
-    },
-
-    components: {
-        vSelect,
+        },
     },
 
     data() {
         return {
             selectedProvider: '',
             selectedColor: '',
-            quantity: 0,
+            quantity: 1,
+            showValidationErreur: false
+        }
+    },
 
-        }
-    },
-    mounted() {
-        for (const key in this.product.option[0]) {
-                if (this.product.option[0].hasOwnProperty(key)) {
-                    const element = this.product.option[0][key];
-                    
-                }
-                console.log(key)
-        }
-    },
-    computed: {
-        providerOptions() {
-            // for (const key in this.product.option) {
-            //     if (object.hasOwnProperty(key)) {
-            //         const element = object[key];
-                    
-            //     }
-            // }
+    watch: {
+        selectedProvider() { 
+            return this.showValidationErreur = false 
         },
-        colorOptions() {
+        selectedColor() { 
+            return this.showValidationErreur = false 
+        }
+    },
 
+    mounted() {
+       
+    },
+    
+    computed: {
+        providers() {
+            return []
+        },
+        colors() {
+            return []
         }
     },
 
     methods: {
         close() {
-            console.log('clicked');
             this.$emit('closeoptionspopup');
-        }
+        },
+
+        addToCart() {
+            if( this.selectedProvider == '' || this.selectedColor == '') {
+                this.showValidationErreur = true;
+            } else {
+                // provider
+                this.product.options[222] = this.selectedProvider;
+                // color
+                this.product.options[223] = this.selectedColor;
+                // we add the product to the cart
+                this.$emit('add-to-cart', this.product);
+            }
+        },
+
     },
 }
 </script>
@@ -135,16 +150,16 @@ export default {
             span
                 color: red
 
-        &__input
+        &__input,&__select
             width: 98%
             max-width: 100%
-            display: block
             height: 36px
             border: 1px solid rgba(0,0,0,0.2)
             padding: 0px 0px 4px
             border-radius: 4px
             font-size: 18px
             padding: 0px 0px 3px 2px
+            background-color: #fff
 
     &__btn
         height: auto
@@ -161,5 +176,10 @@ export default {
 
         &:hover 
             background-color: darken(#0080ff, 5%)
+    
+    &__validation
+        p 
+            font-size: 0.6em
+            color: #E71D36
 
 </style>

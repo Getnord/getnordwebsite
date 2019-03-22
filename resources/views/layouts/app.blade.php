@@ -20,5 +20,6 @@
     </div>
     @include('inc.footer')
     <script src="{{ asset('js/app.js') }}"></script>
+    <script src="{{ url('/') }}/js/lang-{{ app()->getLocale() }}.js"></script>
 </body>
 </html>

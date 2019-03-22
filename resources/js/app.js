@@ -44,6 +44,8 @@ import buyBtn from './components/shoppingCart/BaseBuyButton.vue';
 import optionsPopup from './components/shoppingCart/PopupProductOptions.vue';
 import shoppingCart from './components/shoppingCart/PopupCart.vue';
 
+Vue.prototype.trans = string => _.get(window.i18n, string);
+
 const app = new Vue({
 
     el:'#app',
@@ -58,40 +60,47 @@ const app = new Vue({
             products: [
                 {
                     productId: 1,
-                    option: [
-                        {
-                            222: 13,
-                            999: 22,
-                        },
-                    ],
+                    options: {
+                        // color
+                        222: 0,
+                        // provider
+                        223: 0,
+                    },
                     name: 'Getnord Lynx',
-                    price: '499 usd'
+                    price: {
+                        us: 299
+                    }
                 },
                 {
                     productId: 2,
-                    option: [
-                        {
-                            222: 13,
-                            999: 22,
-                        },
-                    ],
+                    options: {
+                        // color
+                        222: 0,
+                        // provider
+                        223: 0,
+                    },
                     name: 'Getnord Onyx',
-                    price: '499 usd'
+                    price: {
+                        us: 299
+                    }
                 },
                 {
                     productId: 3,
                     name: 'Getnord Walrus',
-                    price: '99 usd'
+                    price: {
+                        us: 99
+                    }
                 },
             ]
         },
         isOptionsPopupOpen: false,
-        cart: []
+        isShoppingCartOpen: false,
+        cart: [],
+        currentProduct: {}
     },
 
     methods: {
         showOptionsPopUp(productId) {
-            console.log(productId);
             // we want to open the options popup
             this.info.products.forEach(product => {
                 if( product.productId ==  productId ) {
@@ -100,7 +109,17 @@ const app = new Vue({
             });
             this.isOptionsPopupOpen = true;
         },
+        
         closeOptionsPopup() {
+            this.isOptionsPopupOpen = false;
+        },
+
+        addToCart(product) {
+            // We add the product to the cart 
+            // after selecting options
+            this.cart.push(product);
+
+            // Destroy the options popup
             this.isOptionsPopupOpen = false;
         }
     },

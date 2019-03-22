@@ -18,5 +18,6 @@
         @yield('content')
     </div>
     <script src="{{ asset('js/app.js') }}"></script>
+    <script src="{{ url('/') }}/js/lang-{{ app()->getLocale() }}.js"></script>
 </body>
 </html>

@@ -15,7 +15,7 @@ class AppServiceProvider extends ServiceProvider
     public function register()
     {
         \Route::bind('locale',function ($locale){
-            in_array($locale,config('app.languages')) ? app()->setlocale($locale) : abort(404);
+            in_array($locale,config('app.locales')) ? app()->setlocale($locale) : abort(404);
             
             return $locale;
         });

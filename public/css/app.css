@@ -153,12 +153,12 @@ a.hover:hover {
 	line-height: 36px;
 }
 @media (-webkit-min-device-pixel-ratio: 0) {
-	select {
+	/* select {
 		background-image: url(data:image/png;base64,R0lGODlhDQAEAIAAAAAAAP8A/yH5BAEHAAEALAAAAAANAAQAAAILhA+hG5jMDpxvhgIAOw==) !important;
 		background-repeat: no-repeat !important;
 		background-position: right center !important;
 		padding-right: 18px !important;
-	}
+	} */
 }
 :-moz-placeholder {
 	color: #dcdcdc;

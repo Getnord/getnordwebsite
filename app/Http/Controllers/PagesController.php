@@ -7,8 +7,14 @@ use Illuminate\Http\Request;
 class PagesController extends Controller
 {
     /**
-     * All of this code will be modified later to support localization
+     * Instantiate a new controller instance.
+     *
+     * @return void
      */
+    public function __construct()
+    {
+        $this->middleware('localize');
+    }
 
     /**
      * Home page

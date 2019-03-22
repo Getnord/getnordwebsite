@@ -4,8 +4,7 @@ namespace App\Http\Middleware;
 
 use Closure;
 
-class Localize
-{
+class Localize{
     /**
      * Handle an incoming request.
      *
@@ -15,7 +14,7 @@ class Localize
      */
     public function handle($request, Closure $next)
     {
-        app()->setLocale($request->getPreferredLanguage(config('app.languages')));
+        app()->setLocale($request->getPreferredLanguage(config('app.locales')));
         
         return $next($request);
     }

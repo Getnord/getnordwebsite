@@ -11,38 +11,42 @@
                     <th>&nbsp;</th>
                 </thead>
                 <tbody>
-                    <tr>
+                    <tr v-for="(product, index) in productsInCart" :key="product.productId">
                         <td class="cart_item_img"><img src="http://placehold.it/50x50" /></td>
-                        <td>Getnord Onyx</td>
+                        <td>{{ product.name }}</td>
                         <td class="cart_item_qty">
-							<a class="num_minus" href="#" @click.prevent="">-</a>
-                        	<input type="text" />
-                       		<a class="num_plus" href="#" @click.prevent="">+</a>
+							<a class="num_minus" href="#" @click.prevent="countQty(index, -1)">-</a>
+                        	<input type="number" v-model="product.quantity" min="1"/>
+                       		<a class="num_plus" href="#" @click.prevent="countQty(index, 1)">+</a>
 						</td>
-                        <td class="cart_item_price">$299</td>
-                        <td class="cart_item_tprice">$299</td>
+                        <td class="cart_item_price">${{ product.price.us }}</td>
+                        <td class="cart_item_tprice">${{ product.quantity * product.price.us }}</td>
                         <td><a class="list_item_del" href="#" @click.prevent=""><i class="fa fa-trash-o"></i></a></td>
                     </tr>
                 </tbody>
                 <tfoot>
                     <tr>
                         <td colspan="4">Total</td>
-                        <td class="cart_item_tprice">$299</td>
+                        <td class="cart_item_tprice">${{ total }}</td>
                         <td>&nbsp;</td>
                     </tr>
 
                 </tfoot>
             </table>
-            <p class="page-btn"><a class="btn" href="#" onclick="return false;">Checkout</a><button class="btn btn-primary btn-sm"><i class="fa fa-refresh"></i></button></p>
+            <p class="page-btn"><a class="btn" href="#" @click="checkout">Checkout</a><button class="btn btn-primary btn-sm"><i class="fa fa-refresh"></i></button></p>
         </div>
     </div>
 </template>
 
 <script>
+require('locutus/php/url/http_build_query')
+import http_build_query from 'locutus/php/url/http_build_query';
+
 export default {
 	props: {
         productsInCart: {
-            type: Array,
+			type: Array,
+			required: true
         },
     },
     data() {
@@ -52,7 +56,25 @@ export default {
 	},
 	computed: {
 		total() {
-			//
+			let accum = 0;
+			this.productsInCart.forEach(product => {
+				accum = product.price.us * product.quantity + accum;
+			});
+			return accum;
+		}
+	},
+
+	methods: {
+		countQty(index, qtyNum) {
+			if( qtyNum == 1 ) {
+				this.productsInCart[index].quantity += 1; 
+			} else if( qtyNum == -1 && this.productsInCart[index].quantity > 0) {
+				this.productsInCart[index].quantity += -1; 
+			};
+		},
+
+		checkout() {
+			console.log(http_build_query(this.productsInCart));
 		}
 	},
 }

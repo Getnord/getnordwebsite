@@ -10,6 +10,12 @@ export default {
         productId: {
             type: String,
             required: true
+        },
+        // Will be used to skip opening the options pop up
+        // and directly add the product to the cart
+        productHasOptions: {
+            type: Boolean,
+            required: true
         }
     },
 
@@ -25,7 +31,7 @@ export default {
 
     methods: {
         clicked() {
-            this.$emit('buybtnblicked', this.productId);
+                this.$emit('buy-btn-clicked', this.productId, this.productHasOptions);
         }
     },
 

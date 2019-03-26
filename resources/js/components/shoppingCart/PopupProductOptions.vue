@@ -83,7 +83,7 @@ export default {
 
     methods: {
         close() {
-            this.$emit('closeoptionspopup');
+            this.$emit('close-options-popup');
         },
 
         addToCart() {

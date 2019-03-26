@@ -43,33 +43,38 @@ $(document).ready(function() {
 import buyBtn from './components/shoppingCart/BaseBuyButton.vue';
 import optionsPopup from './components/shoppingCart/PopupProductOptions.vue';
 import shoppingCart from './components/shoppingCart/PopupCart.vue';
+import shoppingCartIcon from './components/shoppingCart/ShoppingCartIcon.vue';
 
+// the following is used to be able to use laravel lang resources in JS
 Vue.prototype.trans = string => _.get(window.i18n, string);
 
 const app = new Vue({
 
     el:'#app',
+
     components: {
         buyBtn,
         optionsPopup,
         shoppingCart,
+        shoppingCartIcon,
     },
 
     data: {
         info: {
             products: [
                 {
-                    productId: 1,
+                    productId: 50,
                     options: {
                         // color
-                        222: 0,
+                        227: 17,
                         // provider
-                        223: 0,
+                        228: 20,
                     },
                     name: 'Getnord Lynx',
                     price: {
                         us: 299
-                    }
+                    },
+                    quantity: 1
                 },
                 {
                     productId: 2,
@@ -82,32 +87,66 @@ const app = new Vue({
                     name: 'Getnord Onyx',
                     price: {
                         us: 299
-                    }
+                    },
+                    quantity: 1
                 },
                 {
                     productId: 3,
                     name: 'Getnord Walrus',
                     price: {
                         us: 99
-                    }
+                    },
+                    quantity: 1
                 },
             ]
         },
         isOptionsPopupOpen: false,
         isShoppingCartOpen: false,
+        options: false,
         cart: [],
         currentProduct: {}
     },
 
     methods: {
-        showOptionsPopUp(productId) {
-            // we want to open the options popup
-            this.info.products.forEach(product => {
-                if( product.productId ==  productId ) {
-                    this.currentProduct = product;
-                }
-            });
-            this.isOptionsPopupOpen = true;
+        buybtnclicked(productId, productHasOptions) {
+            if( productHasOptions == true) {
+                // we want to open the options popup
+                this.info.products.forEach(product => {
+                    if( product.productId ==  productId ) {
+                        this.currentProduct = product;
+                    }
+                });
+                this.isOptionsPopupOpen = true;
+            } else {
+                // we add the product directlyl to the cart
+                this.info.products.forEach(product => {
+                    // first we validate that the product exists 
+                    if( product.productId ==  productId && this.cart.length != 0 ) {
+                        // we need to iterate over the cart to see if the product exists in the cart
+                        let isInCart = false;
+                        let i = 0;
+                        for( i ; i < this.cart.length; i++ )  {
+                            if( this.cart[i].productId == productId ) {
+                                isInCart = true;
+                                console.log( 'found' , i);
+                                break;
+                            };
+                        };
+                        console.log(i, isInCart);
+                        if( isInCart ) {
+                            // we found it so lets increase the quantity
+                            const quantity = parseInt(this.cart[i].quantity);
+                            this.cart[i].quantity = quantity + 1;
+                        } else {
+                            // add the item to the cart
+                            this.cart.push(product);
+                        };
+                    // if cart is empty, we can't iterate over it
+                    } else if( product.productId ==  productId && this.cart.length == 0) {
+                        this.cart.push(product);
+                    }
+                });
+            }   
         },
         
         closeOptionsPopup() {
@@ -118,9 +157,12 @@ const app = new Vue({
             // We add the product to the cart 
             // after selecting options
             this.cart.push(product);
-
             // Destroy the options popup
             this.isOptionsPopupOpen = false;
+        },
+
+        openShoppingCart() {
+            this.isShoppingCartOpen = true;
         }
     },
 

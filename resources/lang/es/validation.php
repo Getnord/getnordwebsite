@@ -128,11 +128,17 @@ return [
     */
 
     'custom' => [
-        'attribute-name' => [
-            'rule-name' => 'custom-message',
+        'subject' => [
+            'required' => 'El sujeto es obligatorio.',
         ],
         'email' => [
-            'required' => 'We need to know your e-mail address!',
+            'required' => 'El campo de correo electrónico es obligatorio.',
+        ],
+        'name' => [
+            'required' => 'El campo de nombre es obligatorio.',
+        ],
+        'message' => [
+            'required' => 'El campo de mensaje es obligatorio.',
         ]
     ],
 

@@ -5,7 +5,7 @@
                 {{ trans('shoppingCart.options_popup_title') }}
             </h1>
             <div class="card__hide" @click="close">
-
+                <i class="fas fa-times"></i>
             </div>
             <div class="card__validation" v-show="showValidationErreur">
                 <p>Please select an option</p>
@@ -16,7 +16,7 @@
                 </h3>
                 <select name="provider" v-model="selectedProvider" class="card__option__select" required>
                     <option value="17"> AT&T </option>
-                    <option value="18"> Verizon </option>
+                    <option value="18"> T-Mobile </option>
                 </select>
             </div>
             <div class="card__option">
@@ -25,14 +25,14 @@
                 </h3>
                 <select name="provider" v-model="selectedColor" class="card__option__select" required>
                     <option value="20"> Black </option>
-                    <option value="18"> Red and black </option>
+                    <option value="19"> Black/red </option>
                 </select>
             </div>
             <div class="card__option">
                 <h3 class="card__option__title">
                     quantity <span>*</span>
                 </h3>
-                <input class="card__option__input" type="number" v-model="quantity" min="1" max="5">
+                <input class="card__option__input" type="number" v-model="selectedQuantity" min="1" max="5">
             </div>
             <button class="card__btn cart__bt--blue" @click="addToCart">
                 ADD TO CART
@@ -54,6 +54,7 @@ export default {
         return {
             selectedProvider: '',
             selectedColor: '',
+            selectedQuantity: 1,
             quantity: 1,
             showValidationErreur: false
         }
@@ -91,9 +92,11 @@ export default {
                 this.showValidationErreur = true;
             } else {
                 // provider
-                this.product.options[222] = this.selectedProvider;
+                this.product.option[227] = this.selectedProvider;
                 // color
-                this.product.options[223] = this.selectedColor;
+                this.product.option[228] = this.selectedColor;
+                // quantity
+                this.product.quantity = parseInt(this.selectedQuantity);
                 // we add the product to the cart
                 this.$emit('add-to-cart', this.product);
             }
@@ -131,11 +134,14 @@ export default {
         position: absolute
         top: 10px
         right: 10px
-        background-color: #0080ff
+        font-size: 20px
         cursor: pointer
+        transform: rotate(0deg)
+        transition: 0.2s all ease-in
+        text-align: center
 
         &:hover
-            background-color: darken(#0080ff,5%)
+            transform: rotate(180deg)
     
     &__title
         margin-left: 0px

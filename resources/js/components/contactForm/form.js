@@ -28,7 +28,7 @@ function formSubmit() {
     $('#send_button').click(function() {
         $.ajax({
             type: 'POST',
-            url: '/getnord/public/contact',
+            url: '/contact',
             data: $('#contact_form').serialize(),
             async: true,
             success: function(data) {

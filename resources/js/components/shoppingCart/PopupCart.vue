@@ -1,6 +1,9 @@
 <template>
     <div class="cart">
         <h2>Cart</h2>
+		<div class="cart__hide" @click="hideCart">
+			<i class="fa fa-times"></i>
+		</div>
         <div class="cart__table">
             <table class="table">
                 <thead>
@@ -11,7 +14,7 @@
                     <th>&nbsp;</th>
                 </thead>
                 <tbody>
-                    <tr v-for="(product, index) in productsInCart" :key="product.productId">
+                    <tr v-for="(product, index) in productsInCart" :key="product.product_id">
                         <td class="cart_item_img"><img src="http://placehold.it/50x50" /></td>
                         <td>{{ product.name }}</td>
                         <td class="cart_item_qty">
@@ -21,7 +24,7 @@
 						</td>
                         <td class="cart_item_price">${{ product.price.us }}</td>
                         <td class="cart_item_tprice">${{ product.quantity * product.price.us }}</td>
-                        <td><a class="list_item_del" href="#" @click.prevent=""><i class="fa fa-trash-o"></i></a></td>
+                        <td><a class="list_item_del" href="#" @click.prevent="delCartItem($event.currentTarget, index)"><i class="fa fa-trash-o"></i></a></td>
                     </tr>
                 </tbody>
                 <tfoot>
@@ -33,14 +36,13 @@
 
                 </tfoot>
             </table>
-            <p class="page-btn"><a class="btn" href="#" @click="checkout">Checkout</a><button class="btn btn-primary btn-sm"><i class="fa fa-refresh"></i></button></p>
+            <p class="page-btn"><a class="btn" href="#" @click.prevent="checkout">Checkout</a></p>
         </div>
     </div>
 </template>
 
 <script>
-require('locutus/php/url/http_build_query')
-import http_build_query from 'locutus/php/url/http_build_query';
+
 
 export default {
 	props: {
@@ -74,7 +76,15 @@ export default {
 		},
 
 		checkout() {
-			console.log(http_build_query(this.productsInCart));
+			this.$emit('checkout');
+		},
+
+		delCartItem(target, index) {
+			this.productsInCart.splice(index, 1);
+		},
+
+		hideCart() {
+			this.$emit('hide-cart');
 		}
 	},
 }
@@ -84,16 +94,30 @@ export default {
 .cart
 	letter-spacing: .05em
 	color: darken(#abc, 80%)
-	font-family: sans-serif
 	width: 600px
 	padding: 15px
 	margin: 0 auto
 	margin-top: 15px
-	background: #fcfcfc
-	box-shadow: 1px 2px 3px #ccc, 1px 2px 25px #ddd
+	background: #ffffff
+	border-radius: 4px
+	box-shadow: 1px 2px 25px #ddd
 	transition-duration: .3s
 	font-size: 16px
 	text-align: left
+	position: relative
+
+	&__hide
+		font-size: 20px
+		position: absolute
+		top: 10px
+		right: 10px
+		cursor: pointer
+		transition: 0.2s all ease-in
+		text-align: center
+		transform: rotate(0deg)
+
+		&:hover
+			transform: rotate(180deg)
 .table
 	width: 100%
 	th, td

@@ -1803,8 +1803,6 @@ __webpack_require__.r(__webpack_exports__);
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
-/* harmony import */ var locutus_php_url_http_build_query__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! locutus/php/url/http_build_query */ "./node_modules/locutus/php/url/http_build_query.js");
-/* harmony import */ var locutus_php_url_http_build_query__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(locutus_php_url_http_build_query__WEBPACK_IMPORTED_MODULE_0__);
 //
 //
 //
@@ -1845,9 +1843,9 @@ __webpack_require__.r(__webpack_exports__);
 //
 //
 //
-__webpack_require__(/*! locutus/php/url/http_build_query */ "./node_modules/locutus/php/url/http_build_query.js");
-
-
+//
+//
+//
 /* harmony default export */ __webpack_exports__["default"] = ({
   props: {
     productsInCart: {
@@ -1879,7 +1877,13 @@ __webpack_require__(/*! locutus/php/url/http_build_query */ "./node_modules/locu
       ;
     },
     checkout: function checkout() {
-      console.log(locutus_php_url_http_build_query__WEBPACK_IMPORTED_MODULE_0___default()(this.productsInCart));
+      this.$emit('checkout');
+    },
+    delCartItem: function delCartItem(target, index) {
+      this.productsInCart.splice(index, 1);
+    },
+    hideCart: function hideCart() {
+      this.$emit('hide-cart');
     }
   }
 });
@@ -1948,6 +1952,7 @@ __webpack_require__.r(__webpack_exports__);
     return {
       selectedProvider: '',
       selectedColor: '',
+      selectedQuantity: 1,
       quantity: 1,
       showValidationErreur: false
     };
@@ -1978,9 +1983,11 @@ __webpack_require__.r(__webpack_exports__);
         this.showValidationErreur = true;
       } else {
         // provider
-        this.product.options[222] = this.selectedProvider; // color
+        this.product.option[227] = this.selectedProvider; // color
 
-        this.product.options[223] = this.selectedColor; // we add the product to the cart
+        this.product.option[228] = this.selectedColor; // quantity
+
+        this.product.quantity = parseInt(this.selectedQuantity); // we add the product to the cart
 
         this.$emit('add-to-cart', this.product);
       }
@@ -6294,7 +6301,7 @@ exports = module.exports = __webpack_require__(/*! ../../../../node_modules/css-
 
 
 // module
-exports.push([module.i, ".cart[data-v-323ebab0] {\n  letter-spacing: 0.05em;\n  color: black;\n  font-family: sans-serif;\n  width: 600px;\n  padding: 15px;\n  margin: 0 auto;\n  margin-top: 15px;\n  background: #fcfcfc;\n  box-shadow: 1px 2px 3px #ccc, 1px 2px 25px #ddd;\n  transition-duration: 0.3s;\n  font-size: 16px;\n  text-align: left;\n}\n.table[data-v-323ebab0] {\n  width: 100%;\n}\n.table th[data-v-323ebab0], .table td[data-v-323ebab0] {\n  padding: 0.5em;\n}\n.table thead th[data-v-323ebab0] {\n  border-bottom: 2px solid #abc;\n}\n.table td[data-v-323ebab0] {\n  border-bottom: 1px solid #abc;\n}\n.table tbody tr:last-of-type td[data-v-323ebab0] {\n  border-bottom-width: 2px;\n}\n.table .cart_item_img[data-v-323ebab0] {\n  width: 80px;\n}\n.table .cart_item_qty[data-v-323ebab0] {\n  text-align: center;\n  min-width: 140px;\n  width: 140px;\n}\n.table .cart_item_qty[data-v-323ebab0]::after {\n  content: \"\";\n  display: block;\n  clear: both;\n}\n.table .cart_item_qty a[data-v-323ebab0], .table .cart_item_qty input[data-v-323ebab0] {\n  float: left;\n  height: 27px;\n}\n.table .cart_item_qty a[data-v-323ebab0] {\n  min-width: 27px;\n  border: 1px solid #ccc;\n  text-align: center;\n  border-radius: 3px;\n  padding-left: 3px;\n  background: #fafafa;\n  text-decoration: none;\n  transition-duration: 0.3s;\n}\n.table .cart_item_qty a[data-v-323ebab0]:hover {\n  box-shadow: 1px 2px 3px #ccc;\n}\n.table .cart_item_qty input[data-v-323ebab0] {\n  width: calc( 100% - 54px - 35px);\n  text-align: center;\n  margin-left: 5px;\n  margin-right: 5px;\n  border-radius: 3px;\n  border: 1px solid #ccc;\n  box-shadow: 0 1px 3px #ddd;\n}\n.table .cart_item_price[data-v-323ebab0], .table .cart_item_tprice[data-v-323ebab0] {\n  text-align: right;\n}\n.page-btn[data-v-323ebab0] {\n  padding-top: 15px;\n  padding-bottom: 15px;\n  margin: 0;\n  text-align: right;\n}\n.page-btn .btn[data-v-323ebab0]:focus {\n  box-shadow: none;\n}", ""]);
+exports.push([module.i, ".cart[data-v-323ebab0] {\n  letter-spacing: 0.05em;\n  color: black;\n  width: 600px;\n  padding: 15px;\n  margin: 0 auto;\n  margin-top: 15px;\n  background: #ffffff;\n  border-radius: 4px;\n  box-shadow: 1px 2px 25px #ddd;\n  transition-duration: 0.3s;\n  font-size: 16px;\n  text-align: left;\n  position: relative;\n}\n.cart__hide[data-v-323ebab0] {\n  font-size: 20px;\n  position: absolute;\n  top: 10px;\n  right: 10px;\n  cursor: pointer;\n  transition: 0.2s all ease-in;\n  text-align: center;\n  -webkit-transform: rotate(0deg);\n          transform: rotate(0deg);\n}\n.cart__hide[data-v-323ebab0]:hover {\n  -webkit-transform: rotate(180deg);\n          transform: rotate(180deg);\n}\n.table[data-v-323ebab0] {\n  width: 100%;\n}\n.table th[data-v-323ebab0], .table td[data-v-323ebab0] {\n  padding: 0.5em;\n}\n.table thead th[data-v-323ebab0] {\n  border-bottom: 2px solid #abc;\n}\n.table td[data-v-323ebab0] {\n  border-bottom: 1px solid #abc;\n}\n.table tbody tr:last-of-type td[data-v-323ebab0] {\n  border-bottom-width: 2px;\n}\n.table .cart_item_img[data-v-323ebab0] {\n  width: 80px;\n}\n.table .cart_item_qty[data-v-323ebab0] {\n  text-align: center;\n  min-width: 140px;\n  width: 140px;\n}\n.table .cart_item_qty[data-v-323ebab0]::after {\n  content: \"\";\n  display: block;\n  clear: both;\n}\n.table .cart_item_qty a[data-v-323ebab0], .table .cart_item_qty input[data-v-323ebab0] {\n  float: left;\n  height: 27px;\n}\n.table .cart_item_qty a[data-v-323ebab0] {\n  min-width: 27px;\n  border: 1px solid #ccc;\n  text-align: center;\n  border-radius: 3px;\n  padding-left: 3px;\n  background: #fafafa;\n  text-decoration: none;\n  transition-duration: 0.3s;\n}\n.table .cart_item_qty a[data-v-323ebab0]:hover {\n  box-shadow: 1px 2px 3px #ccc;\n}\n.table .cart_item_qty input[data-v-323ebab0] {\n  width: calc( 100% - 54px - 35px);\n  text-align: center;\n  margin-left: 5px;\n  margin-right: 5px;\n  border-radius: 3px;\n  border: 1px solid #ccc;\n  box-shadow: 0 1px 3px #ddd;\n}\n.table .cart_item_price[data-v-323ebab0], .table .cart_item_tprice[data-v-323ebab0] {\n  text-align: right;\n}\n.page-btn[data-v-323ebab0] {\n  padding-top: 15px;\n  padding-bottom: 15px;\n  margin: 0;\n  text-align: right;\n}\n.page-btn .btn[data-v-323ebab0]:focus {\n  box-shadow: none;\n}", ""]);
 
 // exports
 
@@ -6313,7 +6320,7 @@ exports = module.exports = __webpack_require__(/*! ../../../../node_modules/css-
 
 
 // module
-exports.push([module.i, ".wrapper[data-v-1200c0bf] {\n  position: fixed;\n  left: 0;\n  right: 0;\n  top: 0;\n  bottom: 0;\n  background-color: rgba(0, 0, 0, 0.4);\n  display: flex;\n  justify-content: center;\n  align-items: center;\n}\n.card[data-v-1200c0bf] {\n  width: 300px;\n  height: -webkit-fit-content;\n  height: -moz-fit-content;\n  height: fit-content;\n  padding: 1em;\n  background-color: #fff;\n  box-shadow: 0px 2px 10px rgba(0, 0, 0, 0.1);\n  border-radius: 6px;\n  position: relative;\n}\n.card__hide[data-v-1200c0bf] {\n  height: 25px;\n  width: 25px;\n  position: absolute;\n  top: 10px;\n  right: 10px;\n  background-color: #0080ff;\n  cursor: pointer;\n}\n.card__hide[data-v-1200c0bf]:hover {\n  background-color: #0073e6;\n}\n.card__title[data-v-1200c0bf] {\n  margin-left: 0px;\n}\n.card__option[data-v-1200c0bf] {\n  margin-top: 10px;\n}\n.card__option__title[data-v-1200c0bf] {\n  font-size: 18px;\n  margin-bottom: 4px;\n}\n.card__option__title span[data-v-1200c0bf] {\n  color: red;\n}\n.card__option__input[data-v-1200c0bf], .card__option__select[data-v-1200c0bf] {\n  width: 98%;\n  max-width: 100%;\n  height: 36px;\n  border: 1px solid rgba(0, 0, 0, 0.2);\n  padding: 0px 0px 4px;\n  border-radius: 4px;\n  font-size: 18px;\n  padding: 0px 0px 3px 2px;\n  background-color: #fff;\n}\n.card__btn[data-v-1200c0bf] {\n  height: auto;\n  width: 100%;\n  text-tranform: uppercase;\n  background-color: #0080ff;\n  color: #fff;\n  font-size: 16px;\n  font-weight: 700;\n  margin-top: 14px;\n  padding: 10px;\n  border-radius: 4px;\n  cursor: pointer;\n}\n.card__btn[data-v-1200c0bf]:hover {\n  background-color: #0073e6;\n}\n.card__validation p[data-v-1200c0bf] {\n  font-size: 0.6em;\n  color: #E71D36;\n}", ""]);
+exports.push([module.i, ".wrapper[data-v-1200c0bf] {\n  position: fixed;\n  left: 0;\n  right: 0;\n  top: 0;\n  bottom: 0;\n  background-color: rgba(0, 0, 0, 0.4);\n  display: flex;\n  justify-content: center;\n  align-items: center;\n}\n.card[data-v-1200c0bf] {\n  width: 300px;\n  height: -webkit-fit-content;\n  height: -moz-fit-content;\n  height: fit-content;\n  padding: 1em;\n  background-color: #fff;\n  box-shadow: 0px 2px 10px rgba(0, 0, 0, 0.1);\n  border-radius: 6px;\n  position: relative;\n}\n.card__hide[data-v-1200c0bf] {\n  height: 25px;\n  width: 25px;\n  position: absolute;\n  top: 10px;\n  right: 10px;\n  font-size: 20px;\n  cursor: pointer;\n  -webkit-transform: rotate(0deg);\n          transform: rotate(0deg);\n  transition: 0.2s all ease-in;\n  text-align: center;\n}\n.card__hide[data-v-1200c0bf]:hover {\n  -webkit-transform: rotate(180deg);\n          transform: rotate(180deg);\n}\n.card__title[data-v-1200c0bf] {\n  margin-left: 0px;\n}\n.card__option[data-v-1200c0bf] {\n  margin-top: 10px;\n}\n.card__option__title[data-v-1200c0bf] {\n  font-size: 18px;\n  margin-bottom: 4px;\n}\n.card__option__title span[data-v-1200c0bf] {\n  color: red;\n}\n.card__option__input[data-v-1200c0bf], .card__option__select[data-v-1200c0bf] {\n  width: 98%;\n  max-width: 100%;\n  height: 36px;\n  border: 1px solid rgba(0, 0, 0, 0.2);\n  padding: 0px 0px 4px;\n  border-radius: 4px;\n  font-size: 18px;\n  padding: 0px 0px 3px 2px;\n  background-color: #fff;\n}\n.card__btn[data-v-1200c0bf] {\n  height: auto;\n  width: 100%;\n  text-tranform: uppercase;\n  background-color: #0080ff;\n  color: #fff;\n  font-size: 16px;\n  font-weight: 700;\n  margin-top: 14px;\n  padding: 10px;\n  border-radius: 4px;\n  cursor: pointer;\n}\n.card__btn[data-v-1200c0bf]:hover {\n  background-color: #0073e6;\n}\n.card__validation p[data-v-1200c0bf] {\n  font-size: 0.6em;\n  color: #E71D36;\n}", ""]);
 
 // exports
 
@@ -49207,6 +49214,10 @@ var render = function() {
   return _c("div", { staticClass: "cart" }, [
     _c("h2", [_vm._v("Cart")]),
     _vm._v(" "),
+    _c("div", { staticClass: "cart__hide", on: { click: _vm.hideCart } }, [
+      _c("i", { staticClass: "fa fa-times" })
+    ]),
+    _vm._v(" "),
     _c("div", { staticClass: "cart__table" }, [
       _c("table", { staticClass: "table" }, [
         _vm._m(0),
@@ -49214,7 +49225,7 @@ var render = function() {
         _c(
           "tbody",
           _vm._l(_vm.productsInCart, function(product, index) {
-            return _c("tr", { key: product.productId }, [
+            return _c("tr", { key: product.product_id }, [
               _vm._m(1, true),
               _vm._v(" "),
               _c("td", [_vm._v(_vm._s(product.name))]),
@@ -49289,6 +49300,7 @@ var render = function() {
                     on: {
                       click: function($event) {
                         $event.preventDefault()
+                        return _vm.delCartItem($event.currentTarget, index)
                       }
                     }
                   },
@@ -49319,11 +49331,15 @@ var render = function() {
           {
             staticClass: "btn",
             attrs: { href: "#" },
-            on: { click: _vm.checkout }
+            on: {
+              click: function($event) {
+                $event.preventDefault()
+                return _vm.checkout($event)
+              }
+            }
           },
           [_vm._v("Checkout")]
-        ),
-        _vm._m(2)
+        )
       ])
     ])
   ])
@@ -49351,14 +49367,6 @@ var staticRenderFns = [
     var _c = _vm._self._c || _h
     return _c("td", { staticClass: "cart_item_img" }, [
       _c("img", { attrs: { src: "http://placehold.it/50x50" } })
-    ])
-  },
-  function() {
-    var _vm = this
-    var _h = _vm.$createElement
-    var _c = _vm._self._c || _h
-    return _c("button", { staticClass: "btn btn-primary btn-sm" }, [
-      _c("i", { staticClass: "fa fa-refresh" })
     ])
   }
 ]
@@ -49393,7 +49401,9 @@ var render = function() {
         )
       ]),
       _vm._v(" "),
-      _c("div", { staticClass: "card__hide", on: { click: _vm.close } }),
+      _c("div", { staticClass: "card__hide", on: { click: _vm.close } }, [
+        _c("i", { staticClass: "fas fa-times" })
+      ]),
       _vm._v(" "),
       _c(
         "div",
@@ -49446,7 +49456,7 @@ var render = function() {
           [
             _c("option", { attrs: { value: "17" } }, [_vm._v(" AT&T ")]),
             _vm._v(" "),
-            _c("option", { attrs: { value: "18" } }, [_vm._v(" Verizon ")])
+            _c("option", { attrs: { value: "18" } }, [_vm._v(" T-Mobile ")])
           ]
         )
       ]),
@@ -49486,9 +49496,7 @@ var render = function() {
           [
             _c("option", { attrs: { value: "20" } }, [_vm._v(" Black ")]),
             _vm._v(" "),
-            _c("option", { attrs: { value: "18" } }, [
-              _vm._v(" Red and black ")
-            ])
+            _c("option", { attrs: { value: "19" } }, [_vm._v(" Black/red ")])
           ]
         )
       ]),
@@ -49501,19 +49509,19 @@ var render = function() {
             {
               name: "model",
               rawName: "v-model",
-              value: _vm.quantity,
-              expression: "quantity"
+              value: _vm.selectedQuantity,
+              expression: "selectedQuantity"
             }
           ],
           staticClass: "card__option__input",
           attrs: { type: "number", min: "1", max: "5" },
-          domProps: { value: _vm.quantity },
+          domProps: { value: _vm.selectedQuantity },
           on: {
             input: function($event) {
               if ($event.target.composing) {
                 return
               }
-              _vm.quantity = $event.target.value
+              _vm.selectedQuantity = $event.target.value
             }
           }
         })
@@ -61755,6 +61763,8 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _components_shoppingCart_PopupProductOptions_vue__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ./components/shoppingCart/PopupProductOptions.vue */ "./resources/js/components/shoppingCart/PopupProductOptions.vue");
 /* harmony import */ var _components_shoppingCart_PopupCart_vue__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! ./components/shoppingCart/PopupCart.vue */ "./resources/js/components/shoppingCart/PopupCart.vue");
 /* harmony import */ var _components_shoppingCart_ShoppingCartIcon_vue__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! ./components/shoppingCart/ShoppingCartIcon.vue */ "./resources/js/components/shoppingCart/ShoppingCartIcon.vue");
+/* harmony import */ var locutus_php_url_http_build_query__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(/*! locutus/php/url/http_build_query */ "./node_modules/locutus/php/url/http_build_query.js");
+/* harmony import */ var locutus_php_url_http_build_query__WEBPACK_IMPORTED_MODULE_8___default = /*#__PURE__*/__webpack_require__.n(locutus_php_url_http_build_query__WEBPACK_IMPORTED_MODULE_8__);
 __webpack_require__(/*! ./bootstrap */ "./resources/js/bootstrap.js");
 
 __webpack_require__(/*! ./vendor/svgxuse/svgxuse.min.js */ "./resources/js/vendor/svgxuse/svgxuse.min.js");
@@ -61794,6 +61804,8 @@ $(document).ready(function () {
 
 
 
+ // require('locutus/php/url/http_build_query')
+
  // the following is used to be able to use laravel lang resources in JS
 
 Vue.prototype.trans = function (string) {
@@ -61811,11 +61823,11 @@ var app = new Vue({
   data: {
     info: {
       products: [{
-        productId: 50,
-        options: {
-          // color
-          227: 17,
+        product_id: 50,
+        option: {
           // provider
+          227: 17,
+          // color
           228: 20
         },
         name: 'Getnord Lynx',
@@ -61824,12 +61836,12 @@ var app = new Vue({
         },
         quantity: 1
       }, {
-        productId: 2,
-        options: {
-          // color
-          222: 0,
+        product_id: 2,
+        option: {
           // provider
-          223: 0
+          227: 0,
+          // color
+          228: 0
         },
         name: 'Getnord Onyx',
         price: {
@@ -61837,7 +61849,7 @@ var app = new Vue({
         },
         quantity: 1
       }, {
-        productId: 3,
+        product_id: 3,
         name: 'Getnord Walrus',
         price: {
           us: 99
@@ -61852,28 +61864,28 @@ var app = new Vue({
     currentProduct: {}
   },
   methods: {
-    buybtnclicked: function buybtnclicked(productId, productHasOptions) {
+    buybtnclicked: function buybtnclicked(product_id, productHasOptions) {
       var _this = this;
 
       if (productHasOptions == true) {
         // we want to open the options popup
         this.info.products.forEach(function (product) {
-          if (product.productId == productId) {
+          if (product.product_id == product_id) {
             _this.currentProduct = product;
           }
         });
-        this.isOptionsPopupOpen = true;
+        this.openOptionsPopup();
       } else {
         // we add the product directlyl to the cart
         this.info.products.forEach(function (product) {
           // first we validate that the product exists 
-          if (product.productId == productId && _this.cart.length != 0) {
+          if (product.product_id == product_id && _this.cart.length != 0) {
             // we need to iterate over the cart to see if the product exists in the cart
             var isInCart = false;
             var i = 0;
 
             for (i; i < _this.cart.length; i++) {
-              if (_this.cart[i].productId == productId) {
+              if (_this.cart[i].product_id == product_id) {
                 isInCart = true;
                 console.log('found', i);
                 break;
@@ -61895,11 +61907,15 @@ var app = new Vue({
             }
 
             ; // if cart is empty, we can't iterate over it
-          } else if (product.productId == productId && _this.cart.length == 0) {
+          } else if (product.product_id == product_id && _this.cart.length == 0) {
             _this.cart.push(product);
           }
         });
       }
+    },
+    openOptionsPopup: function openOptionsPopup() {
+      this.isShoppingCartOpen = false;
+      this.isOptionsPopupOpen = true;
     },
     closeOptionsPopup: function closeOptionsPopup() {
       this.isOptionsPopupOpen = false;
@@ -61913,6 +61929,19 @@ var app = new Vue({
     },
     openShoppingCart: function openShoppingCart() {
       this.isShoppingCartOpen = true;
+    },
+    hideCart: function hideCart() {
+      this.isShoppingCartOpen = false;
+    },
+    checkout: function checkout() {
+      // we are using OpenCart as a platform handling the e-commerce part
+      // we add the products to the cart using an external link that contains
+      // an array called products 
+      var orderUrl = locutus_php_url_http_build_query__WEBPACK_IMPORTED_MODULE_8___default()({
+        products: this.cart
+      }); // console.log(orderUrl);
+
+      window.location.href = "http://store.getnord.live/index.php?route=checkout/cart/addToCart&".concat(orderUrl);
     }
   }
 });
@@ -62014,7 +62043,7 @@ function formSubmit() {
   $('#send_button').click(function () {
     $.ajax({
       type: 'POST',
-      url: '/getnord/public/contact',
+      url: '/contact',
       data: $('#contact_form').serialize(),
       async: true,
       success: function success(data) {

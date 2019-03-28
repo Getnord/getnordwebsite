@@ -449,7 +449,7 @@ a.hover:hover {
 	font-size: 20px;
 	line-height: 20px;
     text-decoration: none;
-	background: transparent url("/getnord/public/img/menu_mobile.png") no-repeat 0 center;
+	background: transparent url("/img/menu_mobile.png") no-repeat 0 center;
 }
 .top_menu {
 	float: right;
@@ -731,7 +731,7 @@ a.hover:hover {
 	left: 0;
 	width: 100%;
 	height: 878px;
-	background-image: url(/getnord/public/img/ram_bg.jpg);
+	background-image: url(/img/ram_bg.jpg);
 	background-color: transparent;
 	background-position: center center;
 	background-size: cover;
@@ -825,7 +825,7 @@ a.hover:hover {
 	left: 0;
 	width: 100%;
 	height: 878px;
-	background-image: url(/getnord/public/img/battery_bg.jpg);
+	background-image: url(/img/battery_bg.jpg);
 	background-color: transparent;
 	background-position: center center;
 	background-size: cover;
@@ -962,7 +962,7 @@ a.hover:hover {
 	bottom: 0;
 	left: 0;
 	right: 0; 
-	background: transparent url("/getnord/public/img/video_overlay.jpg") no-repeat center center;
+	background: transparent url("/img/video_overlay.jpg") no-repeat center center;
 	background-size: cover;
 	cursor: pointer;
 }
@@ -1305,16 +1305,16 @@ items_section .product_info button:hover {
 }
 
 #footer .item:nth-child(1) {
-    background-image: url("/getnord/public/img/visa.png");
+    background-image: url("/img/visa.png");
 }
 #footer .item:nth-child(2) {
-    background-image: url("/getnord/public/img/mastercard.png");
+    background-image: url("/img/mastercard.png");
 }
 #footer .item:nth-child(3) {
-    background-image: url("/getnord/public/img/maestro.png");
+    background-image: url("/img/maestro.png");
 }
 #footer .item:nth-child(4) {
-    background-image: url("/getnord/public/img/paypal.png");
+    background-image: url("/img/paypal.png");
 }
 
 #footer .secure {
@@ -1647,15 +1647,15 @@ items_section .product_info button:hover {
 	vertical-align: middle;
 }
 .icon_qi {
-	background: transparent url(/getnord/public/img/icon_qi.png) no-repeat 0px 0px;
+	background: transparent url(/img/icon_qi.png) no-repeat 0px 0px;
 	background-size: 220px 125px;
 }
 .icon_compatible {
-	background: transparent url(/getnord/public/img/icon_compatible.png) no-repeat 0px 0px;
+	background: transparent url(/img/icon_compatible.png) no-repeat 0px 0px;
 	background-size: 220px 125px;
 }
 .icon_magnetic {
-	background: transparent url(/getnord/public/img/icon_magnetic.png) no-repeat 0px 0px;
+	background: transparent url(/img/icon_magnetic.png) no-repeat 0px 0px;
 	background-size: 220px 125px;
 }
 .icon_ram, .icon_usa {
@@ -1666,11 +1666,11 @@ items_section .product_info button:hover {
 	vertical-align: middle;
 }
 .icon_ram {
-	background: transparent url(/getnord/public/img/icon_ram.png) no-repeat 0px 0px;
+	background: transparent url(/img/icon_ram.png) no-repeat 0px 0px;
 	background-size: 231px 70px;
 }
 .icon_usa {
-	background: transparent url(/getnord/public/img/icon_usa.png) no-repeat 0px 0px;
+	background: transparent url(/img/icon_usa.png) no-repeat 0px 0px;
 	background-size: 231px 70px;
 }
 
@@ -2347,7 +2347,7 @@ items_section .product_info button:hover {
 	}
 	.ram_section .section_bg {
 		opacity: 0.9;
-        background-image: url(/getnord/public/img/ram_bg.jpg);
+        background-image: url(/img/ram_bg.jpg);
         position: relative;
         height: 350px;
         top: -20px !important;

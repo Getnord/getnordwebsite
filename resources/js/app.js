@@ -44,7 +44,8 @@ import buyBtn from './components/shoppingCart/BaseBuyButton.vue';
 import optionsPopup from './components/shoppingCart/PopupProductOptions.vue';
 import shoppingCart from './components/shoppingCart/PopupCart.vue';
 import shoppingCartIcon from './components/shoppingCart/ShoppingCartIcon.vue';
-
+// require('locutus/php/url/http_build_query')
+import http_build_query from 'locutus/php/url/http_build_query';
 // the following is used to be able to use laravel lang resources in JS
 Vue.prototype.trans = string => _.get(window.i18n, string);
 
@@ -63,11 +64,11 @@ const app = new Vue({
         info: {
             products: [
                 {
-                    productId: 50,
-                    options: {
-                        // color
-                        227: 17,
+                    product_id: 50,
+                    option: {
                         // provider
+                        227: 17,
+                        // color
                         228: 20,
                     },
                     name: 'Getnord Lynx',
@@ -77,12 +78,12 @@ const app = new Vue({
                     quantity: 1
                 },
                 {
-                    productId: 2,
-                    options: {
-                        // color
-                        222: 0,
+                    product_id: 2,
+                    option: {
                         // provider
-                        223: 0,
+                        227: 0,
+                        // color
+                        228: 0,
                     },
                     name: 'Getnord Onyx',
                     price: {
@@ -91,7 +92,7 @@ const app = new Vue({
                     quantity: 1
                 },
                 {
-                    productId: 3,
+                    product_id: 3,
                     name: 'Getnord Walrus',
                     price: {
                         us: 99
@@ -108,25 +109,25 @@ const app = new Vue({
     },
 
     methods: {
-        buybtnclicked(productId, productHasOptions) {
+        buybtnclicked(product_id, productHasOptions) {
             if( productHasOptions == true) {
                 // we want to open the options popup
                 this.info.products.forEach(product => {
-                    if( product.productId ==  productId ) {
+                    if( product.product_id ==  product_id ) {
                         this.currentProduct = product;
                     }
                 });
-                this.isOptionsPopupOpen = true;
+                this.openOptionsPopup();
             } else {
                 // we add the product directlyl to the cart
                 this.info.products.forEach(product => {
                     // first we validate that the product exists 
-                    if( product.productId ==  productId && this.cart.length != 0 ) {
+                    if( product.product_id ==  product_id && this.cart.length != 0 ) {
                         // we need to iterate over the cart to see if the product exists in the cart
                         let isInCart = false;
                         let i = 0;
                         for( i ; i < this.cart.length; i++ )  {
-                            if( this.cart[i].productId == productId ) {
+                            if( this.cart[i].product_id == product_id ) {
                                 isInCart = true;
                                 console.log( 'found' , i);
                                 break;
@@ -142,11 +143,15 @@ const app = new Vue({
                             this.cart.push(product);
                         };
                     // if cart is empty, we can't iterate over it
-                    } else if( product.productId ==  productId && this.cart.length == 0) {
+                    } else if( product.product_id ==  product_id && this.cart.length == 0) {
                         this.cart.push(product);
                     }
                 });
             }   
+        },
+        openOptionsPopup() {
+            this.isShoppingCartOpen = false;
+            this.isOptionsPopupOpen = true;
         },
         
         closeOptionsPopup() {
@@ -163,6 +168,19 @@ const app = new Vue({
 
         openShoppingCart() {
             this.isShoppingCartOpen = true;
+        },
+
+        hideCart() {
+            this.isShoppingCartOpen = false;
+        },
+
+        checkout() {
+            // we are using OpenCart as a platform handling the e-commerce part
+            // we add the products to the cart using an external link that contains
+            // an array called products 
+            const orderUrl = http_build_query({products: this.cart});
+            // console.log(orderUrl);
+            window.location.href = `http://store.getnord.live/index.php?route=checkout/cart/addToCart&${orderUrl}`;
         }
     },
 

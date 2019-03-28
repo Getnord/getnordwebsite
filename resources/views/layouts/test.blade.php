@@ -7,8 +7,8 @@
     <meta name="csrf-token" content="{{ csrf_token() }}">
     {{-- <link href="https://fonts.googleapis.com/css?family=IBM+Plex+Sans:400,700&amp;subset=cyrillic,latin-ext" rel="stylesheet"> --}}
     <link rel="stylesheet" href="{{ asset('css/app.css') }}">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css" integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous">
     <title>@yield('pageTitle')</title>
-    @include('inc.header_tags')
 </head>
 <body>
     <!-- Google Tag Manager (noscript) -->

@@ -41,20 +41,84 @@
                                 data-item-image="img/Lynx_with_screen_cart.png"
                                 data-item-description="Getnord Lynx Smartphone"
                                 >Buy</button>
-                            
-                            <p>Or</p>
+                            @if (!( app()->getLocale() == 'lt' || app()->getLocale() == 'pl' ))
+                                <p>Or</p>
+                            @endif
                         </div>
                         <div class="section_text2">
-                            <p>Shop at your favorite stores</p>
+                            @if (!(app()->getLocale() == 'lt' || app()->getLocale() == 'pl'))
+                                <p>Shop at your favorite stores</p>
+                            @endif
                         </div>
-                        <div class="section_cta">
-                            <a href="https://www.amazon.com/dp/B07MMTFHBX" class="store_cta" target="_blank">
-                                <img src="img/amazon.png" alt="">
-                            </a>
-                            <a href="https://www.amazon.com/dp/B07MMTFHBX" class="store_cta" target="_blank">
-                                <img src="img/ebay.png" alt="">
-                            </a>
-                        </div>
+                        
+                        @if (app()->getLocale() == 'us' || app()->getLocale() == 'ca')
+                            <div class="section_cta">
+                                <a href="https://www.amazon.com/dp/B07MMTFHBX" class="store_cta" target="_blank">
+                                    <img src="img/amazon.png" alt="">
+                                </a>
+                                <a href="https://www.amazon.com/dp/B07MMTFHBX" class="store_cta" target="_blank">
+                                    <img src="img/ebay.png" alt="">
+                                </a>
+                            </div>
+                        @endif
+                        @if (app()->getLocale() == 'uk')
+                            <div class="section_cta">
+                                <a href="https://www.amazon.co.uk/stores/page/8C405FAC-1B98-4B97-AA2F-EA7F87FB6FA7" class="store_cta" target="_blank">
+                                    <img src="img/amazon.png" alt="">
+                                </a>
+                                <a href="https://www.amazon.co.uk/stores/page/8C405FAC-1B98-4B97-AA2F-EA7F87FB6FA7" class="store_cta" target="_blank">
+                                    <img src="img/ebay.png" alt="">
+                                </a>
+                            </div>
+                        @endif
+                        @if (app()->getLocale() == 'fr')
+                            <div class="section_cta">
+                                <a href="https://www.amazon.fr/stores/node/3743971031" class="store_cta" target="_blank">
+                                    <img src="img/amazon.png" alt="">
+                                </a>
+                                <a href="https://ebay.us/oXQIHj" class="store_cta" target="_blank">
+                                    <img src="img/ebay.png" alt="">
+                                </a>
+                            </div>
+                            <div class="section_cta">
+                                <a href="https://www.bol.com/nl/p/getnord-lynx-robuuste-telefoon-rugged-smartphone-solide-gsm-dual-sim-simlockvrij-waterproof-shockproof-ruggedized/9200000104427027/?country=NL&approved=true" class="store_cta" target="_blank">
+                                    <img src="img/Bol.com_logo.png" alt="">
+                                </a>
+                                <a href="https://www.cdiscount.com/bricolage/electricite/getnord-lynx-smartphone-4g-outdoor-double-sim-16-g/f-1661416-get0722512456525.html" class="store_cta" target="_blank">
+                                    <img src="img/Cdiscount-logo.png" alt="">
+                                </a>
+                            </div>
+                        @endif
+                        @if (app()->getLocale() == 'it')
+                            <div class="section_cta">
+                                <a href="https://www.amazon.it/stores/node/3724762031" class="store_cta" target="_blank">
+                                    <img src="img/amazon.png" alt="">
+                                </a>
+                                <a href="https://ebay.us/UIbe3S" class="store_cta" target="_blank">
+                                    <img src="img/ebay.png" alt="">
+                                </a>
+                            </div>
+                        @endif
+                        @if (app()->getLocale() == 'lt' || app()->getLocale() == 'pl')
+                            
+                        @endif
+                        @if (app()->getLocale() == 'nl' )
+                            <div class="section_cta">
+                                <a href="https://www.bol.com/nl/p/getnord-lynx-robuuste-telefoon-rugged-smartphone-solide-gsm-dual-sim-simlockvrij-waterproof-shockproof-ruggedized/9200000104427027/?country=NL&approved=true" class="store_cta" target="_blank">
+                                    <img src="img/Bol.com_logo.png" alt="">
+                                </a>
+                            </div>
+                        @endif
+                        @if (app()->getLocale() == 'es')
+                            <div class="section_cta">
+                                <a href="https://www.amazon.es/stores/node/3736323031" class="store_cta" target="_blank">
+                                    <img src="img/amazon.png" alt="">
+                                </a>
+                                <a href="https://ebay.us/dPCydx" class="store_cta" target="_blank">
+                                    <img src="img/ebay.png" alt="">
+                                </a>
+                            </div>
+                        @endif
 
                         {{-- We only want this link to show up in the us and ca page --}}
                         @if (app()->getLocale() == 'us' || app()->getLocale() == 'ca')
@@ -556,17 +620,79 @@
                                     <img src="img/getnord_logo.png" alt="">
                             </button>
                         </div>
-                        <div class="section_text2">
-                            <p>Shop at your favorite stores</p>
-                        </div>
-                        <div class="section_cta">
-                            <a href="https://www.amazon.com/dp/B07MMTFHBX" class="store_cta" traget="_blank">
-                                <img src="img/amazon.png" alt="">
-                            </a>
-                            <a href="https://www.amazon.com/dp/B07MMTFHBX" class="store_cta" traget="_blank">
-                                <img src="img/ebay.png" alt="">
-                            </a>
-                        </div>
+                        @if (!( app()->getLocale() == 'lt' || app()->getLocale() == 'pl' ))
+                            <div class="section_text2">
+                                <p>Shop at your favorite stores</p>
+                            </div>
+                        @endif
+                        @if (app()->getLocale() == 'us' || app()->getLocale() == 'ca')
+                            <div class="section_cta">
+                                <a href="https://www.amazon.com/dp/B07MMTFHBX" class="store_cta" target="_blank">
+                                    <img src="img/amazon.png" alt="">
+                                </a>
+                                <a href="https://www.amazon.com/dp/B07MMTFHBX" class="store_cta" target="_blank">
+                                    <img src="img/ebay.png" alt="">
+                                </a>
+                            </div>
+                        @endif
+                        @if (app()->getLocale() == 'uk')
+                            <div class="section_cta">
+                                <a href="https://www.amazon.co.uk/stores/page/8C405FAC-1B98-4B97-AA2F-EA7F87FB6FA7" class="store_cta" target="_blank">
+                                    <img src="img/amazon.png" alt="">
+                                </a>
+                                <a href="https://www.amazon.co.uk/stores/page/8C405FAC-1B98-4B97-AA2F-EA7F87FB6FA7" class="store_cta" target="_blank">
+                                    <img src="img/ebay.png" alt="">
+                                </a>
+                            </div>
+                        @endif
+                        @if (app()->getLocale() == 'fr')
+                            <div class="section_cta">
+                                <a href="https://www.amazon.fr/stores/node/3743971031" class="store_cta" target="_blank">
+                                    <img src="img/amazon.png" alt="">
+                                </a>
+                                <a href="https://ebay.us/oXQIHj" class="store_cta" target="_blank">
+                                    <img src="img/ebay.png" alt="">
+                                </a>
+                            </div>
+                            <div class="section_cta">
+                                <a href="https://www.bol.com/nl/p/getnord-lynx-robuuste-telefoon-rugged-smartphone-solide-gsm-dual-sim-simlockvrij-waterproof-shockproof-ruggedized/9200000104427027/?country=NL&approved=true" class="store_cta" target="_blank">
+                                    <img src="img/Bol.com_logo.png" alt="">
+                                </a>
+                                <a href="https://www.cdiscount.com/bricolage/electricite/getnord-lynx-smartphone-4g-outdoor-double-sim-16-g/f-1661416-get0722512456525.html" class="store_cta" target="_blank">
+                                    <img src="img/Cdiscount-logo.png" alt="">
+                                </a>
+                            </div>
+                        @endif
+                        @if (app()->getLocale() == 'it')
+                            <div class="section_cta">
+                                <a href="https://www.amazon.it/stores/node/3724762031" class="store_cta" target="_blank">
+                                    <img src="img/amazon.png" alt="">
+                                </a>
+                                <a href="https://ebay.us/UIbe3S" class="store_cta" target="_blank">
+                                    <img src="img/ebay.png" alt="">
+                                </a>
+                            </div>
+                        @endif
+                        @if (app()->getLocale() == 'lt' || app()->getLocale() == 'pl')
+                            
+                        @endif
+                        @if (app()->getLocale() == 'nl' )
+                            <div class="section_cta">
+                                <a href="https://www.bol.com/nl/p/getnord-lynx-robuuste-telefoon-rugged-smartphone-solide-gsm-dual-sim-simlockvrij-waterproof-shockproof-ruggedized/9200000104427027/?country=NL&approved=true" class="store_cta" target="_blank">
+                                    <img src="img/Bol.com_logo.png" alt="">
+                                </a>
+                            </div>
+                        @endif
+                        @if (app()->getLocale() == 'es')
+                            <div class="section_cta">
+                                <a href="https://www.amazon.es/stores/node/3736323031" class="store_cta" target="_blank">
+                                    <img src="img/amazon.png" alt="">
+                                </a>
+                                <a href="https://ebay.us/dPCydx" class="store_cta" target="_blank">
+                                    <img src="img/ebay.png" alt="">
+                                </a>
+                            </div>
+                        @endif
                     </div>
                 </div>
             </div>

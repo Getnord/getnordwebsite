@@ -1989,7 +1989,7 @@ __webpack_require__.r(__webpack_exports__);
 
         this.product.quantity = parseInt(this.selectedQuantity); // we add the product to the cart
 
-        this.$emit('add-to-cart', this.product);
+        this.$emit('add-to-cart');
       }
     }
   }
@@ -6301,7 +6301,7 @@ exports = module.exports = __webpack_require__(/*! ../../../../node_modules/css-
 
 
 // module
-exports.push([module.i, ".cart[data-v-323ebab0] {\n  letter-spacing: 0.05em;\n  color: black;\n  width: 600px;\n  padding: 15px;\n  margin: 0 auto;\n  margin-top: 15px;\n  background: #ffffff;\n  border-radius: 4px;\n  box-shadow: 1px 2px 25px #ddd;\n  transition-duration: 0.3s;\n  font-size: 16px;\n  text-align: left;\n  position: relative;\n}\n.cart__hide[data-v-323ebab0] {\n  font-size: 20px;\n  position: absolute;\n  top: 10px;\n  right: 10px;\n  cursor: pointer;\n  transition: 0.2s all ease-in;\n  text-align: center;\n  -webkit-transform: rotate(0deg);\n          transform: rotate(0deg);\n}\n.cart__hide[data-v-323ebab0]:hover {\n  -webkit-transform: rotate(180deg);\n          transform: rotate(180deg);\n}\n.table[data-v-323ebab0] {\n  width: 100%;\n}\n.table th[data-v-323ebab0], .table td[data-v-323ebab0] {\n  padding: 0.5em;\n}\n.table thead th[data-v-323ebab0] {\n  border-bottom: 2px solid #abc;\n}\n.table td[data-v-323ebab0] {\n  border-bottom: 1px solid #abc;\n}\n.table tbody tr:last-of-type td[data-v-323ebab0] {\n  border-bottom-width: 2px;\n}\n.table .cart_item_img[data-v-323ebab0] {\n  width: 80px;\n}\n.table .cart_item_qty[data-v-323ebab0] {\n  text-align: center;\n  min-width: 140px;\n  width: 140px;\n}\n.table .cart_item_qty[data-v-323ebab0]::after {\n  content: \"\";\n  display: block;\n  clear: both;\n}\n.table .cart_item_qty a[data-v-323ebab0], .table .cart_item_qty input[data-v-323ebab0] {\n  float: left;\n  height: 27px;\n}\n.table .cart_item_qty a[data-v-323ebab0] {\n  min-width: 27px;\n  border: 1px solid #ccc;\n  text-align: center;\n  border-radius: 3px;\n  padding-left: 3px;\n  background: #fafafa;\n  text-decoration: none;\n  transition-duration: 0.3s;\n}\n.table .cart_item_qty a[data-v-323ebab0]:hover {\n  box-shadow: 1px 2px 3px #ccc;\n}\n.table .cart_item_qty input[data-v-323ebab0] {\n  width: calc( 100% - 54px - 35px);\n  text-align: center;\n  margin-left: 5px;\n  margin-right: 5px;\n  border-radius: 3px;\n  border: 1px solid #ccc;\n  box-shadow: 0 1px 3px #ddd;\n}\n.table .cart_item_price[data-v-323ebab0], .table .cart_item_tprice[data-v-323ebab0] {\n  text-align: right;\n}\n.page-btn[data-v-323ebab0] {\n  padding-top: 15px;\n  padding-bottom: 15px;\n  margin: 0;\n  text-align: right;\n}\n.page-btn .btn[data-v-323ebab0]:focus {\n  box-shadow: none;\n}", ""]);
+exports.push([module.i, ".cart[data-v-323ebab0] {\n  letter-spacing: 0.05em;\n  color: black;\n  width: 600px;\n  padding: 15px;\n  margin: 0 auto;\n  margin-top: 15px;\n  background: #ffffff;\n  border-radius: 4px;\n  box-shadow: 1px 2px 25px #ddd;\n  transition-duration: 0.3s;\n  font-size: 16px;\n  text-align: left;\n  position: relative;\n}\n.cart__hide[data-v-323ebab0] {\n  font-size: 20px;\n  position: absolute;\n  top: 10px;\n  right: 10px;\n  cursor: pointer;\n  transition: 0.2s all ease-in;\n  text-align: center;\n  -webkit-transform: rotate(0deg);\n          transform: rotate(0deg);\n}\n.cart__hide[data-v-323ebab0]:hover {\n  -webkit-transform: rotate(180deg);\n          transform: rotate(180deg);\n}\n.table[data-v-323ebab0] {\n  width: 100%;\n}\n.table th[data-v-323ebab0], .table td[data-v-323ebab0] {\n  padding: 0.5em;\n}\n.table thead th[data-v-323ebab0] {\n  border-bottom: 2px solid #abc;\n}\n.table td[data-v-323ebab0] {\n  border-bottom: 1px solid #abc;\n}\n.table tbody tr:last-of-type td[data-v-323ebab0] {\n  border-bottom-width: 2px;\n}\n.table .cart_item_img[data-v-323ebab0] {\n  width: 80px;\n}\n.table .cart_item_qty[data-v-323ebab0] {\n  text-align: center;\n  min-width: 140px;\n  width: 140px;\n}\n.table .cart_item_qty[data-v-323ebab0]::after {\n  content: \"\";\n  display: block;\n  clear: both;\n}\n.table .cart_item_qty a[data-v-323ebab0], .table .cart_item_qty input[data-v-323ebab0] {\n  float: left;\n  height: 27px;\n}\n.table .cart_item_qty a[data-v-323ebab0] {\n  min-width: 27px;\n  border: 1px solid #ccc;\n  text-align: center;\n  border-radius: 3px;\n  padding-left: 3px;\n  background: #fafafa;\n  text-decoration: none;\n  transition-duration: 0.3s;\n  padding-top: 1px;\n  padding-bottom: 1px;\n}\n.table .cart_item_qty a[data-v-323ebab0]:hover {\n  box-shadow: 1px 2px 3px #ccc;\n}\n.table .cart_item_qty input[data-v-323ebab0] {\n  width: calc( 100% - 54px - 35px);\n  text-align: center;\n  margin-left: 5px;\n  margin-right: 5px;\n  border-radius: 3px;\n  border: 1px solid #ccc;\n  box-shadow: 0 1px 3px #ddd;\n}\n.table .cart_item_qty input[data-v-323ebab0]::-webkit-outer-spin-button, .table .cart_item_qty input[data-v-323ebab0]::-webkit-inner-spin-button {\n  -webkit-appearance: none;\n  margin: 0;\n}\n.table .cart_item_qty input[type=number][data-v-323ebab0] {\n  -moz-appearance: textfield;\n}\n.table .cart_item_price[data-v-323ebab0], .table .cart_item_tprice[data-v-323ebab0] {\n  text-align: right;\n}\n.page-btn[data-v-323ebab0] {\n  padding-top: 15px;\n  padding-bottom: 15px;\n  margin: 0;\n  text-align: right;\n}\n.page-btn .btn[data-v-323ebab0]:focus {\n  box-shadow: none;\n}", ""]);
 
 // exports
 
@@ -6339,7 +6339,7 @@ exports = module.exports = __webpack_require__(/*! ../../../../node_modules/css-
 
 
 // module
-exports.push([module.i, ".cart__icon[data-v-6713b5ad] {\n  height: 40px;\n  width: 40px;\n  position: relative;\n  text-align: center;\n  cursor: pointer;\n}\n.cart__icon img[data-v-6713b5ad] {\n  width: 100%;\n}\n.cart__icon__num[data-v-6713b5ad] {\n  font-weight: 700;\n  font-size: 16px;\n  padding: 4px;\n  position: absolute;\n  top: -10px;\n  right: -16px;\n  background: #f7f7f7;\n  color: #0080ff;\n  height: 22px;\n  width: 22px;\n  box-shadow: 0px 2px 10px rgba(0, 0, 0, 0.2);\n  border-radius: 22px;\n}", ""]);
+exports.push([module.i, ".cart__icon[data-v-6713b5ad] {\n  height: 40px;\n  width: 40px;\n  position: relative;\n  text-align: center;\n  cursor: pointer;\n  margin-top: 50px;\n}\n.cart__icon img[data-v-6713b5ad] {\n  width: 100%;\n}\n.cart__icon__num[data-v-6713b5ad] {\n  font-weight: 700;\n  font-size: 16px;\n  padding: 4px;\n  position: absolute;\n  top: -10px;\n  right: -16px;\n  background: #f7f7f7;\n  color: #0080ff;\n  height: 22px;\n  width: 22px;\n  box-shadow: 0px 2px 10px rgba(0, 0, 0, 0.2);\n  border-radius: 22px;\n}", ""]);
 
 // exports
 
@@ -49225,7 +49225,7 @@ var render = function() {
         _c(
           "tbody",
           _vm._l(_vm.productsInCart, function(product, index) {
-            return _c("tr", { key: product.product_id }, [
+            return _c("tr", { key: index }, [
               _vm._m(1, true),
               _vm._v(" "),
               _c("td", [_vm._v(_vm._s(product.name))]),
@@ -49304,7 +49304,7 @@ var render = function() {
                       }
                     }
                   },
-                  [_c("i", { staticClass: "fa fa-trash-o" })]
+                  [_c("i", { staticClass: "far fa-trash-alt" })]
                 )
               ])
             ])
@@ -49594,9 +49594,25 @@ var render = function() {
     [
       _c("img", { attrs: { src: "img/shopping-cart.png", alt: "" } }),
       _vm._v(" "),
-      _c("p", { staticClass: "cart__icon__num" }, [
-        _vm._v("\n        " + _vm._s(_vm.allProductsInCartQuantity) + "\n    ")
-      ])
+      _c(
+        "p",
+        {
+          directives: [
+            {
+              name: "show",
+              rawName: "v-show",
+              value: _vm.allProductsInCartQuantity > 0,
+              expression: "allProductsInCartQuantity > 0"
+            }
+          ],
+          staticClass: "cart__icon__num"
+        },
+        [
+          _vm._v(
+            "\n        " + _vm._s(_vm.allProductsInCartQuantity) + "\n    "
+          )
+        ]
+      )
     ]
   )
 }
@@ -61807,6 +61823,7 @@ $(document).ready(function () {
  // require('locutus/php/url/http_build_query')
 
  // the following is used to be able to use laravel lang resources in JS
+// it will be used to have a funcional localization in this app 
 
 Vue.prototype.trans = function (string) {
   return _.get(window.i18n, string);
@@ -61923,7 +61940,7 @@ var app = new Vue({
     addToCart: function addToCart(product) {
       // We add the product to the cart 
       // after selecting options
-      this.cart.push(product); // Destroy the options popup
+      this.cart.push(this.currentProduct); // Destroy the options popup
 
       this.isOptionsPopupOpen = false;
     },
@@ -61941,7 +61958,7 @@ var app = new Vue({
         products: this.cart
       }); // console.log(orderUrl);
 
-      window.location.href = "http://store.getnord.live/index.php?route=checkout/cart/addToCart&".concat(orderUrl);
+      window.open("http://store.getnord.live/index.php?route=checkout/cart/addToCart&".concat(orderUrl));
     }
   }
 });

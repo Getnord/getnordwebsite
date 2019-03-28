@@ -14,7 +14,7 @@
                     <th>&nbsp;</th>
                 </thead>
                 <tbody>
-                    <tr v-for="(product, index) in productsInCart" :key="product.product_id">
+                    <tr v-for="(product, index) in productsInCart" :key="index">
                         <td class="cart_item_img"><img src="http://placehold.it/50x50" /></td>
                         <td>{{ product.name }}</td>
                         <td class="cart_item_qty">
@@ -24,7 +24,7 @@
 						</td>
                         <td class="cart_item_price">${{ product.price.us }}</td>
                         <td class="cart_item_tprice">${{ product.quantity * product.price.us }}</td>
-                        <td><a class="list_item_del" href="#" @click.prevent="delCartItem($event.currentTarget, index)"><i class="fa fa-trash-o"></i></a></td>
+                        <td><a class="list_item_del" href="#" @click.prevent="delCartItem($event.currentTarget, index)"><i class="far fa-trash-alt"></i></a></td>
                     </tr>
                 </tbody>
                 <tfoot>
@@ -152,6 +152,8 @@ export default {
 			background: #fafafa
 			text-decoration: none
 			transition-duration: .3s
+			padding-top: 1px
+			padding-bottom: 1px
 			&:hover
 				box-shadow: 1px 2px 3px #ccc
 		input
@@ -162,6 +164,14 @@ export default {
 			border-radius: 3px
 			border: 1px solid #ccc
 			box-shadow: 0 1px 3px #ddd
+
+			&::-webkit-outer-spin-button, &::-webkit-inner-spin-button
+				-webkit-appearance: none
+				margin: 0
+
+			&[type=number]
+				-moz-appearance: textfield
+
 	.cart_item_price, .cart_item_tprice
 		text-align: right
 .page-btn

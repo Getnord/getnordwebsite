@@ -46,7 +46,9 @@ import shoppingCart from './components/shoppingCart/PopupCart.vue';
 import shoppingCartIcon from './components/shoppingCart/ShoppingCartIcon.vue';
 // require('locutus/php/url/http_build_query')
 import http_build_query from 'locutus/php/url/http_build_query';
+
 // the following is used to be able to use laravel lang resources in JS
+// it will be used to have a funcional localization in this app 
 Vue.prototype.trans = string => _.get(window.i18n, string);
 
 const app = new Vue({
@@ -161,7 +163,7 @@ const app = new Vue({
         addToCart(product) {
             // We add the product to the cart 
             // after selecting options
-            this.cart.push(product);
+            this.cart.push(this.currentProduct);
             // Destroy the options popup
             this.isOptionsPopupOpen = false;
         },
@@ -180,7 +182,7 @@ const app = new Vue({
             // an array called products 
             const orderUrl = http_build_query({products: this.cart});
             // console.log(orderUrl);
-            window.location.href = `http://store.getnord.live/index.php?route=checkout/cart/addToCart&${orderUrl}`;
+            window.open(`http://store.getnord.live/index.php?route=checkout/cart/addToCart&${orderUrl}`);
         }
     },
 

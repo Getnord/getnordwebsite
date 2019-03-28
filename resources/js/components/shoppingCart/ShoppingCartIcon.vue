@@ -1,7 +1,7 @@
 <template>
     <div class="cart__icon" @click="openShoppingCart">
         <img src="img/shopping-cart.png" alt="">
-        <p class="cart__icon__num">
+        <p class="cart__icon__num" v-show="allProductsInCartQuantity > 0">
             {{ allProductsInCartQuantity }}
         </p>
     </div>
@@ -30,6 +30,7 @@ export default {
     position: relative
     text-align: center
     cursor: pointer
+    margin-top: 50px
 
     img 
         width: 100%

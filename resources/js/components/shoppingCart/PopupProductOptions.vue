@@ -98,7 +98,7 @@ export default {
                 // quantity
                 this.product.quantity = parseInt(this.selectedQuantity);
                 // we add the product to the cart
-                this.$emit('add-to-cart', this.product);
+                this.$emit('add-to-cart');
             }
         },
 

@@ -22,15 +22,15 @@
                         	<input type="number" v-model="product.quantity" min="1"/>
                        		<a class="num_plus" href="#" @click.prevent="countQty(index, 1)">+</a>
 						</td>
-                        <td class="cart_item_price">${{ product.price.us }}</td>
-                        <td class="cart_item_tprice">${{ product.quantity * product.price.us }}</td>
+                        <td class="cart_item_price">{{ trans('shoppingCart.currency_symbol') }}{{ product.price.us }}</td>
+                        <td class="cart_item_tprice">{{ trans('shoppingCart.currency_symbol') }}{{ product.quantity * product.price.us }}</td>
                         <td><a class="list_item_del" href="#" @click.prevent="delCartItem($event.currentTarget, index)"><i class="far fa-trash-alt"></i></a></td>
                     </tr>
                 </tbody>
                 <tfoot>
                     <tr>
                         <td colspan="4">Total</td>
-                        <td class="cart_item_tprice">${{ total }}</td>
+                        <td class="cart_item_tprice">{{ trans('shoppingCart.currency_symbol') }}{{ total }}</td>
                         <td>&nbsp;</td>
                     </tr>
 

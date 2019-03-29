@@ -1941,6 +1941,9 @@ __webpack_require__.r(__webpack_exports__);
 //
 //
 //
+//
+//
+//
 /* harmony default export */ __webpack_exports__["default"] = ({
   props: {
     product: {
@@ -1953,16 +1956,19 @@ __webpack_require__.r(__webpack_exports__);
       selectedProvider: '',
       selectedColor: '',
       selectedQuantity: 1,
-      quantity: 1,
-      showValidationErreur: false
+      showValidationError: false,
+      showQuantityError: false
     };
   },
   watch: {
     selectedProvider: function selectedProvider() {
-      return this.showValidationErreur = false;
+      return this.showValidationError = false;
     },
     selectedColor: function selectedColor() {
-      return this.showValidationErreur = false;
+      return this.showValidationError = false;
+    },
+    selectedQuantity: function selectedQuantity() {
+      return this.showQuantityError = false;
     }
   },
   mounted: function mounted() {},
@@ -1979,9 +1985,20 @@ __webpack_require__.r(__webpack_exports__);
       this.$emit('close-options-popup');
     },
     addToCart: function addToCart() {
+      // if no options is selected
       if (this.selectedProvider == '' || this.selectedColor == '') {
-        this.showValidationErreur = true;
-      } else {
+        this.showValidationError = true;
+      }
+
+      ; // if quantity is negative
+
+      if (parseInt(this.selectedQuantity) < 0) {
+        this.showQuantityError = true;
+      }
+
+      ; // if no errors exists
+
+      if (this.selectedQuantity > 0 && !(this.selectedProvider == '' || this.selectedColor == '')) {
         // provider
         this.product.option[227] = this.selectedProvider; // color
 
@@ -49284,11 +49301,17 @@ var render = function() {
               ]),
               _vm._v(" "),
               _c("td", { staticClass: "cart_item_price" }, [
-                _vm._v("$" + _vm._s(product.price.us))
+                _vm._v(
+                  _vm._s(_vm.trans("shoppingCart.currency_symbol")) +
+                    _vm._s(product.price.us)
+                )
               ]),
               _vm._v(" "),
               _c("td", { staticClass: "cart_item_tprice" }, [
-                _vm._v("$" + _vm._s(product.quantity * product.price.us))
+                _vm._v(
+                  _vm._s(_vm.trans("shoppingCart.currency_symbol")) +
+                    _vm._s(product.quantity * product.price.us)
+                )
               ]),
               _vm._v(" "),
               _c("td", [
@@ -49317,7 +49340,10 @@ var render = function() {
             _c("td", { attrs: { colspan: "4" } }, [_vm._v("Total")]),
             _vm._v(" "),
             _c("td", { staticClass: "cart_item_tprice" }, [
-              _vm._v("$" + _vm._s(_vm.total))
+              _vm._v(
+                _vm._s(_vm.trans("shoppingCart.currency_symbol")) +
+                  _vm._s(_vm.total)
+              )
             ]),
             _vm._v(" "),
             _c("td", [_vm._v(" ")])
@@ -49412,8 +49438,8 @@ var render = function() {
             {
               name: "show",
               rawName: "v-show",
-              value: _vm.showValidationErreur,
-              expression: "showValidationErreur"
+              value: _vm.showValidationError,
+              expression: "showValidationError"
             }
           ],
           staticClass: "card__validation"
@@ -49526,6 +49552,22 @@ var render = function() {
           }
         })
       ]),
+      _vm._v(" "),
+      _c(
+        "div",
+        {
+          directives: [
+            {
+              name: "show",
+              rawName: "v-show",
+              value: _vm.showQuantityError,
+              expression: "showQuantityError"
+            }
+          ],
+          staticClass: "card__validation"
+        },
+        [_c("p", [_vm._v("Please enter a valid quantity")])]
+      ),
       _vm._v(" "),
       _c(
         "button",
@@ -61849,7 +61891,16 @@ var app = new Vue({
         },
         name: 'Getnord Lynx',
         price: {
-          us: 299
+          us: 299,
+          ca: 299,
+          uk: 299,
+          fr: 299,
+          it: 299,
+          nl: 299,
+          pl: 1299,
+          lt: 299,
+          es: 299,
+          de: 299
         },
         quantity: 1
       }, {
@@ -61862,14 +61913,32 @@ var app = new Vue({
         },
         name: 'Getnord Onyx',
         price: {
-          us: 299
+          us: 299,
+          ca: 299,
+          uk: 299,
+          fr: 299,
+          it: 299,
+          nl: 299,
+          pl: 1299,
+          lt: 299,
+          es: 299,
+          de: 299
         },
         quantity: 1
       }, {
         product_id: 3,
         name: 'Getnord Walrus',
         price: {
-          us: 99
+          us: 299,
+          ca: 299,
+          uk: 299,
+          fr: 299,
+          it: 299,
+          nl: 299,
+          pl: 1299,
+          lt: 299,
+          es: 299,
+          de: 299
         },
         quantity: 1
       }]
@@ -61904,7 +61973,6 @@ var app = new Vue({
             for (i; i < _this.cart.length; i++) {
               if (_this.cart[i].product_id == product_id) {
                 isInCart = true;
-                console.log('found', i);
                 break;
               }
 
@@ -61912,7 +61980,6 @@ var app = new Vue({
             }
 
             ;
-            console.log(i, isInCart);
 
             if (isInCart) {
               // we found it so lets increase the quantity
@@ -61940,7 +62007,8 @@ var app = new Vue({
     addToCart: function addToCart(product) {
       // We add the product to the cart 
       // after selecting options
-      this.cart.push(this.currentProduct); // Destroy the options popup
+      var target = this.jsonCopy(this.currentProduct);
+      this.cart.push(target); // Destroy the options popup
 
       this.isOptionsPopupOpen = false;
     },
@@ -61959,6 +62027,13 @@ var app = new Vue({
       }); // console.log(orderUrl);
 
       window.open("http://store.getnord.live/index.php?route=checkout/cart/addToCart&".concat(orderUrl));
+    },
+    // The need for the following function comes from a bug that appeared when adding the same product but with different
+    // options to the cart. The bug basically resulted in altering the same product to have the same options.
+    // The fix was basically just cloning the object, so we are not refrencing the same root object.
+    // Kind off this is confusing, but it works.
+    jsonCopy: function jsonCopy(src) {
+      return JSON.parse(JSON.stringify(src));
     }
   }
 });

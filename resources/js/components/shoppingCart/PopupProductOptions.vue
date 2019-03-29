@@ -7,7 +7,7 @@
             <div class="card__hide" @click="close">
                 <i class="fas fa-times"></i>
             </div>
-            <div class="card__validation" v-show="showValidationErreur">
+            <div class="card__validation" v-show="showValidationError">
                 <p>Please select an option</p>
             </div>
             <div class="card__option">
@@ -34,6 +34,9 @@
                 </h3>
                 <input class="card__option__input" type="number" v-model="selectedQuantity" min="1" max="5">
             </div>
+            <div class="card__validation" v-show="showQuantityError">
+                <p>Please enter a valid quantity</p>
+            </div>
             <button class="card__btn cart__bt--blue" @click="addToCart">
                 ADD TO CART
             </button>
@@ -55,17 +58,20 @@ export default {
             selectedProvider: '',
             selectedColor: '',
             selectedQuantity: 1,
-            quantity: 1,
-            showValidationErreur: false
+            showValidationError: false,
+            showQuantityError: false,
         }
     },
 
     watch: {
         selectedProvider() { 
-            return this.showValidationErreur = false 
+            return this.showValidationError = false; 
         },
         selectedColor() { 
-            return this.showValidationErreur = false 
+            return this.showValidationError = false;
+        },
+        selectedQuantity() {
+            return this.showQuantityError = false;
         }
     },
 
@@ -88,9 +94,16 @@ export default {
         },
 
         addToCart() {
+            // if no options is selected
             if( this.selectedProvider == '' || this.selectedColor == '') {
-                this.showValidationErreur = true;
-            } else {
+                this.showValidationError = true;
+            };
+            // if quantity is negative
+            if ( parseInt(this.selectedQuantity) < 0 ) {
+                this.showQuantityError = true;
+            };
+            // if no errors exists
+            if( this.selectedQuantity > 0 && !( this.selectedProvider == '' || this.selectedColor == '')) {
                 // provider
                 this.product.option[227] = this.selectedProvider;
                 // color

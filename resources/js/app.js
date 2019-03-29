@@ -75,7 +75,16 @@ const app = new Vue({
                     },
                     name: 'Getnord Lynx',
                     price: {
-                        us: 299
+                        us: 299,
+                        ca: 299,
+                        uk: 299,
+                        fr: 299,
+                        it: 299,
+                        nl: 299,
+                        pl: 1299,
+                        lt: 299,
+                        es: 299,
+                        de: 299
                     },
                     quantity: 1
                 },
@@ -89,7 +98,16 @@ const app = new Vue({
                     },
                     name: 'Getnord Onyx',
                     price: {
-                        us: 299
+                        us: 299,
+                        ca: 299,
+                        uk: 299,
+                        fr: 299,
+                        it: 299,
+                        nl: 299,
+                        pl: 1299,
+                        lt: 299,
+                        es: 299,
+                        de: 299
                     },
                     quantity: 1
                 },
@@ -97,7 +115,16 @@ const app = new Vue({
                     product_id: 3,
                     name: 'Getnord Walrus',
                     price: {
-                        us: 99
+                        us: 299,
+                        ca: 299,
+                        uk: 299,
+                        fr: 299,
+                        it: 299,
+                        nl: 299,
+                        pl: 1299,
+                        lt: 299,
+                        es: 299,
+                        de: 299
                     },
                     quantity: 1
                 },
@@ -131,11 +158,9 @@ const app = new Vue({
                         for( i ; i < this.cart.length; i++ )  {
                             if( this.cart[i].product_id == product_id ) {
                                 isInCart = true;
-                                console.log( 'found' , i);
                                 break;
                             };
                         };
-                        console.log(i, isInCart);
                         if( isInCart ) {
                             // we found it so lets increase the quantity
                             const quantity = parseInt(this.cart[i].quantity);
@@ -163,7 +188,8 @@ const app = new Vue({
         addToCart(product) {
             // We add the product to the cart 
             // after selecting options
-            this.cart.push(this.currentProduct);
+            const target = this.jsonCopy(this.currentProduct);
+            this.cart.push(target);
             // Destroy the options popup
             this.isOptionsPopupOpen = false;
         },
@@ -183,6 +209,13 @@ const app = new Vue({
             const orderUrl = http_build_query({products: this.cart});
             // console.log(orderUrl);
             window.open(`http://store.getnord.live/index.php?route=checkout/cart/addToCart&${orderUrl}`);
+        },
+        // The need for the following function comes from a bug that appeared when adding the same product but with different
+        // options to the cart. The bug basically resulted in altering the same product to have the same options.
+        // The fix was basically just cloning the object, so we are not refrencing the same root object.
+        // Kind off this is confusing, but it works.
+        jsonCopy(src) {
+            return JSON.parse(JSON.stringify(src));
         }
     },
 

@@ -4,7 +4,7 @@
 		<div class="cart__hide" @click="hideCart">
 			<i class="fa fa-times"></i>
 		</div>
-        <div class="cart__table">
+        <div class="cart__table" v-if="productsInCart.length !== 0">
             <table class="table">
                 <thead>
                     <th colspan="2">Product</th>
@@ -38,6 +38,9 @@
             </table>
             <p class="page-btn"><a class="btn" href="#" @click.prevent="checkout">Checkout</a></p>
         </div>
+		<div v-else class="cart__empty">
+			<p>Your cart is empty</p>
+		</div>
     </div>
 </template>
 
@@ -182,5 +185,8 @@ export default {
 	.btn:focus
 		box-shadow: none
 
+.cart__empty
+	width: 100%
+	text-align: center
 </style>
 

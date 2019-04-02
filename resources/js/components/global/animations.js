@@ -7,15 +7,15 @@ import ScrollMagic from 'scrollmagic';
 // responsible for smooth scrolling from section to section
 function sectionToSection() {
 
-    $(document).on('click', 'a[href^="#"]', function(event) {
+    // $(document).on('click', 'a[href^="#"]', function(event) {
 
-        event.preventDefault();
+    //     event.preventDefault();
 
-        $('html, body').animate({
-            scrollTop: $($.attr(this, 'href')).offset().top
-        }, 800);
+    //     $('html, body').animate({
+    //         scrollTop: $($.attr(this, 'href')).offset().top
+    //     }, 800);
 
-    });
+    // });
 
 };
 

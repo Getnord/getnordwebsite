@@ -1,13 +1,5 @@
-
-// Fonts
-@import url('https://fonts.googleapis.com/css?family=Nunito');
-
 // Variables
 @import 'variables';
-
-// Bootstrap
-
-// @import '~bootstrap/scss/bootstrap';
 
 // Old css file
 @import 'global/main.css';
@@ -20,5 +12,8 @@
 
 // Informational pages
 @import 'pages/informational/style.sass';
+
+// Home Page
+// @import 'pages/home/style.css';
 
 

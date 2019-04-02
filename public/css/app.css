@@ -1,4 +1,4 @@
-@import url(https://fonts.googleapis.com/css?family=Nunito);/* reset */
+/* reset */
 html, body, div, span, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, pre,
 a, img, del, ins, em, q, small, strong, sub, sup, b, i, dl, dt, dd, ol, ul, li,
 form, fieldset, legend, label, table, caption, thead, tbody, tfoot, tr, th, td, hr,
@@ -2777,14 +2777,14 @@ body {
   width: 100%;
 }
 
-.main_container {
+body .main_container {
   max-width: 1100px;
   margin: 20px auto;
   padding: 20px;
   display: block;
 }
 
-h1 {
+body h1 {
   font-weight: 700;
   margin-left: 15px;
   letter-spacing: 1px;
@@ -2794,16 +2794,16 @@ h1 {
   margin: 15px;
 }
 
-p {
+.text-container p {
   margin-bottom: 10px;
   letter-spacing: 1px;
 }
 
-ul {
+.text-container ul {
   padding-left: 20px;
 }
 
-ul li {
+.text-container ul li {
   margin-bottom: 10px;
 }
 

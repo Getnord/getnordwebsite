@@ -18,15 +18,18 @@ window.Event = new Vue();
 
 import NavInit from './components/global/header';
 import contactForm from './components/contactForm/form';
+// There is a bug in animations that keeps fucking everything up,
+// that bitch needs to be fixed asap
 import startAnimations from './components/global/animations';
 import specsDropDownToggle from './components/homePage/specsSection';
+import videosControllers from './components/homePage/videos.js';
 
-$(document).ready(function() {
-    $('.btn-buy-product').on('click', function() {
-        $('section#buy-product').addClass('active');
-    });
+// $(document).ready(function() {
+//     $('.btn-buy-product').on('click', function() {
+//         $('section#buy-product').addClass('active');
+//     });
     
-});
+// });
 
 $(document).ready(function() {
         
@@ -34,6 +37,7 @@ $(document).ready(function() {
     startAnimations();
     specsDropDownToggle();
     contactForm();
+    videosControllers();
     
 });
 
@@ -44,8 +48,11 @@ import buyBtn from './components/shoppingCart/BaseBuyButton.vue';
 import optionsPopup from './components/shoppingCart/PopupProductOptions.vue';
 import shoppingCart from './components/shoppingCart/PopupCart.vue';
 import shoppingCartIcon from './components/shoppingCart/ShoppingCartIcon.vue';
-// require('locutus/php/url/http_build_query')
+import checkoutPage from './components/shoppingCart/Checkout.vue';
+import products from './components/shoppingCart/products';
+
 import http_build_query from 'locutus/php/url/http_build_query';
+import Axios from 'axios';
 
 // the following is used to be able to use laravel lang resources in JS
 // it will be used to have a funcional localization in this app 
@@ -60,6 +67,7 @@ const app = new Vue({
         optionsPopup,
         shoppingCart,
         shoppingCartIcon,
+        checkoutPage,
     },
 
     data: {
@@ -132,11 +140,38 @@ const app = new Vue({
         },
         isOptionsPopupOpen: false,
         isShoppingCartOpen: false,
+        isCheckoutPageOpen: false,
+        lang: '',
+        currency: '',
         options: false,
+        orderUrl: '',
         cart: [],
         currentProduct: {}
     },
+    watch: {
+        cart() {
+            localStorage.cartData = JSON.stringify(this.cart);
+        }
+    },
+    mounted() {
+        // we want to set the lang
+        this.lang = document.getElementsByTagName('html')[0].getAttribute('lang');
+        // we also want to check if any cart data exists 
+        if(localStorage.cartData) {
+            this.cart = JSON.parse(localStorage.cartData);
+        };
+        // Check if the products are available in stock
+        const form = new FormData();
+        form.append("product_id", "40");
 
+        axios.post('http://opencart.info/index.php?route=product/product/stock',form)
+            .then(function (response) {
+                console.log(response);
+            })
+            .catch(function (error) {
+                console.log(error);
+            });
+    },
     methods: {
         buybtnclicked(product_id, productHasOptions) {
             if( productHasOptions == true) {
@@ -205,10 +240,32 @@ const app = new Vue({
         checkout() {
             // we are using OpenCart as a platform handling the e-commerce part
             // we add the products to the cart using an external link that contains
-            // an array called products 
-            const orderUrl = http_build_query({products: this.cart});
-            // console.log(orderUrl);
-            window.open(`http://store.getnord.live/index.php?route=checkout/cart/addToCart&${orderUrl}`);
+            // an array called products
+
+            /**
+             * Check if cart is empty
+             */
+            if( this.cart.length === 0 ) {
+                // do someting like maybe show cart empty
+                console.log('empty');
+            } else {
+                // we don't need all the data we have in the cart
+                let cartSlim = [];
+                this.cart.forEach(element => {
+                    cartSlim.push({
+                        product_id: element.product_id,
+                        option: element.option,
+                        quantity: element.quantity
+                    });
+                });
+                const cartUrl = http_build_query({products: cartSlim, lang: this.lang, currency: this.currency});
+                this.isCheckoutPageOpen = true;
+                this.orderUrl = `http://store.getnord.live/index.php?route=checkout/cart/addToCart&${cartUrl}`;
+            }
+
+        },
+        hideCheckout() {
+            this.isCheckoutPageOpen = false;
         },
         // The need for the following function comes from a bug that appeared when adding the same product but with different
         // options to the cart. The bug basically resulted in altering the same product to have the same options.

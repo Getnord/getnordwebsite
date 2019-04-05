@@ -49,6 +49,7 @@ import optionsPopup from './components/shoppingCart/PopupProductOptions.vue';
 import shoppingCart from './components/shoppingCart/PopupCart.vue';
 import shoppingCartIcon from './components/shoppingCart/ShoppingCartIcon.vue';
 import checkoutPage from './components/shoppingCart/Checkout.vue';
+import baseTextWarning from './components/shoppingCart/BaseTextWarning.vue';
 import products from './components/shoppingCart/products';
 
 import http_build_query from 'locutus/php/url/http_build_query';
@@ -68,6 +69,7 @@ const app = new Vue({
         shoppingCart,
         shoppingCartIcon,
         checkoutPage,
+        baseTextWarning,
     },
 
     data: {
@@ -94,7 +96,8 @@ const app = new Vue({
                         es: 299,
                         de: 299
                     },
-                    quantity: 1
+                    quantity: 1,
+                    stock: 100
                 },
                 {
                     product_id: 2,
@@ -117,7 +120,8 @@ const app = new Vue({
                         es: 299,
                         de: 299
                     },
-                    quantity: 1
+                    quantity: 1,
+                    stock: 100
                 },
                 {
                     product_id: 3,
@@ -134,13 +138,16 @@ const app = new Vue({
                         es: 299,
                         de: 299
                     },
-                    quantity: 1
+                    quantity: 1,
+                    stock: 100
                 },
-            ]
+            ],
+            openCartData: []
         },
         isOptionsPopupOpen: false,
         isShoppingCartOpen: false,
         isCheckoutPageOpen: false,
+        isProductNotAvailalbe: false,
         lang: '',
         currency: '',
         options: false,
@@ -162,11 +169,12 @@ const app = new Vue({
         };
         // Check if the products are available in stock
         const form = new FormData();
-        form.append("product_id", "40");
-
+        // the array contains the product ids
+        form.append("products", "[\"30\",\"40\", \"50\"]");
         axios.post('http://opencart.info/index.php?route=product/product/stock',form)
-            .then(function (response) {
-                console.log(response);
+            .then(response => {
+                // product detials from OpenCart
+                this.info.openCartData = response.data.products;
             })
             .catch(function (error) {
                 console.log(error);
@@ -174,20 +182,42 @@ const app = new Vue({
     },
     methods: {
         buybtnclicked(product_id, productHasOptions) {
+            // checking if product exits in our data
+            this.info.openCartData.forEach(product => {
+                if( product.product_id ==  product_id ) {
+                    this.currentProduct = product;
+                }
+            });
+            
+            // checking the product stock quantities
+            switch (this.currentProduct.quantity) {
+                case '0':
+                    // show not available message for a fixed amount of time
+                    this.isProductNotAvailalbe = true;
+                    setTimeout(() => {
+                        this.isProductNotAvailalbe = false;
+                    }, 6000);
+                    break;
+            
+                default:
+                    console.log(this.currentProduct.quantity)
+                    break;
+            };
+
             if( productHasOptions == true) {
                 // we want to open the options popup
                 this.info.products.forEach(product => {
                     if( product.product_id ==  product_id ) {
                         this.currentProduct = product;
+                        this.openOptionsPopup();
                     }
                 });
-                this.openOptionsPopup();
             } else {
                 // we add the product directlyl to the cart
                 this.info.products.forEach(product => {
                     // first we validate that the product exists 
                     if( product.product_id ==  product_id && this.cart.length != 0 ) {
-                        // we need to iterate over the cart to see if the product exists in the cart
+                        // we need to iterate over the cart to see if the product is already added to the cart
                         let isInCart = false;
                         let i = 0;
                         for( i ; i < this.cart.length; i++ )  {
@@ -207,10 +237,11 @@ const app = new Vue({
                     // if cart is empty, we can't iterate over it
                     } else if( product.product_id ==  product_id && this.cart.length == 0) {
                         this.cart.push(product);
-                    }
+                    };
                 });
             }   
         },
+
         openOptionsPopup() {
             this.isShoppingCartOpen = false;
             this.isOptionsPopupOpen = true;

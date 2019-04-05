@@ -74,20 +74,7 @@ export default {
             return this.showQuantityError = false;
         }
     },
-
-    mounted() {
-       
-    },
     
-    computed: {
-        providers() {
-            return []
-        },
-        colors() {
-            return []
-        }
-    },
-
     methods: {
         close() {
             this.$emit('close-options-popup');

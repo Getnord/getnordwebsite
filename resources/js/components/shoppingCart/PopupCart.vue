@@ -22,8 +22,8 @@
                         	<input type="number" v-model="product.quantity" min="1"/>
                        		<a class="num_plus" href="#" @click.prevent="countQty(index, 1)">+</a>
 						</td>
-                        <td class="cart_item_price">{{ trans('shoppingCart.currency_symbol') }}{{ product.price.us }}</td>
-                        <td class="cart_item_tprice">{{ trans('shoppingCart.currency_symbol') }}{{ product.quantity * product.price.us }}</td>
+                        <td class="cart_item_price">{{ trans('shoppingCart.currency_symbol') }}{{ product.price }}</td>
+                        <td class="cart_item_tprice">{{ trans('shoppingCart.currency_symbol') }}{{ product.quantity * product.price }}</td>
                         <td><a class="list_item_del" href="#" @click.prevent="delCartItem($event.currentTarget, index)"><i class="far fa-trash-alt"></i></a></td>
                     </tr>
                 </tbody>
@@ -63,7 +63,7 @@ export default {
 		total() {
 			let accum = 0;
 			this.productsInCart.forEach(product => {
-				accum = product.price.us * product.quantity + accum;
+				accum = product.price * product.quantity + accum;
 			});
 			return accum;
 		}

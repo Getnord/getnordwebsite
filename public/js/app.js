@@ -1919,7 +1919,7 @@ __webpack_require__.r(__webpack_exports__);
     total: function total() {
       var accum = 0;
       this.productsInCart.forEach(function (product) {
-        accum = product.price.us * product.quantity + accum;
+        accum = product.price * product.quantity + accum;
       });
       return accum;
     }
@@ -2048,7 +2048,9 @@ __webpack_require__.r(__webpack_exports__);
       ; // if no errors exists
 
       if (this.selectedQuantity > 0 && !(this.selectedProvider == '' || this.selectedColor == '')) {
-        // provider
+        // adding the option property
+        this.product.option = {}; // provider
+
         this.product.option[227] = this.selectedProvider; // color
 
         this.product.option[228] = this.selectedColor; // quantity
@@ -49515,14 +49517,14 @@ var render = function() {
                   _c("td", { staticClass: "cart_item_price" }, [
                     _vm._v(
                       _vm._s(_vm.trans("shoppingCart.currency_symbol")) +
-                        _vm._s(product.price.us)
+                        _vm._s(product.price)
                     )
                   ]),
                   _vm._v(" "),
                   _c("td", { staticClass: "cart_item_tprice" }, [
                     _vm._v(
                       _vm._s(_vm.trans("shoppingCart.currency_symbol")) +
-                        _vm._s(product.quantity * product.price.us)
+                        _vm._s(product.quantity * product.price)
                     )
                   ]),
                   _vm._v(" "),
@@ -62111,6 +62113,18 @@ var app = new Vue({
   },
   data: {
     info: {
+      currencies: {
+        us: 'usd',
+        ca: 'usd',
+        uk: 'gpb',
+        fr: 'eur',
+        it: 'eur',
+        nl: 'eur',
+        pl: 'pnl',
+        lt: 'eur',
+        es: 'eur',
+        de: 'eur'
+      },
       products: [{
         product_id: 50,
         option: {
@@ -62208,6 +62222,7 @@ var app = new Vue({
     var form = new FormData(); // the array contains the product ids
 
     form.append("products", "[\"30\",\"40\", \"50\"]");
+    form.append("currency", this.info.currencies[this.lang]);
     axios.post('http://opencart.info/index.php?route=product/product/stock', form).then(function (response) {
       // product detials from OpenCart
       _this.info.openCartData = response.data.products;
@@ -62224,6 +62239,8 @@ var app = new Vue({
         if (product.product_id == product_id) {
           _this2.currentProduct = product;
         }
+
+        ;
       }); // checking the product stock quantities
 
       switch (this.currentProduct.quantity) {
@@ -62236,58 +62253,68 @@ var app = new Vue({
           break;
 
         default:
-          console.log(this.currentProduct.quantity);
+          if (productHasOptions == true) {
+            // open the options popup
+            this.info.openCartData.forEach(function (product) {
+              if (product.product_id == product_id) {
+                _this2.currentProduct = product;
+
+                _this2.openOptionsPopup();
+              }
+            });
+          } else {
+            // add the product to the cart
+            this.info.openCartData.forEach(function (product) {
+              // first we validate that the product exists 
+              if (product.product_id == product_id && _this2.cart.length != 0) {
+                // we need to iterate over the cart to see if the product is already added to the cart
+                var isInCart = false;
+                var i = 0;
+
+                for (i; i < _this2.cart.length; i++) {
+                  if (_this2.cart[i].product_id == product_id) {
+                    isInCart = true;
+                    break;
+                  }
+
+                  ;
+                }
+
+                ;
+
+                if (isInCart) {
+                  // we found it so lets increase the quantity
+                  var quantity = parseInt(_this2.cart[i].quantity);
+                  _this2.cart[i].quantity = quantity + 1;
+                } else {
+                  // add the item to the cart
+                  _this2.cart.push({
+                    name: product.name,
+                    product_id: product.product_id,
+                    price: parseInt(product.price),
+                    quantity: 1
+                  });
+                }
+
+                ; // if cart is empty, we can't iterate over it
+              } else if (product.product_id == product_id && _this2.cart.length == 0) {
+                _this2.cart.push({
+                  name: product.name,
+                  product_id: product.product_id,
+                  price: parseInt(product.price),
+                  quantity: 1
+                }); // this.cart.push(product);
+
+              }
+
+              ;
+            });
+          }
+
           break;
       }
 
       ;
-
-      if (productHasOptions == true) {
-        // we want to open the options popup
-        this.info.products.forEach(function (product) {
-          if (product.product_id == product_id) {
-            _this2.currentProduct = product;
-
-            _this2.openOptionsPopup();
-          }
-        });
-      } else {
-        // we add the product directlyl to the cart
-        this.info.products.forEach(function (product) {
-          // first we validate that the product exists 
-          if (product.product_id == product_id && _this2.cart.length != 0) {
-            // we need to iterate over the cart to see if the product is already added to the cart
-            var isInCart = false;
-            var i = 0;
-
-            for (i; i < _this2.cart.length; i++) {
-              if (_this2.cart[i].product_id == product_id) {
-                isInCart = true;
-                break;
-              }
-
-              ;
-            }
-
-            ;
-
-            if (isInCart) {
-              // we found it so lets increase the quantity
-              var quantity = parseInt(_this2.cart[i].quantity);
-              _this2.cart[i].quantity = quantity + 1;
-            } else {
-              // add the item to the cart
-              _this2.cart.push(product);
-            }
-
-            ; // if cart is empty, we can't iterate over it
-          } else if (product.product_id == product_id && _this2.cart.length == 0) {
-            _this2.cart.push(product);
-          }
-
-          ;
-        });
-      }
     },
     openOptionsPopup: function openOptionsPopup() {
       this.isShoppingCartOpen = false;
@@ -62296,11 +62323,16 @@ var app = new Vue({
     closeOptionsPopup: function closeOptionsPopup() {
       this.isOptionsPopupOpen = false;
     },
-    addToCart: function addToCart(product) {
+    addToCart: function addToCart() {
       // We add the product to the cart 
       // after selecting options
-      var target = this.jsonCopy(this.currentProduct);
-      this.cart.push(target); // Destroy the options popup
+      var productToAdd = this.jsonCopy({
+        name: this.currentProduct.name,
+        product_id: this.currentProduct.product_id,
+        price: parseInt(this.currentProduct.price),
+        quantity: 1
+      });
+      this.cart.push(productToAdd); // Destroy the options popup
 
       this.isOptionsPopupOpen = false;
     },

@@ -11,7 +11,7 @@
 <buy-btn product-id="30" @buy-btn-clicked="buybtnclicked" :product-has-options="true">
     id 30
 </buy-btn>
-<buy-btn product-id="40" @buy-btn-clicked="buybtnclicked" :product-has-options="true">
+<buy-btn product-id="40" @buy-btn-clicked="buybtnclicked" :product-has-options="false">
     id 40
 </buy-btn>
 

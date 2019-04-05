@@ -74,7 +74,7 @@ export default {
             return this.showQuantityError = false;
         }
     },
-    
+
     methods: {
         close() {
             this.$emit('close-options-popup');
@@ -91,6 +91,8 @@ export default {
             };
             // if no errors exists
             if( this.selectedQuantity > 0 && !( this.selectedProvider == '' || this.selectedColor == '')) {
+                // adding the option property
+                this.product.option = {};
                 // provider
                 this.product.option[227] = this.selectedProvider;
                 // color

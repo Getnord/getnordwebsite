@@ -74,6 +74,18 @@ const app = new Vue({
 
     data: {
         info: {
+            currencies: {
+                us: 'usd',
+                ca: 'usd',
+                uk: 'gpb',
+                fr: 'eur',
+                it: 'eur',
+                nl: 'eur',
+                pl: 'pnl',
+                lt: 'eur',
+                es: 'eur',
+                de: 'eur'
+            },
             products: [
                 {
                     product_id: 50,
@@ -171,6 +183,7 @@ const app = new Vue({
         const form = new FormData();
         // the array contains the product ids
         form.append("products", "[\"30\",\"40\", \"50\"]");
+        form.append("currency", this.info.currencies[this.lang]);
         axios.post('http://opencart.info/index.php?route=product/product/stock',form)
             .then(response => {
                 // product detials from OpenCart
@@ -186,7 +199,7 @@ const app = new Vue({
             this.info.openCartData.forEach(product => {
                 if( product.product_id ==  product_id ) {
                     this.currentProduct = product;
-                }
+                };
             });
             
             // checking the product stock quantities
@@ -200,46 +213,58 @@ const app = new Vue({
                     break;
             
                 default:
-                    console.log(this.currentProduct.quantity)
+                    if( productHasOptions == true) {
+                        // open the options popup
+                        this.info.openCartData.forEach(product => {
+                            if( product.product_id ==  product_id ) {
+                                this.currentProduct = product;
+                                this.openOptionsPopup();
+                            }
+                        });
+                    } else {
+                        // add the product to the cart
+                        this.info.openCartData.forEach(product => {
+                            // first we validate that the product exists 
+                            if( product.product_id ==  product_id && this.cart.length != 0 ) {
+                                // we need to iterate over the cart to see if the product is already added to the cart
+                                let isInCart = false;
+                                let i = 0;
+                                for( i ; i < this.cart.length; i++ )  {
+                                    if( this.cart[i].product_id == product_id ) {
+                                        isInCart = true;
+                                        break;
+                                    };
+                                };
+                                if( isInCart ) {
+                                    // we found it so lets increase the quantity
+                                    const quantity = parseInt(this.cart[i].quantity);
+                                    this.cart[i].quantity = quantity + 1;
+                                } else {
+                                    // add the item to the cart
+                                    this.cart.push({
+                                        name: product.name,
+                                        product_id: product.product_id,
+                                        price: parseInt(product.price),
+                                        quantity: 1
+                                    });
+                                };
+                            // if cart is empty, we can't iterate over it
+                            } else if( product.product_id ==  product_id && this.cart.length == 0) {
+
+                                this.cart.push({
+                                    name: product.name,
+                                    product_id: product.product_id,
+                                    price: parseInt(product.price),
+                                    quantity: 1
+                                });
+                                // this.cart.push(product);
+                            };
+                        });
+                    } 
                     break;
             };
 
-            if( productHasOptions == true) {
-                // we want to open the options popup
-                this.info.products.forEach(product => {
-                    if( product.product_id ==  product_id ) {
-                        this.currentProduct = product;
-                        this.openOptionsPopup();
-                    }
-                });
-            } else {
-                // we add the product directlyl to the cart
-                this.info.products.forEach(product => {
-                    // first we validate that the product exists 
-                    if( product.product_id ==  product_id && this.cart.length != 0 ) {
-                        // we need to iterate over the cart to see if the product is already added to the cart
-                        let isInCart = false;
-                        let i = 0;
-                        for( i ; i < this.cart.length; i++ )  {
-                            if( this.cart[i].product_id == product_id ) {
-                                isInCart = true;
-                                break;
-                            };
-                        };
-                        if( isInCart ) {
-                            // we found it so lets increase the quantity
-                            const quantity = parseInt(this.cart[i].quantity);
-                            this.cart[i].quantity = quantity + 1;
-                        } else {
-                            // add the item to the cart
-                            this.cart.push(product);
-                        };
-                    // if cart is empty, we can't iterate over it
-                    } else if( product.product_id ==  product_id && this.cart.length == 0) {
-                        this.cart.push(product);
-                    };
-                });
-            }   
+             
         },
 
         openOptionsPopup() {
@@ -251,11 +276,16 @@ const app = new Vue({
             this.isOptionsPopupOpen = false;
         },
 
-        addToCart(product) {
+        addToCart() {
             // We add the product to the cart 
             // after selecting options
-            const target = this.jsonCopy(this.currentProduct);
-            this.cart.push(target);
+            const productToAdd = this.jsonCopy({
+                name: this.currentProduct.name,
+                product_id: this.currentProduct.product_id,
+                price: parseInt(this.currentProduct.price),
+                quantity: 1
+            });
+            this.cart.push(productToAdd);
             // Destroy the options popup
             this.isOptionsPopupOpen = false;
         },

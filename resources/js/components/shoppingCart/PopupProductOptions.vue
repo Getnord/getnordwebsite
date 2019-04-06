@@ -24,8 +24,8 @@
                     color <span>*</span>
                 </h3>
                 <select name="provider" v-model="selectedColor" class="card__option__select" required>
-                    <option value="20"> Black </option>
-                    <option value="19"> Black/red </option>
+                    <option value="15"> Black </option>
+                    <option value="16"> Black/red </option>
                 </select>
             </div>
             <div class="card__option">
@@ -91,12 +91,14 @@ export default {
             };
             // if no errors exists
             if( this.selectedQuantity > 0 && !( this.selectedProvider == '' || this.selectedColor == '')) {
-                // adding the option property
-                this.product.option = {};
+                // adding the option property to the product object
+                this.product.option = {
+                    226: 95,
+                }
                 // provider
-                this.product.option[227] = this.selectedProvider;
+                this.product.option[226] = parseInt(this.selectedProvider);
                 // color
-                this.product.option[228] = this.selectedColor;
+                // this.product.option[228] = parseInt(this.selectedColor);
                 // quantity
                 this.product.quantity = parseInt(this.selectedQuantity);
                 // we add the product to the cart

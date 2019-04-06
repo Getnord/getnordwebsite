@@ -1,7 +1,9 @@
 @extends('layouts.test')
 
 @section('content')
-<base-text-warning v-if="isProductNotAvailalbe"></base-text-warning>
+<base-card-warning>
+{{ trans('shoppingCart.product_not_available') }}
+</base-card-warning>
 <buy-btn product-id="2" @buy-btn-clicked="buybtnclicked" :product-has-options="false">
     Onyx
 </buy-btn>

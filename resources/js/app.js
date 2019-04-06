@@ -49,7 +49,7 @@ import optionsPopup from './components/shoppingCart/PopupProductOptions.vue';
 import shoppingCart from './components/shoppingCart/PopupCart.vue';
 import shoppingCartIcon from './components/shoppingCart/ShoppingCartIcon.vue';
 import checkoutPage from './components/shoppingCart/Checkout.vue';
-import baseTextWarning from './components/shoppingCart/BaseTextWarning.vue';
+import baseCardWarning from './components/shoppingCart/BaseCardWarning.vue';
 import products from './components/shoppingCart/products';
 
 import http_build_query from 'locutus/php/url/http_build_query';
@@ -69,7 +69,7 @@ const app = new Vue({
         shoppingCart,
         shoppingCartIcon,
         checkoutPage,
-        baseTextWarning,
+        baseCardWarning,
     },
 
     data: {
@@ -81,7 +81,7 @@ const app = new Vue({
                 fr: 'eur',
                 it: 'eur',
                 nl: 'eur',
-                pl: 'pnl',
+                pl: 'eur',
                 lt: 'eur',
                 es: 'eur',
                 de: 'eur'
@@ -179,7 +179,7 @@ const app = new Vue({
         if(localStorage.cartData) {
             this.cart = JSON.parse(localStorage.cartData);
         };
-        // Check if the products are available in stock
+        // Get all product details form openCart
         const form = new FormData();
         // the array contains the product ids
         form.append("products", "[\"30\",\"40\", \"50\"]");
@@ -198,10 +198,22 @@ const app = new Vue({
             // checking if product exits in our data
             this.info.openCartData.forEach(product => {
                 if( product.product_id ==  product_id ) {
-                    this.currentProduct = product;
+                    this.currentProduct = {
+                        name: product.name,
+                        price: parseInt(product.price),
+                        product_id: product.product_id,
+                        quantity: 1,
+                        stock: product.quantity,
+                    };
                 };
             });
-            
+
+            console.log(_.isEmpty(this.currentProduct));
+            // we throw an error if the product doesn't and stop the execution of the rest of the code
+            if( this.currentProduct == {} ){
+                return console.log('no product exists');
+            };
+
             // checking the product stock quantities
             switch (this.currentProduct.quantity) {
                 case '0':
@@ -215,56 +227,37 @@ const app = new Vue({
                 default:
                     if( productHasOptions == true) {
                         // open the options popup
-                        this.info.openCartData.forEach(product => {
-                            if( product.product_id ==  product_id ) {
-                                this.currentProduct = product;
-                                this.openOptionsPopup();
-                            }
-                        });
+                        this.openOptionsPopup();
                     } else {
                         // add the product to the cart
-                        this.info.openCartData.forEach(product => {
-                            // first we validate that the product exists 
-                            if( product.product_id ==  product_id && this.cart.length != 0 ) {
-                                // we need to iterate over the cart to see if the product is already added to the cart
-                                let isInCart = false;
-                                let i = 0;
-                                for( i ; i < this.cart.length; i++ )  {
-                                    if( this.cart[i].product_id == product_id ) {
-                                        isInCart = true;
-                                        break;
-                                    };
+                        // first we validate that the product exists 
+                        if( this.cart.length != 0 ) {
+                            // we need to iterate over the cart to see if the product is already added to the cart
+                            let isInCart = false;
+                            let i = 0;
+                            for( i ; i < this.cart.length; i++ )  {
+                                if( this.cart[i].product_id == product_id ) {
+                                    isInCart = true;
+                                    break;
                                 };
-                                if( isInCart ) {
-                                    // we found it so lets increase the quantity
-                                    const quantity = parseInt(this.cart[i].quantity);
-                                    this.cart[i].quantity = quantity + 1;
-                                } else {
-                                    // add the item to the cart
-                                    this.cart.push({
-                                        name: product.name,
-                                        product_id: product.product_id,
-                                        price: parseInt(product.price),
-                                        quantity: 1
-                                    });
-                                };
-                            // if cart is empty, we can't iterate over it
-                            } else if( product.product_id ==  product_id && this.cart.length == 0) {
-
-                                this.cart.push({
-                                    name: product.name,
-                                    product_id: product.product_id,
-                                    price: parseInt(product.price),
-                                    quantity: 1
-                                });
-                                // this.cart.push(product);
                             };
-                        });
+                            if( isInCart ) {
+                                // we found it so lets increase the quantity
+                                const quantity = parseInt(this.cart[i].quantity);
+                                this.cart[i].quantity = quantity + 1;
+                            } else {
+                                // add the item to the cart
+                                this.cart.push(this.currentProduct);
+                                this.currentProduct == {}
+                            };
+                        // if cart is empty, we can't iterate over it
+                        } else if( this.cart.length == 0) {
+                            this.cart.push(this.currentProduct);
+                            this.currentProduct == {};
+                        };
                     } 
                     break;
-            };
-
-             
+            };  
         },
 
         openOptionsPopup() {
@@ -279,15 +272,12 @@ const app = new Vue({
         addToCart() {
             // We add the product to the cart 
             // after selecting options
-            const productToAdd = this.jsonCopy({
-                name: this.currentProduct.name,
-                product_id: this.currentProduct.product_id,
-                price: parseInt(this.currentProduct.price),
-                quantity: 1
-            });
+            const productToAdd = this.jsonCopy(this.currentProduct);
             this.cart.push(productToAdd);
             // Destroy the options popup
             this.isOptionsPopupOpen = false;
+            // setting the current product to empty
+            this.currentProduct == {};
         },
 
         openShoppingCart() {
@@ -321,7 +311,8 @@ const app = new Vue({
                 });
                 const cartUrl = http_build_query({products: cartSlim, lang: this.lang, currency: this.currency});
                 this.isCheckoutPageOpen = true;
-                this.orderUrl = `http://store.getnord.live/index.php?route=checkout/cart/addToCart&${cartUrl}`;
+                // this.orderUrl = `http://store.getnord.live/index.php?route=checkout/cart/addToCart&${cartUrl}`;
+                this.orderUrl = `http://localhost/opencart/index.php?route=checkout/cart/addToCart&${cartUrl}`;
             }
 
         },

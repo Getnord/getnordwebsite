@@ -677,6 +677,12 @@ class ControllerProductProduct extends Controller {
 		if ($this->request->server['REQUEST_METHOD'] == 'POST') {
 			if (isset($this->request->post['products'])) {
 
+				if(isset($this->request->post['currency'])) {
+					$this->session->data['currency'] = strtoupper($this->request->post['currency']);
+				};
+
+				$currencies = $this->model_localisation_currency->getCurrencies();
+
 				$this->load->model('catalog/product');
 
 				$products_ids =  json_decode(htmlspecialchars_decode($this->request->post['products']));
@@ -686,9 +692,10 @@ class ControllerProductProduct extends Controller {
 					if ($product_info) {
 						$product_options = $this->model_catalog_product->getProductOptions($product_id);
 						$product_info['option'] = $product_options;
+						$product_info['price'] = $this->currency->format($this->tax->calculate($product_info['price'], $product_info['tax_class_id'], $this->config->get('config_tax')), $this->session->data['currency']);
 						array_push($json['products'], $product_info);
 					}
-				}
+				};
 
 				$this->response->addHeader('Access-Control-Allow-Origin: http://localhost:3000');
 				$this->response->addHeader('Access-Control-Allow-Methods: GET, PUT, POST, DELETE, OPTIONS');

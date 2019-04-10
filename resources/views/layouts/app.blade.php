@@ -18,7 +18,7 @@
     <div class="page_content" id="app">
         @yield('content')
     </div>
-    @include('inc.footer')
+    @include('inc.footer2')
     <script src="{{ asset('js/app.js') }}"></script>
     <script src="{{ url('/') }}/js/lang-{{ app()->getLocale() }}.js"></script>
 </body>

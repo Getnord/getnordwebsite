@@ -96,7 +96,7 @@ export default {
                     226: 95,
                 }
                 // provider
-                this.product.option[226] = parseInt(this.selectedProvider);
+                this.product.option[226] = parseInt(this.selectedColor);
                 // color
                 // this.product.option[228] = parseInt(this.selectedColor);
                 // quantity

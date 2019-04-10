@@ -49,11 +49,9 @@ import optionsPopup from './components/shoppingCart/PopupProductOptions.vue';
 import shoppingCart from './components/shoppingCart/PopupCart.vue';
 import shoppingCartIcon from './components/shoppingCart/ShoppingCartIcon.vue';
 import checkoutPage from './components/shoppingCart/Checkout.vue';
-import baseCardWarning from './components/shoppingCart/BaseCardWarning.vue';
-import products from './components/shoppingCart/products';
+import baseCardMessage from './components/shoppingCart/BaseCardMessage.vue';
 
 import http_build_query from 'locutus/php/url/http_build_query';
-import Axios from 'axios';
 
 // the following is used to be able to use laravel lang resources in JS
 // it will be used to have a funcional localization in this app 
@@ -69,7 +67,7 @@ const app = new Vue({
         shoppingCart,
         shoppingCartIcon,
         checkoutPage,
-        baseCardWarning,
+        baseCardMessage,
     },
 
     data: {
@@ -159,6 +157,7 @@ const app = new Vue({
         isOptionsPopupOpen: false,
         isShoppingCartOpen: false,
         isCheckoutPageOpen: false,
+        isMessageCardOpen: false,
         isProductNotAvailalbe: false,
         lang: '',
         currency: '',
@@ -208,10 +207,9 @@ const app = new Vue({
                 };
             });
 
-            console.log(_.isEmpty(this.currentProduct));
             // we throw an error if the product doesn't and stop the execution of the rest of the code
-            if( this.currentProduct == {} ){
-                return console.log('no product exists');
+            if( _.isEmpty(this.currentProduct)){
+                return this.isMessageCardOpen = true;
             };
 
             // checking the product stock quantities
@@ -225,7 +223,7 @@ const app = new Vue({
                     break;
             
                 default:
-                    if( productHasOptions == true) {
+                    if( productHasOptions == true ) {
                         // open the options popup
                         this.openOptionsPopup();
                     } else {
@@ -258,6 +256,10 @@ const app = new Vue({
                     } 
                     break;
             };  
+        },
+
+        hideMessageCard() {
+            this.isMessageCardOpen = false;
         },
 
         openOptionsPopup() {

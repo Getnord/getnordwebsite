@@ -1,9 +1,9 @@
 @extends('layouts.test')
 
 @section('content')
-<base-card-warning>
+<base-card-message @hide-message-card="hideMessageCard" v-if="isMessageCardOpen">
 {{ trans('shoppingCart.product_not_available') }}
-</base-card-warning>
+</base-card-message>
 <buy-btn product-id="2" @buy-btn-clicked="buybtnclicked" :product-has-options="false">
     Onyx
 </buy-btn>

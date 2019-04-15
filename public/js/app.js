@@ -6380,7 +6380,7 @@ exports = module.exports = __webpack_require__(/*! ../../../../node_modules/css-
 
 
 // module
-exports.push([module.i, ".card[data-v-777e1bec] {\n  position: fixed;\n  bottom: 40px;\n  right: 40px;\n  height: -webkit-fit-content;\n  height: -moz-fit-content;\n  height: fit-content;\n  min-height: 120px;\n  width: 250px;\n  background-color: #fff;\n  box-shadow: 0px 2px 20px #e6e6e6;\n}\n.card__hide[data-v-777e1bec] {\n  position: absolute;\n  top: 10px;\n  right: 10px;\n  cursor: pointer;\n  text-align: center;\n  transition: 0.2s all ease-in;\n  font-size: 20px;\n  -webkit-transform: rotate(0deg);\n          transform: rotate(0deg);\n}\n.card__hide[data-v-777e1bec]:hover {\n  -webkit-transform: rotate(180deg);\n          transform: rotate(180deg);\n}\n.card p[data-v-777e1bec] {\n  padding: 20px;\n}", ""]);
+exports.push([module.i, ".card[data-v-777e1bec] {\n  position: fixed;\n  bottom: 40px;\n  right: 40px;\n  height: -webkit-fit-content;\n  height: -moz-fit-content;\n  height: fit-content;\n  min-height: 120px;\n  width: 250px;\n  background-color: #fff;\n  box-shadow: 0px 2px 20px rgba(0, 0, 0, 0.1);\n  z-index: 20;\n}\n.card__hide[data-v-777e1bec] {\n  position: absolute;\n  top: 10px;\n  right: 10px;\n  cursor: pointer;\n  text-align: center;\n  transition: 0.2s all ease-in;\n  font-size: 20px;\n  -webkit-transform: rotate(0deg);\n          transform: rotate(0deg);\n}\n.card__hide[data-v-777e1bec]:hover {\n  -webkit-transform: rotate(180deg);\n          transform: rotate(180deg);\n}\n.card p[data-v-777e1bec] {\n  padding: 20px;\n}", ""]);
 
 // exports
 
@@ -6399,7 +6399,7 @@ exports = module.exports = __webpack_require__(/*! ../../../../node_modules/css-
 
 
 // module
-exports.push([module.i, ".checkout[data-v-03380332] {\n  display: block;\n  position: fixed;\n  top: 0;\n  left: 0;\n  right: 0;\n  bottom: 0;\n  z-index: 100;\n  background-color: #666666;\n}\n.checkout__hide[data-v-03380332] {\n  font-size: 26px;\n  position: absolute;\n  top: 20px;\n  right: 20px;\n  color: #fff;\n  cursor: pointer;\n  transition: all 0.2s ease-in;\n  text-align: center;\n  -webkit-transform: rotate(0deg);\n          transform: rotate(0deg);\n}\n.checkout__hide[data-v-03380332]:hover {\n  -webkit-transform: rotate(180deg);\n          transform: rotate(180deg);\n}\n.checkout iframe[data-v-03380332] {\n  height: 90%;\n  width: 90%;\n  position: absolute;\n  left: 50%;\n  top: 50%;\n  -webkit-transform: translate(-50%, -50%);\n          transform: translate(-50%, -50%);\n}", ""]);
+exports.push([module.i, ".checkout[data-v-03380332] {\n  display: block;\n  position: fixed;\n  top: 0;\n  left: 0;\n  right: 0;\n  bottom: 0;\n  z-index: 100;\n  background-color: #666666;\n  z-index: 20;\n}\n.checkout__hide[data-v-03380332] {\n  font-size: 26px;\n  position: absolute;\n  top: 100px;\n  right: 20px;\n  color: #fff;\n  cursor: pointer;\n  transition: all 0.2s ease-in;\n  text-align: center;\n  -webkit-transform: rotate(0deg);\n          transform: rotate(0deg);\n}\n.checkout__hide[data-v-03380332]:hover {\n  -webkit-transform: rotate(180deg);\n          transform: rotate(180deg);\n}\n.checkout iframe[data-v-03380332] {\n  height: 80%;\n  width: 90%;\n  position: absolute;\n  left: 50%;\n  top: 56%;\n  -webkit-transform: translate(-50%, -50%);\n          transform: translate(-50%, -50%);\n}", ""]);
 
 // exports
 
@@ -6418,7 +6418,7 @@ exports = module.exports = __webpack_require__(/*! ../../../../node_modules/css-
 
 
 // module
-exports.push([module.i, ".cart[data-v-323ebab0] {\n  letter-spacing: 0.05em;\n  color: black;\n  width: 600px;\n  padding: 15px;\n  margin: 0 auto;\n  margin-top: 15px;\n  background: #ffffff;\n  border-radius: 4px;\n  box-shadow: 1px 2px 25px #ddd;\n  transition-duration: 0.3s;\n  font-size: 16px;\n  text-align: left;\n  position: relative;\n}\n.cart__hide[data-v-323ebab0] {\n  font-size: 20px;\n  position: absolute;\n  top: 10px;\n  right: 10px;\n  cursor: pointer;\n  transition: 0.2s all ease-in;\n  text-align: center;\n  -webkit-transform: rotate(0deg);\n          transform: rotate(0deg);\n}\n.cart__hide[data-v-323ebab0]:hover {\n  -webkit-transform: rotate(180deg);\n          transform: rotate(180deg);\n}\n.table[data-v-323ebab0] {\n  width: 100%;\n}\n.table th[data-v-323ebab0], .table td[data-v-323ebab0] {\n  padding: 0.5em;\n}\n.table thead th[data-v-323ebab0] {\n  border-bottom: 2px solid #abc;\n}\n.table td[data-v-323ebab0] {\n  border-bottom: 1px solid #abc;\n}\n.table tbody tr:last-of-type td[data-v-323ebab0] {\n  border-bottom-width: 2px;\n}\n.table .cart_item_img[data-v-323ebab0] {\n  width: 80px;\n}\n.table .cart_item_qty[data-v-323ebab0] {\n  text-align: center;\n  min-width: 140px;\n  width: 140px;\n}\n.table .cart_item_qty[data-v-323ebab0]::after {\n  content: \"\";\n  display: block;\n  clear: both;\n}\n.table .cart_item_qty a[data-v-323ebab0], .table .cart_item_qty input[data-v-323ebab0] {\n  float: left;\n  height: 27px;\n}\n.table .cart_item_qty a[data-v-323ebab0] {\n  min-width: 27px;\n  border: 1px solid #ccc;\n  text-align: center;\n  border-radius: 3px;\n  padding-left: 3px;\n  background: #fafafa;\n  text-decoration: none;\n  transition-duration: 0.3s;\n  padding-top: 1px;\n  padding-bottom: 1px;\n}\n.table .cart_item_qty a[data-v-323ebab0]:hover {\n  box-shadow: 1px 2px 3px #ccc;\n}\n.table .cart_item_qty input[data-v-323ebab0] {\n  width: calc( 100% - 54px - 35px);\n  text-align: center;\n  margin-left: 5px;\n  margin-right: 5px;\n  border-radius: 3px;\n  border: 1px solid #ccc;\n  box-shadow: 0 1px 3px #ddd;\n}\n.table .cart_item_qty input[data-v-323ebab0]::-webkit-outer-spin-button, .table .cart_item_qty input[data-v-323ebab0]::-webkit-inner-spin-button {\n  -webkit-appearance: none;\n  margin: 0;\n}\n.table .cart_item_qty input[type=number][data-v-323ebab0] {\n  -moz-appearance: textfield;\n}\n.table .cart_item_price[data-v-323ebab0], .table .cart_item_tprice[data-v-323ebab0] {\n  text-align: right;\n}\n.page-btn[data-v-323ebab0] {\n  padding-top: 15px;\n  padding-bottom: 15px;\n  margin: 0;\n  text-align: right;\n}\n.page-btn .btn[data-v-323ebab0]:focus {\n  box-shadow: none;\n}\n.cart__empty[data-v-323ebab0] {\n  width: 100%;\n  text-align: center;\n}", ""]);
+exports.push([module.i, ".cart[data-v-323ebab0] {\n  letter-spacing: 0.05em;\n  color: black;\n  width: 600px;\n  padding: 15px;\n  margin: 0 auto;\n  margin-top: 15px;\n  background: #ffffff;\n  border-radius: 4px;\n  box-shadow: 1px 2px 25px rgba(0, 0, 0, 0.1);\n  transition-duration: 0.3s;\n  font-size: 16px;\n  text-align: left;\n  position: fixed;\n  top: 50%;\n  left: 50%;\n  -webkit-transform: translate(-50%, -50%);\n          transform: translate(-50%, -50%);\n  z-index: 20;\n}\n.cart__hide[data-v-323ebab0] {\n  font-size: 20px;\n  position: absolute;\n  top: 10px;\n  right: 10px;\n  cursor: pointer;\n  transition: 0.2s all ease-in;\n  text-align: center;\n  -webkit-transform: rotate(0deg);\n          transform: rotate(0deg);\n}\n.cart__hide[data-v-323ebab0]:hover {\n  -webkit-transform: rotate(180deg);\n          transform: rotate(180deg);\n}\n.table[data-v-323ebab0] {\n  width: 100%;\n}\n.table th[data-v-323ebab0], .table td[data-v-323ebab0] {\n  padding: 0.5em;\n}\n.table thead th[data-v-323ebab0] {\n  border-bottom: 2px solid #abc;\n}\n.table td[data-v-323ebab0] {\n  border-bottom: 1px solid #abc;\n}\n.table tbody tr:last-of-type td[data-v-323ebab0] {\n  border-bottom-width: 2px;\n}\n.table .cart_item_img[data-v-323ebab0] {\n  width: 80px;\n}\n.table .cart_item_qty[data-v-323ebab0] {\n  text-align: center;\n  min-width: 140px;\n  width: 140px;\n}\n.table .cart_item_qty[data-v-323ebab0]::after {\n  content: \"\";\n  display: block;\n  clear: both;\n}\n.table .cart_item_qty a[data-v-323ebab0], .table .cart_item_qty input[data-v-323ebab0] {\n  float: left;\n  height: 27px;\n}\n.table .cart_item_qty a[data-v-323ebab0] {\n  min-width: 27px;\n  border: 1px solid #ccc;\n  text-align: center;\n  border-radius: 3px;\n  padding-left: 3px;\n  background: #fafafa;\n  text-decoration: none;\n  transition-duration: 0.3s;\n  padding-top: 1px;\n  padding-bottom: 1px;\n}\n.table .cart_item_qty a[data-v-323ebab0]:hover {\n  box-shadow: 1px 2px 3px #ccc;\n}\n.table .cart_item_qty input[data-v-323ebab0] {\n  width: calc( 100% - 54px - 35px);\n  text-align: center;\n  margin-left: 5px;\n  margin-right: 5px;\n  border-radius: 3px;\n  border: 1px solid #ccc;\n  box-shadow: 0 1px 3px #ddd;\n}\n.table .cart_item_qty input[data-v-323ebab0]::-webkit-outer-spin-button, .table .cart_item_qty input[data-v-323ebab0]::-webkit-inner-spin-button {\n  -webkit-appearance: none;\n  margin: 0;\n}\n.table .cart_item_qty input[type=number][data-v-323ebab0] {\n  -moz-appearance: textfield;\n}\n.table .cart_item_price[data-v-323ebab0], .table .cart_item_tprice[data-v-323ebab0] {\n  text-align: right;\n}\n.page-btn[data-v-323ebab0] {\n  padding-top: 15px;\n  padding-bottom: 15px;\n  margin: 0;\n  text-align: right;\n}\n.page-btn .btn[data-v-323ebab0]:focus {\n  box-shadow: none;\n}\n.cart__empty[data-v-323ebab0] {\n  width: 100%;\n  text-align: center;\n}", ""]);
 
 // exports
 
@@ -6437,7 +6437,7 @@ exports = module.exports = __webpack_require__(/*! ../../../../node_modules/css-
 
 
 // module
-exports.push([module.i, ".wrapper[data-v-1200c0bf] {\n  position: fixed;\n  left: 0;\n  right: 0;\n  top: 0;\n  bottom: 0;\n  background-color: rgba(0, 0, 0, 0.4);\n  display: flex;\n  justify-content: center;\n  align-items: center;\n}\n.card[data-v-1200c0bf] {\n  width: 300px;\n  height: -webkit-fit-content;\n  height: -moz-fit-content;\n  height: fit-content;\n  padding: 1em;\n  background-color: #fff;\n  box-shadow: 0px 2px 10px rgba(0, 0, 0, 0.1);\n  border-radius: 6px;\n  position: relative;\n}\n.card__hide[data-v-1200c0bf] {\n  height: 25px;\n  width: 25px;\n  position: absolute;\n  top: 10px;\n  right: 10px;\n  font-size: 20px;\n  cursor: pointer;\n  -webkit-transform: rotate(0deg);\n          transform: rotate(0deg);\n  transition: 0.2s all ease-in;\n  text-align: center;\n}\n.card__hide[data-v-1200c0bf]:hover {\n  -webkit-transform: rotate(180deg);\n          transform: rotate(180deg);\n}\n.card__title[data-v-1200c0bf] {\n  margin-left: 0px;\n}\n.card__option[data-v-1200c0bf] {\n  margin-top: 10px;\n}\n.card__option__title[data-v-1200c0bf] {\n  font-size: 18px;\n  margin-bottom: 4px;\n}\n.card__option__title span[data-v-1200c0bf] {\n  color: red;\n}\n.card__option__input[data-v-1200c0bf], .card__option__select[data-v-1200c0bf] {\n  width: 98%;\n  max-width: 100%;\n  height: 36px;\n  border: 1px solid rgba(0, 0, 0, 0.2);\n  padding: 0px 0px 4px;\n  border-radius: 4px;\n  font-size: 18px;\n  padding: 0px 0px 3px 2px;\n  background-color: #fff;\n}\n.card__btn[data-v-1200c0bf] {\n  height: auto;\n  width: 100%;\n  text-tranform: uppercase;\n  background-color: #0080ff;\n  color: #fff;\n  font-size: 16px;\n  font-weight: 700;\n  margin-top: 14px;\n  padding: 10px;\n  border-radius: 4px;\n  cursor: pointer;\n}\n.card__btn[data-v-1200c0bf]:hover {\n  background-color: #0073e6;\n}\n.card__validation p[data-v-1200c0bf] {\n  font-size: 0.6em;\n  color: #E71D36;\n}", ""]);
+exports.push([module.i, ".wrapper[data-v-1200c0bf] {\n  position: fixed;\n  left: 0;\n  right: 0;\n  top: 0;\n  bottom: 0;\n  background-color: rgba(0, 0, 0, 0.4);\n  display: flex;\n  justify-content: center;\n  align-items: center;\n  z-index: 20;\n}\n.card[data-v-1200c0bf] {\n  width: 300px;\n  height: -webkit-fit-content;\n  height: -moz-fit-content;\n  height: fit-content;\n  padding: 1em;\n  background-color: #fff;\n  box-shadow: 0px 2px 10px rgba(0, 0, 0, 0.1);\n  border-radius: 6px;\n  position: relative;\n}\n.card__hide[data-v-1200c0bf] {\n  height: 25px;\n  width: 25px;\n  position: absolute;\n  top: 10px;\n  right: 10px;\n  font-size: 20px;\n  cursor: pointer;\n  -webkit-transform: rotate(0deg);\n          transform: rotate(0deg);\n  transition: 0.2s all ease-in;\n  text-align: center;\n}\n.card__hide[data-v-1200c0bf]:hover {\n  -webkit-transform: rotate(180deg);\n          transform: rotate(180deg);\n}\n.card__title[data-v-1200c0bf] {\n  margin-left: 0px;\n}\n.card__option[data-v-1200c0bf] {\n  margin-top: 10px;\n}\n.card__option__title[data-v-1200c0bf] {\n  font-size: 18px;\n  margin-bottom: 4px;\n}\n.card__option__title span[data-v-1200c0bf] {\n  color: red;\n}\n.card__option__input[data-v-1200c0bf], .card__option__select[data-v-1200c0bf] {\n  width: 98%;\n  max-width: 100%;\n  height: 36px;\n  border: 1px solid rgba(0, 0, 0, 0.2);\n  padding: 0px 0px 4px;\n  border-radius: 4px;\n  font-size: 18px;\n  padding: 0px 0px 3px 2px;\n  background-color: #fff;\n}\n.card__btn[data-v-1200c0bf] {\n  height: auto;\n  width: 100%;\n  text-tranform: uppercase;\n  background-color: #0080ff;\n  color: #fff;\n  font-size: 16px;\n  font-weight: 700;\n  margin-top: 14px;\n  padding: 10px;\n  border-radius: 4px;\n  cursor: pointer;\n}\n.card__btn[data-v-1200c0bf]:hover {\n  background-color: #0073e6;\n}\n.card__validation p[data-v-1200c0bf] {\n  font-size: 0.6em;\n  color: #E71D36;\n}", ""]);
 
 // exports
 
@@ -62201,7 +62201,6 @@ var app = new Vue({
     isShoppingCartOpen: false,
     isCheckoutPageOpen: false,
     isMessageCardOpen: false,
-    isProductNotAvailalbe: false,
     lang: '',
     currency: '',
     options: false,
@@ -62249,12 +62248,13 @@ var app = new Vue({
             price: parseInt(product.price),
             product_id: product.product_id,
             quantity: 1,
+            option: {},
             stock: product.quantity
           };
         }
 
         ;
-      }); // we throw an error if the product doesn't and stop the execution of the rest of the code
+      }); // we throw an error if the product doesn't exist and stop the execution of the rest of the code
 
       if (_.isEmpty(this.currentProduct)) {
         return this.isMessageCardOpen = true;
@@ -62262,12 +62262,12 @@ var app = new Vue({
 
       ; // checking the product stock quantities
 
-      switch (this.currentProduct.quantity) {
+      switch (this.currentProduct.stock) {
         case '0':
           // show not available message for a fixed amount of time
-          this.isProductNotAvailalbe = true;
+          this.isMessageCardOpen = true;
           setTimeout(function () {
-            _this2.isProductNotAvailalbe = false;
+            _this2.isMessageCardOpen = false;
           }, 6000);
           break;
 
@@ -62591,8 +62591,8 @@ __webpack_require__.r(__webpack_exports__);
  */
 function navWatcher() {
   $(window).on("scroll", function () {
-    var isNavOpen = $('.float-languages').hasClass('active');
-    var isLanguageSelectorOpen = $(".top_menu").hasClass("on"); //change the header background to transparent on scroll
+    var isLanguageSelectorOpen = $('.float-languages').hasClass('active');
+    var isNavvOpen = $(".top_menu").hasClass("on"); //change the header background to transparent on scroll
 
     if ($(window).scrollTop() > 50) {
       $(".page_header").addClass("active");
@@ -62605,22 +62605,18 @@ function navWatcher() {
 
     ;
 
-    if (isNavOpen) {
+    if (isLanguageSelectorOpen) {
       $('.float-languages').removeClass('active');
     }
 
     ; //close the nav menu drop down on scroll
 
-    $(window).on("scroll", function () {
-      var isNavOpen = $(".top_menu").hasClass("on");
+    if (isNavvOpen) {
+      $(".top_menu").removeClass("on");
+      $(".page_header").removeClass("on");
+    }
 
-      if (isNavOpen) {
-        $(".top_menu").removeClass("on");
-        $(".page_header").removeClass("on");
-      }
-
-      ;
-    }); //Make country flag names clickable
+    ; //Make country flag names clickable
 
     $('.floating-selector').find('h3').on('click', function (e) {
       // get the parent of the clicked element
@@ -62671,12 +62667,25 @@ function languageSelectorWatcher() {
 
 ;
 /**
+ * Dropdown
+ */
+
+function toggleDropDown() {
+  $('.dropdown').on('click', function (e) {
+    e.preventDefault();
+    $('.dropdown').toggleClass('active');
+  });
+}
+
+;
+/**
  * public methodes
  */
 
 function NavInit() {
   navWatcher();
   languageSelectorWatcher();
+  toggleDropDown();
 }
 
 ;

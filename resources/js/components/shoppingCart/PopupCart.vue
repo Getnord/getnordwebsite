@@ -103,11 +103,15 @@ export default {
 	margin-top: 15px
 	background: #ffffff
 	border-radius: 4px
-	box-shadow: 1px 2px 25px #ddd
+	box-shadow: 1px 2px 25px rgba(0, 0, 0, 0.1)
 	transition-duration: .3s
 	font-size: 16px
 	text-align: left
-	position: relative
+	position: fixed
+	top: 50%
+	left: 50% 
+	transform: translate(-50%,-50%)
+	z-index: 20
 
 	&__hide
 		font-size: 20px

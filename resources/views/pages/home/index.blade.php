@@ -1,6 +1,27 @@
 @extends('layouts.app')
 @section('pageTitle', __('home.pagetitle'))
-@section('content')    
+@section('content')  
+    <section class="shopping_cart">
+            <buy-btn product-id="50" @buy-btn-clicked="buybtnclicked" :product-has-options="true">
+                    Lynx
+                </buy-btn>
+                <buy-btn product-id="30" @buy-btn-clicked="buybtnclicked" :product-has-options="true">
+                    id 30
+                </buy-btn>
+                <buy-btn product-id="40" @buy-btn-clicked="buybtnclicked" :product-has-options="false">
+                    id 40
+                </buy-btn>
+        <base-card-message @hide-message-card="hideMessageCard" v-if="isMessageCardOpen">
+        @{{ trans('shoppingCart.product_not_available') }}
+        </base-card-message>
+        <shopping-cart-icon :all-products-in-cart-quantity="cart.length" @open-shopping-cart="openShoppingCart"></shopping-cart-icon>
+        {{-- we use v-if because we want the component to rerender --}}
+        <options-popup v-if="isOptionsPopupOpen" @close-options-popup="closeOptionsPopup" v-on:add-to-cart="addToCart" :product="currentProduct">
+        </options-popup>
+
+        <shopping-cart v-show="isShoppingCartOpen" :products-in-cart="cart" @checkout="checkout" @hide-cart="hideCart"></shopping-cart>
+        <checkout-page v-if="isCheckoutPageOpen" :order-url="orderUrl" @hide-checkout="hideCheckout"></checkout-page>
+    </section>
     <section class="intro_section">
         <video autoplay loop muted playsinline class="section_video" inline>
             <source src="{{ url('/') }}/img/intro.mp4" type="video/mp4">
@@ -32,15 +53,18 @@
                             </ul>
                         </div>
                         <div class="section_form">
-                            <button
-                                class="snipcart-add-item button button_blue_solid"
+                            {{-- <button
+                                class="snipcart-add-item "
                                 data-item-id="Getnord lynx"
                                 data-item-name="Getnord Lynx Smartphone"
                                 data-item-url="https://lynx.getnord.com/"
                                 data-item-price='{"usd": 299.00}'
                                 data-item-image="{{ url('/') }}/img/Lynx_with_screen_cart.png"
                                 data-item-description="Getnord Lynx Smartphone"
-                                >Buy</button>
+                                >Buy</button> --}}
+                                <buy-btn product-id="50" @buy-btn-clicked="buybtnclicked" :product-has-options="true">
+                                    Buy
+                                </buy-btn>
                             @if (!( app()->getLocale() == 'lt' || app()->getLocale() == 'pl' ))
                                 <p>Or</p>
                             @endif

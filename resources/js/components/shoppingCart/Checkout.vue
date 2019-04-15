@@ -34,11 +34,12 @@ export default {
     bottom: 0
     z-index: 100
     background-color: lighten(#000, 40%)
+    z-index: 20
 
     &__hide
         font-size: 26px
         position: absolute
-        top: 20px 
+        top: 100px 
         right: 20px
         color: #fff
         cursor: pointer
@@ -50,10 +51,10 @@ export default {
             transform: rotate(180deg)
 
     iframe
-        height: 90%
+        height: 80%
         width: 90%
         position: absolute
         left: 50%
-        top: 50%
+        top: 56%
         transform: translate(-50%, -50%)
 </style>

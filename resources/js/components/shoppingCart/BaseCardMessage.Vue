@@ -28,7 +28,8 @@ export default {
     min-height: 120px
     width: 250px
     background-color: #fff
-    box-shadow: 0px 2px 20px darken(#fff,10%)
+    box-shadow: 0px 2px 20px rgba(0,0,0,0.1)
+    z-index: 20
 
     &__hide
         position: absolute

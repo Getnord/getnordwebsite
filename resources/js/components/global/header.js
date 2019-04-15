@@ -5,9 +5,8 @@
 
 function navWatcher() {
     $(window).on("scroll", function() {
-        const isNavOpen = $('.float-languages').hasClass('active');
-        const isLanguageSelectorOpen = $(".top_menu").hasClass("on");
-
+        const isLanguageSelectorOpen = $('.float-languages').hasClass('active');
+        const isNavvOpen = $(".top_menu").hasClass("on");
         //change the header background to transparent on scroll
         if ($(window).scrollTop() > 50) {
             $(".page_header").addClass("active");
@@ -17,18 +16,16 @@ function navWatcher() {
             $(".page_header").removeClass("active");
             $(".floating-selector").removeClass("inactive");
         };
-        if (isNavOpen) {
+        if (isLanguageSelectorOpen) {
             $('.float-languages').removeClass('active');
         };
 
         //close the nav menu drop down on scroll
-        $(window).on("scroll" , function() {
-            const isNavOpen = $(".top_menu").hasClass("on");
-            if(isNavOpen) {
+        
+            if(isNavvOpen) {
                 $(".top_menu").removeClass("on");
                 $(".page_header").removeClass("on");
             };
-        });
 
         //Make country flag names clickable
         $('.floating-selector').find('h3').on('click', function(e){
@@ -54,7 +51,7 @@ function navWatcher() {
  * Opens and closes the language selector
  */
 function languageSelectorTrig() {
-    var isSelectorOpen = $('.float-languages').hasClass('active');
+    const isSelectorOpen = $('.float-languages').hasClass('active');
     if (isSelectorOpen) {
         $('.float-languages').removeClass('active');
     } else {
@@ -75,12 +72,23 @@ function languageSelectorWatcher() {
 };
 
 /**
+ * Dropdown
+ */
+function toggleDropDown() {
+    $('.dropdown').on('click', function(e) {
+        e.preventDefault();
+        $('.dropdown').toggleClass('active');
+    });
+};
+
+/**
  * public methodes
  */
 
 function NavInit() {
     navWatcher();
     languageSelectorWatcher();
+    toggleDropDown();
 };
 
 export default NavInit;

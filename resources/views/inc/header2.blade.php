@@ -191,8 +191,18 @@
             @else
                 <li><a href="{{ route('home', ['locale' => app()->getLocale()]) }}">SHOP</a></li>
             @endif
-            <li>
-                <a href="#" class="">Phone</a>
+            <li class="dropdown">
+                <a href="#" class="dropdown__btn ">
+                    <p>Phones</p>
+                </a>
+                <ul class="dropdown__list">
+                    <li>
+                        <a href="#">Getnord Lynx</a>
+                    </li>
+                    <li>
+                        <a href="#">Getnord Onyx</a>
+                    </li>
+                </ul>
             </li>
 <!--			<li><a href="javascript:void(0);" onclick="popup_open();">CONTACT</a></li>-->
             <li><a href="{{ route('contact', ['locale' => app()->getLocale()]) }}">CONTACTS&SUPPORT</a></li>

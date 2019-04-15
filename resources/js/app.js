@@ -158,7 +158,6 @@ const app = new Vue({
         isShoppingCartOpen: false,
         isCheckoutPageOpen: false,
         isMessageCardOpen: false,
-        isProductNotAvailalbe: false,
         lang: '',
         currency: '',
         options: false,
@@ -202,23 +201,24 @@ const app = new Vue({
                         price: parseInt(product.price),
                         product_id: product.product_id,
                         quantity: 1,
+                        option: {},
                         stock: product.quantity,
                     };
                 };
             });
 
-            // we throw an error if the product doesn't and stop the execution of the rest of the code
+            // we throw an error if the product doesn't exist and stop the execution of the rest of the code
             if( _.isEmpty(this.currentProduct)){
                 return this.isMessageCardOpen = true;
             };
 
             // checking the product stock quantities
-            switch (this.currentProduct.quantity) {
+            switch (this.currentProduct.stock) {
                 case '0':
                     // show not available message for a fixed amount of time
-                    this.isProductNotAvailalbe = true;
+                    this.isMessageCardOpen = true;
                     setTimeout(() => {
-                        this.isProductNotAvailalbe = false;
+                        this.isMessageCardOpen = false;
                     }, 6000);
                     break;
             

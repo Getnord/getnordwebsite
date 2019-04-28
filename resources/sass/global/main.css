@@ -1634,15 +1634,15 @@ items_section .product_info button:hover {
 	vertical-align: middle;
 }
 .icon_qi {
-	background: transparent url(/img/icon_qi.png) no-repeat 0px 0px;
+	background: transparent url("/img/icon_qi.png") no-repeat 0px 0px;
 	background-size: 220px 125px;
 }
 .icon_compatible {
-	background: transparent url(/img/icon_compatible.png) no-repeat 0px 0px;
+	background: transparent url("/img/icon_compatible.png") no-repeat 0px 0px;
 	background-size: 220px 125px;
 }
 .icon_magnetic {
-	background: transparent url(/img/icon_magnetic.png) no-repeat 0px 0px;
+	background: transparent url("/img/icon_magnetic.png") no-repeat 0px 0px;
 	background-size: 220px 125px;
 }
 .icon_ram, .icon_usa {
@@ -1653,11 +1653,11 @@ items_section .product_info button:hover {
 	vertical-align: middle;
 }
 .icon_ram {
-	background: transparent url(/img/icon_ram.png) no-repeat 0px 0px;
+	background: transparent url("/img/icon_ram.png") no-repeat 0px 0px;
 	background-size: 231px 70px;
 }
 .icon_usa {
-	background: transparent url(/img/icon_usa.png) no-repeat 0px 0px;
+	background: transparent url("/img/icon_usa.png") no-repeat 0px 0px;
 	background-size: 231px 70px;
 }
 

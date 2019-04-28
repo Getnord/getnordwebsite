@@ -34,6 +34,23 @@ class PagesController extends Controller
     }
 
     /**
+     * Onyx page
+     */
+    public function onyx($locale = null) {
+        if(isset($locale)) {
+            app()->setLocale($locale);
+        }
+        else {
+            app()->setLocale('us');
+        }
+        // We want to auto change some links in the nav depending if 
+        // we are on the home page or not
+        $onHomePage = false;
+        session()->put('locale', $locale);
+        return view('pages.onyx.index')->with('onHomePage', $onHomePage);
+    }
+
+    /**
      * Contact page
      */
     public function contact($locale = null) {

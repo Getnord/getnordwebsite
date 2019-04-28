@@ -62381,7 +62381,7 @@ var app = new Vue({
     // The need for the following function comes from a bug that appeared when adding the same product but with different
     // options to the cart. The bug basically resulted in altering the same product to have the same options.
     // The fix was basically just cloning the object, so we are not refrencing the same root object.
-    // Kind off this is confusing, but it works.
+    // I know this is confusing, but its basically preventing the mutation of the object.
     jsonCopy: function jsonCopy(src) {
       return JSON.parse(JSON.stringify(src));
     }

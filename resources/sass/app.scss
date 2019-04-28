@@ -16,6 +16,9 @@
 // Home Page
 // @import 'pages/home/style.css';
 
+// Onyx page
+@import 'pages/onyx/main.sass';
+
 /***************************************************
     Components
 ****************************************************/
@@ -26,4 +29,5 @@
 // header
 @import 'global/header.sass';
 
-
+// global
+@import 'global/components.sass';

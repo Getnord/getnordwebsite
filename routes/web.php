@@ -21,6 +21,7 @@ Route::get('/test', function() {
 
 Route::prefix('{locale?}')->group(function() {
     Route::get('/', 'PagesController@home')->name('home');
+    Route::get('/onyx', 'PagesController@onyx')->name('onyx');
     Route::get('/contact', 'PagesController@contact')->name('contact');
     Route::get('/compatibilty', 'PagesController@compatibility')->name('compatibility');
     Route::get('/shipping', 'PagesController@shipping')->name('shipping');
@@ -67,7 +68,9 @@ Route::get('js/lang-{locale}.js', function ($locale) {
     return $response;
 });
 
-
+/**
+ * used by the contact form submission
+ */
 Route::post('/contact', 'ContactFormController');
 
 

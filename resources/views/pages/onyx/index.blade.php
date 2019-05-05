@@ -23,5 +23,8 @@
     {{-- scratch proof section --}}
     @include('pages.onyx.section_7')
 
+    {{-- accessories section --}}
+    @include('pages.onyx.section_8')
+
 
 @endsection

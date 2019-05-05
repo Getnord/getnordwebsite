@@ -5,6 +5,7 @@ require('./vendor/bullseye/jquery.bullseye-1.0-min.js');
 window.Vue = require('vue');
 window.Event = new Vue();
 
+Vue.config.productTip = false;
 /**
  * The following block of code may be used to automatically register your
  * Vue components. It will recursively scan this directory for the Vue
@@ -18,8 +19,6 @@ window.Event = new Vue();
 
 import NavInit from './components/global/header';
 import contactForm from './components/contactForm/form';
-// There is a bug in animations that keeps fucking everything up,
-// that bitch needs to be fixed asap
 import startAnimations from './components/global/animations';
 import specsDropDownToggle from './components/homePage/specsSection';
 import videosControllers from './components/homePage/videos.js';
@@ -50,8 +49,8 @@ import shoppingCart from './components/shoppingCart/PopupCart.vue';
 import shoppingCartIcon from './components/shoppingCart/ShoppingCartIcon.vue';
 import checkoutPage from './components/shoppingCart/Checkout.vue';
 import baseCardMessage from './components/shoppingCart/BaseCardMessage.vue';
-
 import http_build_query from 'locutus/php/url/http_build_query';
+
 
 // the following is used to be able to use laravel lang resources in JS
 // it will be used to have a funcional localization in this app 
@@ -59,7 +58,7 @@ Vue.prototype.trans = string => _.get(window.i18n, string);
 
 const app = new Vue({
 
-    el:'#app',
+    el:'#shop',
 
     components: {
         buyBtn,
@@ -331,3 +330,42 @@ const app = new Vue({
     },
 
 });
+
+/**
+ * The following vue instance handles the accessories section.
+ */
+import BaseAccessorieCard from './components/accessories/BaseAccessorieCard.vue';
+import DetailsWindow from './components/accessories/DetailsWindow.vue';
+import accessoriesData from './components/accessories/accessoriesData';
+import AccessoriesRow from './components/accessories/accessoriesRow.vue';
+
+const accessories = new Vue({
+    el: '#accessories',
+
+    components: {
+        'base-accessorie-card': BaseAccessorieCard,
+        'details-window': DetailsWindow,
+        'accessories-row': AccessoriesRow
+    },
+
+
+    data: {
+        accessoriesData,
+        activeAccessorie: {},
+        isDetailsWindowOpen: false
+    },
+
+    methods: {
+        openDetailsWindow(id) {
+            console.log(id);
+            /**
+             * we have to find the accessorie data form the accessories data
+             */
+            this.activeAccessorie = _.find(accessoriesData, (o) => o.id = id);
+            if(!_.isEmpty(this.activeAccessorie)) {
+                this.isDetailsWindowOpen = true;   
+            }
+        }
+    }
+});
+

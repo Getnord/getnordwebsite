@@ -19,5 +19,13 @@ return [
     It is neccessary to show the people this technology using simple gifs or video. ',
 
     // section 5 refined to be perfect 
-    'refinedTitle' => 'refined to be perfect'
+    'refinedTitle' => 'refined to be perfect',
+
+
+    // section 7 - scratchproof
+    'scratchProofTitle' => 'ScratchProof',
+    'scratchProofParagraph' => 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam aliquet, odio nec pretium luctus, elit enim gravida mi, ac sagittis odio arcu vitae leo. Sed scelerisque varius erat, sed vehicula risus aliquet vel. Morbi quam massa, rutrum vitae faucibus et, cursus eget mauris. Integer fringilla ullamcorper massa eu finibus. Nulla consectetur rutrum rutrum. In ante ex, fermentum quis elit et, blandit varius odio.',
+
+    // section 8 - accessories
+    'accessoriesTitle' => 'Accessories'
 ];

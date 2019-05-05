@@ -19,19 +19,9 @@ export default {
         }
     },
 
-    data() {
-        return {
-            
-        }
-    },
-
-    mounted() {
-        
-    }, 
-
     methods: {
         clicked() {
-                this.$emit('buy-btn-clicked', this.productId, this.productHasOptions);
+            this.$emit('buy-btn-clicked', this.productId, this.productHasOptions);
         }
     },
 

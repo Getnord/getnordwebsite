@@ -1,4 +1,4 @@
-<section class="product_section" id="product_section">
+<section class="product_section product_section--onyx" id="product_section">
     <div class="page_center">
         <div class="row anim">
             <div class="col_2_3_xl col_1_m">
@@ -20,15 +20,15 @@
                             Buy
                         </buy-btn> --}}
                         <a href="#product_section2" class="button button_yellow button--full-width">{{ __('onyx.heroBtn') }}</a>
-                        <p class="product_section_or-text">Or</p>
+                        <p class="product_section--onyx_or-text">Or</p>
                     </div>
                 </div>
             </div>
         </div>
         <div class="row">
-            <div class="product_section_stores">
+            <div class="product_section--onyx_stores">
                 <h2>{{ __('onyx.maketPlacesTitle') }}</h2>
-                <div class="product_section_stores_list">
+                <div class="product_section--onyx_stores_list">
                     <a href="https://www.amazon.com/dp/B07MMTFHBX" class="store_cta" target="_blank">
                         <img src="{{ url('/') }}/img/amazon.png" alt="">
                     </a>

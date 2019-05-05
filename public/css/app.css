@@ -2819,11 +2819,11 @@ body h1 {
   }
 }
 
-.product_section .section_form {
+.product_section--onyx .section_form {
   flex-direction: column;
 }
 
-.product_section_or-text {
+.product_section--onyx_or-text {
   align-self: center;
   position: relative;
   display: flex;
@@ -2842,8 +2842,8 @@ body h1 {
   background-color: #f2f3f3;
 }
 
-.product_section_or-text::before,
-.product_section_or-text::after {
+.product_section--onyx_or-text::before,
+.product_section--onyx_or-text::after {
   content: "";
   width: 40px;
   height: 2px;
@@ -2854,28 +2854,28 @@ body h1 {
           transform: translateY(-50%);
 }
 
-.product_section_or-text::before {
+.product_section--onyx_or-text::before {
   right: 120%;
 }
 
-.product_section_or-text::after {
+.product_section--onyx_or-text::after {
   left: 120%;
 }
 
-.product_section_stores {
+.product_section--onyx_stores {
   background-color: #f2f3f3;
   min-height: 80px;
   padding: 20px 30px;
   margin-top: 48px;
 }
 
-.product_section_stores h2 {
+.product_section--onyx_stores h2 {
   text-transform: uppercase;
   font-size: 20px;
   font-weight: 700;
 }
 
-.product_section_stores_list {
+.product_section--onyx_stores_list {
   display: flex;
   flex-direction: row;
   justify-content: flex-start;
@@ -2883,7 +2883,7 @@ body h1 {
   margin-top: 46px;
 }
 
-.product_section_stores_list a {
+.product_section--onyx_stores_list a {
   max-width: 160px;
 }
 
@@ -2909,20 +2909,42 @@ body h1 {
   background: #ffe401;
 }
 
-.scratch_section {
-  height: 600px;
-  background: #fff;
-}
-
 .scratch_section .cols {
   display: flex;
   flex-direction: row;
   align-items: stretch;
-  height: 100%;
+  height: 600px;
 }
 
 .scratch_section_col--right {
+  position: relative;
+  color: #fff;
+}
+
+.scratch_section_col--right::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  right: 0;
+  width: 50vw;
+  z-index: -1;
   background: #272727;
+}
+
+.scratch_section_col--right .section_heading {
+  margin: 130px 0 35px 0;
+  font-size: 55px;
+  line-height: 60px;
+  font-weight: bold;
+  text-transform: uppercase;
+  text-align: left;
+}
+
+.scratch_section_col--right p {
+  max-width: 500px;
+  font-size: 20px;
+  line-height: 30px;
 }
 
 /***************************************************

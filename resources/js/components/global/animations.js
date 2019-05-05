@@ -21,30 +21,35 @@ function sectionToSection() {
 
 // scroll revealing certain elements
 function scrollReveal() {
+    /**
+     * Currently we only these animations to trigger on the home page
+     * for that we can check if the element we are trying to animate exists in the first place
+     */
+    if ($('#ram_section').length != 0) {
+        let sm_controller = new ScrollMagic.Controller();
 
-    let sm_controller = new ScrollMagic.Controller();
+        $('.anim').bind('enterviewport', function(e) {
+            $(this).addClass('viewport');
+        }).bullseye();
 
-    $('.anim').bind('enterviewport', function(e) {
-        $(this).addClass('viewport');
-    }).bullseye();
+        let scene1 = new ScrollMagic.Scene({
+            triggerElement: '#ram_section',
+            duration: 600,
+            offset: -100
+        }).setTween('#ram_section_bg', {
+            top: '-75px',
+            ease: Linear.easeNone
+        }).addTo(sm_controller);
 
-    let scene1 = new ScrollMagic.Scene({
-        triggerElement: '#ram_section',
-        duration: 600,
-        offset: -100
-    }).setTween('#ram_section_bg', {
-        top: '-75px',
-        ease: Linear.easeNone
-    }).addTo(sm_controller);
-
-    let scene2 = new ScrollMagic.Scene({
-        triggerElement: '#battery_section',
-        duration: 600,
-        offset: -100
-    }).setTween('#battery_section_bg', {
-        top: '-75px',
-        ease: Linear.easeNone
-    }).addTo(sm_controller);
+        let scene2 = new ScrollMagic.Scene({
+            triggerElement: '#battery_section',
+            duration: 600,
+            offset: -100
+        }).setTween('#battery_section_bg', {
+            top: '-75px',
+            ease: Linear.easeNone
+        }).addTo(sm_controller);
+    };
 
 };
 /**

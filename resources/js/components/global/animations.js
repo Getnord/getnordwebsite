@@ -24,8 +24,9 @@ function scrollReveal() {
     /**
      * Currently we only these animations to trigger on the home page
      * for that we can check if the element we are trying to animate exists in the first place
+     * $('#ram_section').length != 0 
      */
-    if ($('#ram_section').length != 0) {
+    if ( true ) {
         let sm_controller = new ScrollMagic.Controller();
 
         $('.anim').bind('enterviewport', function(e) {

@@ -2,7 +2,8 @@
     <div class="page_center">
         <div class="row anim">
             <div class="col_2_3_xl col_1_m">
-                <figure class="section_figure anim3"><img alt="Product" src="{{ url('/') }}/img/product.jpg" /></figure>
+                {{-- add  anim3 class to section_figure in order to start the animations --}}
+                <figure class="section_figure anim3"><img alt="Product" src="{{ url('/') }}/img/onyx/getnord_onyx_all_sides.png" /></figure>
             </div>
             <div class="col_1_3_xl col_1_m">
                 <div class="section_content">

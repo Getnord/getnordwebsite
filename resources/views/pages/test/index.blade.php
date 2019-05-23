@@ -34,9 +34,6 @@
             <base-accessorie-card :id="40" @open-details-window="openDetailsWindow"></base-accessorie-card>
         </accessories-row>
         <details-window v-if="isDetailsWindowOpen" :active-accessorie="activeAccessorie">
-            <buy-btn product-id="40" @buy-btn-clicked="buybtnclicked" :product-has-options="false">
-                id 40
-            </buy-btn>
         </details-window>
     </div>
 

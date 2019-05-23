@@ -16,7 +16,7 @@
                 </div>
                 <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Eligendi labore fugit officia doloremque, totam pariatur dolore voluptate. Adipisci natus, aut suscipit eos placeat, nihil quisquam quos delectus expedita rerum culpa.</p>
                 <h2 class="price"></h2>
-                <slot></slot>
+                <button class="modal__cols__right__btn" @click="addToCart">Add To Cart</button>
             </div>
         </div>
     </div>
@@ -50,6 +50,10 @@ export default {
     methods: {
         switchCurrentImage(imgUrl){
             this.currentImageUrl = imgUrl;
+        },
+
+        addToCart() {
+            Event.$emit('add-accessorie-to-cart', this.activeAccessorie.id);
         }
     }
 
@@ -61,7 +65,6 @@ export default {
     width: 100%
     background: #fff
     min-height: 600px
-    margin-top: 100px
 
     &__cols
         display: flex
@@ -78,6 +81,25 @@ export default {
             &__name 
                 padding: 0px
                 margin-left: 0px
+
+            &__btn
+                margin-top: 70px
+                margin-right: auto
+                margin-left: auto
+                display: inline-block
+                padding: 17px 60px
+                height: 70px
+                font-size: 18px
+                line-height: 30px
+                font-weight: bold
+                text-align: center
+                text-decoration: none
+                text-transform: uppercase
+                cursor: pointer
+                background-color: #ffe401
+                color: #272727
+                border-width: 0px
+                height: 66px
 
         &__left
             width: 71.6%

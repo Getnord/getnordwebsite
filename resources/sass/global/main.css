@@ -8,7 +8,7 @@ audio, video, canvas, time, mark {
     padding: 0;
     border: 0;
     font-size: 100%;
-    font-weight: inherit;
+	font-weight: inherit;
 }
 header, footer, main, aside, section, article, nav, figure, figcaption, details, summary, hgroup {
 	display: block;
@@ -19,7 +19,7 @@ audio, video, canvas {
 
 /* common */
 body {
-	font-size: 20px;
+	font-size: 16px;
 	line-height: normal;
 	font-family: 'IBM Plex Sans', sans-serif;
 	font-weight: normal;

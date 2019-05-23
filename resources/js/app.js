@@ -166,8 +166,15 @@ const app = new Vue({
     },
     watch: {
         cart() {
+            // we use localstorage to save the cart data from page to page
+            // and also in case the user gets back again to the website
             localStorage.cartData = JSON.stringify(this.cart);
         }
+    },
+    created() {
+        // the following code will handle adding products to the cart that come form 
+        // the accessorie instance
+        Event.$on('add-accessorie-to-cart', (accessorieId) => console.log(accessorieId));
     },
     mounted() {
         // we want to set the lang

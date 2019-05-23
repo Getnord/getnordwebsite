@@ -1849,6 +1849,9 @@ __webpack_require__.r(__webpack_exports__);
   methods: {
     switchCurrentImage: function switchCurrentImage(imgUrl) {
       this.currentImageUrl = imgUrl;
+    },
+    addToCart: function addToCart() {
+      Event.$emit('add-accessorie-to-cart', this.activeAccessorie.id);
     }
   }
 });
@@ -2283,7 +2286,7 @@ exports = module.exports = __webpack_require__(/*! ../../../../node_modules/css-
 
 
 // module
-exports.push([module.i, ".modal[data-v-b3297a50] {\n  width: 100%;\n  background: #fff;\n  min-height: 600px;\n  margin-top: 100px;\n}\n.modal__cols[data-v-b3297a50] {\n  display: flex;\n  flex-direction: row;\n  align-items: stretch;\n}\n.modal__cols__right[data-v-b3297a50] {\n  width: 28.4%;\n  padding-top: 100px;\n  padding-left: 60px;\n  padding-right: 60px;\n}\n.modal__cols__right__name[data-v-b3297a50] {\n  padding: 0px;\n  margin-left: 0px;\n}\n.modal__cols__left[data-v-b3297a50] {\n  width: 71.6%;\n  background: black;\n  background-size: cover;\n  background-position: center;\n}\n.modal__cols__left__imgs[data-v-b3297a50] {\n  display: flex;\n  flex-direction: column;\n  margin-left: 20px;\n  margin-top: 20px;\n  list-style: none;\n}\n.modal__cols__left__imgs__img[data-v-b3297a50] {\n  width: 100px;\n  margin-bottom: 20px;\n  cursor: pointer;\n}", ""]);
+exports.push([module.i, ".modal[data-v-b3297a50] {\n  width: 100%;\n  background: #fff;\n  min-height: 600px;\n}\n.modal__cols[data-v-b3297a50] {\n  display: flex;\n  flex-direction: row;\n  align-items: stretch;\n}\n.modal__cols__right[data-v-b3297a50] {\n  width: 28.4%;\n  padding-top: 100px;\n  padding-left: 60px;\n  padding-right: 60px;\n}\n.modal__cols__right__name[data-v-b3297a50] {\n  padding: 0px;\n  margin-left: 0px;\n}\n.modal__cols__right__btn[data-v-b3297a50] {\n  margin-top: 70px;\n  margin-right: auto;\n  margin-left: auto;\n  display: inline-block;\n  padding: 17px 60px;\n  height: 70px;\n  font-size: 18px;\n  line-height: 30px;\n  font-weight: bold;\n  text-align: center;\n  text-decoration: none;\n  text-transform: uppercase;\n  cursor: pointer;\n  background-color: #ffe401;\n  color: #272727;\n  border-width: 0px;\n  height: 66px;\n}\n.modal__cols__left[data-v-b3297a50] {\n  width: 71.6%;\n  background: black;\n  background-size: cover;\n  background-position: center;\n}\n.modal__cols__left__imgs[data-v-b3297a50] {\n  display: flex;\n  flex-direction: column;\n  margin-left: 20px;\n  margin-top: 20px;\n  list-style: none;\n}\n.modal__cols__left__imgs__img[data-v-b3297a50] {\n  width: 100px;\n  margin-bottom: 20px;\n  cursor: pointer;\n}", ""]);
 
 // exports
 
@@ -43081,7 +43084,7 @@ var render = function() {
   return _c("div", { staticClass: "card" }, [
     _c("img", {
       staticClass: "card__img",
-      attrs: { src: "img/accessories/accessorie_1.png", alt: "" }
+      attrs: { src: "/img/accessories/accessorie_1.png", alt: "" }
     }),
     _vm._v(" "),
     _c("h1", { staticClass: "card__title" }, [_vm._v("holla")]),
@@ -43151,28 +43154,30 @@ var render = function() {
         ]
       ),
       _vm._v(" "),
-      _c(
-        "div",
-        { staticClass: "modal__cols__right" },
-        [
-          _c("h1", { staticClass: "modal__cols__right__name" }, [
-            _vm._v("Ttest " + _vm._s(_vm.activeAccessorie.id))
-          ]),
-          _vm._v(" "),
-          _vm._m(0),
-          _vm._v(" "),
-          _c("p", [
-            _vm._v(
-              "Lorem ipsum dolor sit amet consectetur adipisicing elit. Eligendi labore fugit officia doloremque, totam pariatur dolore voluptate. Adipisci natus, aut suscipit eos placeat, nihil quisquam quos delectus expedita rerum culpa."
-            )
-          ]),
-          _vm._v(" "),
-          _c("h2", { staticClass: "price" }),
-          _vm._v(" "),
-          _vm._t("default")
-        ],
-        2
-      )
+      _c("div", { staticClass: "modal__cols__right" }, [
+        _c("h1", { staticClass: "modal__cols__right__name" }, [
+          _vm._v("Ttest " + _vm._s(_vm.activeAccessorie.id))
+        ]),
+        _vm._v(" "),
+        _vm._m(0),
+        _vm._v(" "),
+        _c("p", [
+          _vm._v(
+            "Lorem ipsum dolor sit amet consectetur adipisicing elit. Eligendi labore fugit officia doloremque, totam pariatur dolore voluptate. Adipisci natus, aut suscipit eos placeat, nihil quisquam quos delectus expedita rerum culpa."
+          )
+        ]),
+        _vm._v(" "),
+        _c("h2", { staticClass: "price" }),
+        _vm._v(" "),
+        _c(
+          "button",
+          {
+            staticClass: "modal__cols__right__btn",
+            on: { click: _vm.addToCart }
+          },
+          [_vm._v("Add To Cart")]
+        )
+      ])
     ])
   ])
 }
@@ -56148,8 +56153,17 @@ var app = new Vue({
   },
   watch: {
     cart: function cart() {
+      // we use localstorage to save the cart data from page to page
+      // and also in case the user gets back again to the website
       localStorage.cartData = JSON.stringify(this.cart);
     }
+  },
+  created: function created() {
+    // the following code will handle adding products to the cart that come form 
+    // the accessorie instance
+    Event.$on('add-accessorie-to-cart', function (accessorieId) {
+      return console.log(accessorieId);
+    });
   },
   mounted: function mounted() {
     var _this = this;
@@ -56607,19 +56621,19 @@ __webpack_require__.r(__webpack_exports__);
 __webpack_require__.r(__webpack_exports__);
 var accessoriesData = [{
   id: 20,
-  images: ['img/accessories/onyx_holster/6.jpg', 'img/accessories/onyx_holster/2.jpg', 'img/accessories/onyx_holster/3.jpg', 'img/accessories/onyx_holster/4.jpg', 'img/accessories/onyx_holster/5.jpg', 'img/accessories/onyx_holster/1.jpg']
+  images: ['/img/accessories/onyx_holster/6.jpg', '/img/accessories/onyx_holster/2.jpg', '/img/accessories/onyx_holster/3.jpg', '/img/accessories/onyx_holster/4.jpg', '/img/accessories/onyx_holster/5.jpg', '/img/accessories/onyx_holster/1.jpg']
 }, {
   id: 30,
-  images: ['img/accessories/onyx_holster/6.jpg', 'img/accessories/onyx_holster/2.jpg', 'img/accessories/onyx_holster/3.jpg', 'img/accessories/onyx_holster/4.jpg', 'img/accessories/onyx_holster/5.jpg', 'img/accessories/onyx_holster/1.jpg']
+  images: ['/img/accessories/onyx_holster/6.jpg', '/img/accessories/onyx_holster/2.jpg', '/img/accessories/onyx_holster/3.jpg', '/img/accessories/onyx_holster/4.jpg', '/img/accessories/onyx_holster/5.jpg', '/img/accessories/onyx_holster/1.jpg']
 }, {
   id: 40,
-  images: ['img/accessories/onyx_holster/6.jpg', 'img/accessories/onyx_holster/2.jpg', 'img/accessories/onyx_holster/3.jpg', 'img/accessories/onyx_holster/4.jpg', 'img/accessories/onyx_holster/5.jpg', 'img/accessories/onyx_holster/1.jpg']
+  images: ['/img/accessories/onyx_holster/6.jpg', '/img/accessories/onyx_holster/2.jpg', '/img/accessories/onyx_holster/3.jpg', '/img/accessories/onyx_holster/4.jpg', '/img/accessories/onyx_holster/5.jpg', '/img/accessories/onyx_holster/1.jpg']
 }, {
   id: 50,
-  images: ['img/accessories/onyx_holster/6.jpg', 'img/accessories/onyx_holster/2.jpg', 'img/accessories/onyx_holster/3.jpg', 'img/accessories/onyx_holster/4.jpg', 'img/accessories/onyx_holster/5.jpg', 'img/accessories/onyx_holster/1.jpg']
+  images: ['/img/accessories/onyx_holster/6.jpg', '/img/accessories/onyx_holster/2.jpg', '/img/accessories/onyx_holster/3.jpg', '/img/accessories/onyx_holster/4.jpg', '/img/accessories/onyx_holster/5.jpg', '/img/accessories/onyx_holster/1.jpg']
 }, {
   id: 60,
-  images: ['img/accessories/onyx_holster/6.jpg', 'img/accessories/onyx_holster/2.jpg', 'img/accessories/onyx_holster/3.jpg', 'img/accessories/onyx_holster/4.jpg', 'img/accessories/onyx_holster/5.jpg', 'img/accessories/onyx_holster/1.jpg']
+  images: ['/img/accessories/onyx_holster/6.jpg', '/img/accessories/onyx_holster/2.jpg', '/img/accessories/onyx_holster/3.jpg', '/img/accessories/onyx_holster/4.jpg', '/img/accessories/onyx_holster/5.jpg', '/img/accessories/onyx_holster/1.jpg']
 }];
 /* harmony default export */ __webpack_exports__["default"] = (accessoriesData);
 
@@ -56894,8 +56908,9 @@ function scrollReveal() {
   /**
    * Currently we only these animations to trigger on the home page
    * for that we can check if the element we are trying to animate exists in the first place
+   * $('#ram_section').length != 0 
    */
-  if ($('#ram_section').length != 0) {
+  if (true) {
     var sm_controller = new scrollmagic__WEBPACK_IMPORTED_MODULE_1___default.a.Controller();
     $('.anim').bind('enterviewport', function (e) {
       $(this).addClass('viewport');

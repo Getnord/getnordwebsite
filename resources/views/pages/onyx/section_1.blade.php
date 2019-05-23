@@ -1,6 +1,6 @@
 <section class="intro_section">
     <video autoplay loop muted playsinline class="section_video" inline>
-        <source src="{{ url('/') }}/img/intro.mp4" type="video/mp4">
+        <source src="{{ url('/') }}/img/onyx/video/onyx_video.mp4" type="video/mp4">
     </video>
     <div class="section_content">
         <div class="section_center">

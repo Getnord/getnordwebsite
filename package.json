@@ -38,6 +38,8 @@
     "locutus": "^2.0.10",
     "pug": "^2.0.3",
     "scrollmagic": "^2.0.6",
-    "vue-select": "^2.6.4"
+    "slick-carousel": "^1.8.1",
+    "vue-select": "^2.6.4",
+    "vuex": "^3.1.1"
   }
 }

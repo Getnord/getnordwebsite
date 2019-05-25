@@ -35,13 +35,13 @@
         <div class="page_center">
             <div class="footer__info">
                 <div class="row">
-                    <div class="col_3_xl footer__info__links">
+                    <div class="col_3_xl col_1_xs footer__info__links">
                         <a href="{{ route('shipping', ['locale' => app()->getLocale()]) }}">Delivery and returns</a>
                         <a href="{{ route('warranty', ['locale' => app()->getLocale()]) }}">Warranty</a>
                         <a href="{{ route('legal', ['locale' => app()->getLocale()]) }}">Legal notes</a>
                         <a href="{{ route('cookies', ['locale' => app()->getLocale()]) }}">Privacy and cookies</a>
                     </div>
-                    <div class="col_3_xl">
+                    <div class="col_3_xl col_1_xs">
                         <h3>
                            Payments Methods 
                         </h3>
@@ -61,7 +61,7 @@
 
                         </div>
                     </div>
-                    <div class="col_3_xl footer__info__secure">
+                    <div class="col_3_xl col_1_xs footer__info__secure">
                         <h3>
                             Secure with
                         </h3>

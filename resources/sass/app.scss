@@ -1,6 +1,9 @@
 // Variables
 @import 'variables';
 
+// Mixins
+@import './abstracts/mixins.sass';
+
 // Old css file
 @import 'global/main.css';
 
@@ -14,6 +17,7 @@
 @import 'pages/informational/style.sass';
 
 // Home Page
+
 // @import 'pages/home/style.css';
 
 // Onyx page
@@ -31,3 +35,12 @@
 
 // global
 @import 'global/components.sass';
+
+
+/******************************************************
+    Dependencies
+*******************************************************/
+
+// Slick carousel
+@import '~slick-carousel/slick/slick';
+@import '~slick-carousel/slick/slick-theme';

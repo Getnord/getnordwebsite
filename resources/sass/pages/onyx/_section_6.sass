@@ -1,7 +1,55 @@
 .specs_section
     overflow: hidden
     padding-bottom: 60px
+    
     .section_header
         margin-top: 60px
         padding: 20px
         background: $getnord-yellow
+    
+    .specs
+        width: 100%
+        display: flex
+        flex-direction: column
+        justify-content: stretch
+        margin-top: 3em
+        display: none
+
+        .row 
+            width: 100%
+            display: flex
+            flex-direction: row
+            justify-content: space-between
+
+            &:not(:first-child)
+
+                .specs__col 
+                    border: 1px solid lighten($getnord-dark-grey, 50%)
+                    border-top-color: transparent
+                    
+                    .specs__spec
+                        padding: 0.625em 1em
+                        font-size: 1em
+                        font-weight: 700
+
+                    .specs__spec-info
+                        padding: 0.625em 1em
+                        font-size: 1em
+                        font-weight: 400em
+
+            &:nth-child(2)
+                margin-top: 2em
+                
+                .specs__col 
+                    border: 1px solid lighten($getnord-dark-grey, 50%)
+
+        &__col
+
+            &--15
+                width: 15%
+
+            &--27
+                width: 27%
+
+        &--responsive
+            display: none

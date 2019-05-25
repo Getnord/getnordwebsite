@@ -3,6 +3,12 @@
     .section_form
         flex-direction: column
 
+        @include breakpoint(s)
+            margin-bottom: 15px
+
+        @include breakpoint(xs)
+            maring-bottom: 10px
+
     &_or-text
         align-self: center
         position: relative
@@ -42,6 +48,12 @@
         padding: 20px 30px
         margin-top: 48px
 
+        @include breakpoint(m)
+            margin-top: 10px
+
+        @include breakpoint(xs)
+            margin-top: 0px
+
         h2 
             text-transform: uppercase
             font-size: 20px
@@ -56,6 +68,9 @@
             
             a 
                 max-width: 160px
+
+                @include breakpoint(s)
+                    max-width: 120px
 
 
 

@@ -9,6 +9,7 @@ const accessoriesData = [
             '/img/accessories/onyx_holster/5.jpg',
             '/img/accessories/onyx_holster/1.jpg',
         ],
+        mainImg: ''
     },
     {
         id: 30,

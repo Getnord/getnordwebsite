@@ -22,12 +22,19 @@
         padding-bottom: 3.750em
         padding-top: 2em
 
+        @include breakpoint(s)
+            padding: 1.5em 1em 3em 1em
+
         span 
             display: flex
             flex-direction: column
             margin: 0px 1em
             align-items: center
             min-width: 9em
+
+            @include breakpoint(s)
+                min-width: 7em
+                width: 32%
 
             img 
                 margin-bottom: 1.8em
@@ -37,4 +44,8 @@
                 text-align: center
                 font-size: 1.250em
                 font-weight: 400
-                max-width: 9em
+                max-width: 10em
+                text-transform: uppercase
+
+                @include breakpoint(s)
+                    font-size: 1.125em

@@ -14,7 +14,7 @@
                     <img src="" alt="">
                     <img src="" alt="">
                 </div>
-                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Eligendi labore fugit officia doloremque, totam pariatur dolore voluptate. Adipisci natus, aut suscipit eos placeat, nihil quisquam quos delectus expedita rerum culpa.</p>
+                <p class="madal__cols__right__description">Lorem ipsum dolor sit amet consectetur adipisicing elit. Eligendi labore fugit officia doloremque, totam pariatur dolore voluptate. Adipisci natus, aut suscipit eos placeat, nihil quisquam quos delectus expedita rerum culpa.</p>
                 <h2 class="price"></h2>
                 <button class="modal__cols__right__btn" @click="addToCart">Add To Cart</button>
             </div>
@@ -77,10 +77,18 @@ export default {
             padding-top: 100px
             padding-left: 60px 
             padding-right: 60px
-
+            
             &__name 
                 padding: 0px
                 margin-left: 0px
+                font-size: 55px
+                line-height: 60px
+                font-weight: bold
+                text-transform: uppercase
+                text-align: left
+
+            &__description 
+                font-size: 1.250em
 
             &__btn
                 margin-top: 70px

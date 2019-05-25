@@ -6,16 +6,16 @@
     </div>
 </template>
 <script>
-import BaseButton from '../baseComponents/BaseButton';
 export default {
     name: 'base-accessorie-card',
-    components: {
-        'base-button': BaseButton,
-    },
 
     props: {
         id: {
             type: Number,
+            required: true
+        },
+        imgUrl: {
+            type: String,
             required: true
         }
     },

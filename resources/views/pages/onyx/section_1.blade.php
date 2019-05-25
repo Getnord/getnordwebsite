@@ -1,4 +1,4 @@
-<section class="intro_section">
+<section class="intro_section intro_section--onyx">
     <video autoplay loop muted playsinline class="section_video" inline>
         <source src="{{ url('/') }}/img/onyx/video/onyx_video.mp4" type="video/mp4">
     </video>

@@ -14,5 +14,9 @@ export default {
     flex-direction: row
     justify-content: space-around
     padding: 8px
+
+    @media(max-width: 480px)
+        flex-direction: column
+        
 </style>
 

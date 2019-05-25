@@ -2491,7 +2491,9 @@ items_section .product_info button:hover {
 /* xs */
 @media (max-width: 480px) {
     .page_content {
-        margin-top: 33px;
+		margin-top: 28px;
+		position: relative;
+		top: -22px;
     }
 	.hidden_xs {
 		display: none;

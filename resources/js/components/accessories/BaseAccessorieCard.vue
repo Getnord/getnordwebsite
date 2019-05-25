@@ -14,10 +14,6 @@ export default {
             type: Number,
             required: true
         },
-        imgUrl: {
-            type: String,
-            required: true
-        }
     },
 
     methods: {
@@ -38,6 +34,9 @@ export default {
     padding: 20px 40px
     width: 32%
     margin: 4px
+    
+    @media( max-width: 480px)
+        width: 50%
 
     &__img
         display: block

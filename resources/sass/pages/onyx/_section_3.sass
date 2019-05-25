@@ -24,6 +24,14 @@
 
         @include breakpoint(s)
             padding: 1.5em 1em 3em 1em
+            max-width: 100%
+
+        @include breakpoint(xs)
+            flex-direction: column
+            align-items: center
+            padding-bottom: 1em
+            padding-top: 0em
+            margin-bottom: 0px
 
         span 
             display: flex
@@ -36,9 +44,16 @@
                 min-width: 7em
                 width: 32%
 
+            @include breakpoint(xs)
+                margin-bottom: 2em
+                width: 100%
+
             img 
                 margin-bottom: 1.8em
                 height: 5em
+
+                @include breakpoint(xs)
+                    margin-bottom: 0.5em
 
             p 
                 text-align: center
@@ -49,3 +64,4 @@
 
                 @include breakpoint(s)
                     font-size: 1.125em
+

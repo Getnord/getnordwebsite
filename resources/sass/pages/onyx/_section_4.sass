@@ -1,5 +1,9 @@
 .mount_section-molding
 
+    .section_text
+        @include breakpoint(xs)
+            margin-bottom: 1.5em
+
     .section_icons
         padding: 1em
 
@@ -9,7 +13,12 @@
                 margin-bottom: 1.8em
                 height: 7em
 
+                @include breakpoint(xs)
+                    margin-bottom: 0.4em
+
             &.delay4
                 img 
                     height: 4.5em
-                    margin-bottom: 1.4em
+                    margin-bottom: 1.4em 
+                @include breakpoint(xs)
+                    margin-bottom: 0

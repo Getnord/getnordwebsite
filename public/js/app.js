@@ -1776,10 +1776,6 @@ __webpack_require__.r(__webpack_exports__);
     id: {
       type: Number,
       required: true
-    },
-    imgUrl: {
-      type: String,
-      required: true
     }
   },
   methods: {
@@ -2240,7 +2236,7 @@ exports = module.exports = __webpack_require__(/*! ../../../../node_modules/css-
 
 
 // module
-exports.push([module.i, ".card[data-v-5dc2256e] {\n  background: #ffffff;\n  display: flex;\n  flex-direction: column;\n  justify-content: center;\n  max-width: 500px;\n  padding: 20px 40px;\n  width: 32%;\n  margin: 4px;\n}\n.card__img[data-v-5dc2256e] {\n  display: block;\n  margin: 10px auto;\n}\n.card__title[data-v-5dc2256e] {\n  font-size: 24px;\n  font-weight: 700;\n  text-transform: uppercase;\n  text-align: center;\n  margin-bottom: 20px;\n  margin-left: 0;\n}\n.card__btn[data-v-5dc2256e] {\n  margin-right: auto;\n  margin-left: auto;\n  display: inline-block;\n  padding: 17px 60px;\n  height: 70px;\n  font-size: 18px;\n  line-height: 30px;\n  font-weight: bold;\n  text-align: center;\n  text-decoration: none;\n  text-transform: uppercase;\n  cursor: pointer;\n  background-color: #ffe401;\n  color: #272727;\n  border-width: 0px;\n  height: 66px;\n}", ""]);
+exports.push([module.i, ".card[data-v-5dc2256e] {\n  background: #ffffff;\n  display: flex;\n  flex-direction: column;\n  justify-content: center;\n  max-width: 500px;\n  padding: 20px 40px;\n  width: 32%;\n  margin: 4px;\n}\n@media (max-width: 480px) {\n.card[data-v-5dc2256e] {\n    width: 50%;\n}\n}\n.card__img[data-v-5dc2256e] {\n  display: block;\n  margin: 10px auto;\n}\n.card__title[data-v-5dc2256e] {\n  font-size: 24px;\n  font-weight: 700;\n  text-transform: uppercase;\n  text-align: center;\n  margin-bottom: 20px;\n  margin-left: 0;\n}\n.card__btn[data-v-5dc2256e] {\n  margin-right: auto;\n  margin-left: auto;\n  display: inline-block;\n  padding: 17px 60px;\n  height: 70px;\n  font-size: 18px;\n  line-height: 30px;\n  font-weight: bold;\n  text-align: center;\n  text-decoration: none;\n  text-transform: uppercase;\n  cursor: pointer;\n  background-color: #ffe401;\n  color: #272727;\n  border-width: 0px;\n  height: 66px;\n}", ""]);
 
 // exports
 
@@ -2278,7 +2274,7 @@ exports = module.exports = __webpack_require__(/*! ../../../../node_modules/css-
 
 
 // module
-exports.push([module.i, ".row[data-v-07111158] {\n  display: flex;\n  flex-direction: row;\n  justify-content: space-around;\n  padding: 8px;\n}", ""]);
+exports.push([module.i, ".row[data-v-07111158] {\n  display: flex;\n  flex-direction: row;\n  justify-content: space-around;\n  padding: 8px;\n}\n@media (max-width: 480px) {\n.row[data-v-07111158] {\n    flex-direction: column;\n}\n}", ""]);
 
 // exports
 

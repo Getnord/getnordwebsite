@@ -7,6 +7,9 @@
         align-items: stretch
         height: fit-content
 
+        @include breakpoint(xs)
+            flex-direction: column
+
     &_col--right
         position: relative
         color: $white
@@ -16,9 +19,17 @@
         justify-content: flex-start
         align-items: flex-end
 
+        @include breakpoint(xs)
+            width: 100%
+            order: 2
+
         .section_content
             margin-right: 4em
             margin-left: 2em
+
+            @include breakpoint(xs)
+                margin-right: auto
+                margin-left: auto
         
         &::after
             content: ''
@@ -26,9 +37,10 @@
             top: 0
             bottom: 0 
             right: 0
-            width: 50vw
+            left: 0
             z-index: -1
             background: $getnord-dark-grey
+
 
         .section_heading
             margin: 130px 0 35px 0
@@ -38,11 +50,28 @@
             text-transform: uppercase
             text-align: left
 
+            @include breakpoint(m)
+                margin: 0.5em 0 0 0
+                font-size: 1.500em
+
+            @include breakpoint(xs)
+                text-align: center
+
         p 
             max-width: 500px
             font-size: 20px
             line-height: 30px
 
+            @include breakpoint(xs)
+                font-size: 1em
+                text-align: center
+                maring: auto
+                padding: 0 1em 2em 1em
+
     .scratch_img 
         width: 50%
         height: auto
+
+        @include breakpoint(xs)
+            width: 100%
+            order: 1

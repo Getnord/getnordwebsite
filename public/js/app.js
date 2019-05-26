@@ -58940,8 +58940,8 @@ Vue.config.productTip = false;
 // });
 
 $(document).ready(function () {
-  Object(_components_global_header__WEBPACK_IMPORTED_MODULE_0__["default"])();
-  Object(_components_global_animations__WEBPACK_IMPORTED_MODULE_2__["default"])();
+  Object(_components_global_header__WEBPACK_IMPORTED_MODULE_0__["default"])(); // startAnimations();
+
   Object(_components_homePage_specsSection__WEBPACK_IMPORTED_MODULE_3__["default"])();
   Object(_components_contactForm_form__WEBPACK_IMPORTED_MODULE_1__["default"])();
   Object(_components_homePage_videos_js__WEBPACK_IMPORTED_MODULE_4__["default"])();
@@ -59923,11 +59923,31 @@ function specsDropDownToggle() {
     } // start slick js 
 
 
-    if (windowWidth < 760) {
-      $(specsSectionToShow).slick({
+    if (windowWidth < 760 && windowWidth > 480) {
+      $('.specs__slider').slick({
         centerMode: true,
-        centerPadding: '60px',
-        slidesToShow: 3
+        centerPadding: '100px',
+        slidesToShow: 1,
+        dots: true,
+        customPaging: function customPaging(slider, i) {
+          var name = $(slider.$slides[i]).find('.specs--responsive__col').attr('name');
+          console.log(name);
+          return '<button class="tab"><h3>' + name + '</h3></button>';
+        }
+      });
+    } else if (windowWidth < 480) {
+      $('.specs__slider').slick({
+        centerMode: true,
+        slidesToShow: 1,
+        arrows: false,
+        infinite: false,
+        dots: true,
+        mobileFirst: true,
+        customPaging: function customPaging(slider, i) {
+          var name = $(slider.$slides[i]).find('.specs--responsive__col').attr('name');
+          console.log(name);
+          return '<button class="tab"><h3>' + name + '</h3></button>';
+        }
       });
     }
 

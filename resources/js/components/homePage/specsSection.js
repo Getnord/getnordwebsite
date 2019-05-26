@@ -16,13 +16,33 @@ function specsDropDownToggle() {
             useElement.setAttributeNS('http://www.w3.org/1999/xlink', 'href',  '/img/icons.svg#icon_minus');
         }
         // start slick js 
-        if(windowWidth < 760) {
-            $(specsSectionToShow).slick({
+        if(windowWidth < 760 && windowWidth > 480) {
+            $('.specs__slider').slick({
                 centerMode: true,
-                centerPadding: '60px',
-                slidesToShow: 3,
+                centerPadding: '100px',
+                slidesToShow: 1,
+                dots: true,
+                customPaging: function(slider, i ) {
+                    var name = $(slider.$slides[i]).find('.specs--responsive__col').attr('name');
+                    console.log(name);
+                    return '<button class="tab"><h3>' + name  + '</h3></button>';
+                },
             });
-        }
+        } else if( windowWidth < 480) {
+            $('.specs__slider').slick({
+                centerMode: true,
+                slidesToShow: 1,
+                arrows: false,
+                infinite: false,
+                dots: true,
+                mobileFirst: true,
+                customPaging: function(slider, i ) {
+                    var name = $(slider.$slides[i]).find('.specs--responsive__col').attr('name');
+                    console.log(name);
+                    return '<button class="tab"><h3>' + name  + '</h3></button>';
+                },
+            });
+        } 
         $(specsSectionToShow).toggle();
 
     });

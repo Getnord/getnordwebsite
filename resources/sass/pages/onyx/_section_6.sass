@@ -59,3 +59,108 @@
 
         &--responsive
             display: none
+
+            &__title
+                margin: 2em 0 2.5em 0
+                font-size: 1.5em
+                font-weight: bold
+                color: $getnord-dark-grey
+                text-align: center
+                text-transform: uppercase
+
+            &__col
+                margin: 0 auto 0 auto
+                position: relative
+                left: 50%
+                transform: translateX(-50%)
+                max-width: 370px
+            
+            .specs__phone
+                opacity: 0.4
+                transition: all 0.2s ease-out
+
+            .specs__spec
+                font-size: 1.125em
+                font-weight: 700
+                color: #ffffff
+                background-color: $getnord-dark-grey
+                text-align: center
+                padding: 0.625em
+                margin: 1.825em auto 0.825em auto
+                display: none
+                transition: all 0.2s ease-out
+
+            .specs__info
+                text-align: center
+                display: none
+                transition: all 0.2s ease-out
+            
+            .slick-dots
+                bottom: auto
+                top: -32px
+                li 
+                    border-radius: 100%
+                    background: darken($getnord-light-grey, 30%)
+                    height: 9px
+                    width: 9px
+                    margin: 0 6px
+
+                    @include breakpoint(xs)
+                        height: auto
+                        width: auto
+                        min-height: 1.2em
+                        background: transparent 
+                        min-width: 2em
+                        border-radius: 0px
+                        border: 1px solid darken($getnord-light-grey, 30%)
+
+                        button
+                            font-size: 0.875em
+                            height: 100%
+                            width: 100%
+                            padding: 0.4em
+
+                            &:before
+                                display: none
+                            
+                            h3 
+                                min-width: 3em
+                                color: darken($getnord-light-grey, 30%)
+                                padding: 0.3em 0.5em
+                                text-align: center
+                                text-transform: uppercase
+                                
+
+                    &.slick-active
+                        background: $getnord-dark-grey 
+
+                        @include breakpoint(xs)
+                            background: transparent 
+                            border-color: $getnord-dark-grey
+
+                            h3 
+                                color: $getnord-dark-grey
+
+            .slick-active, .slick-current
+
+                .specs__info
+                    display: block
+
+                .specs__spec
+                    display: block
+
+                .specs__phone
+                    opacity: 1
+
+            .slick-slide 
+                @include breakpoint(xs)
+                    max-width: 400px
+
+            .slick-slider 
+                display: table
+                table-layout: fixed
+                width: 100%
+
+            
+
+

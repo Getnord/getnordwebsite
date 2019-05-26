@@ -33,7 +33,7 @@ import videosControllers from './components/homePage/videos.js';
 $(document).ready(function() {
         
     NavInit();
-    startAnimations();
+    // startAnimations();
     specsDropDownToggle();
     contactForm();
     videosControllers();

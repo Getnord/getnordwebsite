@@ -26,6 +26,8 @@ return [
     'refinedTitle' => 'refined to be perfect',
 
     // section 6 - comparison
+    'getnordPhonesComparison' => 'Getnord Phones Comparison',
+
     'comparisonIpRating' => 'Ip Rating', 
     'comparisonIpRatingOnyx' => 'IP68',
     'comparisonIpRatingLynx' => 'IP68',

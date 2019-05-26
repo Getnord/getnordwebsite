@@ -66,10 +66,143 @@
             
         </div>
         <div class="specs--responsive" id="specs--responsive">
-            <h1>test</h1>
-            <h1>test</h1>
-            <h1>test</h1>
-            <h1>test</h1>
+            <h2 class="specs--responsive__title">
+                {{ __('onyx.getnordPhonesComparison') }}
+            </h2>
+            <div class="specs__dots"></div>
+            <div class="specs__slider">
+                <div class="specs--responsive__col" name="Onyx">
+                    <img src="{{ url('/')}}/img/onyx/phone_onyx.jpg" alt="" class="specs__phone">
+                    <div class="specs--responsive__row">
+                        <p class="specs__spec">
+                            {{ __('onyx.comparisonIpRating') }}
+                        </p>
+                        <p class="specs__info">
+                            {{ __('onyx.comparisonIpRatingOnyx') }}
+                        </p>
+                    </div>
+                    <div class="sepcs--responsive__row">
+                        <p class="specs__spec">
+                            {{ __('onyx.comparisonIpRating') }}
+                        </p>
+                        <p class="specs__info">
+                            {{ __('onyx.comparisonIpRatingOnyx') }}
+                        </p>
+                    </div>
+                    <div class="sepcs--responsive__row">
+                        <p class="specs__spec">
+                            {{ __('onyx.comparisonIpRating') }}
+                        </p>
+                        <p class="specs__info">
+                            {{ __('onyx.comparisonIpRatingOnyx') }}
+                        </p>
+                    </div>
+                    <div class="sepcs--responsive__row">
+                        <p class="specs__spec">
+                            {{ __('onyx.comparisonIpRating') }}
+                        </p>
+                        <p class="specs__info">
+                            {{ __('onyx.comparisonIpRatingOnyx') }}
+                        </p>
+                    </div>
+                    <div class="sepcs--responsive__row">
+                        <p class="specs__spec">
+                            {{ __('onyx.comparisonIpRating') }}
+                        </p>
+                        <p class="specs__info">
+                            {{ __('onyx.comparisonIpRatingOnyx') }}
+                        </p>
+                    </div>
+                </div>
+                <div class="specs--responsive__col"
+                name="Lynx">
+                    <img src="{{ url('/')}}/img/onyx/phone_onyx.jpg" alt="" class="specs__phone">
+                    <div class="specs--responsive__row">
+                        <p class="specs__spec">
+                            {{ __('onyx.comparisonIpRating') }}
+                        </p>
+                        <p class="specs__info">
+                            {{ __('onyx.comparisonIpRatingOnyx') }}
+                        </p>
+                    </div>
+                    <div class="sepcs--responsive__row">
+                        <p class="specs__spec">
+                            {{ __('onyx.comparisonIpRating') }}
+                        </p>
+                        <p class="specs__info">
+                            {{ __('onyx.comparisonIpRatingOnyx') }}
+                        </p>
+                    </div>
+                    <div class="sepcs--responsive__row">
+                        <p class="specs__spec">
+                            {{ __('onyx.comparisonIpRating') }}
+                        </p>
+                        <p class="specs__info">
+                            {{ __('onyx.comparisonIpRatingOnyx') }}
+                        </p>
+                    </div>
+                    <div class="sepcs--responsive__row">
+                        <p class="specs__spec">
+                            {{ __('onyx.comparisonIpRating') }}
+                        </p>
+                        <p class="specs__info">
+                            {{ __('onyx.comparisonIpRatingOnyx') }}
+                        </p>
+                    </div>
+                    <div class="sepcs--responsive__row">
+                        <p class="specs__spec">
+                            {{ __('onyx.comparisonIpRating') }}
+                        </p>
+                        <p class="specs__info">
+                            {{ __('onyx.comparisonIpRatingOnyx') }}
+                        </p>
+                    </div>
+                </div>
+                <div class="specs--responsive__col"
+                name="Walrus">
+                    <img src="{{ url('/')}}/img/onyx/phone_onyx.jpg" alt="" class="specs__phone">
+                    <div class="specs--responsive__row">
+                        <p class="specs__spec">
+                            {{ __('onyx.comparisonIpRating') }}
+                        </p>
+                        <p class="specs__info">
+                            {{ __('onyx.comparisonIpRatingOnyx') }}
+                        </p>
+                    </div>
+                    <div class="sepcs--responsive__row">
+                        <p class="specs__spec">
+                            {{ __('onyx.comparisonIpRating') }}
+                        </p>
+                        <p class="specs__info">
+                            {{ __('onyx.comparisonIpRatingOnyx') }}
+                        </p>
+                    </div>
+                    <div class="sepcs--responsive__row">
+                        <p class="specs__spec">
+                            {{ __('onyx.comparisonIpRating') }}
+                        </p>
+                        <p class="specs__info">
+                            {{ __('onyx.comparisonIpRatingOnyx') }}
+                        </p>
+                    </div>
+                    <div class="sepcs--responsive__row">
+                        <p class="specs__spec">
+                            {{ __('onyx.comparisonIpRating') }}
+                        </p>
+                        <p class="specs__info">
+                            {{ __('onyx.comparisonIpRatingOnyx') }}
+                        </p>
+                    </div>
+                    <div class="sepcs--responsive__row">
+                        <p class="specs__spec">
+                            {{ __('onyx.comparisonIpRating') }}
+                        </p>
+                        <p class="specs__info">
+                            {{ __('onyx.comparisonIpRatingOnyx') }}
+                        </p>
+                    </div>
+                </div>
+            </div>
         </div>
     </div>
 </section>

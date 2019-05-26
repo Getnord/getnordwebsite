@@ -4,8 +4,11 @@
     .cols
         display: flex
         flex-direction: row
-        align-items: stretch
+        align-items: flex-start
         height: fit-content
+
+        @include breakpoint(s)
+            flex-direction: column 
 
         @include breakpoint(xs)
             flex-direction: column
@@ -18,8 +21,9 @@
         flex-direction: column
         justify-content: flex-start
         align-items: flex-end
+        align-self: stretch
 
-        @include breakpoint(xs)
+        @include breakpoint(s)
             width: 100%
             order: 2
 
@@ -27,7 +31,7 @@
             margin-right: 4em
             margin-left: 2em
 
-            @include breakpoint(xs)
+            @include breakpoint(s)
                 margin-right: auto
                 margin-left: auto
         
@@ -54,7 +58,7 @@
                 margin: 0.5em 0 0 0
                 font-size: 1.500em
 
-            @include breakpoint(xs)
+            @include breakpoint(s)
                 text-align: center
 
         p 
@@ -62,7 +66,10 @@
             font-size: 20px
             line-height: 30px
 
-            @include breakpoint(xs)
+            @include breakpoint(m)
+                font-size: 1em
+
+            @include breakpoint(s)
                 font-size: 1em
                 text-align: center
                 maring: auto
@@ -72,6 +79,6 @@
         width: 50%
         height: auto
 
-        @include breakpoint(xs)
+        @include breakpoint(s)
             width: 100%
             order: 1

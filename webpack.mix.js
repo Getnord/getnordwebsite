@@ -11,6 +11,12 @@ const mix = require('laravel-mix');
  |
  */
 
+//  mix.options({
+//    hmrOptions: {
+//       host: 'localhost',  // site's host name
+//    }
+// });
+
 mix.js('resources/js/app.js', 'public/js')
    .sass('resources/sass/app.scss', 'public/css')
    .browserSync('http://localhost/getnord/public')

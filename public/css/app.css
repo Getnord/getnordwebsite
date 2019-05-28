@@ -3196,6 +3196,12 @@ body h1 {
   transition: all 0.2s ease-out;
 }
 
+@media (max-width: 480px) {
+  .specs_section .specs--responsive .specs__phone {
+    opacity: 0;
+  }
+}
+
 .specs_section .specs--responsive .specs__spec {
   font-size: 1.125em;
   font-weight: 700;

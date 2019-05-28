@@ -11,11 +11,10 @@
             <div class="modal__cols__right">
                 <h1 class="modal__cols__right__name">Ttest {{ activeAccessorie.id }}</h1>
                 <div class="modal__cols__right__imgs">
-                    <img src="" alt="">
-                    <img src="" alt="">
+                    <img v-for="(icon, index ) in activeAccessorie.icons" :src="icon" alt="" :key="index" class="modal__cols__right__imgs__icon">
                 </div>
                 <p class="madal__cols__right__description">Lorem ipsum dolor sit amet consectetur adipisicing elit. Eligendi labore fugit officia doloremque, totam pariatur dolore voluptate. Adipisci natus, aut suscipit eos placeat, nihil quisquam quos delectus expedita rerum culpa.</p>
-                <h2 class="price"></h2>
+                <h2 class="modal__cols__right__price">{{ activeAccessorie.price }}</h2>
                 <button class="modal__cols__right__btn" @click="addToCart">Add To Cart</button>
             </div>
         </div>
@@ -33,12 +32,11 @@ export default {
     },
 
     computed: {
-        imagesList: function() {
+        imagesList() {
             return this.activeAccessorie.images.filter((imgUrl, index) => {
                 return imgUrl != this.currentImageUrl;
             });
         },
-
     },
 
     data() {
@@ -87,11 +85,23 @@ export default {
                 text-transform: uppercase
                 text-align: left
 
+            &__imgs
+                margin: 2em 0 2em 0
+
+                &__icon 
+                    margin-right: 2em
+
             &__description 
                 font-size: 1.250em
+                line-height: 1.5em
+
+            &__price 
+                font-size: 1.500em
+                font-weight: 700
+                margin: 1em 0 0 0
 
             &__btn
-                margin-top: 70px
+                margin-top: 3em
                 margin-right: auto
                 margin-left: auto
                 display: inline-block
@@ -108,6 +118,9 @@ export default {
                 color: #272727
                 border-width: 0px
                 height: 66px
+                margin-bottom: 4em
+
+            
 
         &__left
             width: 71.6%

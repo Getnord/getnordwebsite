@@ -33,7 +33,7 @@ import videosControllers from './components/homePage/videos.js';
 $(document).ready(function() {
         
     NavInit();
-    // startAnimations();
+    startAnimations();
     specsDropDownToggle();
     contactForm();
     videosControllers();
@@ -51,14 +51,14 @@ import checkoutPage from './components/shoppingCart/Checkout.vue';
 import baseCardMessage from './components/shoppingCart/BaseCardMessage.vue';
 import http_build_query from 'locutus/php/url/http_build_query';
 
-
+import accessoriesSection from './components/accessories/accessoriesSection.vue';
 // the following is used to be able to use laravel lang resources in JS
 // it will be used to have a funcional localization in this app 
 Vue.prototype.trans = string => _.get(window.i18n, string);
 
 const app = new Vue({
 
-    el:'#shop',
+    el:'#app',
 
     components: {
         buyBtn,
@@ -67,6 +67,7 @@ const app = new Vue({
         shoppingCartIcon,
         checkoutPage,
         baseCardMessage,
+        accessoriesSection,
     },
 
     data: {
@@ -174,7 +175,7 @@ const app = new Vue({
     created() {
         // the following code will handle adding products to the cart that come form 
         // the accessorie instance
-        Event.$on('add-accessorie-to-cart', (accessorieId) => console.log(accessorieId));
+        Event.$on('add-accessorie-to-cart', (accessorieId) => this.buybtnclicked(accessorieId, false));
     },
     mounted() {
         // we want to set the lang
@@ -186,6 +187,7 @@ const app = new Vue({
         // Get all product details form openCart
         const form = new FormData();
         // the array contains the product ids
+        // form.append("products", "[ 30, 40, 50 ]");
         form.append("products", "[\"30\",\"40\", \"50\"]");
         form.append("currency", this.info.currencies[this.lang]);
         axios.post('http://opencart.info/index.php?route=product/product/stock',form)
@@ -338,41 +340,5 @@ const app = new Vue({
 
 });
 
-/**
- * The following vue instance handles the accessories section.
- */
-import BaseAccessorieCard from './components/accessories/BaseAccessorieCard.vue';
-import DetailsWindow from './components/accessories/DetailsWindow.vue';
-import accessoriesData from './components/accessories/accessoriesData';
-import AccessoriesRow from './components/accessories/accessoriesRow.vue';
 
-const accessories = new Vue({
-    el: '#accessories',
-
-    components: {
-        'base-accessorie-card': BaseAccessorieCard,
-        'details-window': DetailsWindow,
-        'accessories-row': AccessoriesRow
-    },
-
-
-    data: {
-        accessoriesData,
-        activeAccessorie: {},
-        isDetailsWindowOpen: false
-    },
-
-    methods: {
-        openDetailsWindow(id) {
-            console.log(id);
-            /**
-             * we have to find the accessorie data form the accessories data
-             */
-            this.activeAccessorie = _.find(accessoriesData, (o) => o.id = id);
-            if(!_.isEmpty(this.activeAccessorie)) {
-                this.isDetailsWindowOpen = true;   
-            }
-        }
-    }
-});
 

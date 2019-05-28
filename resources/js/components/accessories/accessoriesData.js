@@ -9,7 +9,11 @@ const accessoriesData = [
             '/img/accessories/onyx_holster/5.jpg',
             '/img/accessories/onyx_holster/1.jpg',
         ],
-        mainImg: ''
+        mainImg: '/img/accessories/onyx_holster.png',
+        icons: [
+            '/img/accessories/EU_charger.svg',
+            '/img/accessories/Oleophobic_Coating.svg'
+        ]
     },
     {
         id: 30,
@@ -20,6 +24,11 @@ const accessoriesData = [
             '/img/accessories/onyx_holster/4.jpg',
             '/img/accessories/onyx_holster/5.jpg',
             '/img/accessories/onyx_holster/1.jpg',
+        ],
+        mainImg: '/img/accessories/onyx_holster.png',
+        icons: [
+            '/img/accessories/EU_charger.svg',
+            '/img/accessories/Oleophobic_Coating.svg'
         ]
     },
     {
@@ -31,6 +40,11 @@ const accessoriesData = [
             '/img/accessories/onyx_holster/4.jpg',
             '/img/accessories/onyx_holster/5.jpg',
             '/img/accessories/onyx_holster/1.jpg',
+        ],
+        mainImg: '/img/accessories/onyx_holster.png',
+        icons: [
+            '/img/accessories/EU_charger.svg',
+            '/img/accessories/Oleophobic_Coating.svg'
         ]
     },
     {
@@ -42,6 +56,11 @@ const accessoriesData = [
             '/img/accessories/onyx_holster/4.jpg',
             '/img/accessories/onyx_holster/5.jpg',
             '/img/accessories/onyx_holster/1.jpg',
+        ],
+        mainImg: '/img/accessories/onyx_holster.png',
+        icons: [
+            '/img/accessories/EU_charger.svg',
+            '/img/accessories/Oleophobic_Coating.svg'
         ]
     },
     {
@@ -53,9 +72,19 @@ const accessoriesData = [
             '/img/accessories/onyx_holster/4.jpg',
             '/img/accessories/onyx_holster/5.jpg',
             '/img/accessories/onyx_holster/1.jpg',
+        ],
+        mainImg: '/img/accessories/onyx_holster.png',
+        icons: [
+            '/img/accessories/EU_charger.svg',
+            '/img/accessories/Oleophobic_Coating.svg'
         ]
     },
     
-]
+];
 
-export default accessoriesData;
+const accessoriesIds = [20, 30, 40, 50, 60];
+
+export {
+    accessoriesData,
+    accessoriesIds,
+};

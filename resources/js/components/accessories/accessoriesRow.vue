@@ -17,6 +17,9 @@ export default {
 
     @media(max-width: 480px)
         flex-direction: column
+
+.center-elts
+    justify-content: center
         
 </style>
 

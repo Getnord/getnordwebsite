@@ -1,6 +1,6 @@
 <template>
     <div class="card">
-        <img class="card__img" src="/img/accessories/accessorie_1.png" alt="">
+        <img class="card__img" :src="mainImg" alt="">
         <h1 class="card__title">holla</h1>
         <button class="card__btn" @click="openDetailsWindow">More info</button>
     </div>
@@ -14,6 +14,10 @@ export default {
             type: Number,
             required: true
         },
+        mainImg: {
+            type: String,
+            required: true
+        }
     },
 
     methods: {

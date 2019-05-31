@@ -1,20 +1,31 @@
 <template>
     <div>
         <accessories-row>
-            <base-accessorie-card v-for="accessorie in accessoriesToLoad" :id="accessorie.id" @open-details-window="openDetailsWindow"></base-accessorie-card>
+            <base-accessorie-card v-for="(accessorie, index) in validAccessories" :id="accessorie.id" :main-img="accessorie.mainImg" :key="index" @open-details-window="openDetailsWindow"></base-accessorie-card>
         </accessories-row>
         <details-window v-if="isDetailsWindowOpen" :active-accessorie="activeAccessorie" >
         </details-window>
+        <accessories-row v-if="isTwoRowsOfAccessories" :class="{ 'center-elts': isTwoRowsOfAccessories }">
 
+        </accessories-row>
+        
     </div>
 </template>
 
 <script>
 import BaseAccessorieCard from './BaseAccessorieCard.vue';
 import DetailsWindow from './DetailsWindow.vue';
-import { accessoriesData, accessoriesIds } from './accessoriesData.js';
+import { accessoriesData, allAccessoriesIds } from './accessoriesData.js';
 import AccessoriesRow from './accessoriesRow.vue';
+import he from 'he';
 
+/**
+ *  How it works
+ * ----------------------
+ *  we specify an array containing ids for each accessory.
+ *  Fitler the existing ones by comparing the previous array and the array of all the products we get from OpenCart.
+ *  
+ */
 export default {
     name: 'AccessoriesSection',
 
@@ -25,6 +36,7 @@ export default {
     },
 
     props: {
+        // array of ids
         accessoriesToLoad: {
             type: Array,
             required: true
@@ -36,8 +48,34 @@ export default {
     },
 
     computed: {
+        // Fitler the elements in the accessoriesToLoad array
         validAccessories() {
-            return _.intersection(this.accessoriesIds, this.accessoriesToLoad);
+            const filteredAccessories =  _.intersection(this.allAccessoriesIds, this.accessoriesToLoad);
+            let result = [];
+            filteredAccessories.forEach((elt) => {
+                this.accessoriesData.forEach((obj) => {
+                    if( obj.id == elt ) {
+                        result.push(obj);
+                    }
+                })
+            });
+            // add the name and description from OC
+            result.forEach((elt, index) => {
+                const accessorieDataOC = _.find(this.openCartData, (o) => o.product_id == elt.id);
+                if( typeof accessorieDataOC != 'undefined') {
+                    elt.description = he.decode(accessorieDataOC.description);
+                    elt.name = he.decode(accessorieDataOC.name);
+                } else {
+                    result.splice(index, 1);
+                };
+            });
+            return result;
+        },
+        isTwoRowsOfAccessories() {
+            // if the length of the following array is more equal or greater than 3
+            // we show two rows of accessories
+            // else we show only one
+            return this.validAccessories.length > 3;
         },
 
     },
@@ -45,9 +83,10 @@ export default {
     data() {
         return {
             accessoriesData,
-            accessoriesIds,
+            allAccessoriesIds,
             activeAccessorie: {},
-            isDetailsWindowOpen: false
+            isDetailsWindowOpen: false,
+
         }
     },
 
@@ -60,6 +99,7 @@ export default {
             this.activeAccessorie = _.find(this.accessoriesData, (o) => o.id == id);
             const accessorieOpenCartInfo = _.find(this.openCartData, (o) => o.id == o.id );
             this.activeAccessorie.price = accessorieOpenCartInfo.price;
+
             if(!_.isEmpty(this.activeAccessorie)) {
                 this.isDetailsWindowOpen = true;   
             }

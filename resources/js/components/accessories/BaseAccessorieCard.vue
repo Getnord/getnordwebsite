@@ -1,8 +1,10 @@
 <template>
     <div class="card">
         <img class="card__img" :src="mainImg" alt="">
-        <h1 class="card__title">holla</h1>
-        <button class="card__btn" @click="openDetailsWindow">More info</button>
+        <div>
+            <h1 class="card__title">holla</h1>
+            <button class="card__btn" @click="openDetailsWindow">More info</button>
+        </div>
     </div>
 </template>
 <script>
@@ -33,18 +35,21 @@ export default {
     background: #ffffff
     display: flex
     flex-direction: column
-    justify-content: center
+    justify-content: space-between
+    align-items: center
     max-width: 500px
     padding: 20px 40px
     width: 32%
     margin: 4px
+    height: 33em
     
     @media( max-width: 480px)
         width: 50%
 
     &__img
         display: block
-        margin: 10px auto
+        margin: 10px auto 2em auto
+        max-height: 68%
 
     &__title
         font-size: 24px

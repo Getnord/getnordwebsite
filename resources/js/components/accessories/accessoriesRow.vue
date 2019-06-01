@@ -13,7 +13,7 @@ export default {
     display: flex
     flex-direction: row
     justify-content: space-around
-    padding: 8px
+    padding: 0 8px
 
     @media(max-width: 480px)
         flex-direction: column

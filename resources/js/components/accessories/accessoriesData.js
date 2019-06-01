@@ -52,30 +52,22 @@ const accessoriesData = [
         ],
         mainImg: '/img/accessories/onyx_screen_protector/getnord_asahi_glass1.jpg',
         icons: [
-            '/img/accessories/EU_charger.svg',
-            '/img/accessories/Oleophobic_Coating.svg'
+            '/img/accessories/onyx_screen_protector/asahi_glass.svg'
         ]
     },
     {
         id: 57,
         images: [
-            '/img/accessories/onyx_holster/6.jpg',
-            '/img/accessories/onyx_holster/2.jpg',
-            '/img/accessories/onyx_holster/3.jpg',
-            '/img/accessories/onyx_holster/4.jpg',
-            '/img/accessories/onyx_holster/5.jpg',
-            '/img/accessories/onyx_holster/1.jpg',
+            '/img/accessories/usb_cable/getnord_microusb_cable.jpg',
         ],
-        mainImg: '/img/accessories/onyx_holster.png',
+        mainImg: '/img/accessories/usb_cable/getnord_microusb_cable.jpg',
         icons: [
-            '/img/accessories/EU_charger.svg',
-            '/img/accessories/Oleophobic_Coating.svg'
         ]
     },
     
 ];
 
-const allAccessoriesIds = [20, 30, 40, 50, 60];
+const allAccessoriesIds = [56, 59, 51, 58, 57];
 
 export {
     accessoriesData,

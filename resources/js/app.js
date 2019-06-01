@@ -188,9 +188,11 @@ const app = new Vue({
         const form = new FormData();
         // the array contains the product ids
         // form.append("products", "[ 30, 40, 50 ]");
-        form.append("products", "[\"30\",\"40\", \"50\"]");
+        form.append("products", "[\"56\",\"59\", \"51\",\"58\",\"57\", \"51\"]");
         form.append("currency", this.info.currencies[this.lang]);
-        axios.post('http://opencart.info/index.php?route=product/product/stock',form)
+        form.append("lang", this.lang);
+        
+        axios.post('http://site.getnord.test/api',form)
             .then(response => {
                 // product detials from OpenCart
                 this.info.openCartData = response.data.products;

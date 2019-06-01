@@ -1,14 +1,38 @@
 <template>
     <div>
-        <accessories-row>
-            <base-accessorie-card v-for="(accessorie, index) in validAccessories" :id="accessorie.id" :main-img="accessorie.mainImg" :key="index" @open-details-window="openDetailsWindow"></base-accessorie-card>
-        </accessories-row>
-        <details-window v-if="isDetailsWindowOpen" :active-accessorie="activeAccessorie" >
-        </details-window>
-        <accessories-row v-if="isTwoRowsOfAccessories" :class="{ 'center-elts': isTwoRowsOfAccessories }">
+        <div v-if="true">
+            <carousel 
+                :perPageCustom="[[480, 2], [768, 3]]">
+                <slide v-for="(accessorie, index) in validAccessories" :key="index">
+                    <base-accessorie-card :id="accessorie.id" :main-img="accessorie.mainImg" @open-details-window="openDetailsWindow">
+                    </base-accessorie-card>
+                </slide>
+                <slide>2</slide>
+                <slide>3</slide>
+                <slide>4</slide>
+                <slide>5</slide>
+            </carousel>
+        </div>
+        <div v-else>
+            <div v-if="isTwoRowsOfAccessories">
+                <accessories-row>
+                    <base-accessorie-card v-for="(accessorie, index) in splitedArray[0]" :id="accessorie.id" :main-img="accessorie.mainImg" :key="index" @open-details-window="openDetailsWindow"></base-accessorie-card>
+                </accessories-row>
+                <details-window v-if="isDetailsWindowOpen" :active-accessorie="activeAccessorie" >
+                </details-window>
+                <accessories-row :class="{'center-elts': isTwoRowsOfAccessories}">
+                    <base-accessorie-card v-for="(accessorie, index) in splitedArray[1]" :id="accessorie.id" :main-img="accessorie.mainImg" :key="index" @open-details-window="openDetailsWindow"></base-accessorie-card>
+                </accessories-row>
+            </div>
 
-        </accessories-row>
-        
+            <div v-else>
+                <accessories-row>
+                    <base-accessorie-card v-for="(accessorie, index) in validAccessories" :id="accessorie.id" :main-img="accessorie.mainImg" :key="index" @open-details-window="openDetailsWindow"></base-accessorie-card>
+                </accessories-row>
+                <details-window v-if="isDetailsWindowOpen" :active-accessorie="activeAccessorie" >
+                </details-window>
+            </div>
+        </div>
     </div>
 </template>
 
@@ -17,6 +41,7 @@ import BaseAccessorieCard from './BaseAccessorieCard.vue';
 import DetailsWindow from './DetailsWindow.vue';
 import { accessoriesData, allAccessoriesIds } from './accessoriesData.js';
 import AccessoriesRow from './accessoriesRow.vue';
+import { Carousel, Slide } from 'vue-carousel';
 import he from 'he';
 
 /**
@@ -30,9 +55,11 @@ export default {
     name: 'AccessoriesSection',
 
     components: {
-        'base-accessorie-card': BaseAccessorieCard,
-        'details-window': DetailsWindow,
-        'accessories-row': AccessoriesRow
+        BaseAccessorieCard,
+        DetailsWindow,
+        AccessoriesRow,
+        Carousel,
+        Slide
     },
 
     props: {
@@ -50,6 +77,7 @@ export default {
     computed: {
         // Fitler the elements in the accessoriesToLoad array
         validAccessories() {
+            // Validate the ids
             const filteredAccessories =  _.intersection(this.allAccessoriesIds, this.accessoriesToLoad);
             let result = [];
             filteredAccessories.forEach((elt) => {
@@ -71,6 +99,7 @@ export default {
             });
             return result;
         },
+
         isTwoRowsOfAccessories() {
             // if the length of the following array is more equal or greater than 3
             // we show two rows of accessories
@@ -78,6 +107,19 @@ export default {
             return this.validAccessories.length > 3;
         },
 
+        splitedArray() {
+            if(this.isTwoRowsOfAccessories) {
+                return _.chunk(this.validAccessories, 3);
+            }
+        },
+
+        isCarouselActive() {
+            if(window.innerWidth <= 750 ) {
+                return true;
+            } else {
+                return false;
+            }
+        }
     },
 
     data() {

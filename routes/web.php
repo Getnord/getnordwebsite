@@ -19,6 +19,8 @@ Route::prefix('{locale?}')->group(function() {
     Route::get('/legal', 'PagesController@legal')->name('legal');
 });
 
+// Get data from OpenCart
+Route::post('/api', 'ProductsController@index');
 /**
  * The following route handles generating a javascript object that will be served 
  * to the front-end. It will be consumed by the shoppingCart only.

@@ -1,17 +1,18 @@
 <template>
     <div>
-        <div v-if="true">
+        <div v-if="isCarouselActive">
             <carousel 
-                :perPageCustom="[[480, 2], [768, 3]]">
+                :perPageCustom="[[0, 1], [560, 2]]"
+                paginationPosition="top"
+                paginationColor="#a2aaaa"
+                >
                 <slide v-for="(accessorie, index) in validAccessories" :key="index">
                     <base-accessorie-card :id="accessorie.id" :main-img="accessorie.mainImg" @open-details-window="openDetailsWindow">
                     </base-accessorie-card>
                 </slide>
-                <slide>2</slide>
-                <slide>3</slide>
-                <slide>4</slide>
-                <slide>5</slide>
             </carousel>
+            <details-window v-if="isDetailsWindowOpen" :active-accessorie="activeAccessorie" >
+            </details-window>
         </div>
         <div v-else>
             <div v-if="isTwoRowsOfAccessories">
@@ -113,13 +114,6 @@ export default {
             }
         },
 
-        isCarouselActive() {
-            if(window.innerWidth <= 750 ) {
-                return true;
-            } else {
-                return false;
-            }
-        }
     },
 
     data() {
@@ -128,8 +122,19 @@ export default {
             allAccessoriesIds,
             activeAccessorie: {},
             isDetailsWindowOpen: false,
+            isCarouselActive: false,
 
         }
+    },
+
+    mounted() {
+        this.$nextTick(() => {
+            if(window.innerWidth <= 850 ) {
+                this.isCarouselActive =  true;
+            } else {
+                this.isCarouselActive =  false;
+            }
+        });
     },
 
     methods: {
@@ -151,6 +156,6 @@ export default {
 }
 </script>
 
-<style>
+<style lang="sass" scoped>
 
 </style>

@@ -43,13 +43,20 @@ export default {
     margin: 4px
     height: 33em
     
-    @media( max-width: 480px)
-        width: 50%
+    @media( max-width: 999px )
+        height: 30em
+    
+    @media(max-width: 850px)
+        width: auto
+        height: 28em
 
     &__img
         display: block
         margin: 10px auto 2em auto
         max-height: 68%
+
+        @media(max-width: 768px)
+            max-height: 60%
 
     &__title
         font-size: 24px
@@ -59,11 +66,14 @@ export default {
         margin-bottom: 20px
         margin-left: 0
 
+        @media( max-width: 999px )
+            font-size: 20px
+
     &__btn
         margin-right: auto
         margin-left: auto
         display: inline-block
-        padding: 17px 60px
+        padding: 17px 10px
         height: 70px
         font-size: 18px
         line-height: 30px
@@ -76,5 +86,8 @@ export default {
         color: #272727
         border-width: 0px
         height: 66px
+        margin-bottom: 1em
+        width: 200px
+        display: block
 
 </style>

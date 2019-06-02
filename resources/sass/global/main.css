@@ -2199,7 +2199,9 @@ items_section .product_info button:hover {
 	.product_section .section_content {
 		padding: 0 20%;
 	}
-
+	.section_header, .section_heading {
+		font-size: 1.875em !important;
+	}
 }	
 
 /* s */
@@ -2527,7 +2529,10 @@ items_section .product_info button:hover {
         visibility: visible;
         pointer-events: auto;
         cursor: pointer;
-    }
+	}
+	.section_heading, .section_header {
+		font-size: 1.5em !important;
+	}
 }
 
 .wrapper_logo{

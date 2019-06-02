@@ -20,7 +20,7 @@
                         {{-- <buy-btn product-id="50" @buy-btn-clicked="buybtnclicked" :product-has-options="true">
                             Buy
                         </buy-btn> --}}
-                        <a href="#product_section2" class="button button_yellow button--full-width">{{ __('onyx.heroBtn') }}</a>
+                        <a href="#product_section2" class="button button_yellow button--full-width">{{ __('onyx.addToCart') }}</a>
                         <p class="product_section--onyx_or-text">Or</p>
                     </div>
                 </div>

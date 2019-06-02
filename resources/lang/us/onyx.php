@@ -7,6 +7,7 @@ return [
 
     //section 2
     'maketPlacesTitle' => 'Buy on popular marketplaces',
+    'addToCart' => 'Add To cart',
 
     // section 3 metal reinforced
     'metalReinforcedTitle' => 'Metal Reinforced',
@@ -27,6 +28,8 @@ return [
 
     // section 6 - comparison
     'getnordPhonesComparison' => 'Getnord Phones Comparison',
+    'comparisonTitleSmall' => 'View full technical specs',
+    'comparisonTitleBig' => 'View full technical specs ONYX vs LYNX vs WALRUS',
 
     'comparisonIpRating' => 'Ip Rating', 
     'comparisonIpRatingOnyx' => 'IP68',

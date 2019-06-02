@@ -10,6 +10,19 @@
         padding: 20px
         background: $getnord-yellow
 
+        .specs__title__small
+            display: inline-block
+
+        .specs__title__big
+            display: none
+
+        @include breakpoint(m)
+            .specs__title__small 
+                display: none
+            .specs__title__big
+                display: inline-block
+                font-size: 22px
+
         @include breakpoint(s)
             margin-top: 2em
     
@@ -76,7 +89,7 @@
                 max-width: 370px
             
             .specs__phone
-                opacity: 0.4
+                opacity: 0.6
                 transition: all 0.2s ease-out
 
                 @include breakpoint(xs)

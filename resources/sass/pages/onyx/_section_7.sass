@@ -54,12 +54,16 @@
             text-transform: uppercase
             text-align: left
 
+            @include breakpoint(l)
+                margin: 70px 0 35px 0
+                
             @include breakpoint(m)
                 margin: 0.5em 0 0 0
-                font-size: 1.500em
+                font-size: 1.875em
 
             @include breakpoint(s)
                 text-align: center
+                font-size: 1.5em
 
         p 
             max-width: 500px

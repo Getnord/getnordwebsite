@@ -1,6 +1,7 @@
 <section class="specs_section">
     <div class="page_center">
-        <div class="section_header"><a id="specs_link" class="hover" href="javascript:void(0)">View full technical specs&emsp;<svg class="icon"><use id="specs_link_icon" xlink:href="{{ url('/') }}/img/icons.svg#icon_plus"></use></svg></a></div>
+        <div class="section_header"><a id="specs_link" class="hover" href="javascript:void(0)"><p class="specs__title__small">{{ __('onyx.comparisonTitleSmall') }}</p><p class="specs__title__big">{{ __('onyx.comparisonTitleBig') }}</p>&emsp;<svg class="icon"><use id="specs_link_icon" xlink:href="{{ url('/') }}/img/icons.svg#icon_plus"></use></svg></a></div>
+        
         <div class="specs" id="specs">
             <div class="row">
                 <div class="specs__col specs__col--15"></div>
@@ -8,10 +9,10 @@
                     <img src="{{ url('/')}}/img/onyx/phone_onyx.jpg" alt="" class="specs__phone">
                 </div>
                 <div class="specs__col specs__col--27">
-                    <img src="{{ url('/')}}/img/onyx/phone_lynx.jpg" alt="" class="specs__phone">
+                    <img src="{{ url('/')}}/img/lynx/phone_lynx.jpg" alt="" class="specs__phone">
                 </div>
                 <div class="specs__col specs__col--27">
-                    <img src="{{ url('/')}}/img/onyx/phone_walrus.jpg" alt="" class="specs__phone">
+                    <img src="{{ url('/')}}/img/walrus/phone_walrus.jpg" alt="" class="specs__phone">
                 </div>
             </div>
 
@@ -116,7 +117,7 @@
                 </div>
                 <div class="specs--responsive__col"
                 name="Lynx">
-                    <img src="{{ url('/')}}/img/onyx/phone_onyx.jpg" alt="" class="specs__phone">
+                    <img src="{{ url('/')}}/img/lynx/phone_lynx.jpg" alt="" class="specs__phone">
                     <div class="specs--responsive__row">
                         <p class="specs__spec">
                             {{ __('onyx.comparisonIpRating') }}
@@ -160,7 +161,7 @@
                 </div>
                 <div class="specs--responsive__col"
                 name="Walrus">
-                    <img src="{{ url('/')}}/img/onyx/phone_onyx.jpg" alt="" class="specs__phone">
+                    <img src="{{ url('/')}}/img/walrus/phone_walrus.jpg" alt="" class="specs__phone">
                     <div class="specs--responsive__row">
                         <p class="specs__spec">
                             {{ __('onyx.comparisonIpRating') }}

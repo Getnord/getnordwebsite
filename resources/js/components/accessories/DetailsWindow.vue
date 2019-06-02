@@ -13,7 +13,7 @@
                 <div class="modal__cols__right__imgs">
                     <img v-for="(icon, index ) in activeAccessorie.icons" :src="icon" alt="" :key="index" class="modal__cols__right__imgs__icon">
                 </div>
-                <p class="madal__cols__right__description">Lorem ipsum dolor sit amet consectetur adipisicing elit. Eligendi labore fugit officia doloremque, totam pariatur dolore voluptate. Adipisci natus, aut suscipit eos placeat, nihil quisquam quos delectus expedita rerum culpa.</p>
+                <p class="madal__cols__right__description description">Lorem ipsum dolor sit amet consectetur adipisicing elit. Eligendi labore fugit officia doloremque, totam pariatur dolore voluptate. Adipisci natus, aut suscipit eos placeat, nihil quisquam quos delectus expedita rerum culpa.</p>
                 <h2 class="modal__cols__right__price">{{ activeAccessorie.price }}</h2>
                 <button class="modal__cols__right__btn" @click="addToCart">Add To Cart</button>
             </div>
@@ -37,11 +37,8 @@ export default {
                 return imgUrl != this.currentImageUrl;
             });
         },
-    },
-
-    data() {
-        return {
-            currentImageUrl: this.activeAccessorie.images[0],
+        currentImageUrl() {
+            return this.activeAccessorie.images[0]
         }
     },
 
@@ -68,14 +65,24 @@ export default {
         display: flex
         flex-direction: row
         align-items: stretch
-        
 
+        @media( max-width: 768px)
+            flex-direction: column
+        
         &__right 
             width: 28.4%
             padding-top: 100px
             padding-left: 60px 
             padding-right: 60px
-            
+
+            @media( max-width: 768px)
+                background-color: #f2f3f3
+                max-width: 100%
+                padding-top: 10px
+                padding-left: 10px
+                padding-right: 10px
+                width: auto
+
             &__name 
                 padding: 0px
                 margin-left: 0px
@@ -85,27 +92,55 @@ export default {
                 text-transform: uppercase
                 text-align: left
 
+                @media( max-width: 768px )
+                    font-size: 24px
+                    padding: 0 10px 0 10px
+                    text-align: left
+
+                @media( max-width: 468px )
+                    text-align: center
+
             &__imgs
                 margin: 2em 0 2em 0
+
+                @media( max-width: 468px)
+                    display: flex
+                    flex-direction: column
+                    justify-content: center
 
                 &__icon 
                     margin-right: 2em
 
             &__description 
-                font-size: 1.250em
-                line-height: 1.5em
+                font-size: 1.250em  
+                line-height: 1.5em  
+            
+            .description
+                font-size: 1.250em  
+                line-height: 1.5em  
+
+                @media( max-width: 468px )
+                    text-align: center  
+                    font-size: 1em 
+                    padding: 0 16px 
 
             &__price 
                 font-size: 1.500em
                 font-weight: 700
                 margin: 1em 0 0 0
+                text-align: left
+                color: #272727
+                @media( max-width: 468px ) 
+                    text-align: center
+
 
             &__btn
                 margin-top: 3em
                 margin-right: auto
                 margin-left: auto
                 display: inline-block
-                padding: 17px 60px
+                padding: 17px 10px
+                width: 200px
                 height: 70px
                 font-size: 18px
                 line-height: 30px
@@ -120,14 +155,19 @@ export default {
                 height: 66px
                 margin-bottom: 4em
 
-            
+                @media( max-width: 468px )
+                    display: block
+                    margin: 1em auto
 
         &__left
             width: 71.6%
             background: black
             background-size: cover
             background-position: center
-                
+
+            @media(max-width: 768px)
+                width: 100%
+                height: 640px
 
             &__imgs 
                 display: flex 

@@ -31,19 +31,32 @@ export default {
         }
     },
 
+    watch: {
+        activeAccessorie() {
+            this.currentImageUrl = this.activeAccessorie.images[0];
+        }
+    },
+
     computed: {
         imagesList() {
             return this.activeAccessorie.images.filter((imgUrl, index) => {
                 return imgUrl != this.currentImageUrl;
             });
         },
-        currentImageUrl() {
-            return this.activeAccessorie.images[0]
+        // currentImageUrl() {
+        //     return this.activeAccessorie.images[0]
+        // }
+    },
+
+    data() {
+        return {
+            currentImageUrl: this.activeAccessorie.images[0],
         }
     },
 
     methods: {
         switchCurrentImage(imgUrl){
+            console.log(imgUrl);
             this.currentImageUrl = imgUrl;
         },
 

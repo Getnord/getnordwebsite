@@ -1838,6 +1838,10 @@ items_section .product_info button:hover {
 
 /*xl*/
 @media(max-width:1300px) {
+	.page_content {
+		position: relative;
+		top: -20px;
+	}
     .page_header {
 		min-height: 60px;
 	}
@@ -1889,7 +1893,6 @@ items_section .product_info button:hover {
 }
 /* l */
 @media (max-width: 1199px) {
-    
 	.hidden_l {
 		display: none;
 	}
@@ -2207,7 +2210,7 @@ items_section .product_info button:hover {
 /* s */
 @media (max-width: 759px) {
     .page_content {
-        margin-top: 35px;
+		margin-top: 0px;
     }
 	.hidden_s {
 		display: none;

@@ -6,7 +6,9 @@
 function navWatcher() {
     $(window).on("scroll", function() {
         const isLanguageSelectorOpen = $('.float-languages').hasClass('active');
-        const isNavvOpen = $(".top_menu").hasClass("on");
+        const isNavOpen = $('.top_menu').hasClass('on');
+        const isDropDownOpen = $('.dropdown').hasClass('active');
+
         //change the header background to transparent on scroll
         if ($(window).scrollTop() > 50) {
             $(".page_header").addClass("active");
@@ -20,12 +22,16 @@ function navWatcher() {
             $('.float-languages').removeClass('active');
         };
 
-        //close the nav menu drop down on scroll
+        //close the nav menu dropdown and the links dropdown on scroll
         
-            if(isNavvOpen) {
-                $(".top_menu").removeClass("on");
-                $(".page_header").removeClass("on");
-            };
+        if(isNavOpen) {
+            $(".top_menu").removeClass("on"); 
+            $(".page_header").removeClass("on");
+        };
+
+        if(isDropDownOpen) {
+            $('.dropdown').removeClass('active');
+        };
 
         //Make country flag names clickable
         $('.floating-selector').find('h3').on('click', function(e){
@@ -35,13 +41,6 @@ function navWatcher() {
             const link = $this.find('a').attr('href');
             // redirect to the clicked link
             window.location.href = link;
-        });
-
-        //nav toggle for mobile
-        $('.top_menu_toggle').click(function(e) {
-            e.preventDefault();
-            $('.top_menu').toggleClass('on');
-            $('.page_header').toggleClass('on');
         });
 
     });
@@ -75,9 +74,15 @@ function languageSelectorWatcher() {
  * Dropdown
  */
 function toggleDropDown() {
-    $('.dropdown').on('click', function(e) {
+    $('.dropdown__btn').on('click', function(e) {
         e.preventDefault();
-        $('.dropdown').toggleClass('active');
+        $('.dropdown__btn').parent().toggleClass('active');
+    });
+    //nav toggle for mobile
+    $('.top_menu_toggle').click(function(e) {
+        e.preventDefault();
+        $('.top_menu').toggleClass('on');
+        $('.page_header').toggleClass('on');
     });
 };
 

@@ -192,17 +192,14 @@
                 <li><a href="{{ route('home', ['locale' => app()->getLocale()]) }}">SHOP</a></li>
             @endif
             <li class="dropdown">
-                <a href="#" class="dropdown__btn ">
+                <a href="#" class="dropdown__btn">
                     <p>Phones</p>
                 </a>
-                <ul class="dropdown__list">
-                    <li>
-                        <a href="#">Getnord Lynx</a>
-                    </li>
-                    <li>
-                        <a href="#">Getnord Onyx</a>
-                    </li>
-                </ul>
+                <div class="dropdown__list">
+                    <a href="{{ route('home', ['locale' => app()->getLocale()]) }}">Getnord Lynx</a>
+            
+                    <a href="{{ route('onyx', ['locale' => app()->getLocale()]) }}">Getnord Onyx</a>
+                </div>
             </li>
 <!--			<li><a href="javascript:void(0);" onclick="popup_open();">CONTACT</a></li>-->
             <li><a href="{{ route('contact', ['locale' => app()->getLocale()]) }}">CONTACTS&SUPPORT</a></li>

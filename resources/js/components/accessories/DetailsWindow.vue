@@ -9,7 +9,7 @@
                 </ul>
             </div>
             <div class="modal__cols__right">
-                <h1 class="modal__cols__right__name">Ttest {{ activeAccessorie.id }}</h1>
+                <h1 class="modal__cols__right__name">{{ activeAccessorie.name }}</h1>
                 <div class="modal__cols__right__imgs">
                     <img v-for="(icon, index ) in activeAccessorie.icons" :src="icon" alt="" :key="index" class="modal__cols__right__imgs__icon">
                 </div>
@@ -97,19 +97,22 @@ export default {
                     padding: 0 10px 0 10px
                     text-align: left
 
-                @media( max-width: 468px )
+                @media( max-width: 480px )
                     text-align: center
 
             &__imgs
                 margin: 2em 0 2em 0
 
-                @media( max-width: 468px)
+                @media( max-width: 480px)
                     display: flex
                     flex-direction: column
                     justify-content: center
 
                 &__icon 
                     margin-right: 2em
+                    @media( max-width: 480px )
+                        margin-right: 0
+
 
             &__description 
                 font-size: 1.250em  
@@ -130,7 +133,7 @@ export default {
                 margin: 1em 0 0 0
                 text-align: left
                 color: #272727
-                @media( max-width: 468px ) 
+                @media( max-width: 480px ) 
                     text-align: center
 
 
@@ -155,7 +158,7 @@ export default {
                 height: 66px
                 margin-bottom: 4em
 
-                @media( max-width: 468px )
+                @media( max-width: 480px )
                     display: block
                     margin: 1em auto
 

@@ -192,7 +192,7 @@ const app = new Vue({
         form.append("currency", this.info.currencies[this.lang]);
         form.append("lang", this.lang);
         
-        axios.post('http://site.getnord.test/api',form)
+        axios.post('/api',form)
             .then(response => {
                 // product detials from OpenCart
                 this.info.openCartData = response.data.products;

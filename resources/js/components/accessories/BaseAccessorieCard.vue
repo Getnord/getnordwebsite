@@ -1,8 +1,8 @@
 <template>
     <div class="card">
-        <img class="card__img" :src="mainImg" alt="">
+        <img class="card__img" :src="mainImg" :alt="name">
         <div>
-            <h1 class="card__title">holla</h1>
+            <h1 class="card__title">{{ name }}</h1>
             <button class="card__btn" @click="openDetailsWindow">More info</button>
         </div>
     </div>
@@ -17,6 +17,10 @@ export default {
             required: true
         },
         mainImg: {
+            type: String,
+            required: true
+        },
+        name: {
             type: String,
             required: true
         }
@@ -53,7 +57,7 @@ export default {
     &__img
         display: block
         margin: 10px auto 2em auto
-        max-height: 68%
+        max-height: 60%
 
         @media(max-width: 768px)
             max-height: 60%

@@ -6,7 +6,7 @@
         <div class="section_center">
             <div class="section_heading">GETNORD Onyx<br />{{ __('onyx.heroIntro') }}</div>
             <div class="section_form">
-                <a href="#product_section2" class="button button_yellow">{{ __('onyx.heroBtn') }}</a>
+                <a href="#product_section" class="button button_yellow">{{ __('onyx.heroBtn') }}</a>
             </div>
         </div>
     </div>

@@ -7,7 +7,10 @@
                 paginationColor="#a2aaaa"
                 >
                 <slide v-for="(accessorie, index) in validAccessories" :key="index">
-                    <base-accessorie-card :id="accessorie.id" :main-img="accessorie.mainImg" @open-details-window="openDetailsWindow">
+                    <base-accessorie-card 
+                        :id="accessorie.id" 
+                        :main-img="accessorie.mainImg" 
+                        @open-details-window="openDetailsWindow">
                     </base-accessorie-card>
                 </slide>
             </carousel>
@@ -17,18 +20,37 @@
         <div v-else>
             <div v-if="isTwoRowsOfAccessories">
                 <accessories-row>
-                    <base-accessorie-card v-for="(accessorie, index) in splitedArray[0]" :id="accessorie.id" :main-img="accessorie.mainImg" :key="index" @open-details-window="openDetailsWindow"></base-accessorie-card>
+                    <base-accessorie-card 
+                        v-for="(accessorie, index) in splitedArray[0]" 
+                        :id="accessorie.id" :main-img="accessorie.mainImg"
+                        :name="accessorie.name" 
+                        :key="index" 
+                        @open-details-window="openDetailsWindow"></base-accessorie-card>
                 </accessories-row>
                 <details-window v-if="isDetailsWindowOpen" :active-accessorie="activeAccessorie" >
                 </details-window>
                 <accessories-row :class="{'center-elts': isTwoRowsOfAccessories}">
-                    <base-accessorie-card v-for="(accessorie, index) in splitedArray[1]" :id="accessorie.id" :main-img="accessorie.mainImg" :key="index" @open-details-window="openDetailsWindow"></base-accessorie-card>
+                    <base-accessorie-card 
+                        v-for="(accessorie, index) in splitedArray[1]" 
+                        :id="accessorie.id" 
+                        :main-img="accessorie.mainImg" 
+                        :key="index" 
+                        :name="accessorie.name"
+                        @open-details-window="openDetailsWindow"></base-accessorie-card>
                 </accessories-row>
             </div>
 
             <div v-else>
                 <accessories-row>
-                    <base-accessorie-card v-for="(accessorie, index) in validAccessories" :id="accessorie.id" :main-img="accessorie.mainImg" :key="index" @open-details-window="openDetailsWindow"></base-accessorie-card>
+                    <base-accessorie-card 
+                        v-for="(accessorie, index) in validAccessories" 
+                        :id="accessorie.id" 
+                        :main-img="accessorie.mainImg" 
+                        :key="index"
+                        @open-details-window="openDetailsWindow"
+                        :name="accessorie.name"
+                    >
+                    </base-accessorie-card>
                 </accessories-row>
                 <details-window v-if="isDetailsWindowOpen" :active-accessorie="activeAccessorie" >
                 </details-window>
@@ -88,12 +110,13 @@ export default {
                     }
                 })
             });
-            // add the name and description from OC
+            // add the name, price and description from OC
             result.forEach((elt, index) => {
                 const accessorieDataOC = _.find(this.openCartData, (o) => o.product_id == elt.id);
                 if( typeof accessorieDataOC != 'undefined') {
                     elt.description = he.decode(accessorieDataOC.description);
                     elt.name = he.decode(accessorieDataOC.name);
+                    elt.price = he.decode(accessorieDataOC.price);
                 } else {
                     result.splice(index, 1);
                 };
@@ -144,11 +167,14 @@ export default {
              * we have to find the accessorie data form the accessories data
              */
             this.activeAccessorie = _.find(this.accessoriesData, (o) => o.id == id);
-            const accessorieOpenCartInfo = _.find(this.openCartData, (o) => o.id == o.id );
-            this.activeAccessorie.price = accessorieOpenCartInfo.price;
 
+            /**
+             * some validation that the accessorie exitst
+             */
             if(!_.isEmpty(this.activeAccessorie)) {
                 this.isDetailsWindowOpen = true;   
+            } else {
+                console.log('the accessorie could not be found on our db');
             }
         }
     },

@@ -29,11 +29,17 @@ function specsDropDownToggle() {
                 centerPadding: '120px',
                 slidesToShow: 1,
                 dots: true,
+                customPaging: function(slider, i ) {
+                    var name = $(slider.$slides[i]).find('.specs--responsive__col').attr('name');
+                    console.log(name);
+                    return '<button class="tab"><h3>' + name  + '</h3></button>';
+                },
             });
         } else if( windowWidth < 480 && specsSectionToShow == '#specs--responsive') {
             $('.specs__slider').slick({
                 centerMode: true,
                 slidesToShow: 1,
+                centerPadding: '16px',
                 arrows: false,
                 infinite: false,
                 dots: true,

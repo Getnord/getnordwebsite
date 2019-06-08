@@ -4,52 +4,52 @@
         <div class="lang-select-btn">
             @if ( app()->getLocale() == 'us')
                 <div class="lang-select">
-                    <img src="{{ url('/') }}/img/united-states.png" alt="">
+                    <img src="{{ url('/') }}/img/united-states.svg" alt="">
                 </div>
             @endif
             @if ( app()->getLocale() == 'ca')
                 <div class="lang-select">
-                        <img src="{{ url('/') }}/img/canada.png" alt="">
+                        <img src="{{ url('/') }}/img/canada.svg" alt="">
                 </div>
             @endif
             @if ( app()->getLocale() == 'uk')
                 <div class="lang-select">
-                    <img src="{{ url('/') }}/img/united-kingdom.png" alt="">
+                    <img src="{{ url('/') }}/img/united-kingdom.svg" alt="">
                 </div>
             @endif
             @if ( app()->getLocale() == 'fr' )
                 <div class="lang-select">
-                    <img src="{{ url('/') }}/img/france.png" alt="">
+                    <img src="{{ url('/') }}/img/france.svg" alt="">
                 </div>
             @endif
             @if ( app()->getLocale() == 'de' )
                 <div class="lang-select">
-                    <img src="{{ url('/') }}/img/germany.png" alt="">
+                    <img src="{{ url('/') }}/img/germany.svg" alt="">
                 </div>
             @endif
             @if ( app()->getLocale() == 'es' )
                 <div class="lang-select">
-                    <img src="{{ url('/') }}/img/spain.png" alt="">
+                    <img src="{{ url('/') }}/img/spain.svg" alt="">
                 </div>
             @endif
             @if ( app()->getLocale() == 'it' )
                 <div class="lang-select">
-                    <img src="{{ url('/') }}/img/italy.png" alt="">
+                    <img src="{{ url('/') }}/img/italy.svg" alt="">
                 </div>
             @endif
             @if ( app()->getLocale() == 'nl' )
                 <div class="lang-select">
-                    <img src="{{ url('/') }}/img/netherlands.png" alt="">
+                    <img src="{{ url('/') }}/img/netherlands.svg" alt="">
                 </div>
             @endif
             @if ( app()->getLocale() == 'pl' )
                 <div class="lang-select">
-                    <img src="{{ url('/') }}/img/poland.png" alt="">
+                    <img src="{{ url('/') }}/img/poland.svg" alt="">
                 </div>
             @endif
             @if ( app()->getLocale() == 'lt' )
                 <div class="lang-select">
-                    <img src="{{ url('/') }}/img/lithuania.png" alt="">
+                    <img src="{{ url('/') }}/img/lithuania.svg" alt="">
                 </div>
             @endif
         </div>
@@ -58,7 +58,7 @@
             @if ( app()->getLocale() != 'us' )
                 <div class="lang-select">
                     <a href="{{ route('home', ['locale' => 'us']) }}">
-                        <img src="{{ url('/') }}/img/united-states.png" alt="">
+                        <img src="{{ url('/') }}/img/united-states.svg" alt="">
                     </a>
                     <h3>Usa</h3>
                 </div>
@@ -66,7 +66,7 @@
             @if ( app()->getLocale() != 'ca' )
                 <div class="lang-select">
                     <a href="{{ route('home', ['locale' => 'ca']) }}">
-                        <img src="{{ url('/') }}/img/canada.png" alt="">
+                        <img src="{{ url('/') }}/img/canada.svg" alt="">
                     </a>
                     <h3>Canada</h3>
                 </div>
@@ -74,7 +74,7 @@
             @if (app()->getLocale() != 'uk' )
                 <div class="lang-select">
                     <a href="{{ route('home', ['locale' => 'uk']) }}">
-                        <img src="{{ url('/') }}/img/united-kingdom.png" alt="">
+                        <img src="{{ url('/') }}/img/united-kingdom.svg" alt="">
                     </a>
                     <h3>UK</h3>
                 </div>
@@ -82,7 +82,7 @@
             @if (app()->getLocale() != 'fr' )
                 <div class="lang-select">
                     <a href="{{ route('home', ['locale' => 'fr']) }}">
-                        <img src="{{ url('/') }}/img/france.png" alt="">
+                        <img src="{{ url('/') }}/img/france.svg" alt="">
                     </a>
                     <h3>France</h3>
                 </div>
@@ -90,7 +90,7 @@
             @if ( app()->getLocale() != 'de' )
                 <div class="lang-select">
                     <a href="{{ route('home', ['locale' => 'de']) }}">
-                        <img src="{{ url('/') }}/img/germany.png" alt="">
+                        <img src="{{ url('/') }}/img/germany.svg" alt="">
                     </a>
                     <h3>Deutschland</h3>
                 </div>
@@ -98,7 +98,7 @@
             @if ( app()->getLocale() != 'es' )
                 <div class="lang-select">
                     <a href="{{ route('home', ['locale' => 'es']) }}">
-                        <img src="{{ url('/') }}/img/spain.png" alt="">
+                        <img src="{{ url('/') }}/img/spain.svg" alt="">
                     </a>
                     <h3>España</h3>
                 </div>
@@ -106,7 +106,7 @@
             @if ( app()->getLocale() != 'it' )
                 <div class="lang-select">
                     <a href="{{ route('home', ['locale' => 'it']) }}">
-                        <img src="{{ url('/') }}/img/italy.png" alt="">
+                        <img src="{{ url('/') }}/img/italy.svg" alt="">
                     </a>
                     <h3>Italia</h3>
                 </div>
@@ -114,7 +114,7 @@
             @if ( app()->getLocale() != 'nl' )
                 <div class="lang-select">
                     <a href="{{ route('home', ['locale' => 'nl']) }}">
-                        <img src="{{ url('/') }}/img/netherlands.png" alt="">
+                        <img src="{{ url('/') }}/img/netherlands.svg" alt="">
                     </a>
                     <h3>Nederland</h3>
                 </div> 
@@ -122,7 +122,7 @@
             @if ( app()->getLocale() != 'pl' )
                 <div class="lang-select">
                     <a href="{{ route('home', ['locale' => 'pl']) }}">
-                        <img src="{{ url('/') }}/img/poland.png" alt="">
+                        <img src="{{ url('/') }}/img/poland.svg" alt="">
                     </a>
                     <h3>Polska</h3>
                 </div>
@@ -130,7 +130,7 @@
             @if ( app()->getLocale() != 'li' )
                 <div class="lang-select">
                     <a href="{{ route('home', ['locale' => 'lt']) }}">
-                        <img src="{{ url('/') }}/img/lithuania.png" alt="">
+                        <img src="{{ url('/') }}/img/lithuania.svg" alt="">
                     </a>
                     <h3>Lietuva</h3>
                 </div>
@@ -140,7 +140,7 @@
     <div class="top_menu_toggle">
         <a class="hover" href="#"></a>
     </div>
-    <div class="social">
+    {{-- <div class="social">
 
         @if ( app()->getLocale() == 'us' || app()->getLocale() == 'uk' || app()->getLocale() == 'ca' )
             <a href="https://www.facebook.com/getnordinternational/" target="_blank" class="fb"><svg class="icon"><use xlink:href="{{ url('/') }}/img/icons.svg#icon_fb"></use></svg></a>
@@ -176,6 +176,9 @@
         
         <a href="https://twitter.com/getnord" target="_blank" class="tw"><svg class="icon"><use xlink:href="{{ url('/') }}/img/icons.svg#icon_tw"></use></svg></a>
         <a href="https://www.instagram.com/getnord/" target="_blank" class="in"><svg class="icon"><use xlink:href="{{ url('/') }}/img/icons.svg#icon_in"></use></svg></a>
+    </div> --}}
+    <div class="social">
+        <shopping-cart-icon :all-products-in-cart-quantity="cart.length" @open-shopping-cart="openShoppingCart"></shopping-cart-icon>
     </div>
     <div class="clear visible_m"></div>
 

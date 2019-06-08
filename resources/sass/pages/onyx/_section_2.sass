@@ -1,5 +1,8 @@
 .product_section--onyx
 
+    .section_heading
+        font-size: 1.125em
+
     .section_form
         flex-direction: column
 
@@ -63,6 +66,9 @@
             font-size: 20px
             font-weight: 700
 
+            @include breakpoint(s)
+                font-size: 1em
+
         &_list
             display: flex
             flex-direction: row
@@ -70,8 +76,11 @@
             align-items: center
             margin-top: 46px
             
-            a 
+            .store_cta 
                 max-width: 160px
+
+                &--ebay 
+                    margin-top: -1.25em
 
                 @include breakpoint(s)
                     max-width: 120px

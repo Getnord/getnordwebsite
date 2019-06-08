@@ -150,14 +150,13 @@ export default {
         }
     },
 
-    mounted() {
-        this.$nextTick(() => {
-            if(window.innerWidth <= 850 ) {
-                this.isCarouselActive =  true;
-            } else {
-                this.isCarouselActive =  false;
-            }
-        });
+    created() {
+        window.addEventListener('resize', this.handleResize);
+        this.handleResize();
+    },
+
+    destroyed() {
+        window.removeEventListener('resize', this.handleResize);
     },
 
     methods: {
@@ -175,6 +174,14 @@ export default {
                 this.isDetailsWindowOpen = true;   
             } else {
                 console.log('the accessorie could not be found on our db');
+            }
+        },
+
+        handleResize() {
+            if(window.innerWidth <= 850 ) {
+                this.isCarouselActive =  true;
+            } else {
+                this.isCarouselActive =  false;
             }
         }
     },

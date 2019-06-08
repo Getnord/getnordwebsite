@@ -2,7 +2,106 @@
     <div class="footer--gray">
         <div class="page_center">
             <div class="footer__instagram">
-                <h1>Lorem ipsum dolor sit amet</h1>
+                <h1>{{ __('footer.feed') }}: <a href="https://www.instagram.com/getnord/" class="footer__instagram__link">@GETNORD</a></h1>
+                <div class="footer__feed">
+                    <div class="footer__feed__elt">
+                        <a href="">
+                            <div class="img-wrapper">
+                                <img src="{{ url('/') }}/img/footer/feed/thumbnails/11.jpg" alt="" class="footer__feed__elt__img">
+                            </div>
+                        </a>
+                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ea, quae!</p>
+                    </div>
+                    <div class="footer__feed__elt">
+                        <a href="https://www.youtube.com/watch?v=-VlHL9f1Dso">
+                            <div class="img-wrapper">
+                                <img src="{{ url('/') }}/img/footer/feed/thumbnails/22.jpg" alt="" class="footer__feed__elt__img">
+                            </div>
+                        </a>
+                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ea, quae!</p>
+                    </div>
+                    <div class="footer__feed__elt">
+                        <a href="https://www.youtube.com/watch?v=_weSutIOuec">
+                            <div class="img-wrapper">
+                                <img src="{{ url('/') }}/img/footer/feed/thumbnails/33.jpg" alt="" class="footer__feed__elt__img">
+                            </div>
+                        </a>
+                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ea, quae!</p>
+                    </div>
+                    <div class="footer__feed__elt">
+                        <a href="https://www.youtube.com/watch?v=SwSZtXq3mhU">
+                            <div class="img-wrapper">
+                                <img src="{{ url('/') }}/img/footer/feed/thumbnails/44.jpg" alt="" class="footer__feed__elt__img">
+                            </div>
+                        </a>
+                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ea, quae!</p>
+                    </div>
+                    <div class="footer__feed__elt">
+                        <a href="https://www.youtube.com/watch?v=nKas1iXksRk">
+                            <div class="img-wrapper">
+                                <img src="{{ url('/') }}/img/footer/feed/thumbnails/55.jpg" alt="" class="footer__feed__elt__img">
+                            </div>
+                        </a>
+                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ea, quae!</p>
+                    </div>
+                    <div class="footer__feed__elt">
+                        <a href="https://www.youtube.com/watch?v=J6lgqkLU66E">
+                            <div class="img-wrapper">
+                                <img src="{{ url('/') }}/img/footer/feed/thumbnails/66.jpg" alt="" class="footer__feed__elt__img">
+                            </div>
+                        </a>
+                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ea, quae!</p>
+                    </div>
+                    <div class="footer__feed__elt">
+                        <a href="https://www.instagram.com/p/BoEfdc2Hsg9/">
+                            <div class="img-wrapper">
+                                <img src="{{ url('/') }}/img/footer/feed/instagram/1.jpg" alt="" class="footer__feed__elt__img">
+                            </div>
+                        </a>
+                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ea, quae!</p>
+                    </div>
+                    <div class="footer__feed__elt">
+                        <a href="https://www.instagram.com/p/6uTSgxGJi1/">
+                            <div class="img-wrapper">
+                                <img src="{{ url('/') }}/img/footer/feed/instagram/2.jpg" alt="" class="footer__feed__elt__img">
+                            </div>
+                        </a>
+                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ea, quae!</p>
+                    </div>
+                    <div class="footer__feed__elt">
+                        <a href="https://www.instagram.com/p/6O8fdFGJtz/">
+                            <div class="img-wrapper">
+                                <img src="{{ url('/') }}/img/footer/feed/instagram/3.jpg" alt="" class="footer__feed__elt__img">
+                            </div>
+                        </a>
+                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ea, quae!</p>
+                    </div>
+                    <div class="footer__feed__elt">
+                        <a href="https://www.instagram.com/p/5XSYnkmJn7/">
+                            <div class="img-wrapper">
+                                <img src="{{ url('/') }}/img/footer/feed/instagram/4.jpg" alt="" class="footer__feed__elt__img">
+                            </div>
+                        </a>
+                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ea, quae!</p>
+                    </div>
+                    <div class="footer__feed__elt">
+                        <a href="https://www.instagram.com/p/4vwetsmJu2/">
+                            <div class="img-wrapper">
+                                <img src="{{ url('/') }}/img/footer/feed/instagram/5.jpg" alt="" class="footer__feed__elt__img">
+                            </div>
+                        </a>
+                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ea, quae!</p>
+                    </div>
+                    <div class="footer__feed__elt">
+                        <a href="https://www.instagram.com/p/4t4Oq7mJhG/">
+                            <div class="img-wrapper">
+                                <img src="{{ url('/') }}/img/footer/feed/instagram/6.jpg" alt="" class="footer__feed__elt__img">
+                            </div>
+                        </a>
+                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ea, quae!</p>
+                    </div>
+
+                </div>
             </div>
             <div class="footer__social">
                 <h1>Lorem ipsum dolor sit amet, consectetur adipiscing elit</h1>

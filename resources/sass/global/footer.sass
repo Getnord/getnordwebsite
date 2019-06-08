@@ -16,7 +16,7 @@
             max-width: 450px
             font-size: 1.3em
             text-align: center
-            margin: 1.8em auto 1em auto
+            margin: 1.8em auto 1.6em auto
 
     h3 
         display: inline-block
@@ -49,6 +49,44 @@
     &--black 
         background-color: $black
         padding-bottom: 60px
+
+    &__feed
+        display: grid
+        grid-template-columns: 25% 25% 25% 25%
+        grid-template-rows: auto auto auto auto
+        grid-row-gap: 0.5em
+        grid-column-gap: 0.5em
+
+        @include breakpoint(m)
+            grid-template-columns: 50% 50%
+            grid-template-rows: auto auto auto
+
+        &__elt
+            width: 100%
+            align-self: center
+
+            a
+                transition: opacity 0.2s ease-out
+                
+                .img-wrapper
+                    max-height: 170px
+                    height: 100%
+                    overflow: hidden
+
+                &:hover
+                    opacity: 0.9
+
+            p 
+                font-size: 15px
+                font-weight: 400
+                line-height: 25px
+                margin-top: 12px
+                margin-bottom: 38px
+
+            @include breakpoint(m)
+                @for $i from 7 through 12
+                    &:nth-child(#{$i})
+                        display: none
 
     &__social__links
         display: flex

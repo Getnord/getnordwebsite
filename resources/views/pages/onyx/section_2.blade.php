@@ -30,10 +30,10 @@
             <div class="product_section--onyx_stores">
                 <h2>{{ __('onyx.maketPlacesTitle') }}</h2>
                 <div class="product_section--onyx_stores_list">
-                    <a href="https://www.amazon.com/dp/B07MMTFHBX" class="store_cta" target="_blank">
+                    <a href="https://www.amazon.com/dp/B07MMTFHBX" class="store_cta store_cta--amazon" target="_blank">
                         <img src="{{ url('/') }}/img/amazon.png" alt="">
                     </a>
-                    <a href="https://www.amazon.com/dp/B07MMTFHBX" class="store_cta" target="_blank">
+                    <a href="https://www.amazon.com/dp/B07MMTFHBX" class="store_cta store_cta--ebay" target="_blank">
                         <img src="{{ url('/') }}/img/ebay.png" alt="">
                     </a>
                 </div>

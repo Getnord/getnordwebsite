@@ -1,6 +1,6 @@
 <template>
     <div class="cart__icon" @click="openShoppingCart">
-        <img src="img/shopping-cart.png" alt="">
+        <img src="/img/shopping-cart.png" alt="">
         <p class="cart__icon__num" v-show="allProductsInCartQuantity > 0">
             {{ allProductsInCartQuantity }}
         </p>
@@ -25,12 +25,11 @@ export default {
 
 <style lang="sass" scoped>
 .cart__icon
-    height: 40px
-    width: 40px
+    height: 35px
+    width: 35px
     position: relative
     text-align: center
     cursor: pointer
-    margin-top: 50px
 
     img 
         width: 100%
@@ -42,8 +41,8 @@ export default {
         position: absolute
         top: -10px
         right: -16px
-        background: darken(#fff, 3%)
-        color: #0080ff
+        background: #0080ff
+        color: darken(#fff, 3%)
         height: 22px
         width: 22px
         box-shadow: 0px 2px 10px rgba(0,0,0,0.2)

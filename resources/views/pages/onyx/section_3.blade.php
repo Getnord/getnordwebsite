@@ -8,15 +8,15 @@
         <div class="section_icons anim">
             <span class="anim1 delay2">
                 <img src="{{ url('/') }}/img/onyx/icons/magnesium-alloy.svg" alt="">
-                <p>{{ __('onyx.metalReinforcedMg') }}</p>
+                <p class="icon_text">{{ __('onyx.metalReinforcedMg') }}</p>
             </span>
             <span class="anim1 delay3">
                 <img src="{{ url('/') }}/img/onyx/icons/high-flexural-strenght.svg" alt="">
-                <p>{{ __('onyx.metalReinforcedFlexural') }}</p>
+                <p class="icon_text">{{ __('onyx.metalReinforcedFlexural') }}</p>
             </span>
             <span class="anim1 delay4">
                 <img src="{{ url('/') }}/img/onyx/icons/carabiner-clip-icon.svg" alt="">
-                <p>{{ __('onyx.metalReinforcedClip') }}</p>
+                <p class="icon_text">{{ __('onyx.metalReinforcedClip') }}</p>
             </span>
         </div>
     </div>

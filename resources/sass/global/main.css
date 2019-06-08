@@ -252,7 +252,7 @@ a.hover:hover {
 
 /* language btn*/
 
-.floating-selector{
+.floating-selector {
     position: relative;
     z-index: 999;
     transition: all 1s ease-in-out;
@@ -263,16 +263,15 @@ a.hover:hover {
     transition: all 0.5s ease-in-out;
 }
 
-.floating-selector .lang-select-btn, .floating-selector .float-languages .lang-select a{
+.floating-selector .lang-select-btn, .floating-selector .float-languages .lang-select a {
     display: flex;
     align-items: center;
     justify-content: center;
-    border-radius: 40px;
-    height: 40px;
+    height: 26px;
     width: 40px;
     box-shadow: 2px 4px 15px rgba(0,0,0,0.2);
     cursor: pointer;
-    margin: 10px 0;
+    margin: 16px 0 10px 0;
     transition: all 1s ease-in-out;
     opacity: 100;
 }
@@ -286,7 +285,7 @@ a.hover:hover {
     height: 0;
     position: absolute;
     background: #fff;
-    padding:0 20px 10px 20px;
+    padding: 0 20px 10px 20px;
     margin-left: -20px;
     display: none;
 }
@@ -307,7 +306,7 @@ a.hover:hover {
     display: block;
 }
 @media(max-width:1300px) {
-    .floating-selector{
+    .floating-selector {
         position: relative;
         z-index: 999;
         margin: 0px 10px;
@@ -409,7 +408,7 @@ a.hover:hover {
 
 /* social */
 .social {
-	margin: 22px 30px 0 50px;
+	margin: 18px 30px 0 30px;
 	float: right;
 }
 .social a {
@@ -2203,7 +2202,7 @@ items_section .product_info button:hover {
 		padding: 0 20%;
 	}
 	.section_header, .section_heading {
-		font-size: 1.875em !important;
+		font-size: 1.875em;
 	}
 }	
 
@@ -2255,17 +2254,7 @@ items_section .product_info button:hover {
 		font-size: 18px;
 		line-height: 28px;
 	}
-	.social {
-		display: none;
-	}
-	.intro_section .section_content {
-		position: relative;
-		margin: 0;
-		padding: 30px 10px;
-		width: auto;
-		color: #272727;
-		background-color: #f2f3f3;
-	}
+	
 	.intro_section .section_heading {
 		font-size: 24px;
 		line-height: 30px;
@@ -2532,6 +2521,14 @@ items_section .product_info button:hover {
         visibility: visible;
         pointer-events: auto;
         cursor: pointer;
+	}
+	.intro_section .section_content {
+		position: relative;
+		margin: 0;
+		padding: 30px 10px;
+		width: auto;
+		color: #272727;
+		background-color: #f2f3f3;
 	}
 	.section_heading, .section_header {
 		font-size: 1.5em !important;

@@ -35,16 +35,19 @@ return [
     'comparisonIpRatingOnyx' => 'IP68',
     'comparisonIpRatingLynx' => 'IP68',
     'comparisonIpRatingWalrus' => 'IP68',
+    'comparisonIpRatingLeo' => 'IP68',
 
     'comparisonIpWaterproof' => 'Waterproof', 
     'comparisonIpWaterproofOnyx' => 'Tested in water of 2 meters depth for 30 min, according to IP68.',
     'comparisonIpWaterproofLynx' => 'Tested in water of 2 meters depth for 30 min, according to IP68.',
     'comparisonIpWaterproofWalrus' => 'Tested in water of 2 meters depth for 30 min, according to IP68.',
+    'comparisonIpWaterproofLeo' => 'Tested in water of 2 meters depth for 30 min, according to IP68.',
 
     'comparisonIpTemp' => 'Temperature range', 
     'comparisonIpTempOnyx' => 'Tested in a low temperature chamber,a high temperature chamber, and for temperature shock, according MIL-STD-810G requirements. Temperature range from -25˚C to +55˚C.',
     'comparisonIpTempLynx' => 'Tested in a low temperature chamber,a high temperature chamber, and for temperature shock, according MIL-STD-810G requirements. Temperature range from -25˚C to +55˚C.',
     'comparisonIpTempWalrus' => 'Tested in a low temperature chamber,a high temperature chamber, and for temperature shock, according MIL-STD-810G requirements. Temperature range from -25˚C to +55˚C.',
+    'comparisonIpTempLeo' => 'Tested in a low temperature chamber,a high temperature chamber, and for temperature shock, according MIL-STD-810G requirements. Temperature range from -25˚C to +55˚C.',
 
     // section 7 - scratchproof
     'scratchProofTitle' => 'ScratchProof',

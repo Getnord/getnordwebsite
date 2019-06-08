@@ -33,26 +33,27 @@ export default {
     right: 0
     bottom: 0
     z-index: 100
-    background-color: lighten(#000, 40%)
-    z-index: 20
+    background-color: #fff
+    z-index: 10000
 
     &__hide
         font-size: 26px
         position: absolute
-        top: 100px 
+        top: 20px 
         right: 20px
-        color: #fff
+        color: #000
         cursor: pointer
         transition: all 0.2s ease-in
         text-align: center
         transform: rotate(0deg)
+        z-index: 1
 
         &:hover
             transform: rotate(180deg)
 
     iframe
-        height: 80%
-        width: 90%
+        height: 100%
+        width: 100%
         position: absolute
         left: 50%
         top: 56%

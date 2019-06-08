@@ -73,7 +73,7 @@
                 width: 15%
 
             &--27
-                width: 27%
+                width: 20%
 
         &--responsive
             display: none
@@ -87,18 +87,24 @@
                 text-transform: uppercase
 
             &__col
-                margin: 0 auto 0 auto
                 position: relative
                 left: 50%
                 transform: translateX(-50%)
                 max-width: 370px
+
+            &__row
+                width: 90%
+                display: block
+                margin: auto
             
             .specs__phone
                 opacity: 0.6
                 transition: all 0.2s ease-out
 
                 @include breakpoint(xs)
-                    opacity: 0
+                    width: 90%
+                    display: block 
+                    margin: auto
 
             .specs__spec
                 font-size: 1.125em
@@ -126,41 +132,41 @@
                     width: 9px
                     margin: 0 6px
 
-                    @include breakpoint(xs)
-                        height: auto
-                        width: auto
-                        min-height: 1.2em
-                        background: transparent 
-                        min-width: 2em
-                        border-radius: 0px
-                        border: 1px solid darken($getnord-light-grey, 30%)
+                    // @include breakpoint(xs)
+                    //     height: auto
+                    //     width: auto
+                    //     min-height: 1.2em
+                    //     background: transparent 
+                    //     min-width: 2em
+                    //     border-radius: 0px
+                    //     border: 1px solid darken($getnord-light-grey, 30%)
 
-                        button
-                            font-size: 0.875em
-                            height: 100%
-                            width: 100%
-                            padding: 0.4em
+                    //     button
+                    //         font-size: 0.875em
+                    //         height: 100%
+                    //         width: 100%
+                    //         padding: 0.4em
 
-                            &:before
-                                display: none
+                    //         &:before
+                    //             display: none
                             
-                            h3 
-                                min-width: 3em
-                                color: darken($getnord-light-grey, 30%)
-                                padding: 0.3em 0.5em
-                                text-align: center
-                                text-transform: uppercase
+                    //         h3 
+                    //             min-width: 3em
+                    //             color: darken($getnord-light-grey, 30%)
+                    //             padding: 0.3em 0.5em
+                    //             text-align: center
+                    //             text-transform: uppercase
                                 
 
                     &.slick-active
                         background: $getnord-dark-grey 
 
-                        @include breakpoint(xs)
-                            background: transparent 
-                            border-color: $getnord-dark-grey
+                        // @include breakpoint(xs)
+                        //     background: transparent 
+                        //     border-color: $getnord-dark-grey
 
-                            h3 
-                                color: $getnord-dark-grey
+                            // h3 
+                            //     color: $getnord-dark-grey
 
             .slick-active, .slick-current
 
@@ -172,6 +178,8 @@
 
                 .specs__phone
                     opacity: 1
+                    display: block 
+                    margin: auto
 
             .slick-slide 
                 @include breakpoint(xs)

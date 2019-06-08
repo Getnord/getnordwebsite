@@ -22,15 +22,15 @@
                         	<input type="number" v-model="product.quantity" min="1"/>
                        		<a class="num_plus" href="#" @click.prevent="countQty(index, 1)">+</a>
 						</td>
-                        <td class="cart_item_price">{{ trans('shoppingCart.currency_symbol') }}{{ product.price }}</td>
-                        <td class="cart_item_tprice">{{ trans('shoppingCart.currency_symbol') }}{{ product.quantity * product.price }}</td>
+                        <td class="cart_item_price">{{ currentCurrencySymbole }}{{ product.price }}</td>
+                        <td class="cart_item_tprice">{{ currentCurrencySymbole }}{{ product.quantity * product.price }}</td>
                         <td><a class="list_item_del" href="#" @click.prevent="delCartItem($event.currentTarget, index)"><i class="far fa-trash-alt"></i></a></td>
                     </tr>
                 </tbody>
                 <tfoot>
                     <tr>
                         <td colspan="4">Total</td>
-                        <td class="cart_item_tprice">{{ trans('shoppingCart.currency_symbol') }}{{ total }}</td>
+                        <td class="cart_item_tprice">{{ currentCurrencySymbole }}{{ total }}</td>
                         <td>&nbsp;</td>
                     </tr>
 
@@ -53,12 +53,25 @@ export default {
 			type: Array,
 			required: true
         },
-    },
+	},
+	
     data() {
 		return {
-			//
+			currencySymbols: {
+				us: '$',
+                ca: 'C$',
+                uk: '£',
+                fr: '€',
+                it: '€',
+                nl: '€',
+                pl: 'zł',
+                lt: '€',
+                es: '€',
+                de: '€'
+			}
 		}
 	},
+
 	computed: {
 		total() {
 			let accum = 0;
@@ -66,6 +79,9 @@ export default {
 				accum = product.price * product.quantity + accum;
 			});
 			return accum;
+		},
+		currentCurrencySymbole() {
+			return this.currencySymbols[document.getElementsByTagName('html')[0].getAttribute('lang')];
 		}
 	},
 

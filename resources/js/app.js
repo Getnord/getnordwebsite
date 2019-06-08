@@ -208,7 +208,7 @@ const app = new Vue({
                 if( product.product_id ==  product_id ) {
                     this.currentProduct = {
                         name: product.name,
-                        price: parseInt(product.price),
+                        price: this.stringToNumber(product.price),
                         product_id: product.product_id,
                         quantity: 1,
                         option: {},
@@ -268,6 +268,10 @@ const app = new Vue({
             };  
         },
 
+        stringToNumber(element) {
+            return parseFloat(element.slice(1));
+        },
+
         hideMessageCard() {
             this.isMessageCardOpen = false;
         },
@@ -323,8 +327,8 @@ const app = new Vue({
                 });
                 const cartUrl = http_build_query({products: cartSlim, lang: this.lang, currency: this.currency});
                 this.isCheckoutPageOpen = true;
-                // this.orderUrl = `http://store.getnord.live/index.php?route=checkout/cart/addToCart&${cartUrl}`;
-                this.orderUrl = `http://localhost/opencart/index.php?route=checkout/cart/addToCart&${cartUrl}`;
+                this.orderUrl = `http://store.getnord.live/index.php?route=checkout/cart/addToCart&${cartUrl}`;
+                // this.orderUrl = `http://localhost/opencart/index.php?route=checkout/cart/addToCart&${cartUrl}`;
             }
 
         },

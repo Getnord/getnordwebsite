@@ -72,7 +72,10 @@ export default {
 .modal
     width: 100%
     background: #fff
-    min-height: 600px
+    min-height: 43.750em
+
+    @media( max-width: 768px )
+        min-height: none
 
     &__cols
         display: flex
@@ -177,9 +180,10 @@ export default {
 
         &__left
             width: 71.6%
-            background: black
-            background-size: cover
+            background: white
+            background-size: contain
             background-position: center
+            background-repeat: no-repeat
 
             @media(max-width: 768px)
                 width: 100%
@@ -197,6 +201,12 @@ export default {
                     width: 100px
                     margin-bottom: 20px
                     cursor: pointer
+
+                    @media( max-width: 768px )
+                        width: 80px
+
+                    @media( max-width: 480px )
+                        width: 50px
 
 
         

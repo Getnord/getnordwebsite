@@ -18,9 +18,9 @@
     <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-PZXDSVM" height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
     <!-- End Google Tag Manager (noscript) -->
     <div class="page_content" id="app">
-        @include('inc.shopping_cart')
         @include('inc.header2')
         @yield('content')
+        @include('inc.shopping_cart')
     </div>
     @include('inc.footer2')
     <script src="{{ asset('js/app.js') }}"></script>

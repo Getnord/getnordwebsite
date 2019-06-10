@@ -1,5 +1,5 @@
 @extends('layouts.app')
-@section('pageTitle', __('onyx.pagetitle'))
+@section('pageTitle', __('onyx.pageTitle'))
 @section('content')
     
     {{-- hero section --}}

@@ -1,7 +1,7 @@
 <?php
 
 return [
-    'page title' => 'Lynx Getnord',
+    'pageTitle' => 'Lynx Getnord',
     'heroIntro' => 'The Noworries Smartphone',
     'heroBtn' => 'Get It Here'
 ];

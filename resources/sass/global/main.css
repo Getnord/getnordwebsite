@@ -269,7 +269,6 @@ a.hover:hover {
     justify-content: center;
     height: 26px;
     width: 40px;
-    box-shadow: 2px 4px 15px rgba(0,0,0,0.2);
     cursor: pointer;
     margin: 16px 0 10px 0;
     transition: all 1s ease-in-out;
@@ -318,7 +317,6 @@ a.hover:hover {
 }
 @media(max-width:480px) {
     .floating-selector .lang-select-btn, .floating-selector .float-languages .lang-select a{
-        height: 30px;
         width: 30px;
     }
     .floating-selector .float-languages .lang-select h3 {
@@ -330,7 +328,6 @@ a.hover:hover {
     .floating-selector{
         position: relative;
         z-index: 999;
-        margin: 5px 5px 0 10px;
     }
 
 }
@@ -2487,7 +2484,7 @@ items_section .product_info button:hover {
     .page_content {
 		margin-top: 28px;
 		position: relative;
-		top: -22px;
+		top: -26px;
     }
 	.hidden_xs {
 		display: none;

@@ -69,6 +69,7 @@ export default {
         text-align: center
         margin-bottom: 20px
         margin-left: 0
+        letter-spacing: 0
 
         @media( max-width: 999px )
             font-size: 20px

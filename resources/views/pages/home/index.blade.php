@@ -1,5 +1,5 @@
 @extends('layouts.app')
-@section('pageTitle', __('home.pagetitle'))
+@section('pageTitle', __('home.pageTitle'))
 @section('content')  
     <section class="intro_section">
         <video autoplay loop muted playsinline class="section_video" inline>

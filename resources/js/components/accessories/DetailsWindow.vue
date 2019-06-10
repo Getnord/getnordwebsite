@@ -72,7 +72,7 @@ export default {
 .modal
     width: 100%
     background: #fff
-    min-height: 43.750em
+    padding: 16px 0
 
     @media( max-width: 768px )
         min-height: none

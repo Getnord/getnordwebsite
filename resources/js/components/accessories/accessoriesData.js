@@ -2,46 +2,34 @@ const accessoriesData = [
     {
         id: 56,
         images: [
-            '/img/accessories/onyx_holster/6.jpg',
-            '/img/accessories/onyx_holster/2.jpg',
-            '/img/accessories/onyx_holster/3.jpg',
-            '/img/accessories/onyx_holster/4.jpg',
-            '/img/accessories/onyx_holster/5.jpg',
-            '/img/accessories/onyx_holster/1.jpg',
+            '/img/accessories/carabiner_clip/getnord_carabiner_clip.jpg',
+            '/img/accessories/carabiner_clip/getnord_onyx_with_carabiner.jpg',
         ],
         mainImg: '/img/accessories/carabiner_clip/getnord_carabiner_clip.jpg',
         icons: [
-            '',
+            '/img/accessories/carabiner_clip/Carabiner_clip_icon.svg',
         ]
     },
     {
         id: 59,
         images: [
-            '/img/accessories/onyx_holster/6.jpg',
-            '/img/accessories/onyx_holster/2.jpg',
-            '/img/accessories/onyx_holster/3.jpg',
-            '/img/accessories/onyx_holster/4.jpg',
-            '/img/accessories/onyx_holster/5.jpg',
-            '/img/accessories/onyx_holster/1.jpg',
+            '/img/accessories/getnord_universal_charger/getnord_universal_2000mah_charger.jpg',
         ],
         mainImg: '/img/accessories/getnord_universal_charger/getnord_universal_2000mah_charger.jpg',
         icons: [
-            '/img/accessories/EU_charger.svg',
+            '/img/accessories/getnord_universal_charger/EU_charger.svg',
         ]
     },
     {
         id: 51,
         images: [
-            '/img/accessories/onyx_holster/6.jpg',
-            '/img/accessories/onyx_holster/2.jpg',
-            '/img/accessories/onyx_holster/3.jpg',
-            '/img/accessories/onyx_holster/4.jpg',
-            '/img/accessories/onyx_holster/5.jpg',
-            '/img/accessories/onyx_holster/1.jpg',
+            '/img/accessories/onyx_holster/getnord_onyx_holster1.jpg',
+            '/img/accessories/onyx_holster/getnord_onyx_holster2.jpg',
+            '/img/accessories/onyx_holster/getnord_onyx_holster3.jpg',
+            '/img/accessories/onyx_holster/getnord_onyx_holster4.jpg'
         ],
         mainImg: '/img/accessories/onyx_holster/getnord_onyx_holster1.jpg',
         icons: [
-            '/img/accessories/EU_charger.svg',
         ]
     },
     {
@@ -52,7 +40,8 @@ const accessoriesData = [
         ],
         mainImg: '/img/accessories/onyx_screen_protector/getnord_asahi_glass1.jpg',
         icons: [
-            '/img/accessories/onyx_screen_protector/asahi_glass.svg'
+            '/img/accessories/onyx_screen_protector/asahi_glass.svg',
+            '/img/accessories/onyx_screen_protector/Oleophobic_Coating.svg'
         ]
     },
     {

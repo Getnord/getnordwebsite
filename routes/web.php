@@ -3,6 +3,7 @@
  * prefix works like a wild card instead of manually settin each prefix 
  * on its own
  */
+Route::get('/csv/{lang}/{name}', 'CsvFilesController@csv_to_array');
 
 Route::get('/test', function() {
     return view('pages.test.index');
@@ -21,6 +22,8 @@ Route::prefix('{locale?}')->group(function() {
 
 // Get data from OpenCart
 Route::post('/api', 'ProductsController@index');
+
+
 /**
  * The following route handles generating a javascript object that will be served 
  * to the front-end. It will be consumed by the shoppingCart only.

@@ -19,64 +19,25 @@
                 </div>
             </div>
 
-            {{-- Ip rating --}}
-            <div class="row">
-                <div class="specs__col specs__col--15">
-                    <p class="specs__spec">{{ __('onyx.comparisonIpRating') }}</p>
-                </div>
-                <div class="specs__col specs__col--27">
-                    <p class="specs__spec-info">{{ __('onyx.comparisonIpRatingOnyx') }}</p>
-                </div>
-                <div class="specs__col specs__col--27">
-                    <p class="specs__spec-info">{{ __('onyx.comparisonIpRatingLynx') }}</p>
-                </div>
-                <div class="specs__col specs__col--27">
-                    <p class="specs__spec-info">{{ __('onyx.comparisonIpRatingWalrus') }}</p>
-                </div>
-                <div class="specs__col specs__col--27">
-                    <p class="specs__spec-info">{{ __('onyx.comparisonIpRatingLeo') }}</p>
-                </div>
-            </div>
-            
-            {{-- waterproof --}}
-            <div class="row">
-                <div class="specs__col specs__col--15">
-                    <p class="specs__spec">{{ __('onyx.comparisonIpWaterproof') }}</p>
-                </div>
-                <div class="specs__col specs__col--27">
-                    <p class="specs__spec-info">{{ __('onyx.comparisonIpWaterproofOnyx') }}</p>
-                </div>
-                <div class="specs__col specs__col--27">
-                    <p class="specs__spec-info">{{ __('onyx.comparisonIpWaterproofLynx') }}</p>
-                </div>
-                <div class="specs__col specs__col--27">
-                    <p class="specs__spec-info">{{ __('onyx.comparisonIpWaterproofWalrus') }}</p>
-                </div>
-                <div class="specs__col specs__col--27">
-                    <p class="specs__spec-info">{{ __('onyx.comparisonIpWaterproofLeo') }}</p>
-                </div>
-            </div>
+            @isset ($rows)
+                @foreach ($rows as $row)
+                    {{-- Row --}}
+                    <div class="row">
+                        <div class="specs__col specs__col--15">
+                            <p class="specs__spec">{{ __('specs.' . $row) }}</p>
+                        </div>
 
-            {{-- Temperature rang --}}
-            <div class="row">
-                <div class="specs__col specs__col--15">
-                    <p class="specs__spec">{{ __('onyx.comparisonIpTemp') }}</p>
-                </div>
-                <div class="specs__col specs__col--27">
-                    <p class="specs__spec-info">{{ __('onyx.comparisonIpTempOnyx') }}</p>
-                </div>
-                <div class="specs__col specs__col--27">
-                    <p class="specs__spec-info">{{ __('onyx.comparisonIpTempLynx') }}</p>
-                </div>
-                <div class="specs__col specs__col--27">
-                    <p class="specs__spec-info">{{ __('onyx.comparisonIpTempWalrus') }}</p>
-                </div>
-                <div class="specs__col specs__col--27">
-                    <p class="specs__spec-info">{{ __('onyx.comparisonIpTempLeo') }}</p>
-                </div>
-            </div>
-
-            
+                        @foreach ($phones as $phone)
+                            <div class="specs__col specs__col--27">
+                                <p class="specs__spec-info">{{ __('specs.' . $row . $phone) }}</p>
+                            </div>
+                        @endforeach
+                        
+                    </div>
+                @endforeach
+            @endisset
+           
+                
         </div>
         <div class="specs--responsive" id="specs--responsive">
             <h2 class="specs--responsive__title">

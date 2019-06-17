@@ -13,6 +13,7 @@
         "guzzlehttp/guzzle": "^6.3",
         "kg-bot/laravel-localization-to-vue": "^1.6",
         "laravel/framework": "5.8.*",
+        "laravel/telescope": "^2.0",
         "laravel/tinker": "^1.0",
         "spatie/laravel-newsletter": "^4.2"
     },

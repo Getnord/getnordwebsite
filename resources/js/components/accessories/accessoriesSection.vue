@@ -18,7 +18,7 @@
             </details-window>
         </div>
         <div v-else>
-            <div v-if="isTwoRowsOfAccessories">
+            <div v-if="isMoreThanOneRowsOfAccessories">
                 <accessories-row>
                     <base-accessorie-card 
                         v-for="(accessorie, index) in splitedArray[0]" 
@@ -29,9 +29,18 @@
                 </accessories-row>
                 <details-window v-if="isDetailsWindowOpen" :active-accessorie="activeAccessorie" >
                 </details-window>
-                <accessories-row :class="{'center-elts': isTwoRowsOfAccessories}">
+                <accessories-row :class="{'center-elts': isMoreThanOneRowsOfAccessories}">
                     <base-accessorie-card 
                         v-for="(accessorie, index) in splitedArray[1]" 
+                        :id="accessorie.id" 
+                        :main-img="accessorie.mainImg" 
+                        :key="index" 
+                        :name="accessorie.name"
+                        @open-details-window="openDetailsWindow"></base-accessorie-card>
+                </accessories-row>
+                <accessories-row :class="{'center-elts': isMoreThanOneRowsOfAccessories}" v-if=" typeof splitedArray[2] != undefined">
+                    <base-accessorie-card 
+                        v-for="(accessorie, index) in splitedArray[2]" 
                         :id="accessorie.id" 
                         :main-img="accessorie.mainImg" 
                         :key="index" 
@@ -124,7 +133,8 @@ export default {
             return result;
         },
 
-        isTwoRowsOfAccessories() {
+        // if we have more than 3 accessories to show
+        isMoreThanOneRowsOfAccessories() {
             // if the length of the following array is more equal or greater than 3
             // we show two rows of accessories
             // else we show only one
@@ -132,7 +142,7 @@ export default {
         },
 
         splitedArray() {
-            if(this.isTwoRowsOfAccessories) {
+            if(this.validAccessories.length > 3) {
                 return _.chunk(this.validAccessories, 3);
             }
         },
@@ -161,14 +171,13 @@ export default {
 
     methods: {
         openDetailsWindow(id) {
-            console.log(id);
             /**
              * we have to find the accessorie data form the accessories data
              */
             this.activeAccessorie = _.find(this.accessoriesData, (o) => o.id == id);
 
             /**
-             * some validation that the accessorie exitst
+             * some validation that the accessorie exist
              */
             if(!_.isEmpty(this.activeAccessorie)) {
                 this.isDetailsWindowOpen = true;   

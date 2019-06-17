@@ -4,13 +4,14 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Storage;
+use Illuminate\Support\Facades\Cache;
 
 class CsvFilesController extends Controller
 {
 
     /**
-     * convert the csv file into direct array 
-     * @param $name: String , $lang: String
+     * convert the csv file into array 
+     * @param $name: String , lang: String
      * @return Array
      */
     public function csv_to_array($lang, $name) {
@@ -45,21 +46,20 @@ class CsvFilesController extends Controller
         fclose($file);
 
         foreach ($csv as $key) {
-            // to get the row names
-            
             // to generate the data for translations for each product
             $row = \preg_replace('/\s+/', '', $key[0]) ;
             $result[$row] = $key[1];
             array_push($rows, $row);
 
-            $row_names[$row] = $key[0];
+            array_push($row_names, $row);
+
         }
 
+        // generate a view and copy the html
+        // but this methode is bad as we have other pages eachone requiring its one solutions.
         $contents = view('pages.onyx.section_6', ['rows' => $rows, 'phones' => $phones])->render();
-        // do some other manipulation?
-        return $contents;
+        Cache::add('specs_section_rows_names', $row_names);
 
-        dd($row_names);
-
+        dd(Cache::get('specs_section_rows_names'));
     }
 }

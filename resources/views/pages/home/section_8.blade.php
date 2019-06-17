@@ -6,7 +6,7 @@
             <div class="row">
                 <div class="specs__col specs__col--15"></div>
                 @foreach ($phones as $phone_name)
-                    <div class="specs__col specs__col--27">
+                    <div class="specs__col specs__col--42">
                         <img src="{{ url('/') . '/img/' . strtolower($phone_name) .'/phone_'. strtolower($phone_name) . '.jpg'}}" alt="" class="specs__phone">
                     </div>
                 @endforeach
@@ -20,42 +20,13 @@
                     </div>
 
                     @foreach ($phones as $phone_name)
-                        <div class="specs__col specs__col--27">
+                        <div class="specs__col specs__col--42">
                             <p class="specs__spec-info">{{ __('specs.' . $row . $phone_name) }}</p>
                         </div>
                     @endforeach
                     
                 </div>
             @endforeach
-
-            {{-- add to cart rows --}}
-            <div class="row">
-                <div class="specs__col sepcs__col--15"></div>
-                @foreach ($phones as $phone_name)
-                    <div class="specs__col specs__col--27">
-                        @if (strtolower($phone_name) == 'lynx')
-                            <buy-btn product-id="2" @buy-btn-clicked="buybtnclicked" :product-has-options="false">
-                                {{ __('onyx.addToCart') }}
-                            </buy-btn>
-                        @endif
-                        @if (strtolower($phone_name) == 'onyx')
-                            <buy-btn product-id="2" @buy-btn-clicked="buybtnclicked" :product-has-options="false">
-                                {{ __('onyx.addToCart') }}
-                            </buy-btn>
-                        @endif
-                        @if (strtolower($phone_name) == 'walrus')
-                            <buy-btn product-id="2" @buy-btn-clicked="buybtnclicked" :product-has-options="false">
-                                {{ __('onyx.addToCart') }}
-                            </buy-btn>
-                        @endif
-                        @if (strtolower($phone_name) == 'leo')
-                            <buy-btn product-id="2" @buy-btn-clicked="buybtnclicked" :product-has-options="false">
-                                {{ __('onyx.addToCart') }}
-                            </buy-btn>
-                        @endif
-                    </div>
-                @endforeach
-            </div>
                 
         </div>
         <div class="specs--responsive" id="specs--responsive">

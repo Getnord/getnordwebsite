@@ -200,8 +200,9 @@
                 </a>
                 <div class="dropdown__list">
                     <a href="{{ route('home', ['locale' => app()->getLocale()]) }}">Getnord Lynx</a>
-            
-                    <a href="{{ route('onyx', ['locale' => app()->getLocale()]) }}">Getnord Onyx</a>
+                    @if (app()->getLocale() != 'us')
+                        <a href="{{ route('onyx', ['locale' => app()->getLocale()]) }}">Getnord Onyx</a>
+                    @endif
                 </div>
             </li>
 <!--			<li><a href="javascript:void(0);" onclick="popup_open();">CONTACT</a></li>-->

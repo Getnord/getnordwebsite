@@ -3,6 +3,8 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Cache;
+
 
 class PagesController extends Controller
 {
@@ -30,7 +32,16 @@ class PagesController extends Controller
         // we are on the home page or not
         $onHomePage = true;
         session()->put('locale', $locale);
-        return view('pages.home.index')->with('onHomePage', $onHomePage);
+        $phones = [
+            'LYNX',
+            'LEO'
+        ];
+        $specs_section_rows_names = Cache::get('specs_section_rows_names');
+        return view('pages.home.index')->with([
+            'onHomePage' => $onHomePage, 
+            'specs_section_rows_names' => $specs_section_rows_names,
+            'phones' => $phones
+            ]);
     }
 
     /**
@@ -47,7 +58,18 @@ class PagesController extends Controller
         // we are on the home page or not
         $onHomePage = false;
         session()->put('locale', $locale);
-        return view('pages.onyx.index')->with('onHomePage', $onHomePage);
+        $phones = [
+            'ONYX',
+            'LYNX',
+            'WALRUS',
+            'LEO'
+        ];
+        $specs_section_rows_names = Cache::get('specs_section_rows_names');
+        return view('pages.onyx.index')->with([
+            'onHomePage' => $onHomePage, 
+            'specs_section_rows_names' => $specs_section_rows_names,
+            'phones' => $phones
+            ]);
     }
 
     /**

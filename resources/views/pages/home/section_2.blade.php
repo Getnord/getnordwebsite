@@ -2,8 +2,7 @@
     <div class="page_center">
         <div class="row anim">
             <div class="col_2_3_xl col_1_m">
-                {{-- add  anim3 class to section_figure in order to start the animations --}}
-                <figure class="section_figure anim3"><img alt="Product" src="{{ url('/') }}/img/onyx/getnord_onyx_all_sides.png" /></figure>
+                <figure class="section_figure anim3"><img alt="Product" src="{{ url('/') }}/img/product.jpg" /></figure>
             </div>
             <div class="col_1_3_xl col_1_m">
                 <div class="section_content">
@@ -20,6 +19,7 @@
                         <a href="#product_section2" class="button button_yellow button--full-width">{{ __('onyx.addToCart') }}</a>
                         <p class="product_section--onyx_or-text">Or</p>
                     </div>
+                    
                 </div>
             </div>
         </div>

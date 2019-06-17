@@ -1,72 +1,83 @@
 <template>
-    <div class="modal">
-        <div class="modal__cols">
-            <div class="modal__cols__left" :style="{ backgroundImage: 'url(' + currentImageUrl + ')' }">
-                <ul class="modal__cols__left__imgs">
-                    <li v-for="(imgUrl, index) in imagesList" :key="index" @click="switchCurrentImage(imgUrl)">
-                        <img :src="imgUrl" alt="" class="modal__cols__left__imgs__img">
-                    </li>
-                </ul>
-            </div>
-            <div class="modal__cols__right">
-                <h1 class="modal__cols__right__name">{{ activeAccessorie.name }}</h1>
-                <div class="modal__cols__right__imgs">
-                    <img v-for="(icon, index ) in activeAccessorie.icons" :src="icon" alt="" :key="index" class="modal__cols__right__imgs__icon">
-                </div>
-                <p class="madal__cols__right__description description">Lorem ipsum dolor sit amet consectetur adipisicing elit. Eligendi labore fugit officia doloremque, totam pariatur dolore voluptate. Adipisci natus, aut suscipit eos placeat, nihil quisquam quos delectus expedita rerum culpa.</p>
-                <h2 class="modal__cols__right__price">{{ activeAccessorie.price }}</h2>
-                <button class="modal__cols__right__btn" @click="addToCart">Add To Cart</button>
-            </div>
+  <div class="modal">
+    <div class="modal__cols">
+      <div class="modal__cols__left" :style="{ backgroundImage: 'url(' + currentImageUrl + ')' }">
+        <ul class="modal__cols__left__imgs">
+          <li
+            v-for="(imgUrl, index) in imagesList"
+            :key="index"
+            @click="switchCurrentImage(imgUrl)"
+          >
+            <img :src="imgUrl" alt class="modal__cols__left__imgs__img">
+          </li>
+        </ul>
+      </div>
+      <div class="modal__cols__right">
+        <h1 class="modal__cols__right__name">{{ activeAccessorie.name }}</h1>
+        <div class="modal__cols__right__imgs">
+          <img
+            v-for="(icon, index ) in activeAccessorie.icons"
+            :src="icon"
+            alt
+            :key="index"
+            class="modal__cols__right__imgs__icon"
+          >
         </div>
+        <div
+          class="madal__cols__right__description"
+          v-html="activeAccessorie.description"
+        ></div>
+        <h2 class="modal__cols__right__price">{{ activeAccessorie.price }}</h2>
+        <button class="modal__cols__right__btn" @click="addToCart">Add To Cart</button>
+      </div>
     </div>
+  </div>
 </template>
 <script>
 export default {
-    name: 'details-window',
+  name: "details-window",
 
-    props: {
-        activeAccessorie: {
-            type: Object,
-            required: true
-        }
-    },
-
-    watch: {
-        activeAccessorie() {
-            this.currentImageUrl = this.activeAccessorie.images[0];
-        }
-    },
-
-    computed: {
-        imagesList() {
-            return this.activeAccessorie.images.filter((imgUrl, index) => {
-                return imgUrl != this.currentImageUrl;
-            });
-        },
-        // currentImageUrl() {
-        //     return this.activeAccessorie.images[0]
-        // }
-    },
-
-    data() {
-        return {
-            currentImageUrl: this.activeAccessorie.images[0],
-        }
-    },
-
-    methods: {
-        switchCurrentImage(imgUrl){
-            console.log(imgUrl);
-            this.currentImageUrl = imgUrl;
-        },
-
-        addToCart() {
-            Event.$emit('add-accessorie-to-cart', this.activeAccessorie.id);
-        }
+  props: {
+    activeAccessorie: {
+      type: Object,
+      required: true
     }
+  },
 
+  watch: {
+    activeAccessorie() {
+      this.currentImageUrl = this.activeAccessorie.images[0];
+    }
+  },
 
-}
+  computed: {
+    imagesList() {
+      return this.activeAccessorie.images.filter((imgUrl, index) => {
+        return imgUrl != this.currentImageUrl;
+      });
+    }
+    // currentImageUrl() {
+    //     return this.activeAccessorie.images[0]
+    // }
+  },
+
+  data() {
+    return {
+      currentImageUrl: this.activeAccessorie.images[0]
+    };
+  },
+
+  methods: {
+    switchCurrentImage(imgUrl) {
+      console.log(imgUrl);
+      this.currentImageUrl = imgUrl;
+    },
+
+    addToCart() {
+      Event.$emit("add-accessorie-to-cart", this.activeAccessorie.id);
+    }
+  }
+};
 </script>
 <style lang="sass" scoped>
 .modal
@@ -131,12 +142,8 @@ export default {
 
 
             &__description 
-                font-size: 1.250em  
-                line-height: 1.5em  
-            
-            .description
-                font-size: 1.250em  
-                line-height: 1.5em  
+                font-size: 1.250em  !important
+                line-height: 1.5em  !important
 
                 @media( max-width: 468px )
                     text-align: center  
@@ -208,8 +215,6 @@ export default {
                     @media( max-width: 480px )
                         width: 50px
 
-
-        
 </style>
 
 

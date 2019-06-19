@@ -1,5 +1,5 @@
 <template>
-    <button class="button button_blue_solid" @click="clicked">
+    <button class="button button_yellow" @click="clicked">
         <slot></slot>
     </button>
 </template>
@@ -27,8 +27,4 @@ export default {
 
 };
 </script>
-
-<style lang="sass" scoped>
-
-</style>
 

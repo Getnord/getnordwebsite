@@ -68,6 +68,10 @@
                     border: 1px solid lighten($getnord-dark-grey, 50%)
 
         &__col
+            .button
+                width: 100%
+                margin-top: 0.6em
+
             &--42
                 width: 40%
 
@@ -76,6 +80,9 @@
 
             &--27
                 width: 20%
+
+            &--no-border
+                border-color: transparent !important
 
 
         &--responsive
@@ -126,6 +133,9 @@
                 display: block
                 opacity: 1
                 transition: all 0.4s ease
+
+                .button
+                    margin-top: 0.8em
             
             .slick-dots
                 bottom: auto

@@ -10,7 +10,7 @@
                                 <img src="{{ url('/') }}/img/footer/feed/thumbnails/11.jpg" alt="" class="footer__feed__elt__img">
                             </div>
                         </a>
-                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ea, quae!</p>
+                        <p>{{  __('footer.feed1')  }}</p>
                     </div>
                     <div class="footer__feed__elt">
                         <a href="https://www.youtube.com/watch?v=-VlHL9f1Dso" target="_blank">
@@ -18,7 +18,7 @@
                                 <img src="{{ url('/') }}/img/footer/feed/thumbnails/22.jpg" alt="" class="footer__feed__elt__img">
                             </div>
                         </a>
-                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ea, quae!</p>
+                        <p>{{  __('footer.feed2')  }}</p>
                     </div>
                     <div class="footer__feed__elt">
                         <a href="https://www.youtube.com/watch?v=_weSutIOuec" target="_blank">
@@ -26,7 +26,7 @@
                                 <img src="{{ url('/') }}/img/footer/feed/thumbnails/33.jpg" alt="" class="footer__feed__elt__img">
                             </div>
                         </a>
-                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ea, quae!</p>
+                        <p>{{  __('footer.feed3')  }}</p>
                     </div>
                     <div class="footer__feed__elt">
                         <a href="https://www.youtube.com/watch?v=SwSZtXq3mhU" target="_blank">
@@ -34,7 +34,7 @@
                                 <img src="{{ url('/') }}/img/footer/feed/thumbnails/44.jpg" alt="" class="footer__feed__elt__img">
                             </div>
                         </a>
-                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ea, quae!</p>
+                        <p>{{  __('footer.feed4')  }}</p>
                     </div>
                     <div class="footer__feed__elt">
                         <a href="https://www.youtube.com/watch?v=nKas1iXksRk" target="_blank">
@@ -42,7 +42,7 @@
                                 <img src="{{ url('/') }}/img/footer/feed/thumbnails/55.jpg" alt="" class="footer__feed__elt__img">
                             </div>
                         </a>
-                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ea, quae!</p>
+                        <p>{{  __('footer.feed5')  }}</p>
                     </div>
                     <div class="footer__feed__elt">
                         <a href="https://www.youtube.com/watch?v=J6lgqkLU66E" target="_blank">
@@ -50,7 +50,7 @@
                                 <img src="{{ url('/') }}/img/footer/feed/thumbnails/66.jpg" alt="" class="footer__feed__elt__img">
                             </div>
                         </a>
-                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ea, quae!</p>
+                        <p>{{  __('footer.feed6')  }}</p>
                     </div>
                     <div class="footer__feed__elt">
                         <a href="https://www.instagram.com/p/BoEfdc2Hsg9/" target="_blank">
@@ -58,7 +58,7 @@
                                 <img src="{{ url('/') }}/img/footer/feed/instagram/1.jpg" alt="" class="footer__feed__elt__img">
                             </div>
                         </a>
-                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ea, quae!</p>
+                        <p>{{  __('footer.feed7')  }}</p>
                     </div>
                     <div class="footer__feed__elt">
                         <a href="https://www.instagram.com/p/6uTSgxGJi1/" target="_blank">
@@ -66,7 +66,7 @@
                                 <img src="{{ url('/') }}/img/footer/feed/instagram/2.jpg" alt="" class="footer__feed__elt__img">
                             </div>
                         </a>
-                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ea, quae!</p>
+                        <p>{{  __('footer.feed8')  }}</p>
                     </div>
                     <div class="footer__feed__elt">
                         <a href="https://www.instagram.com/p/6O8fdFGJtz/" target="_blank">
@@ -74,7 +74,7 @@
                                 <img src="{{ url('/') }}/img/footer/feed/instagram/3.jpg" alt="" class="footer__feed__elt__img">
                             </div>
                         </a>
-                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ea, quae!</p>
+                        <p>{{  __('footer.feed9')  }}</p>
                     </div>
                     <div class="footer__feed__elt">
                         <a href="https://www.instagram.com/p/5XSYnkmJn7/" target="_blank">
@@ -82,7 +82,7 @@
                                 <img src="{{ url('/') }}/img/footer/feed/instagram/4.jpg" alt="" class="footer__feed__elt__img">
                             </div>
                         </a>
-                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ea, quae!</p>
+                        <p>{{  __('footer.feed10')  }}</p>
                     </div>
                     <div class="footer__feed__elt">
                         <a href="https://www.instagram.com/p/4vwetsmJu2/" target="_blank">
@@ -90,7 +90,7 @@
                                 <img src="{{ url('/') }}/img/footer/feed/instagram/5.jpg" alt="" class="footer__feed__elt__img">
                             </div>
                         </a>
-                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ea, quae!</p>
+                        <p>{{  __('footer.feed11')  }}</p>
                     </div>
                     <div class="footer__feed__elt">
                         <a href="https://www.instagram.com/p/4t4Oq7mJhG/" target="_blank">
@@ -98,13 +98,13 @@
                                 <img src="{{ url('/') }}/img/footer/feed/instagram/6.jpg" alt="" class="footer__feed__elt__img">
                             </div>
                         </a>
-                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ea, quae!</p>
+                        <p>{{  __('footer.feed12')  }}</p>
                     </div>
 
                 </div>
             </div>
             <div class="footer__social">
-                <h1>Lorem ipsum dolor sit amet, consectetur adipiscing elit</h1>
+                <h1>{{ __('footer.socialMedia') }}</h1>
                 <div class="footer__social__links">
 
                     <a href="#" class="footer__social__links__link--yt">

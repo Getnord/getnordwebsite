@@ -5,6 +5,12 @@
  */
 Route::get('/csv/{lang}/{name}', 'CsvFilesController@csv_to_array');
 
+// to clear the cache from a route
+Route::get('/clear-cache', function() {
+    Artisan::call('cache:clear');
+    return "Cache is cleared";
+});
+
 Route::get('/test', function() {
     return view('pages.test.index');
 });

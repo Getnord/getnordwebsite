@@ -72,7 +72,7 @@ const app = new Vue({
             currencies: {
                 us: "usd",
                 ca: "usd",
-                uk: "gpb",
+                uk: "GBP",
                 fr: "eur",
                 it: "eur",
                 nl: "eur",
@@ -191,7 +191,7 @@ const app = new Vue({
         // form.append("products", "[ 30, 40, 50 ]");
         form.append(
             "products",
-            '["56", "59", "51","58","57", "60", "61", "62", "66", "65", "64", "63"]'
+            '["56", "59", "51","58","57", "60", "61", "62", "66", "65", "64", "63", "67", "68", "69", "50"]'
         );
         form.append("currency", this.info.currencies[this.lang]);
         form.append("lang", this.lang);

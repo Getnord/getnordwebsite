@@ -27,6 +27,7 @@ class PagesController extends Controller
         }
         else {
             app()->setLocale('us');
+            $locale = 'us';
         }
         // We want to auto change some links in the nav depending if 
         // we are on the home page or not
@@ -34,7 +35,9 @@ class PagesController extends Controller
         session()->put('locale', $locale);
         $phones = [
             'LYNX',
-            'LEO'
+            'LEO',
+            'WALRUS',
+            'ONYX'
         ];
         $specs_section_rows_names = Cache::get('specs_section_rows_names');
         return view('pages.home.index')->with([
@@ -53,6 +56,7 @@ class PagesController extends Controller
         }
         else {
             app()->setLocale('us');
+            $locale = 'us';
         }
         // We want to auto change some links in the nav depending if 
         // we are on the home page or not
@@ -81,6 +85,7 @@ class PagesController extends Controller
         }
         else {
             app()->setLocale('us');
+            $locale = 'us';
         }
         // We want to auto change some links in the nav depending if 
         // we are on the home page or not
@@ -98,6 +103,7 @@ class PagesController extends Controller
         }
         else {
             app()->setLocale('us');
+            $locale = 'us';
         };
 
         // We want to auto change some links in the nav depending if 
@@ -115,6 +121,7 @@ class PagesController extends Controller
         }
         else {
             app()->setLocale('us');
+            $locale = 'us';
         };
         // We want to auto change some links in the nav depending if 
         // we are on the home page or not
@@ -131,6 +138,7 @@ class PagesController extends Controller
         }
         else {
             app()->setLocale('us');
+            $locale = 'us';
         }
 
         // We want to auto change some links in the nav depending if 
@@ -148,6 +156,7 @@ class PagesController extends Controller
         }
         else {
             app()->setLocale('us');
+            $locale = 'us';
         }
 
         // We want to auto change some links in the nav depending if 
@@ -165,6 +174,7 @@ class PagesController extends Controller
         }
         else {
             app()->setLocale('us');
+            $locale = 'us';
         }
 
         // We want to auto change some links in the nav depending if 

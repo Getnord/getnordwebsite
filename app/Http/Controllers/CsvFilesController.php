@@ -57,7 +57,7 @@ class CsvFilesController extends Controller
 
         // generate a view and copy the html
         // but this methode is bad as we have other pages eachone requiring its one solutions.
-        $contents = view('pages.onyx.section_6', ['rows' => $rows, 'phones' => $phones])->render();
+        // $contents = view('pages.onyx.section_6', ['rows' => $rows, 'phones' => $phones])->render();
         Cache::add('specs_section_rows_names', $row_names);
 
         dd(Cache::get('specs_section_rows_names'));

@@ -63,14 +63,14 @@
                     <h3>Usa</h3>
                 </div>
             @endif
-            @if ( app()->getLocale() != 'ca' )
+            {{-- @if ( app()->getLocale() != 'ca' )
                 <div class="lang-select">
                     <a href="{{ route('home', ['locale' => 'ca']) }}">
                         <img src="{{ url('/') }}/img/canada.svg" alt="">
                     </a>
                     <h3>Canada</h3>
                 </div>
-            @endif
+            @endif --}}
             @if (app()->getLocale() != 'uk' )
                 <div class="lang-select">
                     <a href="{{ route('home', ['locale' => 'uk']) }}">
@@ -79,7 +79,7 @@
                     <h3>UK</h3>
                 </div>
             @endif
-            @if (app()->getLocale() != 'fr' )
+            {{-- @if (app()->getLocale() != 'fr' )
                 <div class="lang-select">
                     <a href="{{ route('home', ['locale' => 'fr']) }}">
                         <img src="{{ url('/') }}/img/france.svg" alt="">
@@ -126,57 +126,20 @@
                     </a>
                     <h3>Polska</h3>
                 </div>
-            @endif
-            @if ( app()->getLocale() != 'li' )
+            @endif --}}
+            {{-- @if ( app()->getLocale() != 'li' )
                 <div class="lang-select">
                     <a href="{{ route('home', ['locale' => 'lt']) }}">
                         <img src="{{ url('/') }}/img/lithuania.svg" alt="">
                     </a>
                     <h3>Lietuva</h3>
                 </div>
-            @endif
+            @endif --}}
         </div>
     </div>
     <div class="top_menu_toggle">
         <a class="hover" href="#"></a>
     </div>
-    {{-- <div class="social">
-
-        @if ( app()->getLocale() == 'us' || app()->getLocale() == 'uk' || app()->getLocale() == 'ca' )
-            <a href="https://www.facebook.com/getnordinternational/" target="_blank" class="fb"><svg class="icon"><use xlink:href="{{ url('/') }}/img/icons.svg#icon_fb"></use></svg></a>
-        @endif
-
-        @if ( app()->getLocale() == 'es' )
-            <a href="https://www.facebook.com/Móviles-Robustos-Getnord-1780741445489150/" target="_blank" class="fb"><svg class="icon"><use xlink:href="{{ url('/') }}/img/icons.svg#icon_fb"></use></svg></a>
-        @endif
-
-        @if ( app()->getLocale() == 'it' )
-            <a href="https://www.facebook.com/Getnord-Italia-1509340049384657" target="_blank" class="fb"><svg class="icon"><use xlink:href="{{ url('/') }}/img/icons.svg#icon_fb"></use></svg></a>
-        @endif
-
-        @if ( app()->getLocale() == 'de' )
-            <a href="https://www.facebook.com/Getnord-Outdoor-Handys-1779613288931903/" target="_blank" class="fb"><svg class="icon"><use xlink:href="{{ url('/') }}/img/icons.svg#icon_fb"></use></svg></a>
-        @endif
-
-        @if ( app()->getLocale() == 'fr' )
-            <a href="https://www.facebook.com/Téléphones-étanches-Getnord-402801463243716/" target="_blank" class="fb"><svg class="icon"><use xlink:href="{{ url('/') }}/img/icons.svg#icon_fb"></use></svg></a>
-        @endif
-
-        @if ( app()->getLocale() == 'lt' )
-            <a href="https://www.facebook.com/Getnord-atsparūs-telefonai-1567572783520802/" target="_blank" class="fb"><svg class="icon"><use xlink:href="{{ url('/') }}/img/icons.svg#icon_fb"></use></svg></a>
-        @endif
-
-        @if ( app()->getLocale() == 'nl' )
-            <a href="https://www.facebook.com/GetnordBenelux/" target="_blank" class="fb"><svg class="icon"><use xlink:href="{{ url('/') }}/img/icons.svg#icon_fb"></use></svg></a>
-        @endif
-
-        @if ( app()->getLocale() == 'pl' )
-            <a href="https://www.facebook.com/Getnord-odporne-telefony-1199674723387722/" target="_blank" class="fb"><svg class="icon"><use xlink:href="{{ url('/') }}/img/icons.svg#icon_fb"></use></svg></a>
-        @endif
-        
-        <a href="https://twitter.com/getnord" target="_blank" class="tw"><svg class="icon"><use xlink:href="{{ url('/') }}/img/icons.svg#icon_tw"></use></svg></a>
-        <a href="https://www.instagram.com/getnord/" target="_blank" class="in"><svg class="icon"><use xlink:href="{{ url('/') }}/img/icons.svg#icon_in"></use></svg></a>
-    </div> --}}
     <div class="social">
         <shopping-cart-icon :all-products-in-cart-quantity="cart.length" @open-shopping-cart="openShoppingCart"></shopping-cart-icon>
     </div>

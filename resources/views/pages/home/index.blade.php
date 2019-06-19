@@ -39,14 +39,4 @@
     @include('pages.home.section_12')
 
     
-    
-    
-    
-    
-    
- 
-
-    
-    
-    
 @endsection('content')

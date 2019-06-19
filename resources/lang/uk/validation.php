@@ -133,12 +133,16 @@ return [
         ],
         'email' => [
             'required' => 'The email field is required.',
+            'sent' => 'Your email has been sent.'
         ],
         'name' => [
             'required' => 'The name field is required.',
         ],
         'message' => [
             'required' => 'The message field is required.',
+        ],
+        'success' => [
+            '' => ''
         ]
     ],
 

@@ -2418,7 +2418,6 @@ items_section .product_info button:hover {
         color: #595858;
     }
     .intro_section .section_form .button {
-        color: #0080ff;
         width: 100%;
         margin: 5px auto;
         max-width: 400px;

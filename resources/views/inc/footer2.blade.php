@@ -162,7 +162,7 @@
                     </div>
                     <div class="col_3_xl col_1_xs footer__info__secure">
                         <h3>
-                            Secure with
+                            Secured with
                         </h3>
                         <div class="footer__info__secure__braintree">
                             <img src="{{ url('/') }}/img/Braintree_logo.svg" alt="">

@@ -1,6 +1,6 @@
 <section class="specs_section">
     <div class="page_center">
-        <div class="section_header"><a id="specs_link" class="hover" href=""><p class="specs__title__small">{{ __('onyx.comparisonTitleSmall') }}</p><p class="specs__title__big">{{ __('onyx.comparisonTitleBig') }}</p>&emsp;<svg class="icon"><use id="specs_link_icon" xlink:href="{{ url('/') }}/img/icons.svg#icon_plus"></use></svg></a></div>
+        <div class="section_header"><a id="specs_link" class="hover" href="#"><p class="specs__title__small">{{ __('onyx.comparisonTitleSmall') }}</p><p class="specs__title__big">{{ __('onyx.comparisonTitleBig') }}</p>&emsp;<svg class="icon"><use id="specs_link_icon" xlink:href="{{ url('/') }}/img/icons.svg#icon_plus"></use></svg></a></div>
         {{-- We need to show different specs phones depending on the locale --}}
         @if ( app()->getLocale() == 'us')
             <div class="specs" id="specs">

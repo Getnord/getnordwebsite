@@ -191,7 +191,7 @@ return [
     "ElectronicVideoStabilisationLYNX" => "YES",
     "Time-LapseVideoLYNX" => "YES",
     "IntheKitLYNX" => "Smartphone, User Manual, Headset with handsfree function, USB Cable, Power adaptor, SIM Opener",
-    "PriceLYNX" => "EUR296",
+    "PriceLYNX" => "$299",
 
     // WALRUS
     "IPRatingWALRUS" => "IP68",
@@ -319,5 +319,5 @@ return [
     "ElectronicVideoStabilisationLEO" => "YES",
     "Time-LapseVideoLEO" => "YES",
     "IntheKitLEO" => "Smartphone, User Manual, Headset with handsfree function, USB Cable, Power adaptor.",
-    "PriceLEO" => "EUR359"
+    "PriceLEO" => "$359"
 ];

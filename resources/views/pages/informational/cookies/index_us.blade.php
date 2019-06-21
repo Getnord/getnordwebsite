@@ -1,9 +1,9 @@
-@extends('layouts.app')
+@extends('layouts.informational')
 
 @section('content')
 <div class="page_content">
-    <div class="main_container">
-        <div class="page" title="Page 1">
+<div class="main_container">
+<div class="page" title="Page 1">
 <div class="section">
 <div class="layoutArea">
 <div class="column">

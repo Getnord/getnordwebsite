@@ -60,7 +60,7 @@
                     <a href="{{ route('home', ['locale' => 'us']) }}">
                         <img src="{{ url('/') }}/img/united-states.svg" alt="">
                     </a>
-                    <h3>Usa</h3>
+                    <h3>USA</h3>
                 </div>
             @endif
             {{-- @if ( app()->getLocale() != 'ca' )

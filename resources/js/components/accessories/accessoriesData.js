@@ -31,6 +31,7 @@ const accessoriesData = [
         ],
         mainImg: '/img/accessories/onyx_holster/getnord_onyx_holster1.jpg',
         icons: [
+            
         ]
     },
     {

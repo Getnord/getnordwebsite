@@ -22,7 +22,6 @@
             </div>
             <div class="row">
                 <div class="col_1">
-                    
                     <p>-{{ __('contact.enjoy_phone') }}</p>
                     <p>-{{ __('contact.social_networks') }}</p>
                 </div>
@@ -55,11 +54,12 @@
                     <p>-<a href="#contact_form">Click here</a>, send us a message and we will get in touch with you as soon as possible</p>
                     <p>-If your phone is defected, apply for repair using this <a href="http://rma.getnord.com/" target="_blank">online form</a>. The team will process the form and send a courier for pickup your phone. For in-warranty repairs we will return your phone fixed free of charge. For non-warranty cases we will get in touch with you and offer competitive repair price.</p>
                     <img src="{{ url('/') }}/img/flow.jpg" alt="" class="process-img">
-                    <p>- Prefer texting or talking? Here are both ways to reach us:</p>
-                    <ul>
-                        <li><p>call us +1 (xxx) xxx-xxxx</p></li>
-                        <li><p>use online chat</p></li>
-                    </ul>
+                    @if (app()->getLocale() == 'us')
+                        <p>- Prefer texting or talking? Here are both ways to reach us:</p>
+                        <ul>
+                            <li><p>call us (888) 303-7271</p></li>
+                        </ul>
+                    @endif
                 </div>
             </div>
             <div class="divider_line">
@@ -152,21 +152,23 @@
             <div class="divider_line">
                 <img src="{{ url('/') }}/img/horizontal-line.png" alt="">
             </div>
-            <div class="row">
-                <div class="col_1_4_xl col_1_m image_wrapper">
-                    <img src="{{ url('/') }}/img/icons8-location-500.png" alt="">
+            @if (app()->getLocale() == 'us')
+                <div class="row">
+                    <div class="col_1_4_xl col_1_m image_wrapper">
+                        <img src="{{ url('/') }}/img/icons8-location-500.png" alt="">
+                    </div>
+                    <div class="col_2_3_xl col_1_s">
+                        <h3>Our address</h3>
+                        <ul>
+                            <li>GETNORD TECHNOLOGIES</li>
+                            <li>62 Main St., </li>
+                            <li>Van Buren, </li>
+                            <li>ME 04785</li>
+                            <li>USA</li>
+                        </ul>
+                    </div> 
                 </div>
-                <div class="col_2_3_xl col_1_s">
-                    <h3>Our address</h3>
-                    <ul>
-                        <li>GETNORD TECHNOLOGIES</li>
-                        <li>62 Main St., </li>
-                        <li>Van Buren, </li>
-                        <li>ME 04785</li>
-                        <li>USA</li>
-                    </ul>
-                </div> 
-            </div>
+            @endif
         </div>
     </section>
 @endsection

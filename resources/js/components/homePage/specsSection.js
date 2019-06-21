@@ -6,6 +6,7 @@ import { slick } from 'slick-carousel';
 function specsDropDownToggle() {
     // specs drop down
     $('#specs_link').click(function(e) {
+        e.preventDefault();
         var useElement = document.getElementById('specs_link_icon');
         var windowWidth = $(document).width();
         var specsSectionToShow = windowWidth > 760 ? '#specs' : '#specs--responsive';

@@ -127,7 +127,7 @@ return [
     "ElectronicVideoStabilisationONYX" => "YES",
     "Time-LapseVideoONYX" => "YES",
     "IntheKitONYX" => "Smartphone, User Manual, Headset with handsfree function, USB Cable, Power adaptor, Carabiner clip, SIM Opener",
-    "PriceONYX" => "EUR298",
+    "PriceONYX" => "£264",
 
     // LYNX
     "IPRatingLYNX" => "IP68",
@@ -191,7 +191,7 @@ return [
     "ElectronicVideoStabilisationLYNX" => "YES",
     "Time-LapseVideoLYNX" => "YES",
     "IntheKitLYNX" => "Smartphone, User Manual, Headset with handsfree function, USB Cable, Power adaptor, SIM Opener",
-    "PriceLYNX" => "EUR296",
+    "PriceLYNX" => "£264",
 
     // WALRUS
     "IPRatingWALRUS" => "IP68",
@@ -255,7 +255,7 @@ return [
     "ElectronicVideoStabilisationWALRUS" => "NO",
     "Time-LapseVideoWALRUS" => "NO",
     "IntheKitWALRUS" => "The phone User Manual, Headset with handsfree function, USB Cable, Power adaptor, Screwdriver, Belt Clip.",
-    "PriceWALRUS" => "EUR69",
+    "PriceWALRUS" => "£61",
 
     // LEO
     "IPRatingLEO" => "IP68",
@@ -319,5 +319,5 @@ return [
     "ElectronicVideoStabilisationLEO" => "YES",
     "Time-LapseVideoLEO" => "YES",
     "IntheKitLEO" => "Smartphone, User Manual, Headset with handsfree function, USB Cable, Power adaptor.",
-    "PriceLEO" => "EUR359"
+    "PriceLEO" => "£319"
 ];

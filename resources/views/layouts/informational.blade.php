@@ -24,6 +24,7 @@
         @include('inc.shopping_cart')
     </div>
     @include('inc.footer2')
+    @include('pages.informational.cookies.style')
     <script src="{{ asset('js/app.js') }}"></script>
     <script src="{{ url('/') }}/js/lang-{{ app()->getLocale() }}.js"></script>
 </body>

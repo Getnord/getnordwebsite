@@ -1631,15 +1631,18 @@ items_section .product_info button:hover {
 }
 .icon_qi {
 	background: transparent url("/img/icon_qi.png") no-repeat 0px 0px;
-	background-size: 220px 125px;
+	background-position: center;
+	background-size: auto 100%;
 }
 .icon_compatible {
 	background: transparent url("/img/icon_compatible.png") no-repeat 0px 0px;
-	background-size: 220px 125px;
+	background-position: center;
+	background-size: auto 100%;
 }
 .icon_magnetic {
 	background: transparent url("/img/icon_magnetic.png") no-repeat 0px 0px;
-	background-size: 220px 125px;
+	background-position: center;
+	background-size: auto 100%;
 }
 .icon_ram, .icon_usa {
 	display: inline-block;
@@ -2287,11 +2290,8 @@ items_section .product_info button:hover {
 		font-size: 24px;
 		line-height: 32px;
 	}
-	.icon_qi, .icon_compatible, .icon_magnetic {
-		width: 147px;
-		height: 83px;
-		line-height: 167px;
-		background-size: 147px 83px;
+	.mount_section .section_text {
+		margin: 35px 0 15px 0;
 	}
 	.ram_section {
 		padding: 30px 0;

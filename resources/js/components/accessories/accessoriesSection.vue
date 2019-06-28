@@ -9,6 +9,7 @@
                 <slide v-for="(accessorie, index) in validAccessories" :key="index">
                     <base-accessorie-card 
                         :id="accessorie.id" 
+                        :name="accessorie.name" 
                         :main-img="accessorie.mainImg" 
                         @open-details-window="openDetailsWindow">
                     </base-accessorie-card>
@@ -38,6 +39,7 @@
                         :name="accessorie.name"
                         @open-details-window="openDetailsWindow"></base-accessorie-card>
                 </accessories-row>
+                <!-- three rows -->
                 <accessories-row :class="{'center-elts': isMoreThanOneRowsOfAccessories}" v-if=" typeof splitedArray[2] != undefined">
                     <base-accessorie-card 
                         v-for="(accessorie, index) in splitedArray[2]" 

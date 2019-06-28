@@ -113,7 +113,8 @@ export default {
 .cart
 	letter-spacing: .05em
 	color: darken(#abc, 80%)
-	width: 600px
+	max-width: 600px
+	width: 100%
 	padding: 15px
 	margin: 0 auto
 	margin-top: 15px

@@ -41,7 +41,7 @@ class ContactFormController extends Controller
             return response()->json([ 'errors' => $validator->errors()->getMessageBag() ]);
         } else {
             Mail::to('hamzabitup@gmail.com')
-                ->send(new ContactRequest($request));
+            ->send(new ContactRequest($request));
             if(!Mail::failures()) {
                 // we add the user to mailchimp
                 Newsletter::subscribe($request->input('email'), ['FNAME'=> $request->input('name'), 'lastName'=>''], 'list_' . app()->getLocale());

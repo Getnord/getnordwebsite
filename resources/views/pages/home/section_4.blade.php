@@ -1,4 +1,4 @@
-<section class="mount_section">
+<section class="mount_section mount_section--lynx">
     <div class="page_center">
         <video autoplay loop muted playsinline  class="section_video" inline>
             <source src="{{ url('/') }}/img/mount.mp4" type="video/mp4">

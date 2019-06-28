@@ -39,6 +39,7 @@ class PagesController extends Controller
             'WALRUS',
             'ONYX'
         ];
+        // the specs section rows names are cached using the CsvFilesController
         $specs_section_rows_names = Cache::get('specs_section_rows_names');
         return view('pages.home.index')->with([
             'onHomePage' => $onHomePage, 

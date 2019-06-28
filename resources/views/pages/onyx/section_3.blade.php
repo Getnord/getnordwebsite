@@ -6,15 +6,15 @@
         <p>{{ __('onyx.metalReinforcedParagraph') }}</p>
         </div>
         <div class="section_icons anim">
-            <span class="anim1 delay2">
+            <span class="anim1 delay2 icons--responsive">
                 <img src="{{ url('/') }}/img/onyx/icons/magnesium-alloy.svg" alt="">
                 <p class="icon_text">{{ __('onyx.metalReinforcedMg') }}</p>
             </span>
-            <span class="anim1 delay3">
+            <span class="anim1 delay3 icons--responsive">
                 <img src="{{ url('/') }}/img/onyx/icons/high-flexural-strenght.svg" alt="">
                 <p class="icon_text">{{ __('onyx.metalReinforcedFlexural') }}</p>
             </span>
-            <span class="anim1 delay4">
+            <span class="anim1 delay4 icons--responsive">
                 <img src="{{ url('/') }}/img/onyx/icons/carabiner-clip-icon.svg" alt="">
                 <p class="icon_text">{{ __('onyx.metalReinforcedClip') }}</p>
             </span>

@@ -17,15 +17,15 @@ return [
     'feed12' => "O'er the land of the free and the home of the brave!",
 
     // footer - social media
-    'socialMedia' => 'Join us in social media',
+    'socialMedia' => 'Getnord Social Media',
 
     // footer - links
-    'deliveryAndReturns' => 'Delivery and returns',
-    'warranty' => 'Warranty',
-    'legalNotes' => 'Legal notes',
-    'privacyAndCookies' => 'Privacy and cookies',
+    'deliveryAndReturns' => 'LIEFERUNG UND RÜCKSENDUNGEN',
+    'warranty' => 'GARANTIE',
+    'legalNotes' => 'RECHTLICHE HINWEISE',
+    'privacyAndCookies' => 'DATENSCHUTZ- UND COOKIE-RICHTLINIEN',
 
     // footer - titles
-    'paymentsMethodes' => 'Payments Methods',
-    'securedWith' => 'Secured with'
+    'paymentsMethodes' => 'Zahlungsarten',
+    'securedWith' => 'Gesichert mit'
 ];

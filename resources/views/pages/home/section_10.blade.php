@@ -4,7 +4,7 @@
             <source src="{{ url('/') }}/img/designed.mp4" type="video/mp4">
         </video>
         <div id="designed_overlay" class="section_overlay">
-            <div class="overlay_text">Designed In Barcelona</div>
+            <div class="overlay_text">{{ __('home.designedInBarcelona') }}</div>
         </div>
     </div>
 </section>

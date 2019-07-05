@@ -135,14 +135,14 @@
             <div class="footer__info">
                 <div class="row">
                     <div class="col_3_xl col_1_xs footer__info__links">
-                        <a href="{{ route('shipping', ['locale' => app()->getLocale()]) }}">Delivery and returns</a>
-                        <a href="{{ route('warranty', ['locale' => app()->getLocale()]) }}">Warranty</a>
-                        <a href="{{ route('legal', ['locale' => app()->getLocale()]) }}">Legal notes</a>
-                        <a href="{{ route('cookies', ['locale' => app()->getLocale()]) }}">Privacy and cookies</a>
+                        <a href="{{ route('shipping', ['locale' => app()->getLocale()]) }}">{{ __('footer.deliveryAndReturns') }}</a>
+                        <a href="{{ route('warranty', ['locale' => app()->getLocale()]) }}">{{ __('footer.warranty') }}</a>
+                        <a href="{{ route('legal', ['locale' => app()->getLocale()]) }}">{{ __('footer.legalNotes') }}</a>
+                        <a href="{{ route('cookies', ['locale' => app()->getLocale()]) }}">{{ __('footer.privacyAndCookies') }}</a>
                     </div>
                     <div class="col_3_xl col_1_xs">
                         <h3>
-                           Payments Methods 
+                           {{ __('footer.paymentsMethodes') }} 
                         </h3>
                         <div class="footer__info__payments">
                             <div class="footer__info__payments__payment">
@@ -162,7 +162,7 @@
                     </div>
                     <div class="col_3_xl col_1_xs footer__info__secure">
                         <h3>
-                            Secured with
+                            {{ __('footer.securedWith') }}
                         </h3>
                         <div class="footer__info__secure__braintree">
                             <img src="{{ url('/') }}/img/Braintree_logo.svg" alt="">

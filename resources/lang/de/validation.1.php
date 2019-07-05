@@ -128,11 +128,21 @@ return [
     */
 
     'custom' => [
-        'attribute-name' => [
-            'rule-name' => 'custom-message',
+        'subject' => [
+            'required' => 'The subject field is required.',
         ],
         'email' => [
-            'required' => 'We need to know your e-mail address!',
+            'required' => 'The email field is required.',
+            'sent' => 'Your email has been sent.'
+        ],
+        'name' => [
+            'required' => 'The name field is required.',
+        ],
+        'message' => [
+            'required' => 'The message field is required.',
+        ],
+        'success' => [
+            '' => ''
         ]
     ],
 

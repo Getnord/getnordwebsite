@@ -84,42 +84,42 @@
                     <a href="{{ route('home', ['locale' => 'fr']) }}">
                         <img src="{{ url('/') }}/img/france.svg" alt="">
                     </a>
-                    <h3>France</h3>
+                    <h3>FR</h3>
                 </div>
-            @endif
+            @endif --}}
             @if ( app()->getLocale() != 'de' )
                 <div class="lang-select">
                     <a href="{{ route('home', ['locale' => 'de']) }}">
                         <img src="{{ url('/') }}/img/germany.svg" alt="">
                     </a>
-                    <h3>Deutschland</h3>
+                    <h3>DE</h3>
                 </div>
             @endif
-            @if ( app()->getLocale() != 'es' )
+            {{-- @if ( app()->getLocale() != 'es' )
                 <div class="lang-select">
                     <a href="{{ route('home', ['locale' => 'es']) }}">
                         <img src="{{ url('/') }}/img/spain.svg" alt="">
                     </a>
-                    <h3>España</h3>
+                    <h3>ES</h3>
                 </div>
-            @endif
-            @if ( app()->getLocale() != 'it' )
+            @endif --}}
+            {{-- @if ( app()->getLocale() != 'it' )
                 <div class="lang-select">
                     <a href="{{ route('home', ['locale' => 'it']) }}">
                         <img src="{{ url('/') }}/img/italy.svg" alt="">
                     </a>
-                    <h3>Italia</h3>
+                    <h3>IT</h3>
                 </div>
-            @endif
-            @if ( app()->getLocale() != 'nl' )
+            @endif --}}
+            {{-- @if ( app()->getLocale() != 'nl' )
                 <div class="lang-select">
                     <a href="{{ route('home', ['locale' => 'nl']) }}">
                         <img src="{{ url('/') }}/img/netherlands.svg" alt="">
                     </a>
                     <h3>Nederland</h3>
                 </div> 
-            @endif
-            @if ( app()->getLocale() != 'pl' )
+            @endif --}}
+            {{-- @if ( app()->getLocale() != 'pl' )
                 <div class="lang-select">
                     <a href="{{ route('home', ['locale' => 'pl']) }}">
                         <img src="{{ url('/') }}/img/poland.svg" alt="">
@@ -153,24 +153,24 @@
     <nav class="top_menu clearfix">
         <ul>
             @if ($onHomePage)
-                <li><a href="#product_section">SHOP</a></li>
+                <li><a href="#product_section">{{ __('header.shop') }}</a></li>
             @else
-                <li><a href="{{ route('home', ['locale' => app()->getLocale()]) }}">SHOP</a></li>
+                <li><a href="{{ route('home', ['locale' => app()->getLocale()]) }}">{{ __('header.shop') }}</a></li>
             @endif
             <li class="dropdown">
                 <a href="#" class="dropdown__btn">
-                    <p>Phones</p>
+                    <p>{{ __('header.phones') }}</p>
                 </a>
                 <div class="dropdown__list">
-                    <a href="{{ route('home', ['locale' => app()->getLocale()]) }}">Getnord Lynx</a>
+                    <a href="{{ route('home', ['locale' => app()->getLocale()]) }}">{{ __('header.lynx') }}</a>
                     @if (app()->getLocale() != 'us')
-                        <a href="{{ route('onyx', ['locale' => app()->getLocale()]) }}">Getnord Onyx</a>
+                        <a href="{{ route('onyx', ['locale' => app()->getLocale()]) }}">{{ __('header.onyx') }}</a>
                     @endif
                 </div>
             </li>
 <!--			<li><a href="javascript:void(0);" onclick="popup_open();">CONTACT</a></li>-->
-            <li><a href="{{ route('contact', ['locale' => app()->getLocale()]) }}">CONTACTS&SUPPORT</a></li>
-            <li><a href="{{ route('compatibility', ['locale' => app()->getLocale()]) }}">COMPATIBILITY</a></li>
+            <li><a href="{{ route('contact', ['locale' => app()->getLocale()]) }}">{{ __('header.contactAndSupport') }}</a></li>
+            <li><a href="{{ route('compatibility', ['locale' => app()->getLocale()]) }}">{{ __('header.compatibility') }}</a></li>
         </ul>
     </nav>
 </header>

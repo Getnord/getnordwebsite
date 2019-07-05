@@ -3,10 +3,9 @@
         <video autoplay muted playsinline  class="section_video" inline>
             <source src="{{ url('/') }}/img/onyx/video/getnord_onyx_dual_moulding.mp4" type="video/mp4">
         </video>
-        <div class="section_heading">{{ __('onyx.dualMoldingTitle') }}</div>
+        <div class="section_heading">{{ __('onyx.dualMolding') }}</div>
         <div class="section_text">
-        Wireless charging cradle with magnetic lock. Patented RAM ball and socket system.<br />
-        Tough and Waterproof. Can be used for offroad, ATV and UTV.
+            {{ __('onyx.dualMoldingParagraph') }}
         </div>
         <div class="section_icons anim">
             <span class="anim1 delay2">

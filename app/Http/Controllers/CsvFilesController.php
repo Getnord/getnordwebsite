@@ -30,10 +30,10 @@ class CsvFilesController extends Controller
         // phones
 
         $phones = [
-            'ONYX',
-            'LYNX',
-            'WALRUS',
-            'LEO'
+            'ONYX' => 'ONYX',
+            'LYNX' => 'LYNX',
+            'WALRUS' => 'WALRUS',
+            'LEO' => 'LEO'
         ];
 
         $file_n = storage_path('app/public/translations/' . $lang . '/' . $name .'.csv');
@@ -45,10 +45,20 @@ class CsvFilesController extends Controller
 
         fclose($file);
 
+        // dd($csv);
+
         foreach ($csv as $key) {
+            // use the following row name in case you are working with the phone specs files
+            // $row = \preg_replace('/\s+/', '', $key[0]) . $phones[strtoupper($name)];
             // to generate the data for translations for each product
-            $row = \preg_replace('/\s+/', '', $key[0]) ;
+            $row = \preg_replace('/\s+/', '', $key[0]);
+
+            if( !isset($key[1]) ) { // to find the exact row where the csv file in not properly formated ( presence of return to line etc )
+                dd($key[0]);
+            }
             $result[$row] = $key[1];
+
+
             array_push($rows, $row);
 
             array_push($row_names, $row);

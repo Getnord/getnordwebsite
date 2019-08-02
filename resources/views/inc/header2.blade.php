@@ -117,7 +117,7 @@
                         <img src="{{ url('/') }}/img/netherlands.svg" alt="">
                     </a>
                     <h3>Nederland</h3>
-                </div> 
+                </div>
             @endif --}}
             {{-- @if ( app()->getLocale() != 'pl' )
                 <div class="lang-select">
@@ -146,10 +146,10 @@
     <div class="clear visible_m"></div>
 
     {{-- The folling elements only need to be shown in the us page --}}
-    @if (app()->getLocale() == 'us')
+    {{--@if (app()->getLocale() == 'us')
         <a href="tel:8883037271" style="color: #0080ff" class="contact">Call us (888) 303-7271</a>
         <a href="tel:8883037271" style="color: #0080ff" class="contact contact_sm">(888) 303-7271</a>
-    @endif
+    @endif--}}
     <nav class="top_menu clearfix">
         <ul>
             @if ($onHomePage)

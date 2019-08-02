@@ -18,7 +18,11 @@ return [
 
     // footer - social media
     'socialMedia' => 'Getnord Social Media',
-
+    'youtube' => 'https://www.youtube.com/channel/UCxWUiWFcqE3-b0C3zTgu9JQ',
+    'facebook' => 'https://www.facebook.com/Getnord-Outdoor-Handys-1779613288931903/',
+    'instagram' => 'https://www.instagram.com/getnord/',
+    'pinterest' => 'https://www.pinterest.com/getnord/getnord-phones/',
+    'twitter' => 'https://twitter.com/getnord?lang=en',
     // footer - links
     'deliveryAndReturns' => 'LIEFERUNG UND RÜCKSENDUNGEN',
     'warranty' => 'GARANTIE',

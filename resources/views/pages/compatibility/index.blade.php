@@ -12,7 +12,7 @@
                         </h2>
                     </div>
                     <div class="section_text">
-                        <img src="{{ url('/') }}/img/canada_carriers.jpg" alt="">
+                        <img src="{{ url('/') }}/img/usa_carriers.jpg" alt="">
                     </div>
                     <div class="section_heading">
                         <h2>
@@ -20,13 +20,14 @@
                         </h2>
                     </div>
                     <div class="section_text">
-                        <img src="{{ url('/') }}/img/usa_carriers.jpg" alt="">
+                        <img src="{{ url('/') }}/img/canada_carriers.jpg" alt="">
+
                     </div>
                 </div>
             </div>
         </section>
     @else
-    
+
     {{-- The following section shows in non US or CA locals --}}
         <section>
             <div class="section_content compatibility_page">

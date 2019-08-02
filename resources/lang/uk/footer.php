@@ -17,5 +17,10 @@ return [
     'feed12' => "O'er the land of the free and the home of the brave!",
 
     // footer - social media
-    'socialMedia' => 'Join us in social media'
+    'socialMedia' => 'Join us in social media',
+    'youtube' => 'https://www.youtube.com/channel/UCxWUiWFcqE3-b0C3zTgu9JQ',
+    'facebook' => 'https://www.facebook.com/getnordinternational/',
+    'instagram' => 'https://www.instagram.com/getnord/',
+    'pinterest' => 'https://www.pinterest.com/getnord/getnord-phones/',
+    'twitter' => 'https://twitter.com/getnord?lang=en',
 ];

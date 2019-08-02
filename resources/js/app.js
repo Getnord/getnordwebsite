@@ -196,6 +196,7 @@ const app = new Vue({
         form.append("currency", this.info.currencies[this.lang]);
         form.append("lang", this.lang);
 
+
         axios
             .post("/api", form)
             .then(response => {

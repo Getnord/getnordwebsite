@@ -1,16 +1,16 @@
 <template>
     <div>
         <div v-if="isCarouselActive">
-            <carousel 
+            <carousel
                 :perPageCustom="[[0, 1], [560, 2]]"
                 paginationPosition="top"
                 paginationColor="#a2aaaa"
                 >
                 <slide v-for="(accessorie, index) in validAccessories" :key="index">
-                    <base-accessorie-card 
-                        :id="accessorie.id" 
-                        :name="accessorie.name" 
-                        :main-img="accessorie.mainImg" 
+                    <base-accessorie-card
+                        :id="accessorie.id"
+                        :name="accessorie.name"
+                        :main-img="accessorie.mainImg"
                         @open-details-window="openDetailsWindow">
                     </base-accessorie-card>
                 </slide>
@@ -21,31 +21,31 @@
         <div v-else>
             <div v-if="isMoreThanOneRowsOfAccessories">
                 <accessories-row>
-                    <base-accessorie-card 
-                        v-for="(accessorie, index) in splitedArray[0]" 
+                    <base-accessorie-card
+                        v-for="(accessorie, index) in splitedArray[0]"
                         :id="accessorie.id" :main-img="accessorie.mainImg"
-                        :name="accessorie.name" 
-                        :key="index" 
+                        :name="accessorie.name"
+                        :key="index"
                         @open-details-window="openDetailsWindow"></base-accessorie-card>
                 </accessories-row>
                 <details-window v-if="isDetailsWindowOpen" :active-accessorie="activeAccessorie" >
                 </details-window>
                 <accessories-row :class="{'center-elts': isMoreThanOneRowsOfAccessories}">
-                    <base-accessorie-card 
-                        v-for="(accessorie, index) in splitedArray[1]" 
-                        :id="accessorie.id" 
-                        :main-img="accessorie.mainImg" 
-                        :key="index" 
+                    <base-accessorie-card
+                        v-for="(accessorie, index) in splitedArray[1]"
+                        :id="accessorie.id"
+                        :main-img="accessorie.mainImg"
+                        :key="index"
                         :name="accessorie.name"
                         @open-details-window="openDetailsWindow"></base-accessorie-card>
                 </accessories-row>
                 <!-- three rows -->
                 <accessories-row :class="{'center-elts': isMoreThanOneRowsOfAccessories}" v-if=" typeof splitedArray[2] != undefined">
-                    <base-accessorie-card 
-                        v-for="(accessorie, index) in splitedArray[2]" 
-                        :id="accessorie.id" 
-                        :main-img="accessorie.mainImg" 
-                        :key="index" 
+                    <base-accessorie-card
+                        v-for="(accessorie, index) in splitedArray[2]"
+                        :id="accessorie.id"
+                        :main-img="accessorie.mainImg"
+                        :key="index"
                         :name="accessorie.name"
                         @open-details-window="openDetailsWindow"></base-accessorie-card>
                 </accessories-row>
@@ -53,10 +53,10 @@
 
             <div v-else>
                 <accessories-row>
-                    <base-accessorie-card 
-                        v-for="(accessorie, index) in validAccessories" 
-                        :id="accessorie.id" 
-                        :main-img="accessorie.mainImg" 
+                    <base-accessorie-card
+                        v-for="(accessorie, index) in validAccessories"
+                        :id="accessorie.id"
+                        :main-img="accessorie.mainImg"
                         :key="index"
                         @open-details-window="openDetailsWindow"
                         :name="accessorie.name"
@@ -83,7 +83,7 @@ import he from 'he';
  * ----------------------
  *  we specify an array containing ids for each accessory.
  *  Fitler the existing ones by comparing the previous array and the array of all the products we get from OpenCart.
- *  
+ *
  */
 export default {
     name: 'AccessoriesSection',
@@ -182,7 +182,7 @@ export default {
              * some validation that the accessorie exist
              */
             if(!_.isEmpty(this.activeAccessorie)) {
-                this.isDetailsWindowOpen = true;   
+                this.isDetailsWindowOpen = true;
             } else {
                 console.log('the accessorie could not be found on our db');
             }

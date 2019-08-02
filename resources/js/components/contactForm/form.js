@@ -15,7 +15,7 @@ function form_response(data, form_id) {
 
     } else if (data.success) {
         let text = data.success;
-        
+
         $('#' + form_id).find('.form_result').show();
         $('#' + form_id).find('.form_result').html(text);
         $('#' + form_id).find('.form_error').hide();

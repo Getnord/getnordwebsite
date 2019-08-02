@@ -107,23 +107,23 @@
                 <h1>{{ __('footer.socialMedia') }}</h1>
                 <div class="footer__social__links">
 
-                    <a href="#" class="footer__social__links__link--yt">
+                    <a href="{{ __('footer.youtube')}}" class="footer__social__links__link--yt">
                         <svg class="icon"><use xlink:href="{{ url('/') }}/img/icons.svg#icon_yt"></use></svg>
                     </a>
 
-                    <a href="#" class="footer__social__links__link--fb">
+                    <a href="{{ __('footer.facebook')}}" class="footer__social__links__link--fb">
                         <svg class="icon"><use xlink:href="{{ url('/') }}/img/icons.svg#icon_fb"></use></svg>
                     </a>
 
-                    <a href="#" class="footer__social__links__link--in">
+                    <a href="{{ __('footer.instagram')}}" class="footer__social__links__link--in">
                         <svg class="icon"><use xlink:href="{{ url('/') }}/img/icons.svg#icon_in"></use></svg>
                     </a>
 
-                    <a href="#" class="footer__social__links__link--pt">
+                    <a href="{{ __('footer.pinterest')}}" class="footer__social__links__link--pt">
                         <svg class="icon"><use xlink:href="{{ url('/') }}/img/icons.svg#icon_pt"></use></svg>
                     </a>
 
-                    <a href="#" class="footer__social__links__link--tw">
+                    <a href="{{ __('footer.twitter')}}" class="footer__social__links__link--tw">
                         <svg class="icon"><use xlink:href="{{ url('/') }}/img/icons.svg#icon_tw"></use></svg>
                     </a>
                 </div>
@@ -142,7 +142,7 @@
                     </div>
                     <div class="col_3_xl col_1_xs">
                         <h3>
-                           {{ __('footer.paymentsMethodes') }} 
+                           {{ __('footer.paymentsMethodes') }}
                         </h3>
                         <div class="footer__info__payments">
                             <div class="footer__info__payments__payment">

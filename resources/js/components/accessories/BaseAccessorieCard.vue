@@ -8,6 +8,8 @@
     </div>
 </template>
 <script>
+
+
 export default {
     name: 'base-accessorie-card',
 
@@ -35,7 +37,7 @@ export default {
 }
 </script>
 <style lang="sass" scoped>
-.card 
+.card
     background: #ffffff
     display: flex
     flex-direction: column
@@ -46,10 +48,10 @@ export default {
     width: 32%
     margin: 4px
     height: 33em
-    
+
     @media( max-width: 999px )
         height: 30em
-    
+
     @media(max-width: 850px)
         width: auto
         height: 28em

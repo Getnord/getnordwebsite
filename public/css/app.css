@@ -99,7 +99,7 @@ a.hover:hover {
 .formatted .table_regular {
 	margin: 20px 0;
 	border-collapse: collapse;
-	max-width: 100%; 
+	max-width: 100%;
 }
 .formatted .table_regular th {
 	padding: 10px 20px;
@@ -172,7 +172,7 @@ a.hover:hover {
 	color: #dcdcdc;
 	opacity: 0.8;
 }
-:-ms-input-placeholder {  
+:-ms-input-placeholder {
 	color: #dcdcdc;
 	opacity: 0.8;
 }
@@ -211,7 +211,7 @@ a.hover:hover {
 	padding: 19px 30px;
 	height: 70px;
 	font-size: 20px;
-	line-height: 30px;	
+	line-height: 30px;
 }
 .button {
 	display: inline-block;
@@ -491,7 +491,7 @@ a.hover:hover {
 }
 .intro_section .section_center {
 	text-align: center;
-    
+
 }
 .intro_section .section_heading {
 	font-size: 60px;
@@ -554,7 +554,7 @@ a.hover:hover {
 
 .product_section .product_form .button{
     display: inline-block;
-    height: 50px; 
+    height: 50px;
     width: 140px;
     margin-right: 10px;
     border: 2px #0077ec solid;
@@ -566,7 +566,7 @@ a.hover:hover {
 }
 .product_section .section_cta a, .product_section .section_cta button{
     display: inline-block;
-    height: 50px; 
+    height: 50px;
     width: 140px;
     margin-right: 10px;
     border: 2px #0077ec solid;
@@ -682,7 +682,7 @@ a.hover:hover {
 	font-size: 35px;
 	line-height: 40px;
 	font-weight: bold;
-	text-transform: uppercase;	
+	text-transform: uppercase;
 }
 .gallery_section .item_description {
 	font-size: 20px;
@@ -961,7 +961,7 @@ a.hover:hover {
 	top: 0;
 	bottom: 0;
 	left: 0;
-	right: 0; 
+	right: 0;
 	background: transparent url("/img/video_overlay.jpg") no-repeat center center;
 	background-size: cover;
 	cursor: pointer;
@@ -1072,7 +1072,7 @@ a.hover:hover {
 .items_section .product_info button {
     background-color: #0080ff;
     color: white;
-    height: 70px; 
+    height: 70px;
     width: 160px;
     border-radius: 0px;
     border-color: transparent;
@@ -1155,7 +1155,7 @@ items_section .product_info button:hover {
         margin-right: 0px;
     }
     .product_section2 {
-        padding-top: 10px !important; 
+        padding-top: 10px !important;
     }
     .product_section2 .row {
         display: flex;
@@ -1246,7 +1246,7 @@ items_section .product_info button:hover {
 /*footer */
 #footer {
 /*    background-color: #f6f6f6;*/
-    width: 100vw;
+    width: 100%;
     margin: 0px;
     height: -webkit-fit-content;
     height: -moz-fit-content;
@@ -1355,7 +1355,7 @@ items_section .product_info button:hover {
         order: -1;
         margin-right: 0px;
     }
-    
+
     .wrapper-info {
         display: block;
     }
@@ -1369,7 +1369,7 @@ items_section .product_info button:hover {
     #buy-product.markets .row {
         margin-top: 30px;
     }
-    
+
     #footer .footer-container {
         flex-direction: column;
         justify-content: center;
@@ -1382,7 +1382,7 @@ items_section .product_info button:hover {
     display: flex;
     align-items: center;
     justify-content: center;
-    margin: 15px 5px 20px 5px;   
+    margin: 15px 5px 20px 5px;
     transition: all 0.2s ease-in-out;
 }
     .intro-items {
@@ -1559,7 +1559,7 @@ items_section .product_info button:hover {
 	.popup_content .popup_row .popup_col1 h2,  .popup_content .popup_row .popup_col1 p{
 		max-width: 300px;
 		text-align: center !important;
-	
+
 	}
 	.popup_content .popup_row .popup_col2 {
 		max-width: 60%;
@@ -1576,7 +1576,7 @@ items_section .product_info button:hover {
 	position: fixed;
 	left: 0;
 	top: 0;
-	right: 0;	
+	right: 0;
 	bottom: 0;
 	overflow-x: auto;
 	overflow-y: scroll;
@@ -1786,7 +1786,7 @@ items_section .product_info button:hover {
 	clear: both;
 }
 .bbox {
-	box-sizing: border-box;	
+	box-sizing: border-box;
 }
 .hidden {
 	display: none;
@@ -1994,7 +1994,7 @@ items_section .product_info button:hover {
 		padding: 50px 0;
 		font-size: 40px;
 		line-height: 45px;
-        
+
 	}
 	.gallery_section .item_heading {
 		margin-bottom: 0;
@@ -2229,7 +2229,7 @@ items_section .product_info button:hover {
 	.section_header, .section_heading {
 		font-size: 1.875em;
 	}
-}	
+}
 
 /* s */
 @media (max-width: 759px) {
@@ -2279,7 +2279,7 @@ items_section .product_info button:hover {
 		font-size: 18px;
 		line-height: 28px;
 	}
-	
+
 	.intro_section .section_heading {
 		font-size: 24px;
 		line-height: 30px;
@@ -2582,7 +2582,11 @@ items_section .product_info button:hover {
 }
 @media (max-width: 1199px){
 	.wrapper_logo{padding-top:40px;}
-}@charset "UTF-8";
+}
+.specs_section .specs__col .button{
+    padding: 0;
+}
+@charset "UTF-8";
 
 .section_contact {
   margin-top: 100px;
@@ -3730,6 +3734,7 @@ body h1 {
 
 .footer__social__links a .icon {
   width: 40px;
+  height: 40px;
 }
 
 @media (max-width: 750px) {

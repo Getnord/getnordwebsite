@@ -2004,7 +2004,7 @@ __webpack_require__.r(__webpack_exports__);
  * ----------------------
  *  we specify an array containing ids for each accessory.
  *  Fitler the existing ones by comparing the previous array and the array of all the products we get from OpenCart.
- *  
+ *
  */
 
 /* harmony default export */ __webpack_exports__["default"] = ({
@@ -61597,8 +61597,8 @@ jQuery.fn.bullseye = function (b, h) {
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
-__webpack_require__(/*! /Applications/AMPPS/www/getnord/resources/js/app.js */"./resources/js/app.js");
-module.exports = __webpack_require__(/*! /Applications/AMPPS/www/getnord/resources/sass/app.scss */"./resources/sass/app.scss");
+__webpack_require__(/*! C:\wamp64\www\getnordwebsite\resources\js\app.js */"./resources/js/app.js");
+module.exports = __webpack_require__(/*! C:\wamp64\www\getnordwebsite\resources\sass\app.scss */"./resources/sass/app.scss");
 
 
 /***/ })

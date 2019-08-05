@@ -8,6 +8,7 @@
     {{-- styles --}}
     {{-- <link href="https://fonts.googleapis.com/css?family=IBM+Plex+Sans:400,700&amp;subset=cyrillic,latin-ext" rel="stylesheet"> --}}
     <link rel="stylesheet" href="{{ asset('css/app.css') }}">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
     {{-- <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css" integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous"> --}}
     {{-- title --}}
     <title>@yield('pageTitle')</title>
@@ -19,7 +20,7 @@
     <!-- End Google Tag Manager (noscript) -->
     <div class="page_content" id="app">
         @include('inc.header2')
-        
+
         @yield('content')
         @include('inc.shopping_cart')
     </div>

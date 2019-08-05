@@ -1,6 +1,7 @@
 <?php
 
 return [
+    'pageTitle' => 'Onyx Getnord',
     "heroPhoneName" => "GETNORD ONYX",
     "heroPhoneTitle" => "A RUGGED PHONE IN REAL METAL HOUSING",
     "heroFindOutMore" => "FIND OUT MORE",

@@ -39,31 +39,31 @@
                                 src="{{ url('/') }}/img/pinterest.png" alt=""></a>
                         <a href="https://plus.google.com/108396757180962407946" target="_blank"><img
                                 src="{{ url('/') }}/img/google-plus.png" alt=""></a>--}}
-                        <a href="{{ __('footer.youtube')}}" class="footer__social__links__link--yt">
+                        <a href="{{ __('footer.youtube')}}" class="footer__social__links__link--yt" target="_blank">
                             <svg class="icon">
                                 <use xlink:href="{{ url('/') }}/img/icons.svg#icon_yt"></use>
                             </svg>
                         </a>
 
-                        <a href="{{ __('footer.facebook')}}" class="footer__social__links__link--fb">
+                        <a href="{{ __('footer.facebook')}}" class="footer__social__links__link--fb" target="_blank">
                             <svg class="icon">
                                 <use xlink:href="{{ url('/') }}/img/icons.svg#icon_fb"></use>
                             </svg>
                         </a>
 
-                        <a href="{{ __('footer.instagram')}}" class="footer__social__links__link--in">
+                        <a href="{{ __('footer.instagram')}}" class="footer__social__links__link--in" target="_blank">
                             <svg class="icon">
                                 <use xlink:href="{{ url('/') }}/img/icons.svg#icon_in"></use>
                             </svg>
                         </a>
 
-                        <a href="{{ __('footer.pinterest')}}" class="footer__social__links__link--pt">
+                        <a href="{{ __('footer.pinterest')}}" class="footer__social__links__link--pt" target="_blank">
                             <svg class="icon">
                                 <use xlink:href="{{ url('/') }}/img/icons.svg#icon_pt"></use>
                             </svg>
                         </a>
 
-                        <a href="{{ __('footer.twitter')}}" class="footer__social__links__link--tw">
+                        <a href="{{ __('footer.twitter')}}" class="footer__social__links__link--tw" target="_blank">
                             <svg class="icon">
                                 <use xlink:href="{{ url('/') }}/img/icons.svg#icon_tw"></use>
                             </svg>
@@ -159,10 +159,10 @@
                         <div class="form_row clearfix">
                             <div class="form_col col_1 bbox">
                                 <div class="label_wrapper">
-                                    <label class="form_label" for="email">{{ __('contact.form_name')}}*</label>
+                                    <label class="form_label" for="email">{{ __('contact.form_email')}}*</label>
                                 </div>
                                 <input type="text" class="textbox" maxlength="100" name="email"
-                                       placeholder="{{ __('contact.form_name_placeholder')}}"/></div>
+                                       placeholder="{{ __('contact.form_email_placeholder')}}"/></div>
                         </div>
                         <div class="form_row clearfix">
                             <div class="form_col clearfix">

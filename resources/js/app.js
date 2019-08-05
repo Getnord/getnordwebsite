@@ -48,6 +48,7 @@ import shoppingCartIcon from "./components/shoppingCart/ShoppingCartIcon.vue";
 import checkoutPage from "./components/shoppingCart/Checkout.vue";
 import baseCardMessage from "./components/shoppingCart/BaseCardMessage.vue";
 import http_build_query from "locutus/php/url/http_build_query";
+import {accessoriesData} from './components/accessories/accessoriesData.js'
 
 import accessoriesSection from "./components/accessories/accessoriesSection.vue";
 // the following is used to be able to use laravel lang resources in JS
@@ -162,13 +163,7 @@ const app = new Vue({
         cart: [],
         currentProduct: {}
     },
-    watch: {
-        cart() {
-            // we use localstorage to save the cart data from page to page
-            // and also in case the user gets back again to the website
-            localStorage.cartData = JSON.stringify(this.cart);
-        }
-    },
+
     created() {
         // the following code will handle adding products to the cart that come form
         // the accessorie instance
@@ -196,7 +191,6 @@ const app = new Vue({
         form.append("currency", this.info.currencies[this.lang]);
         form.append("lang", this.lang);
 
-
         axios
             .post("/api", form)
             .then(response => {
@@ -210,15 +204,36 @@ const app = new Vue({
     methods: {
         buybtnclicked(product_id, productHasOptions) {
             // checking if product exits in our data
+            var image;
+            if (product_id === '50'){
+                image = '/img/lynx/phone_lynx.jpg'
+            }else if (product_id == '67'){
+                image = '/img/onyx/phone_onyx.jpg'
+            }else if (product_id == '69'){
+                image = '/img/walrus/phone_walrus.jpg'
+            }else if (product_id == '68'){
+                image = '/img/leo/phone_leo.jpg'
+            }else{
+                image = 'http://placehold.it/50x50'
+            }
+            accessoriesData.forEach(img =>{
+              if (img.id === product_id) {
+                  image = img.mainImg
+              }
+            })
+
             this.info.openCartData.forEach(product => {
                 if (product.product_id == product_id) {
+                   // console.log(product)
+                    //
                     this.currentProduct = {
                         name: product.name,
-                        price: this.stringToNumber(product.price),
+                        price: product.price.slice(0,-1),
                         product_id: product.product_id,
                         quantity: 1,
                         option: {},
-                        stock: product.quantity
+                        stock: product.quantity,
+                        img: image
                     };
                 }
             });
@@ -274,6 +289,7 @@ const app = new Vue({
                     }
                     break;
             }
+            localStorage.cartData = JSON.stringify(this.cart);
         },
 
         stringToNumber(element) {
@@ -353,5 +369,13 @@ const app = new Vue({
         jsonCopy(src) {
             return JSON.parse(JSON.stringify(src));
         }
+    },watch: {
+        cart() {
+            // we use localstorage to save the cart data from page to page
+            // and also in case the user gets back again to the website
+            localStorage.cartData = JSON.stringify(this.cart);
+        },
+        immediate: true
     }
 });
+

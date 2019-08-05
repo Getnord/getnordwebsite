@@ -69,7 +69,6 @@ export default {
 
   methods: {
     switchCurrentImage(imgUrl) {
-      console.log(imgUrl);
       this.currentImageUrl = imgUrl;
     },
 
@@ -78,6 +77,7 @@ export default {
     }
   }
 };
+
 </script>
 <style lang="sass" scoped>
 .modal
@@ -95,11 +95,11 @@ export default {
 
         @media( max-width: 768px)
             flex-direction: column
-        
-        &__right 
+
+        &__right
             width: 28.4%
             padding-top: 100px
-            padding-left: 60px 
+            padding-left: 60px
             padding-right: 60px
 
             @media( max-width: 768px)
@@ -110,7 +110,7 @@ export default {
                 padding-right: 10px
                 width: auto
 
-            &__name 
+            &__name
                 padding: 0px
                 margin-left: 0px
                 font-size: 55px
@@ -135,28 +135,28 @@ export default {
                     flex-direction: column
                     justify-content: center
 
-                &__icon 
+                &__icon
                     margin-right: 2em
                     @media( max-width: 480px )
                         margin-right: 0
 
 
-            &__description 
+            &__description
                 font-size: 1.250em  !important
                 line-height: 1.5em  !important
 
                 @media( max-width: 468px )
-                    text-align: center  
-                    font-size: 1em 
-                    padding: 0 16px 
+                    text-align: center
+                    font-size: 1em
+                    padding: 0 16px
 
-            &__price 
+            &__price
                 font-size: 1.500em
                 font-weight: 700
                 margin: 1em 0 0 0
                 text-align: left
                 color: #272727
-                @media( max-width: 480px ) 
+                @media( max-width: 480px )
                     text-align: center
 
 
@@ -186,7 +186,7 @@ export default {
                     margin: 1em auto
 
         &__left
-            width: 71.6%
+            width: 50%
             background: white
             background-size: contain
             background-position: center
@@ -196,13 +196,13 @@ export default {
                 width: 100%
                 height: 640px
 
-            &__imgs 
-                display: flex 
+            &__imgs
+                display: flex
                 flex-direction: column
                 margin-left: 20px
                 margin-top: 20px
                 list-style: none
-                
+
 
                 &__img
                     width: 100px

@@ -15,22 +15,22 @@
                 </thead>
                 <tbody>
                     <tr v-for="(product, index) in productsInCart" :key="index">
-                        <td class="cart_item_img"><img src="http://placehold.it/50x50" /></td>
+                        <td class="cart_item_img"><img :src="product.img" /></td>
                         <td>{{ product.name }}</td>
                         <td class="cart_item_qty">
-							<a class="num_minus" href="#" @click.prevent="countQty(index, -1)">-</a>
+							<a class="num_minus" href="" @click.prevent="countQty(index, -1)">-</a>
                         	<input type="number" v-model="product.quantity" min="1"/>
-                       		<a class="num_plus" href="#" @click.prevent="countQty(index, 1)">+</a>
+                       		<a class="num_plus" href="" @click.prevent="countQty(index, 1)">+</a>
 						</td>
-                        <td class="cart_item_price">{{ currentCurrencySymbole }}{{ product.price }}</td>
-                        <td class="cart_item_tprice">{{ currentCurrencySymbole }}{{ product.quantity * product.price }}</td>
-                        <td><a class="list_item_del" href="#" @click.prevent="delCartItem($event.currentTarget, index)"><i class="far fa-trash-alt"></i></a></td>
+                        <td class="cart_item_price">{{ currentCurrencySymbole }}{{ parseFloat(product.price)  }}</td>
+                        <td class="cart_item_tprice">{{ currentCurrencySymbole }}{{  product.quantity * product.price }}</td>
+                        <td><a class="list_item_del" href="" @click.prevent="delCartItem($event.currentTarget, index)"><i class="fa fa-trash"></i></a></td>
                     </tr>
                 </tbody>
                 <tfoot>
                     <tr>
                         <td colspan="4">Total</td>
-                        <td class="cart_item_tprice">{{ currentCurrencySymbole }}{{ total }}</td>
+                        <td class="cart_item_tprice">{{ currentCurrencySymbole }}{{ total.toFixed(2) }}</td>
                         <td>&nbsp;</td>
                     </tr>
 
@@ -54,7 +54,7 @@ export default {
 			required: true
         },
 	},
-	
+
     data() {
 		return {
 			currencySymbols: {
@@ -88,10 +88,11 @@ export default {
 	methods: {
 		countQty(index, qtyNum) {
 			if( qtyNum == 1 ) {
-				this.productsInCart[index].quantity += 1; 
+				this.productsInCart[index].quantity += 1;
 			} else if( qtyNum == -1 && this.productsInCart[index].quantity > 0) {
-				this.productsInCart[index].quantity += -1; 
+				this.productsInCart[index].quantity += -1;
 			};
+            localStorage.cartData = JSON.stringify(this.productsInCart);
 		},
 
 		checkout() {
@@ -100,6 +101,7 @@ export default {
 
 		delCartItem(target, index) {
 			this.productsInCart.splice(index, 1);
+            localStorage.cartData = JSON.stringify(this.productsInCart);
 		},
 
 		hideCart() {
@@ -126,7 +128,7 @@ export default {
 	text-align: left
 	position: fixed
 	top: 50%
-	left: 50% 
+	left: 50%
 	transform: translate(-50%,-50%)
 	z-index: 20
 
@@ -139,6 +141,7 @@ export default {
 		transition: 0.2s all ease-in
 		text-align: center
 		transform: rotate(0deg)
+
 
 		&:hover
 			transform: rotate(180deg)
@@ -167,7 +170,7 @@ export default {
 		a, input
 			float: left
 			height: 27px
-		a	
+		a
 			min-width: 27px
 			border: 1px solid #ccc
 			text-align: center

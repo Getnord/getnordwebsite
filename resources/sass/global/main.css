@@ -2556,3 +2556,16 @@ items_section .product_info button:hover {
 .specs_section .specs__col .button{
     padding: 0;
 }
+
+#accessories li.li1 p.p1 ,#accessories li.li1 .s1,#accessories li.li1 span{
+    font-size: 1em;
+    font: 1em "IBM Plex Sans", sans-serif !important;
+    color: #272727 !important;
+    font-weight: 400 !important;
+    font-family: "IBM Plex Sans", sans-serif !important;
+    line-height: 1.5em !important;
+}
+.cart__hide{
+    color: #0080ff
+}
+

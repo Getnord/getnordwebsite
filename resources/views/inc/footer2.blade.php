@@ -107,23 +107,23 @@
                 <h1>{{ __('footer.socialMedia') }}</h1>
                 <div class="footer__social__links">
 
-                    <a href="{{ __('footer.youtube')}}" class="footer__social__links__link--yt">
+                    <a href="{{ __('footer.youtube')}}" class="footer__social__links__link--yt" target="_blank">
                         <svg class="icon"><use xlink:href="{{ url('/') }}/img/icons.svg#icon_yt"></use></svg>
                     </a>
 
-                    <a href="{{ __('footer.facebook')}}" class="footer__social__links__link--fb">
+                    <a href="{{ __('footer.facebook')}}" class="footer__social__links__link--fb" target="_blank">
                         <svg class="icon"><use xlink:href="{{ url('/') }}/img/icons.svg#icon_fb"></use></svg>
                     </a>
 
-                    <a href="{{ __('footer.instagram')}}" class="footer__social__links__link--in">
+                    <a href="{{ __('footer.instagram')}}" class="footer__social__links__link--in" target="_blank">
                         <svg class="icon"><use xlink:href="{{ url('/') }}/img/icons.svg#icon_in"></use></svg>
                     </a>
 
-                    <a href="{{ __('footer.pinterest')}}" class="footer__social__links__link--pt">
+                    <a href="{{ __('footer.pinterest')}}" class="footer__social__links__link--pt" target="_blank">
                         <svg class="icon"><use xlink:href="{{ url('/') }}/img/icons.svg#icon_pt"></use></svg>
                     </a>
 
-                    <a href="{{ __('footer.twitter')}}" class="footer__social__links__link--tw">
+                    <a href="{{ __('footer.twitter')}}" class="footer__social__links__link--tw" target="_blank">
                         <svg class="icon"><use xlink:href="{{ url('/') }}/img/icons.svg#icon_tw"></use></svg>
                     </a>
                 </div>

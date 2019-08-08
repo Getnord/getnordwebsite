@@ -1,5 +1,5 @@
 <header class="page_header">
-    <a href="#"><div class="logo"><img src="{{ url('/') }}/img/logo.svg" alt="Getnord" /></div></a>
+    <a href="{{ url('/')}}@if(app()->getLocale())/{{app()->getLocale()}}@endif"><div class="logo"><img src="{{ url('/') }}/img/logo.svg" alt="Getnord" /></div></a>
     <div class="floating-selector">
         <div class="lang-select-btn">
             @if ( app()->getLocale() == 'us')

@@ -30,14 +30,16 @@ import videosControllers from "./components/homePage/videos.js";
 
 // });
 
-$(document).ready(function() {
+$(document).ready(function () {
     NavInit();
     startAnimations();
     specsDropDownToggle();
     contactForm();
     videosControllers();
 });
-
+/* Get locale language */
+var localeLang = '';
+localeLang = $('.locale_input').val()
 // We use another vue instance to pass data between components and not
 // between the child and the parent component
 // shopping cart
@@ -197,7 +199,7 @@ const app = new Vue({
                 // product detials from OpenCart
                 this.info.openCartData = response.data.products;
             })
-            .catch(function(error) {
+            .catch(function (error) {
                 console.log(error);
             });
     },
@@ -205,30 +207,38 @@ const app = new Vue({
         buybtnclicked(product_id, productHasOptions) {
             // checking if product exits in our data
             var image;
-            if (product_id === '50'){
+            if (product_id === '50') {
                 image = '/img/lynx/phone_lynx.jpg'
-            }else if (product_id == '67'){
+            } else if (product_id == '67') {
                 image = '/img/onyx/phone_onyx.jpg'
-            }else if (product_id == '69'){
+            } else if (product_id == '69') {
                 image = '/img/walrus/phone_walrus.jpg'
-            }else if (product_id == '68'){
+            } else if (product_id == '68') {
                 image = '/img/leo/phone_leo.jpg'
-            }else{
+            } else {
                 image = 'http://placehold.it/50x50'
             }
-            accessoriesData.forEach(img =>{
-              if (img.id === product_id) {
-                  image = img.mainImg
-              }
+            accessoriesData.forEach(img => {
+                if (img.id === product_id) {
+                    image = img.mainImg
+                }
             })
 
             this.info.openCartData.forEach(product => {
                 if (product.product_id == product_id) {
-                   // console.log(product)
-                    //
+                    // console.log(product)
+
+                    var pr;
+
+                    if (!isNaN(parseFloat(product.price))) {
+                        pr = product.price.slice(0, -1)
+                    } else {
+                        pr = product.price.slice(1)
+                    }
+
                     this.currentProduct = {
                         name: product.name,
-                        price: product.price.slice(0,-1),
+                        price: pr,
                         product_id: product.product_id,
                         quantity: 1,
                         option: {},
@@ -369,7 +379,7 @@ const app = new Vue({
         jsonCopy(src) {
             return JSON.parse(JSON.stringify(src));
         }
-    },watch: {
+    }, watch: {
         cart() {
             // we use localstorage to save the cart data from page to page
             // and also in case the user gets back again to the website

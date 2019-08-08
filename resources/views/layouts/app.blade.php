@@ -18,6 +18,9 @@
     <!-- Google Tag Manager (noscript) -->
     {{-- <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-PZXDSVM" height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript> --}}
     <!-- End Google Tag Manager (noscript) -->
+
+    {{-- Get locale to use in js--}}
+    <input type="hidden" class="locale_input" value="@if(app()->getLocale()){{app()->getLocale()}}@endif">
     <div class="page_content" id="app">
         @include('inc.header2')
 

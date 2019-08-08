@@ -28,7 +28,7 @@ return [
     'form_subject_placeholder' => '',
     'form_message' => 'Nachricht',
     'form_message_placeholder' => '',
-    'form_button_text' => 'SEND NOW',
+    'form_button_text' => 'E-mail Senden',
 
     /**
      * The following is used in validation success

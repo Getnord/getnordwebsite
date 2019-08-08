@@ -1,5 +1,48 @@
 <template>
-    <div class="cart">
+    <div class="cart"  v-if="isGerman">
+        <h2>Einkaufswagen</h2>
+		<div class="cart__hide" @click="hideCart">
+			<i class="fa fa-times"></i>
+		</div>
+        <div class="cart__table" v-if="productsInCart.length !== 0">
+            <table class="table">
+                <thead>
+                    <th colspan="2">Produkt</th>
+                    <th class="cart_item_qty">Menge</th>
+                    <th class="cart_item_price">Stückpreis</th>
+                    <th class="cart_item_tprice">Zwischensumme</th>
+                    <th>&nbsp;</th>
+                </thead>
+                <tbody>
+                    <tr v-for="(product, index) in productsInCart" :key="index">
+                        <td class="cart_item_img"><img :src="product.img" /></td>
+                        <td>{{ product.name }}</td>
+                        <td class="cart_item_qty">
+							<a class="num_minus" href="" @click.prevent="countQty(index, -1)">-</a>
+                        	<input type="number" v-model="product.quantity" min="1"/>
+                       		<a class="num_plus" href="" @click.prevent="countQty(index, 1)">+</a>
+						</td>
+                        <td class="cart_item_price">{{ currentCurrencySymbole }}{{ parseFloat(product.price)  }}</td>
+                        <td class="cart_item_tprice">{{ currentCurrencySymbole }}{{  product.quantity * product.price }}</td>
+                        <td><a class="list_item_del" href="" @click.prevent="delCartItem($event.currentTarget, index)"><i class="fa fa-trash"></i></a></td>
+                    </tr>
+                </tbody>
+                <tfoot>
+                    <tr>
+                        <td colspan="4">Gesamt</td>
+                        <td class="cart_item_tprice">{{ currentCurrencySymbole }}{{ total.toFixed(2) }}</td>
+                        <td>&nbsp;</td>
+                    </tr>
+
+                </tfoot>
+            </table>
+            <p class="page-btn"><a class="btn" href="#" @click.prevent="checkout">Auschecken</a></p>
+        </div>
+		<div v-else class="cart__empty">
+			<p>German(Your cart is empty)</p>
+		</div>
+    </div>
+    <div class="cart" v-else>
         <h2>Cart</h2>
 		<div class="cart__hide" @click="hideCart">
 			<i class="fa fa-times"></i>
@@ -53,6 +96,10 @@ export default {
 			type: Array,
 			required: true
         },
+        localeLang: {
+            type: String,
+            required: true
+        }
 	},
 
     data() {
@@ -82,7 +129,14 @@ export default {
 		},
 		currentCurrencySymbole() {
 			return this.currencySymbols[document.getElementsByTagName('html')[0].getAttribute('lang')];
-		}
+		},
+        isGerman(){
+		    if (this.localeLang === 'de'){
+		        return true
+            } else{
+		        return false
+            }
+        }
 	},
 
 	methods: {
@@ -109,6 +163,7 @@ export default {
 		}
 	},
 }
+
 </script>
 
 <style lang="sass" scoped>

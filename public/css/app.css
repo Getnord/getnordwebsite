@@ -2588,8 +2588,8 @@ items_section .product_info button:hover {
 }
 
 #accessories li.li1 p.p1 ,#accessories li.li1 .s1,#accessories li.li1 span{
-    font-size: 1em;
-    font: 1em "IBM Plex Sans", sans-serif !important;
+    font-size: 20px;
+    font: 20px "IBM Plex Sans", sans-serif !important;
     color: #272727 !important;
     font-weight: 400 !important;
     font-family: "IBM Plex Sans", sans-serif !important;
@@ -2598,7 +2598,15 @@ items_section .product_info button:hover {
 .cart__hide{
     color: #0080ff
 }
-
+#accessories p.p1{
+    font-family: "IBM Plex Sans", sans-serif !important;
+}
+.section_contact p ,.section_contact label{
+    font-size: 20px;
+}
+.section_contact .section_welcome p{
+    font-size: 28px;
+}
 @charset "UTF-8";
 
 .section_contact {
@@ -3549,10 +3557,11 @@ body h1 {
 }
 
 #accessories ul.ul1 li.li1 {
-  font-size: 1.15em !important;
+  font-size: 20px !important;
   color: #272727 !important;
   font-weight: 400 !important;
-  font-family: "IBM Plex Sans", sans-serif;
+  font-family: "IBM Plex Sans", sans-serif !important;
+  line-height: 1.5em !important;
 }
 
 /***************************************************

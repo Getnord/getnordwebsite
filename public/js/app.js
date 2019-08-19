@@ -59959,11 +59959,7 @@ $(document).ready(function () {
   Object(_components_homePage_specsSection__WEBPACK_IMPORTED_MODULE_3__["default"])();
   Object(_components_contactForm_form__WEBPACK_IMPORTED_MODULE_1__["default"])();
   Object(_components_homePage_videos_js__WEBPACK_IMPORTED_MODULE_4__["default"])();
-});
-/* Get locale language */
-
-var localeLang = '';
-localeLang = $('.locale_input').val(); // We use another vue instance to pass data between components and not
+}); // We use another vue instance to pass data between components and not
 // between the child and the parent component
 // shopping cart
 

@@ -9,7 +9,7 @@
 <div class="column">
 <p class="p1"><span class="s1">GETNORD Website Privacy Policy</span></p>
 <p class="p2"><span class="s1">This Privacy Policy was last changed 20 April 2018.</span></p>
-<p class="p2"><span class="s1">WHO WE ARE</span></p>
+    <p class="p2"><span class="s1" style="font-weight:bold">WHO WE ARE</span></p>
 <p class="p3"><span class="s1">GETNORD is a trading division and a trademark of Redlainas UAB</span></p>
 <p class="p4"><span class="s1">Redlainas UAB registered office is Verslo 6, Kumpiai, 54311, Kaunas, Lithuania. Registered Number 235983690.</span></p>
 <p class="p4"><span class="s1">This policy describes our practices when using personal information of:</span></p>
@@ -28,7 +28,7 @@
 <li class="li5"><span class="s1"><strong>the rights to which you may be entitled</strong>.</span></li>
 </ul>
 <p class="p1"><span class="s1">If you have any questions or anything in this policy is unclear, please get in touch at the following email address: </span><span class="s3">support@getnord.com</span></p>
-<p class="p2"><span class="s1">DATA COLLECTION AND USAGE</span></p>
+<p class="p2"><span class="s1" style="font-weight:bold">DATA COLLECTION AND USAGE</span></p>
 <p class="p3"><span class="s3">We will collect and use your personal information for purposes set out in more detail in this section.</span><span class="s1"> </span></p>
 <p class="p4"><span class="s3">Certain types of personal information are more sensitive than others. "Special information" about you includes information about health, disability, race, ethnicity, criminal offences (or alleged offences), political opinions, biometrics or religion. We may collect and receive special information about you. We have identified</span><span class="s1"> </span><span class="s3">below</span><span class="s1"> </span><span class="s3">the types of special information we may collect or receive, how we will use it and why we will use it.</span></p>
 <p class="p4"><span class="s3">Your information may be shared with members of our group and some third parties as is set out in more detail</span><span class="s1"> </span><span class="s3">below.</span><span class="s1"><br />  </span></p>
@@ -323,22 +323,22 @@
 <p class="p2"><span class="s1">COOKIES</span></p>
 <p class="p3"><span class="s1">We use cookies that identify your browser or device. They collect and store information when you visit our website / app about how you use it.</span></p>
 <p class="p1"><span class="s1">For more information about cookies, the types of cookies we use and how we use them please see our Cookie Policy.</span></p>
-<p class="p2"><span class="s1">SECURITY</span></p>
+<p class="p2"><span class="s1" style="font-weight:bold">SECURITY</span></p>
 <p class="p12"><span class="s1">We are committed to keeping your personal information safe. We've got physical, technical and administrative measures in place to prevent unauthorised access or use of your information.</span></p>
-<p class="p2"><span class="s1">LINKS TO THIRD PARTY WEBSITES</span></p>
+<p class="p2"><span class="s1" style="font-weight:bold">LINKS TO THIRD PARTY WEBSITES</span></p>
 <p class="p3"><span class="s1">Our website, newsletters, email updates and other communications may, from time to time, contain links to and from the websites of others including our partner networks, advertisers and other group companies and/or social networks as offered to you and supported by your browser.</span></p>
 <p class="p6"><span class="s4"> </span></p>
 <p class="p1"><span class="s1">The personal data that you provide through these websites is not subject to this Privacy Policy and the treatment of your personal data by such websites is not our responsibility. If you follow a link to any of these websites, please note that these websites have their own privacy policies which will set out how your information is collected and processed when visiting those links. For more information about the purpose and scope of data collection and processing in connection with social sharing features, please visit the privacy policies of entities through which you chose to share.</span></p>
-<p class="p2"><span class="s1">CHILDREN</span></p>
+<p class="p2"><span class="s1" style="font-weight:bold">CHILDREN</span></p>
 <p class="p12"><span class="s1">We do not knowingly collect information from children or other persons who are under 18 years old. If you are under 18 years old, you may not submit any personal information to us or subscribe for the services. If you believe we might have any personal information from or about a person under the age of 18, please contact us at </span><span class="s6">support@getnord.com or or by post addressed to: </span><span class="s7">'Head of Privacy', Legal Department, Redlainas UAB, Verslo 6, Kumpiai 54311 Kaunas, Lithuania</span><span class="s6">.</span></p>
-<p class="p2"><span class="s1">CHANGES TO THE POLICY</span></p>
+<p class="p2"><span class="s1" style="font-weight:bold">CHANGES TO THE POLICY</span></p>
 <p class="p3"><span class="s1">This policy will be changed from time to time.</span></p>
 <p class="p4"><span class="s1">If we change anything important about this policy (the information we collect, how we use it or why) we will highlight those changes at the top of the policy and provide a prominent link to it for a reasonable length of time following the change. We will also notify you in advance of the changes taking effect so that you understand what impact our changes may have on you.</span></p>
 <p class="p1"><span class="s1">If you would like to access previous versions of this policy please click on the link to archived policies at the top of this page. Alternately for previous versions, you can get in touch at the following email address: </span><span class="s3">support@getnord.com</span></p>
 <p class="p2"><span class="s1">Cookie Policy</span></p>
 <p class="p4"><span class="s8">If you have any questions about this policy please contact us at: </span><span class="s1">support@getnord.com or or by post addressed to: </span><span class="s3">'Head of Privacy', Legal Department, Redlainas UAB, Verslo 6, Kumpiai 54311 Kaunas, Lithuania</span><span class="s1">.</span></p>
 <p class="p11"> </p>
-<p class="p2"><span class="s1">HOW TO CONTACT US</span></p>
+<p class="p2"><span class="s1" style="font-weight:bold">HOW TO CONTACT US</span></p>
 <p class="p3"><span class="s1"><strong>Information About 'Cookies' &amp; Why We Use Them</strong></span></p>
 <p class="p4"><span class="s1">Like most sites, we use cookies on </span><span class="s3">www.getnord.com</span></p>
 <p class="p4"><span class="s1">Cookies are small files stored by your browser in your computer when you visit our site. We use cookies to make your site visit efficient and ensure your checkout is easy. For example, if you don’t enable cookies on our site then you won’t be able to go back to search results or see what you’ve put in your basket. As well, some other features may not work as intended. We mostly use "session cookies" that are automatically deleted after each visit.</span></p>

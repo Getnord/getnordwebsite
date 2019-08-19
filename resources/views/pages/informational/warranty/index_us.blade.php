@@ -30,7 +30,7 @@
         <p class="p8"><span class="s3">Redlainas UAB (Getnord) warrants that the Product is at the time of its original purchase free of defects in design, material and workmanship ("Limited Warranty").</span>
         </p>
         <p class="p9"> </p>
-        <p class="p8"><span class="s3">THIS LIMITED WARRANTY DOES NOT AFFECT YOUR STATUTORY RIGHTS.</span></p>
+        <p class="p8"><span class="s3">This limited warranty does not affect your statutory rights.</span></p>
         <p class="p9"> </p>
         <p class="p8"><span class="s3">This Limited Warranty is subject to the following terms and conditions:</span>
         </p>
@@ -56,7 +56,7 @@
         <p class="p8"><span class="s3">6. Before returning any unit for service, be sure to back up data and remove any confidential, proprietary, or personal information from the device. Getnord is not responsible for the damage to or loss of any programs, data, or removable storage media where you do not back-up your data.</span>
         </p>
         <p class="p9"> </p>
-        <p class="p8"><span class="s3">7. THIS LIMITED WARRANTY SHALL NOT APPLY IF THE DEFECT WAS CAUSED THROUGH ANY OF THE FOLLOWING:</span>
+        <p class="p8"><span class="s3">7. This limited warranty shall not apply if the defect was caused through any of the following:</span>
         </p>
         <p class="p8"><span class="s3">a) This Limited Warranty does not cover user manuals or any third party software, settings, content, data or links, whether included or downloaded in the Product, whether included during instalment, assembly, shipping or at any other time in the delivery chain or otherwise and in any way acquired by you. Getnord does not warrant that any Getnord software will meet your requirements, will work in combination with any hardware or software provided by a third party, that the operation of any software will be uninterrupted or error free or that any defects in the software are correctable or will be corrected.</span>
         </p>
@@ -96,13 +96,13 @@
         <p class="p8"><span class="s3">Getnord will provide the Customer with instructions regarding how and when the defective Product should be returned. Getnord will pay costs inconnection with both the return of the defective product to Getnord and the repaired Product back to the Customer if the Defective Product is within the Warranty Period.</span>
         </p>
         <p class="p9"> </p>
-        <p class="p8"><span class="s3">10. THIS LIMITED WARRANTY STATES THE ENTIRE WARRANTY GIVEN BY GETNORD TO THE CUSTOMER. IN NO EVENT SHALL GETNORD BE LIABLE UNDER THIS LIMITED WARRANTY FOR LOSS OF PROFIT, LOSS OF ANTICIPATED SAVINGS, LOSS OF DATA. LOSS OF USE OF THE PRODUCT OR ANY ASSOCIATED EQUIPMENT, OR INDIRECT, INCIDENTAL OR CONSEQUENTAL LOSSES OR DAMAGES OF ANY NATURE WHATSOEVERTO THE FULLEST EXTENT THAT THOSE LOSSES OR DAMAGES CAN BE DISCLAIMED BY LAW. IN ANY CASE GETNORD AND ITS SUPPLIERS ENTIRE LIABILITY UNDER ANY PROVISION OF THIS LIMITED WARRANTY SHALL BE LIMITED TO THE AMOUNT ACTUALLY PAID BY THE CUSTOMER FOR THE HARDWARE.</span>
+        <p class="p8"><span class="s3">10. This limited warranty states the entire warranty given by getnord to the customer. in no event shall getnord be liable under this limited warranty for loss of profit, loss of anticipated savings, loss of data. Loss of use of the product or any associated equipment, or indirect, incidental or consequental losses or damages of any nature whatsoeverto the fullest extent that those losses or damages can be disclaimed by law. In any case Getnord and its suppliers entire liability under any provision of this limited warranty shall be limited to the amount actually paid by the customer for the hardware.</span>
         </p>
         <p class="p8"><span class="s3">Getnord does not exclude or limit liability for personal injury or death resulting from its own negligence, for defects in the Product arising out of its or its manufacturers' negligence.</span>
         </p>
-        <p class="p8"><span class="s3">THE LAWS OF CERTAIN COUNTRIES MAY STATE THAT THE MANUFACTURER MAY NOT EXCLUDE OR LIMIT ASPECTS OF ITS LIABILITY TO THE CONSUMER. WHERE THAT IS THE CASE, THE EXCLUSIONS AND LIMITATIONS OF LIABILITY IN THIS LIMITED WARRANTY WILL NOT APPLY.</span>
+        <p class="p8"><span class="s3">The laws of certain countries may state that the manufacturer may not exclude or limit aspects of its liability to the consumer. Where that is the case, the exclusions and limitations of liability in this limited warranty will not apply</span>
         </p>
-        <p class="p8"><span class="s3">ANY CLAIM UNDER THIS LIMITEDWARRANTY IS SUBJECT TO YOU NOTIFYING GETNORD OR A GETNORD AUTHORIZED SERVICE AGENT OF THE ALLEGED DEFECT WITHIN A REASONABLE TIME Of IT HAVING COME TO YOUR ATTENTION AND IN ANY EVENT NO LATER THAN BEFORE THE EXPIRY Of THE WARRANTY PERIOD.</span>
+        <p class="p8"><span class="s3">Any claim under this limitedwarranty is subject to you notifying Getnord or a Getnord authorized service agent of the alleged defect within a reasonable time of it having come to your attention and in any event no later than before the expiry of the warranty period.</span>
         </p>
         <p class="p8"><span class="s3">This limited warranty does not affect the Customers statutory rights in law specific to the country of purchase, such rights remain protected. This Limited Warranty will be updated by Getnord from time to time. Please visit www.getnord.com to the latest version of the Limited Warranty for the Product. </span>
         </p>

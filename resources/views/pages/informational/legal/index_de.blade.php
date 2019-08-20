@@ -16,7 +16,7 @@
                 <div class="text-container">
                     <p>1.1. Diese Geschäftsbedingungen („Die Bedingungen“) beziehen sich auf Deine Nutzung dieser Website („Die Website“). Mit dem Zugriff und/oder der Aufgabe einer Bestellung stimmst Du den Bedingungen, die unsere Datenschutz- und Cookies-Richtlinien („Datenschutz und Cookies Richtlinien“) beinhalten, zu. Solltest Du diesen Bedingungen nicht zustimmen, darfst Du diese Website weder nutzen, noch auf sie zugreifen. Nutzt Du diese Website, stimmst Du den Bedingungen mit Deinem Verhalten zu.</p>
                     <p>1.2. In diesen Bedingungen werden die nachstehenden Begriffe und Ausdrücke wie folgt bestimmt, es sei denn der Kontext erfordert eine abweichende Definition:</p>
-                    <ul>
+                    <ul class="ul1">
                         <li>„Vertrag“ bezieht sich auf jeglichen Vertrag zur Lieferung von Ware durch uns, in dem diese Bedingungen eingebunden werden</li>
                         <li>„Karte“ bezieht sich auf die Kreditkarte oder EC-Karte, die Du zur Zahlung der Ware verwendest;</li>
                         <li>„Ware“ bezieht sich auf die Ware, die wir auf Grundlage dieser Bedingungen liefern;</li>

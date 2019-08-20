@@ -2607,6 +2607,9 @@ items_section .product_info button:hover {
 .section_contact .section_welcome p{
     font-size: 28px;
 }
+.ul1{
+    letter-spacing: 1px;
+}
 @charset "UTF-8";
 
 .section_contact {

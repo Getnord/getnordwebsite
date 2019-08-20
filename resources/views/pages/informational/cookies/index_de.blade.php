@@ -95,17 +95,17 @@
 
                             <p class="p4"><span class="s3">10. DIESE BESCHRÄNKTE GARANTIE LEGT DIE VOLLSTÄNDIGE GARANTIE FEST, DIE GETNORD DEM KUNDEN GEWÄHRT.</span>
                             </p>
-                            <p class="p4"><span class="s3">IN KEINEM FALL HAFTET GETNORD GEMÄSS DIESER BESCHRÄNKTEN GARANTIE FÜR ENTGANGENEN GEWINN, VERLUST VON ERWARTETEN EINSPARUNGEN, DATENVERLUST, VERLUST DES PRODUKTS ODER ANDEREN ZUBEHÖRS ODER FÜR INDIREKTE, ZUFÄLLIGE ODER RESULTIERENDE VERLUSTE ODER SCHÄDEN JEGLICHER ART, SOWEIT EINE HAFTUNG FÜR DIESE SCHÄDEN ODER VERLUSTE PER GESETZ AUSGESCHLOSSEN WERDEN KÖNNEN. AUF JEDEN FALL IST DIE GESAMTHAFUNG DURCH GETNORD UND SEINE LIEFERANTEN AUS BESTIMMUNGEN DIESER BESCHRÄNKTEN GARANTIE IN DER IN HÖHE AUF DEN DURCH DEN KUNDEN FÜR DIE HARDWARE GEZAHLTEN BETRAG BESCHRÄNKT.</span>
+                            <p class="p4"><span class="s3" style="text-transform: lowercase;">IN KEINEM FALL HAFTET GETNORD GEMÄSS DIESER BESCHRÄNKTEN GARANTIE FÜR ENTGANGENEN GEWINN, VERLUST VON ERWARTETEN EINSPARUNGEN, DATENVERLUST, VERLUST DES PRODUKTS ODER ANDEREN ZUBEHÖRS ODER FÜR INDIREKTE, ZUFÄLLIGE ODER RESULTIERENDE VERLUSTE ODER SCHÄDEN JEGLICHER ART, SOWEIT EINE HAFTUNG FÜR DIESE SCHÄDEN ODER VERLUSTE PER GESETZ AUSGESCHLOSSEN WERDEN KÖNNEN. AUF JEDEN FALL IST DIE GESAMTHAFUNG DURCH GETNORD UND SEINE LIEFERANTEN AUS BESTIMMUNGEN DIESER BESCHRÄNKTEN GARANTIE IN DER IN HÖHE AUF DEN DURCH DEN KUNDEN FÜR DIE HARDWARE GEZAHLTEN BETRAG BESCHRÄNKT.</span>
                             </p>
 
                             <p class="p4"><span class="s3">Es erfolgen kein Haftungsausschluss und keine Haftungsbeschränkung durch Getnord für Personenschäden oder Tod durch eigene Fahrlässigkeit für Produktmängel, die aus Fahrlässigkeit des Herstellers entstehen.</span>
                             </p>
 
-                            <p class="p4"><span class="s3">DIE GESETZE BESTIMMTER LÄNDER KÖNNEN FESTLEGEN, DASS DER HERSTELLER ASPEKTE SEINER HAFTUNG GEGENÜBER DEM KUNDEN NICHT AUSSCHLIESSEN ODER BEGRENZEN DARF. WENN DAS DER FALL IST, FINDET DER AUSSCHLUSS UND DIE BESCHRÄNKUNG DER BESCHRANKTEN GARANTIE KEINE ANWENDUNG.</span>
+                            <p class="p4"><span class="s3" style="text-transform: lowercase;">DIE GESETZE BESTIMMTER LÄNDER KÖNNEN FESTLEGEN, DASS DER HERSTELLER ASPEKTE SEINER HAFTUNG GEGENÜBER DEM KUNDEN NICHT AUSSCHLIESSEN ODER BEGRENZEN DARF. WENN DAS DER FALL IST, FINDET DER AUSSCHLUSS UND DIE BESCHRÄNKUNG DER BESCHRANKTEN GARANTIE KEINE ANWENDUNG.</span>
                             </p>
-                            <p class="p4"><span class="s3">ALLE FORDERUNGEN AUS DIESER BESCHRÄNKTEN GARANTIE UNTERLIEGEN DER MELDUNG DES MANGELS AN GETNORD ODER EINEN VON GETNORD AUTORISIERTEN DIENSTLEISTER INNERHALB EINER ZUMUTBAREN ZEIT, NACHDEM IHNEN DER MÄNGEL AUFGEFALLEN IST, UND AUF JEDEN FALL NICHT NACHDEM DIE GARANTIEZEIT ABGELAUFEN IST.</span>
+                            <p class="p4"><span class="s3" style="text-transform: lowercase;">ALLE FORDERUNGEN AUS DIESER BESCHRÄNKTEN GARANTIE UNTERLIEGEN DER MELDUNG DES MANGELS AN GETNORD ODER EINEN VON GETNORD AUTORISIERTEN DIENSTLEISTER INNERHALB EINER ZUMUTBAREN ZEIT, NACHDEM IHNEN DER MÄNGEL AUFGEFALLEN IST, UND AUF JEDEN FALL NICHT NACHDEM DIE GARANTIEZEIT ABGELAUFEN IST.</span>
                             </p>
-                            <p class="p4"><span class="s3">Diese beschränkte Garantie hat keine Auswirkungen auf die gesetzlichen Rechte des Kunden von Land des Kaufs; diese Rechte bleiben geschützt. Diese beschränkte Garantie wird von Getnord, Zeit zu Zeit aktualisiert. Bitte besuchen Sie www.getnord.com, um die aktuelle Version der beschränkten Garantie für dieses Produkt zu erhalten</span>
+                            <p class="p4"><span class="s3" style="text-transform: lowercase;">Diese beschränkte Garantie hat keine Auswirkungen auf die gesetzlichen Rechte des Kunden von Land des Kaufs; diese Rechte bleiben geschützt. Diese beschränkte Garantie wird von Getnord, Zeit zu Zeit aktualisiert. Bitte besuchen Sie www.getnord.com, um die aktuelle Version der beschränkten Garantie für dieses Produkt zu erhalten</span>
                             </p>
                         </div>
                     </div>

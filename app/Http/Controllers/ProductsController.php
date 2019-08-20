@@ -20,7 +20,7 @@ class ProductsController extends Controller
             'cookies' => $cookieJar
         ]);
         // $response = $client->post($url,  ['from_params'=> $request->all()]);
-    
+
         return $response->getBody();
     }
 }

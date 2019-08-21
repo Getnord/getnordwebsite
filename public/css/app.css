@@ -2598,8 +2598,9 @@ items_section .product_info button:hover {
 .cart__hide{
     color: #0080ff
 }
-#accessories p.p1{
+#accessories p.p1,#accessories .s1{
     font-family: "IBM Plex Sans", sans-serif !important;
+    letter-spacing: 1px;
 }
 .section_contact p ,.section_contact label{
     font-size: 20px;

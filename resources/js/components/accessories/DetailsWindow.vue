@@ -187,6 +187,8 @@ export default {
 
         &__left
             width: 50%
+            height: 70vh
+            margin-top: 100px
             background: white
             background-size: contain
             background-position: center

@@ -132,6 +132,7 @@ export default {
                     result.splice(index, 1);
                 };
             });
+
             return result;
         },
 

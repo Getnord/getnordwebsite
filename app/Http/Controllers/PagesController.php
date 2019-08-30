@@ -29,7 +29,7 @@ class PagesController extends Controller
             app()->setLocale('us');
             $locale = 'us';
         }
-        // We want to auto change some links in the nav depending if 
+        // We want to auto change some links in the nav depending if
         // we are on the home page or not
         $onHomePage = true;
         session()->put('locale', $locale);
@@ -42,7 +42,7 @@ class PagesController extends Controller
         // the specs section rows names are cached using the CsvFilesController
         $specs_section_rows_names = Cache::get('specs_section_rows_names');
         return view('pages.home.index')->with([
-            'onHomePage' => $onHomePage, 
+            'onHomePage' => $onHomePage,
             'specs_section_rows_names' => $specs_section_rows_names,
             'phones' => $phones
             ]);
@@ -59,7 +59,7 @@ class PagesController extends Controller
             app()->setLocale('us');
             $locale = 'us';
         }
-        // We want to auto change some links in the nav depending if 
+        // We want to auto change some links in the nav depending if
         // we are on the home page or not
         $onHomePage = false;
         session()->put('locale', $locale);
@@ -71,7 +71,7 @@ class PagesController extends Controller
         ];
         $specs_section_rows_names = Cache::get('specs_section_rows_names');
         return view('pages.onyx.index')->with([
-            'onHomePage' => $onHomePage, 
+            'onHomePage' => $onHomePage,
             'specs_section_rows_names' => $specs_section_rows_names,
             'phones' => $phones
             ]);
@@ -88,7 +88,7 @@ class PagesController extends Controller
             app()->setLocale('us');
             $locale = 'us';
         }
-        // We want to auto change some links in the nav depending if 
+        // We want to auto change some links in the nav depending if
         // we are on the home page or not
         $onHomePage = false;
         session()->put('locale', $locale);
@@ -107,7 +107,7 @@ class PagesController extends Controller
             $locale = 'us';
         };
 
-        // We want to auto change some links in the nav depending if 
+        // We want to auto change some links in the nav depending if
         // we are on the home page or not
         $onHomePage = false;
         return view('pages.compatibility.index')->with(['locale' => app()->getLocale(), 'onHomePage' => $onHomePage]);
@@ -124,7 +124,7 @@ class PagesController extends Controller
             app()->setLocale('us');
             $locale = 'us';
         };
-        // We want to auto change some links in the nav depending if 
+        // We want to auto change some links in the nav depending if
         // we are on the home page or not
         $onHomePage = false;
         return view('pages.informational.shipping.index_'.app()->getLocale())->with('onHomePage', $onHomePage);
@@ -142,7 +142,7 @@ class PagesController extends Controller
             $locale = 'us';
         }
 
-        // We want to auto change some links in the nav depending if 
+        // We want to auto change some links in the nav depending if
         // we are on the home page or not
         $onHomePage = false;
         return view('pages.informational.cookies.index_'.app()->getLocale())->with('onHomePage', $onHomePage);
@@ -160,7 +160,7 @@ class PagesController extends Controller
             $locale = 'us';
         }
 
-        // We want to auto change some links in the nav depending if 
+        // We want to auto change some links in the nav depending if
         // we are on the home page or not
         $onHomePage = false;
         return view('pages.informational.warranty.index_'.app()->getLocale())->with('onHomePage', $onHomePage);
@@ -178,9 +178,53 @@ class PagesController extends Controller
             $locale = 'us';
         }
 
-        // We want to auto change some links in the nav depending if 
+        // We want to auto change some links in the nav depending if
         // we are on the home page or not
         $onHomePage = false;
         return view('pages.informational.legal.index_'.app()->getLocale())->with('onHomePage', $onHomePage);
+    }
+
+    /**
+     * Leo page
+     */
+    public function leo($locale = null) {
+        if(isset($locale)) {
+            app()->setLocale($locale);
+        }
+        else {
+            app()->setLocale('us');
+            $locale = 'us';
+        }
+        // We want to auto change some links in the nav depending if
+        // we are on the home page or not
+        $onHomePage = false;
+        session()->put('locale', $locale);
+        $phones = [
+            'ONYX',
+            'LYNX',
+            'WALRUS',
+            'LEO'
+        ];
+        $specs_section_rows_names = Cache::get('specs_section_rows_names');
+        $images = [
+            'camera_1',
+            'camera_2',
+            'camera_3',
+            'camera_4',
+            'camera_5',
+            'camera_6',
+            'camera_7',
+            'camera_8',
+            'camera_9',
+            'camera_10',
+            'camera_11',
+            'camera_12',
+            ];
+        return view('pages.leo.index')->with([
+            'onHomePage' => $onHomePage,
+            'specs_section_rows_names' => $specs_section_rows_names,
+            'phones' => $phones,
+            'images' => $images
+        ]);
     }
 }

@@ -132,7 +132,7 @@ export default {
                     result.splice(index, 1);
                 };
             });
-
+console.log(result)
             return result;
         },
 

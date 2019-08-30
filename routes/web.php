@@ -1,6 +1,6 @@
 <?php
 /**
- * prefix works like a wild card instead of manually settin each prefix 
+ * prefix works like a wild card instead of manually settin each prefix
  * on its own
  */
 Route::get('/csv/{lang}/{name}', 'CsvFilesController@csv_to_array');
@@ -24,6 +24,7 @@ Route::prefix('{locale?}')->group(function() {
     Route::get('/cookies', 'PagesController@cookies')->name('cookies');
     Route::get('/warranty', 'PagesController@warranty')->name('warranty');
     Route::get('/legal', 'PagesController@legal')->name('legal');
+    Route::get('/leo', 'PagesController@leo')->name('leo');
 });
 
 // Get data from OpenCart
@@ -31,9 +32,9 @@ Route::post('/api', 'ProductsController@index');
 
 
 /**
- * The following route handles generating a javascript object that will be served 
+ * The following route handles generating a javascript object that will be served
  * to the front-end. It will be consumed by the shoppingCart only.
- * After doing some further testing and finishing up the front-end 
+ * After doing some further testing and finishing up the front-end
  * This will be converted into its own controller
  */
 Route::get('js/lang-{locale}.js', function ($locale) {

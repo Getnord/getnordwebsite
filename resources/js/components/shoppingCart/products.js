@@ -62,6 +62,23 @@ const products = [
         },
         quantity: 1
     },
+    {
+        product_id: 68,
+        name: 'Getnord Leo',
+        price: {
+            us: 359,
+            ca: 359,
+            uk: 359,
+            fr: 359,
+            it: 359,
+            nl: 359,
+            pl: 359,
+            lt: 359,
+            es: 359,
+            de: 359
+        },
+        quantity: 1
+    },
 ];
 
 export default products;

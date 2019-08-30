@@ -2058,6 +2058,7 @@ __webpack_require__.r(__webpack_exports__);
 
         ;
       });
+      console.log(result);
       return result;
     },
     // if we have more than 3 accessories to show

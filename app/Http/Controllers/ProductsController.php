@@ -11,10 +11,10 @@ class ProductsController extends Controller
         //return response("http://store.getnord.live/index.php?route=product/product/stock".'&lng='.$request->input('lang').'-'.$request->input('lang'));
         // dd($request->all());
         $client = new \GuzzleHttp\Client();
-        $url = "www.store.getnord.com/index.php?route=product/product/stock".'&lng='.$request->input('lang').'-'.$request->input('lang');
+        $url = "store.getnord.com/index.php?route=product/product/stock".'&lng='.$request->input('lang').'-'.$request->input('lang');
         $cookieJar = CookieJar::fromArray([
             'language' => $request->input('lang')
-        ], 'www.store.getnord.com');
+        ], 'store.getnord.com');
 
         $response = $client->request('POST', $url, [
             'form_params' => $request->all(),

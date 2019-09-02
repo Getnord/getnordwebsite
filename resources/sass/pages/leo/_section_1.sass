@@ -4,13 +4,18 @@
     @include breakpoint(s)
         min-height: 70vh
     @include breakpoint(xs)
-        background: none !important
-        min-height: auto
+        min-height: calc(100vh - 60px)
+
 
 
     .section_center
         width: 50%
         text-align: right
+        @include breakpoint(s)
+            width: 100%
+            text-align: center
+        @include breakpoint(xs)
+            display: none
 
         p
             font-size: 24px
@@ -18,6 +23,13 @@
 
     .section_content
         padding-top: 12%
+        @include breakpoint(xs)
+            padding: 0
+    .section_form
+        @include breakpoint(s)
+            display: block
+        @include breakpoint(xs)
+            display: none
 
     .section_phone
         position: absolute
@@ -31,5 +43,5 @@
             display: block
             height: 75vh
             @include breakpoint(s)
-                height: 50vh
+                display: none
 

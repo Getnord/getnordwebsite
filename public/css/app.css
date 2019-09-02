@@ -3581,14 +3581,26 @@ body h1 {
 
 @media (max-width: 480px) {
   .intro_section--leo {
-    background: none !important;
-    min-height: auto;
+    min-height: calc(100vh - 60px);
   }
 }
 
 .intro_section--leo .section_center {
   width: 50%;
   text-align: right;
+}
+
+@media (max-width: 750px) {
+  .intro_section--leo .section_center {
+    width: 100%;
+    text-align: center;
+  }
+}
+
+@media (max-width: 480px) {
+  .intro_section--leo .section_center {
+    display: none;
+  }
 }
 
 .intro_section--leo .section_center p {
@@ -3598,6 +3610,24 @@ body h1 {
 
 .intro_section--leo .section_content {
   padding-top: 12%;
+}
+
+@media (max-width: 480px) {
+  .intro_section--leo .section_content {
+    padding: 0;
+  }
+}
+
+@media (max-width: 750px) {
+  .intro_section--leo .section_form {
+    display: block;
+  }
+}
+
+@media (max-width: 480px) {
+  .intro_section--leo .section_form {
+    display: none;
+  }
 }
 
 .intro_section--leo .section_phone {
@@ -3621,12 +3651,22 @@ body h1 {
 
 @media (max-width: 750px) {
   .intro_section--leo .section_phone img {
-    height: 50vh;
+    display: none;
   }
 }
 
 .product_section--leo_stores .product_section--onyx_stores_list {
   justify-content: space-between;
+  justify-content: flex-start;
+  flex-wrap: wrap;
+}
+
+@media (max-width: 750px) {
+  .product_section--leo_stores .product_section--onyx_stores_list .store_cta {
+    max-width: none;
+    width: 30%;
+    margin: 20px auto;
+  }
 }
 
 .getnord_leo--technology {
@@ -3638,6 +3678,7 @@ body h1 {
   display: flex;
   justify-content: center;
   max-width: 100% !important;
+  flex-wrap: wrap;
 }
 
 @media (max-width: 480px) {
@@ -3647,8 +3688,14 @@ body h1 {
 }
 
 .getnord_leo--technology .section_heading {
-  padding: 80px 0 40px;
+  padding: 100px 0 60px;
   margin: 0;
+}
+
+@media (max-width: 750px) {
+  .getnord_leo--technology .section_heading {
+    padding: 60px 0 0;
+  }
 }
 
 @media (max-width: 480px) {
@@ -3684,7 +3731,8 @@ body h1 {
 
 @media (max-width: 750px) {
   .getnord_leo--technology .leo_features {
-    margin: 0 10px;
+    width: 30%;
+    margin: 10px;
   }
 }
 
@@ -3696,6 +3744,12 @@ body h1 {
 
 .shock_proof_section {
   background: #fff;
+}
+
+@media (max-width: 750px) {
+  .shock_proof_section {
+    padding: 30px 30px 0;
+  }
 }
 
 .shock_proof_section .section_heading {
@@ -3746,8 +3800,38 @@ body h1 {
   text-align: center;
 }
 
+@media (max-width: 750px) {
+  .water__proof {
+    padding: 30px 30px 0;
+    background: #272727;
+  }
+}
+
 .camera .getnord_leo--technology {
   background: transparent;
+}
+
+.camera .camera_top {
+  display: flex;
+  flex-direction: column;
+}
+
+@media (max-width: 750px) {
+  .camera .camera_top {
+    flex-direction: column-reverse;
+  }
+}
+
+@media (max-width: 750px) {
+  .camera .camera_top .page_center {
+    background: #272727;
+  }
+}
+
+@media (max-width: 750px) {
+  .camera .camera_top .section_text {
+    padding: 0 20px;
+  }
 }
 
 .camera .image_text {
@@ -3758,6 +3842,12 @@ body h1 {
 .camera .image_text p {
   text-align: center;
   color: #000;
+}
+
+@media (max-width: 750px) {
+  .camera .leo_features {
+    width: 40%;
+  }
 }
 
 .camera .camera_image {
@@ -3809,9 +3899,22 @@ body h1 {
   align-items: flex-end;
 }
 
+@media (max-width: 750px) {
+  .panel_section .cols {
+    flex-direction: column-reverse;
+  }
+}
+
+@media (max-width: 750px) {
+  .battery_info_section {
+    background: #232323;
+    padding: 30px 30px 0;
+  }
+}
+
 .battery_info_section .scratch_section_col--right {
   padding: 0 0 30px;
-  background: #161616;
+  background: #232323;
 }
 
 .battery_info_section .scratch_section_col--right .section_content {
@@ -3903,6 +4006,12 @@ body h1 {
 
 .fingerprint_section .cols {
   align-items: center;
+}
+
+@media (max-width: 750px) {
+  .fingerprint_section .cols {
+    flex-direction: column-reverse;
+  }
 }
 
 .variety_section .section_text {

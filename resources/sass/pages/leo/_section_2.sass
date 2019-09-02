@@ -1,3 +1,13 @@
 .product_section--leo_stores
     .product_section--onyx_stores_list
         justify-content: space-between
+        @include breakpoint(s)
+        justify-content: flex-start
+        flex-wrap: wrap
+        .store_cta
+            @include breakpoint(s)
+                max-width: none
+                width: 30%
+                margin: 20px auto
+
+

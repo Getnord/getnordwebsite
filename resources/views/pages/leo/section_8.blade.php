@@ -7,7 +7,9 @@
             </div>
 
         </div>
-        <img src="{{ url('/img/leo/leo_girl.png') }}" alt="" class="scratch_img">
+        <video autoplay loop muted playsinline class="scratch_img section_video" inline>
+            <source src="{{ url('/') }}/img/girl_phone.mp4" type="video/mp4">
+        </video>
     </div>
     <div class="scratch_section_col--right" style="width: 100%;text-align: center">
         <div class="section_content">

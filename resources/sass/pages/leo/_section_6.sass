@@ -3,6 +3,18 @@
     .getnord_leo--technology
         background: transparent
 
+    .camera_top
+        display: flex
+        flex-direction: column
+        @include breakpoint(s)
+            flex-direction: column-reverse
+
+        .page_center
+            @include breakpoint(s)
+                background: #272727
+        .section_text
+            @include breakpoint(s)
+                padding: 0 20px
 
     .image_text
         padding: 15px 0
@@ -11,6 +23,9 @@
         p
             text-align: center
             color: #000
+    .leo_features
+        @include breakpoint(s)
+            width: 40%
 
     .camera_image
         width: 100%

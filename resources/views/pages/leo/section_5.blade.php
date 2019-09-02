@@ -1,4 +1,4 @@
-<section class="scratch_section">
+<section class="scratch_section water__proof">
     <div class="cols">
         <img src="{{ url('/img/leo/water_proof.png') }}" alt="" class="scratch_img">
         <div class="col_2_xl scratch_section_col--right">

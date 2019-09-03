@@ -362,7 +362,7 @@ const app = new Vue({
                     currency: this.currency
                 });
                 this.isCheckoutPageOpen = true;
-                this.orderUrl = `http://store.getnord.live/index.php?route=checkout/cart/addToCart&${cartUrl}`;
+                this.orderUrl = `https://store.getnord.com/index.php?route=checkout/cart/addToCart&${cartUrl}`;
                 // this.orderUrl = `http://localhost/opencart/index.php?route=checkout/cart/addToCart&${cartUrl}`;
             }
         },

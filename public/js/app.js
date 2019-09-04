@@ -2149,6 +2149,7 @@ __webpack_require__.r(__webpack_exports__);
   },
   methods: {
     clicked: function clicked() {
+      console.log(this.productId);
       this.$emit('buy-btn-clicked', this.productId, this.productHasOptions);
     }
   }
@@ -60270,7 +60271,8 @@ var app = new Vue({
           lang: this.lang,
           currency: this.currency
         });
-        this.isCheckoutPageOpen = true;
+        this.isCheckoutPageOpen = true; //this.orderUrl = `https://store.getnord.com/index.php?route=checkout/checkout`;
+
         this.orderUrl = "https://store.getnord.com/index.php?route=checkout/cart/addToCart&".concat(cartUrl); // this.orderUrl = `http://localhost/opencart/index.php?route=checkout/cart/addToCart&${cartUrl}`;
       }
     },

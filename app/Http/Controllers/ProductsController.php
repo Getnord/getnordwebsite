@@ -11,7 +11,7 @@ class ProductsController extends Controller
         //return response("http://store.getnord.live/index.php?route=product/product/stock".'&lng='.$request->input('lang').'-'.$request->input('lang'));
         // dd($request->all());
         $client = new \GuzzleHttp\Client();
-        $url = "store.getnord.com/index.php?route=product/product/stock".'&lng='.$request->input('lang').'-'.$request->input('lang');
+        $url = "https://store.getnord.com/index.php?route=product/product/stock".'&lng='.$request->input('lang').'-'.$request->input('lang');
         $cookieJar = CookieJar::fromArray([
             'language' => $request->input('lang')
         ], 'store.getnord.com');

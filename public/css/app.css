@@ -3657,8 +3657,13 @@ body h1 {
 
 .product_section--leo_stores .product_section--onyx_stores_list {
   justify-content: space-between;
-  justify-content: flex-start;
   flex-wrap: wrap;
+}
+
+@media (max-width: 750px) {
+  .product_section--leo_stores .product_section--onyx_stores_list {
+    justify-content: flex-start;
+  }
 }
 
 @media (max-width: 750px) {

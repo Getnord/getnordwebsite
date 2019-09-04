@@ -1,4 +1,4 @@
-<?php 
+<?php
 
 return [
     // row names
@@ -127,7 +127,7 @@ return [
     "ElectronicVideoStabilisationONYX" => "YES",
     "Time-LapseVideoONYX" => "YES",
     "IntheKitONYX" => "Smartphone, User Manual, Headset with handsfree function, USB Cable, Power adaptor, Carabiner clip, SIM Opener",
-    "PriceONYX" => "EUR298",
+    "PriceONYX" => "EUR296",
 
     // LYNX
     "IPRatingLYNX" => "IP68",
@@ -191,7 +191,7 @@ return [
     "ElectronicVideoStabilisationLYNX" => "YES",
     "Time-LapseVideoLYNX" => "YES",
     "IntheKitLYNX" => "Smartphone, User Manual, Headset with handsfree function, USB Cable, Power adaptor, SIM Opener",
-    "PriceLYNX" => "$299",
+    "PriceLYNX" => "$296",
 
     // WALRUS
     "IPRatingWALRUS" => "IP68",

@@ -1,5 +1,5 @@
 <section class="scratch_section shock_proof_section">
-    <div class="cols">
+    <div class="cols anim viewport">
         <div class="col_2_xl scratch_section_col--right">
             <div class="section_content">
                 <div class="section_heading">{{ __('leo.shockProof') }}</div>
@@ -23,6 +23,6 @@
             </div>
 
         </div>
-        <img src="{{ url('/img/leo/shockproof.png') }}" alt="" class="scratch_img">
+        <img src="{{ url('/img/leo/shockproof.png') }}" alt="" class="scratch_img anim3">
     </div>
 </section>

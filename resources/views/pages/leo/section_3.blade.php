@@ -6,19 +6,19 @@
                 <img src="{{asset('/img/processor.svg')}}" alt="">
                 <p>{!! __('leo.leoTechnologyProcessor') !!}</p>
             </div>
-            <div class="leo_features anim1 delay2 ">
+            <div class="leo_features anim1 delay4 ">
                 <img src="{{asset('/img/graphics.svg')}}" alt="">
                 <p>{!! __('leo.leoTechnologyGraphics') !!}</p>
             </div>
-            <div class="leo_features anim1 delay2 ">
+            <div class="leo_features anim1 delay6 ">
                 <img src="{{asset('/img/wifi.svg')}}" alt="">
                 <p>{!! __('leo.leoTechnologyWifi') !!}</p>
             </div>
-            <div class="leo_features anim1 delay2 ">
+            <div class="leo_features anim1 delay8 ">
                 <img src="{{asset('/img/ram.svg')}}" alt="">
                 <p>{!! __('leo.leoTechnologyRam') !!}</p>
             </div>
-            <div class="leo_features anim1 delay2 ">
+            <div class="leo_features anim1 delay10 ">
                 <img src="{{asset('/img/dual_sim.svg')}}" alt="">
                 <p>{!! __('leo.leoTechnologyDual') !!}</p>
             </div>

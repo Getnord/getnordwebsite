@@ -13,15 +13,15 @@
                         <img src="{{asset('/img/camera.svg')}}" alt="">
                         <p>{!! __('leo.leoCameraIconText') !!}</p>
                     </div>
-                    <div class="leo_features anim1 delay2 ">
+                    <div class="leo_features anim1 delay4 ">
                         <img src="{{asset('/img/led_flash.svg')}}" alt="">
                         <p>{!! __('leo.leoLedFlashText') !!}</p>
                     </div>
-                    <div class="leo_features anim1 delay2 ">
+                    <div class="leo_features anim1 delay6 ">
                         <img src="{{asset('/img/autofocus.svg')}}" alt="">
                         <p>{!! __('leo.leoFocusText') !!}</p>
                     </div>
-                    <div class="leo_features anim1 delay2 ">
+                    <div class="leo_features anim1 delay8 ">
                         <img src="{{asset('/img/full_hg.svg')}}" alt="">
                         <p>{!! __('leo.leoVideoText') !!}</p>
                     </div>

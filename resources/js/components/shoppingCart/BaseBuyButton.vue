@@ -23,6 +23,7 @@
 
         methods: {
             clicked() {
+                console.log(this.productId)
                 this.$emit('buy-btn-clicked', this.productId, this.productHasOptions);
             }
         },

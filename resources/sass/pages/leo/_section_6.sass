@@ -37,18 +37,25 @@
 
 .lightbox_section
     display: flex
+    height: 110px
     @include breakpoint(s)
         flex-wrap: wrap
     img
-        margin: 0
-        height: auto
+        position: absolute
+        top: 0
+        left: 0
+        height: 100%
+        width: 100%
+        transition: all ease .5s
         &:hover
             border: 2px solid #ffe401
             transform: scale(1.2)
-            transition: all ease .3s
+            transition: all ease .5s
+            z-index: 999
 
     a
         width: 100%
+        position: relative
         @include breakpoint(s)
             width: 16.5%
 

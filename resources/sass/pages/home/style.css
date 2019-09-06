@@ -85,7 +85,7 @@
     left: -500px;
     z-index: -1;
     overflow: hidden;
-    
+
 }
 
 /*this is for the three links at the very bottom under the products*/
@@ -131,7 +131,7 @@
         margin: 10px auto;
         flex-direction: column;
         justify-content:flex-start;
-    } 
+    }
     .link-container a{
         font-size: 14px;
     }
@@ -176,7 +176,7 @@
         display: flex;
         flex-direction: column;
         justify-content: center;
-    }  
+    }
     .products_section .product_container {
         margin: 20px auto;
     }
@@ -220,7 +220,7 @@
         margin: 55px 10px 35px 10px;
         font-size: 35px;
         line-height: 40px;
-        
+
     }
     .products_section .product_info {
         width: 450px;
@@ -239,14 +239,14 @@
         font-size: 18px;
         width: 450px;
     }
-    
+
 }
 
 
 @media(max-width:470px) {
     .button_blue_solid {
         font-size: 16px;
-    } 
+    }
     .products_section .section_text {
         font-size: 16px;
         max-width: 300px;
@@ -257,7 +257,7 @@
         margin: 45px 10px 35px 10px;
         font-size: 24px;
         line-height: 30px;
-        
+
     }
     .products_section .product_info {
         width: 300px;
@@ -271,7 +271,7 @@
         width: 300px;
         margin: 10px auto;
     }
-    
+
     .products_section .product_text .bold_paragraph {
         font-size: 18px;
     }
@@ -281,7 +281,6 @@
         width: 300px;
     }
 }
-
 
 
 

@@ -2216,6 +2216,13 @@ __webpack_require__.r(__webpack_exports__);
     hideCheckout: function hideCheckout() {
       this.$emit('hide-checkout');
     }
+  },
+  mounted: function mounted() {
+    setTimeout(function () {
+      $('#top')[0].remove();
+      $('.checkout header').remove();
+      console.log('done');
+    }, 2000);
   }
 });
 
@@ -60279,6 +60286,9 @@ var app = new Vue({
     hideCheckout: function hideCheckout() {
       this.isCheckoutPageOpen = false;
     },
+    iframeChanges: function iframeChanges() {
+      console.log('asd');
+    },
     // The need for the following function comes from a bug that appeared when adding the same product but with different
     // options to the cart. The bug basically resulted in altering the same product to have the same options.
     // The fix was basically just cloning the object, so we are not refrencing the same root object.
@@ -60296,6 +60306,7 @@ var app = new Vue({
     immediate: true
   }
 });
+console.log(document.domain);
 
 /***/ }),
 

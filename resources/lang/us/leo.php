@@ -3,11 +3,14 @@ return [
     // Hero Section
     'pageTitle' => 'Leo Getnord',
     "heroPhoneName" => "GETNORD LEO",
-    "heroPhoneTitle" => "A RUGGED PHONE IN REAL METAL HOUSING",
+    "heroPhoneTitle" => "LIMITLESS.<br>
+EXTREME.<br>
+OUTSTANDING.
+",
     "heroFindOutMore" => "FIND OUT MORE",
 
 // Section 2
-    "productTitle" => "HIGH-END OCTA CORE PLATFORM. SUPERB QUALITY CAMERA.HIGH DEFINITION SCREEN.ALL PROTECTED FROM SHOCK AND WATER.",
+    "productTitle" => "HIGH-END OCTA-CORE PLATFORM. SUPERB QUALITY CAMERA. HIGH DEFINITION SCREEN. FULLY PROTECTED FROM SHOCK AND WATER.",
     "productScreen" => "Super bright 5.72” IPS Type 1440 x 720 screen",
     "productProcessor" => "Helio Octa Core processor, 4GB RAM, 64GB Storage",
     "productOs" => "Android 8.1 Oreo",
@@ -40,14 +43,17 @@ return [
     'shockProof' => 'SHOCKPROOF',
     'shockProofParagraph' => 'Advanced Smartphone technologies. Totally protected. Built to last.',
     'shockProofText' => 'SHOCKPROOF',
-    'ipText' => 'IP68',
+    '810G' => 'MIL-STD-810G',
 
     //section 5
 
     'waterProofTitle' => 'WATERPROOF',
-    'waterProofText' => 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam aliquet, odio nec pretium luctus.',
+    'waterProofText' => 'Not only rain or splashes - complete water immersion won\'t damage your phone.',
     'waterProof' => 'WATERPROOF',
+    'ipText' => 'IP68',
     'waterProofParagraph' => 'Advanced Smartphone technologies. Totally protected. Built to last.',
+    'operatingTemperature' => '<span>-20˚C to +55˚C</span><br>Operating temperature',
+    'bottomText' => '*Getnord battery test: by -20˚C, playing Youtube video - 3 hours.',
 
     // section 6
 
@@ -70,9 +76,9 @@ return [
 
     'batteryTitle' => 'THE BATTERY FOR<br>LONGER ADVENTURES',
     'batteryMah' => '5000mAh',
-    'batteryEnvironment' => 'Extreme Environment Battery Technology',
-    'batteryContinous' => '<span>-20˚C...+55˚C</span><br>Continous operation',
-    'batteryShort' => '<span>-40˚C...+75˚C</span><br>Short term operation',
+    'batteryEnvironment' => 'Extreme Environment Battery Technology:',
+    'batteryContinous' => '<span>-20˚C to +55˚C</span><br>Continous operation',
+    'batteryShort' => '<span>-40˚C to +75˚C</span><br>Short term operation',
 
     // section 10
 
@@ -84,7 +90,7 @@ return [
 
     'varietyTitle' => 'A VARIETY OF SENSORS',
     'varietyGravity' => 'Gravity Sensor',
-    'varietyDistance' => 'Light and<br>Distance sensor',
+    'varietyDistance' => 'Light and<br>Distance Sensor',
     'varietyGeomagnetic' => 'Geomagnetic<br>Sensor',
     'varietyGyroscope' => 'Gyroscope',
     'varietyGps' => 'GPS sensor',

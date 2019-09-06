@@ -12,15 +12,24 @@
                         <div class="item__img">
                             <img src="{{asset('img/waterproof.svg')}}" alt="">
                         </div>
-                        <p>{{ __('leo.shockProofText') }}</p>
+                        <p>{{ __('leo.waterProof') }}</p>
                     </div>
                     <div class="shock_proof_icon">
                         <div class="item__img">
-                            <img src="{{asset('img/810G.svg')}}" alt="">
+                            <img src="{{asset('img/ip68.svg')}}" alt="">
                         </div>
                         <p>{{ __('leo.ipText') }}</p>
                     </div>
                 </div>
+                <div class="info_item">
+                    <div class="info_points">
+                        <div>
+                            <p style="text-align: center">{!!  __('leo.operatingTemperature')  !!}</p>
+                        </div>
+                    </div>
+
+                </div>
+                <span style="margin: 20px auto 0;display: block">{!!  __('leo.bottomText')  !!}</span>
             </div>
 
         </div>

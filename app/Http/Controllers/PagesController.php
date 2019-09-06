@@ -21,11 +21,11 @@ class PagesController extends Controller
     /**
      * Home page
      */
-    public function home($locale = null) {
-        if(isset($locale)) {
+    public function home($locale = null)
+    {
+        if (isset($locale)) {
             app()->setLocale($locale);
-        }
-        else {
+        } else {
             app()->setLocale('us');
             $locale = 'us';
         }
@@ -45,17 +45,17 @@ class PagesController extends Controller
             'onHomePage' => $onHomePage,
             'specs_section_rows_names' => $specs_section_rows_names,
             'phones' => $phones
-            ]);
+        ]);
     }
 
     /**
      * Onyx page
      */
-    public function onyx($locale = null) {
-        if(isset($locale)) {
+    public function onyx($locale = null)
+    {
+        if (isset($locale)) {
             app()->setLocale($locale);
-        }
-        else {
+        } else {
             app()->setLocale('us');
             $locale = 'us';
         }
@@ -74,17 +74,17 @@ class PagesController extends Controller
             'onHomePage' => $onHomePage,
             'specs_section_rows_names' => $specs_section_rows_names,
             'phones' => $phones
-            ]);
+        ]);
     }
 
     /**
      * Contact page
      */
-    public function contact($locale = null) {
-        if(isset($locale)) {
+    public function contact($locale = null)
+    {
+        if (isset($locale)) {
             app()->setLocale($locale);
-        }
-        else {
+        } else {
             app()->setLocale('us');
             $locale = 'us';
         }
@@ -98,11 +98,11 @@ class PagesController extends Controller
     /**
      * Compatibility page
      */
-    public function compatibility($locale = null) {
-        if(isset($locale)) {
+    public function compatibility($locale = null)
+    {
+        if (isset($locale)) {
             app()->setLocale($locale);
-        }
-        else {
+        } else {
             app()->setLocale('us');
             $locale = 'us';
         };
@@ -116,28 +116,28 @@ class PagesController extends Controller
     /**
      * Shipping page
      */
-    public function shipping($locale = null) {
-        if(isset($locale)) {
+    public function shipping($locale = null)
+    {
+        if (isset($locale)) {
             app()->setLocale($locale);
-        }
-        else {
+        } else {
             app()->setLocale('us');
             $locale = 'us';
         };
         // We want to auto change some links in the nav depending if
         // we are on the home page or not
         $onHomePage = false;
-        return view('pages.informational.shipping.index_'.app()->getLocale())->with('onHomePage', $onHomePage);
+        return view('pages.informational.shipping.index_' . app()->getLocale())->with('onHomePage', $onHomePage);
     }
 
     /**
      * Cookies page
      */
-    public function cookies($locale = null) {
-        if(isset($locale)) {
+    public function cookies($locale = null)
+    {
+        if (isset($locale)) {
             app()->setLocale($locale);
-        }
-        else {
+        } else {
             app()->setLocale('us');
             $locale = 'us';
         }
@@ -145,17 +145,17 @@ class PagesController extends Controller
         // We want to auto change some links in the nav depending if
         // we are on the home page or not
         $onHomePage = false;
-        return view('pages.informational.cookies.index_'.app()->getLocale())->with('onHomePage', $onHomePage);
+        return view('pages.informational.cookies.index_' . app()->getLocale())->with('onHomePage', $onHomePage);
     }
 
     /**
      * Warranty page
      */
-    public function warranty($locale = null) {
-        if(isset($locale)) {
+    public function warranty($locale = null)
+    {
+        if (isset($locale)) {
             app()->setLocale($locale);
-        }
-        else {
+        } else {
             app()->setLocale('us');
             $locale = 'us';
         }
@@ -163,17 +163,17 @@ class PagesController extends Controller
         // We want to auto change some links in the nav depending if
         // we are on the home page or not
         $onHomePage = false;
-        return view('pages.informational.warranty.index_'.app()->getLocale())->with('onHomePage', $onHomePage);
+        return view('pages.informational.warranty.index_' . app()->getLocale())->with('onHomePage', $onHomePage);
     }
 
     /**
      * Legal page
      */
-    public function legal($locale = null) {
-        if(isset($locale)) {
+    public function legal($locale = null)
+    {
+        if (isset($locale)) {
             app()->setLocale($locale);
-        }
-        else {
+        } else {
             app()->setLocale('us');
             $locale = 'us';
         }
@@ -181,17 +181,17 @@ class PagesController extends Controller
         // We want to auto change some links in the nav depending if
         // we are on the home page or not
         $onHomePage = false;
-        return view('pages.informational.legal.index_'.app()->getLocale())->with('onHomePage', $onHomePage);
+        return view('pages.informational.legal.index_' . app()->getLocale())->with('onHomePage', $onHomePage);
     }
 
     /**
      * Leo page
      */
-    public function leo($locale = null) {
-        if(isset($locale)) {
+    public function leo($locale = null)
+    {
+        if (isset($locale)) {
             app()->setLocale($locale);
-        }
-        else {
+        } else {
             app()->setLocale('us');
             $locale = 'us';
         }
@@ -219,12 +219,27 @@ class PagesController extends Controller
             'camera_10',
             'camera_11',
             'camera_12',
-            ];
+        ];
         return view('pages.leo.index')->with([
             'onHomePage' => $onHomePage,
             'specs_section_rows_names' => $specs_section_rows_names,
             'phones' => $phones,
             'images' => $images
+        ]);
+    }
+
+    public function leoImage( $locale,$image)
+    {
+        if (isset($locale)) {
+            app()->setLocale($locale);
+        } else {
+            app()->setLocale('us');
+            $locale = 'us';
+        }
+        $onHomePage = false;
+        return view('pages.leo.image')->with([
+            'onHomePage' => $onHomePage,
+            'image' => $image
         ]);
     }
 }

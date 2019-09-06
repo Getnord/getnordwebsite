@@ -15,9 +15,9 @@
                     </div>
                     <div class="shock_proof_icon">
                         <div class="item__img">
-                            <img src="{{asset('img/ip68.svg')}}" alt="">
+                            <img src="{{asset('img/810G.svg')}}" alt="">
                         </div>
-                        <p style="color: #000">{{ __('leo.ipText') }}</p>
+                        <p style="color: #000">{{ __('leo.810G') }}</p>
                     </div>
                 </div>
             </div>

@@ -36,15 +36,7 @@
                     <a href="{{ __('leo.leoEbayLink') }}" class="store_cta store_cta--ebay" target="_blank">
                         <img src="{{ url('/') }}/img/ebay.png" alt="">
                     </a>
-                    <a href="{{ __('leo.leoWalmartLink') }}" class="store_cta store_cta--ebay" target="_blank">
-                        <img src="{{ url('/') }}/img/walmart.png" alt="">
-                    </a>
-                    <a href="{{ __('leo.leoSearsLink') }}" class="store_cta store_cta--ebay" target="_blank">
-                        <img src="{{ url('/') }}/img/sears.png" alt="">
-                    </a>
-                    <a href="{{ __('leo.leoJetLink') }}" class="store_cta store_cta--ebay" target="_blank">
-                        <img src="{{ url('/') }}/img/jet.png" alt="">
-                    </a>
+
                 </div>
             </div>
         </div>

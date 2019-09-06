@@ -1,4 +1,5 @@
 <section class="getnord_leo--technology mount_section ">
+    <div class="blue_bg"></div>
     <div class="page_center">
         <div class="section_heading">{{ __('leo.leoAdvanced') }}</div>
         <div class="section_text anim ">
@@ -25,7 +26,7 @@
         </div>
     </div>
     <div class="technology_bg"
-         style="background: url({{asset('img/leo/leo_helio.png')}}) center no-repeat;background-size: cover">
+         style="background: url({{asset('img/leo/leo_helio.png')}}) center no-repeat;background-size: 100% 100%">
 
     </div>
 

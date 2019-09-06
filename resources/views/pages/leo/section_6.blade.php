@@ -36,7 +36,7 @@
         </div>
         <div class="lightbox_section">
             @foreach($images as $image)
-                <a href="{{asset('img/leo/camera').'/'.$image.'.png'}}" data-lightbox="leo"><img
+                <a href="{{url(app()->getLocale().'/'.'leo').'/'.$image}}" target="_blank"><img
                         src="{{asset('img/leo/camera').'/'.$image.'.png'}}" alt=""></a>
             @endforeach
         </div>

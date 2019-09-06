@@ -5,7 +5,7 @@ return [
     "heroPhoneTitle" => "THE NOWORRIES SMARTPHONE",
     "heroGetItHere" => "GET IT HERE",
 
-    "productTitle" => "ALL-ROUNDER WITH VARIETY OF WIRELESS ACCESSORIES, LARGEST BATTERY AND STRONGEST SCREEN IN THE MARKET",
+    "productTitle" => "ALL-ROUNDER WITH A HUGE VARIETY OF WIRELESS ACCESSORIES, THE LARGEST BATTERY AND STRONGEST SCREEN IN THE MARKET",
     "productScreen" => "4.5'' 1.8mm Corning Gorilla Screen",
     "productBattery" => "6000mAh battery",
     "productSoftware" => "Android 8.1 Oreo",

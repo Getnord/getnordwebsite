@@ -370,6 +370,9 @@ const app = new Vue({
         hideCheckout() {
             this.isCheckoutPageOpen = false;
         },
+        iframeChanges() {
+            console.log('asd')
+        },
         // The need for the following function comes from a bug that appeared when adding the same product but with different
         // options to the cart. The bug basically resulted in altering the same product to have the same options.
         // The fix was basically just cloning the object, so we are not refrencing the same root object.
@@ -387,3 +390,5 @@ const app = new Vue({
     }
 });
 
+
+console.log(document.domain)

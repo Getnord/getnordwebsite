@@ -2,7 +2,7 @@
 @section('pageTitle', __('leo.pageTitle'))
 @section('content')
 
-
+@include('pages.leo.section_1')
 
 
 @include('pages.leo.section_2')

@@ -5,6 +5,8 @@
         height: 40px
         width: 100%
         background: #040a23
+        @include breakpoint(s)
+            display: none
     .section_text
         display: flex
         justify-content: center
@@ -29,6 +31,8 @@
         height: 100vh
         @include breakpoint(s)
            height: 80vh
+        @include breakpoint(xs)
+            height: 50vh
 
     img
         margin-bottom: 20px
@@ -40,6 +44,6 @@
         margin: 0 25px
         @include breakpoint(s)
             width: 30%
-            margin: 10px
+            margin: 20px 10px
         @include breakpoint(xs)
             margin: 0 10px 20px

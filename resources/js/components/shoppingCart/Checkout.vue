@@ -20,15 +20,7 @@
             hideCheckout() {
                 this.$emit('hide-checkout');
             }
-        },
-        mounted() {
-            setTimeout(function () {
 
-                    $('#top')[0].remove()
-                    $('.checkout header').remove()
-                console.log('done')
-
-            },2000)
         }
     }
 </script>

@@ -19,18 +19,41 @@ class PagesController extends Controller
         $this->middleware('localize');
     }
 
+    public function index()
+    {
+
+        $data = geoip($_SERVER['REMOTE_ADDR']);
+        $countryCode = strtolower($data->iso_code);
+
+            if (isset($countryCode)) {
+                if ($countryCode == 'de' || $countryCode == 'at') {
+
+                    app()->setLocale('de');
+                } elseif ($countryCode == 'us') {
+                    app()->setLocale('us');
+                } else {
+                    app()->setLocale('uk');
+                }
+
+            }
+        $locale = app()->getLocale();
+
+        return redirect('/' . $locale);
+    }
+
     /**
      * Home page
      */
-    public function home($locale = null)
+    public function home($locale)
     {
 
         if (isset($locale)) {
             app()->setLocale($locale);
         } else {
-            app()->setLocale('us');
-            $locale = 'us';
+            app()->setLocale('uk');
+            $locale = 'uk';
         }
+        //dd($locale);
         // We want to auto change some links in the nav depending if
         // we are on the home page or not
         $onHomePage = true;
@@ -53,13 +76,13 @@ class PagesController extends Controller
     /**
      * Onyx page
      */
-    public function onyx($locale = null)
+    public function onyx($locale)
     {
         if (isset($locale)) {
             app()->setLocale($locale);
         } else {
-            app()->setLocale('us');
-            $locale = 'us';
+            app()->setLocale('uk');
+            $locale = 'uk';
         }
         // We want to auto change some links in the nav depending if
         // we are on the home page or not
@@ -82,13 +105,13 @@ class PagesController extends Controller
     /**
      * Contact page
      */
-    public function contact($locale = null)
+    public function contact($locale)
     {
         if (isset($locale)) {
             app()->setLocale($locale);
         } else {
-            app()->setLocale('us');
-            $locale = 'us';
+            app()->setLocale('uk');
+            $locale = 'uk';
         }
         // We want to auto change some links in the nav depending if
         // we are on the home page or not
@@ -100,13 +123,13 @@ class PagesController extends Controller
     /**
      * Compatibility page
      */
-    public function compatibility($locale = null)
+    public function compatibility($locale )
     {
         if (isset($locale)) {
             app()->setLocale($locale);
         } else {
-            app()->setLocale('us');
-            $locale = 'us';
+            app()->setLocale('uk');
+            $locale = 'uk';
         };
 
         // We want to auto change some links in the nav depending if
@@ -118,13 +141,13 @@ class PagesController extends Controller
     /**
      * Shipping page
      */
-    public function shipping($locale = null)
+    public function shipping($locale)
     {
         if (isset($locale)) {
             app()->setLocale($locale);
         } else {
-            app()->setLocale('us');
-            $locale = 'us';
+            app()->setLocale('uk');
+            $locale = 'uk';
         };
         // We want to auto change some links in the nav depending if
         // we are on the home page or not
@@ -135,13 +158,13 @@ class PagesController extends Controller
     /**
      * Cookies page
      */
-    public function cookies($locale = null)
+    public function cookies($locale)
     {
         if (isset($locale)) {
             app()->setLocale($locale);
         } else {
-            app()->setLocale('us');
-            $locale = 'us';
+            app()->setLocale('uk');
+            $locale = 'uk';
         }
 
         // We want to auto change some links in the nav depending if
@@ -153,13 +176,13 @@ class PagesController extends Controller
     /**
      * Warranty page
      */
-    public function warranty($locale = null)
+    public function warranty($locale = nul)
     {
         if (isset($locale)) {
             app()->setLocale($locale);
         } else {
-            app()->setLocale('us');
-            $locale = 'us';
+            app()->setLocale('uk');
+            $locale = 'uk';
         }
 
         // We want to auto change some links in the nav depending if
@@ -171,13 +194,13 @@ class PagesController extends Controller
     /**
      * Legal page
      */
-    public function legal($locale = null)
+    public function legal($locale)
     {
         if (isset($locale)) {
             app()->setLocale($locale);
         } else {
-            app()->setLocale('us');
-            $locale = 'us';
+            app()->setLocale('uk');
+            $locale = 'uk';
         }
 
         // We want to auto change some links in the nav depending if
@@ -189,13 +212,13 @@ class PagesController extends Controller
     /**
      * Leo page
      */
-    public function leo($locale = null)
+    public function leo($locale)
     {
         if (isset($locale)) {
             app()->setLocale($locale);
         } else {
-            app()->setLocale('us');
-            $locale = 'us';
+            app()->setLocale('uk');
+            $locale = 'uk';
         }
         // We want to auto change some links in the nav depending if
         // we are on the home page or not
@@ -230,13 +253,13 @@ class PagesController extends Controller
         ]);
     }
 
-    public function leoImage( $locale,$image)
+    public function leoImage($locale, $image)
     {
         if (isset($locale)) {
             app()->setLocale($locale);
         } else {
-            app()->setLocale('us');
-            $locale = 'us';
+            app()->setLocale('uk');
+            $locale = 'uk';
         }
         $onHomePage = false;
         return view('pages.leo.image')->with([
@@ -244,8 +267,11 @@ class PagesController extends Controller
             'image' => $image
         ]);
     }
-    public function test(){
-        $data = geoip();
-        dd($data);
+
+    public function test()
+    {
+
+        $data = geoip($_SERVER['REMOTE_ADDR']);
+        dd(strtolower($data->iso_code));
     }
 }

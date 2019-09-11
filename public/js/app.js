@@ -60109,7 +60109,8 @@ var app = new Vue({
     form.append("currency", this.info.currencies[this.lang]);
     form.append("lang", this.lang);
     axios.post("/api", form).then(function (response) {
-      // product detials from OpenCart
+      console.log(response); // product detials from OpenCart
+
       _this2.info.openCartData = response.data.products;
     }).catch(function (error) {
       console.log(error);

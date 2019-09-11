@@ -193,6 +193,7 @@ const app = new Vue({
         axios
             .post("/api", form)
             .then(response => {
+                console.log(response)
                 // product detials from OpenCart
                 this.info.openCartData = response.data.products;
             })

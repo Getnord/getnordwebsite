@@ -99,7 +99,7 @@ return [
      * ------------------------------------------------------------------------
      * Application supported locals
      * ------------------------------------------------------------------------
-     * 
+     *
      * The application supported locals lists all the locals we have, these
      * will be used to auto serve the aproriate local depending on the user
      * default browser language
@@ -177,7 +177,7 @@ return [
         /*
          * Package Service Providers...
          */
-
+        \Torann\GeoIP\GeoIPServiceProvider::class,
         /*
          * Application Service Providers...
          */
@@ -238,6 +238,8 @@ return [
         'URL' => Illuminate\Support\Facades\URL::class,
         'Validator' => Illuminate\Support\Facades\Validator::class,
         'View' => Illuminate\Support\Facades\View::class,
+        'GeoIP' => \Torann\GeoIP\Facades\GeoIP::class,
+
 
     ],
 

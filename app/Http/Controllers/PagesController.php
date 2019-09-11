@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Cache;
+use Torann\GeoIP\Facades\GeoIP;
 
 
 class PagesController extends Controller
@@ -23,6 +24,7 @@ class PagesController extends Controller
      */
     public function home($locale = null)
     {
+
         if (isset($locale)) {
             app()->setLocale($locale);
         } else {
@@ -241,5 +243,9 @@ class PagesController extends Controller
             'onHomePage' => $onHomePage,
             'image' => $image
         ]);
+    }
+    public function test(){
+        $data = geoip();
+        dd($data);
     }
 }

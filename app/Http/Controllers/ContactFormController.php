@@ -2,11 +2,10 @@
 
 namespace App\Http\Controllers;
 
-use Spatie\Newsletter\Newsletter;
+use Spatie\Newsletter\NewsletterFacade as Newsletter;
 use Validator;
 use Lang;
 use Illuminate\Http\Request;
-use Illuminate\Support\MessageBag;
 use App\Mail\ContactRequest;
 use Illuminate\Support\Facades\Mail;
 
@@ -46,7 +45,7 @@ class ContactFormController extends Controller
                 ->send(new ContactRequest($request));
             if (!Mail::failures()) {
                 // we add the user to mailchimp
-                //Newsletter::subscribe($request->input('email'), ['FNAME'=> $request->input('name'), 'lastName'=>''], 'list_' . app()->getLocale());
+                Newsletter::subscribe($request->input('email'), ['FNAME'=> $request->input('name'), 'lastName'=>''], 'list_' . app()->getLocale());
                 return response()->json(['success' => Lang::get('contact.email_sent')]);
             }
         };

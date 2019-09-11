@@ -2120,6 +2120,54 @@ __webpack_require__.r(__webpack_exports__);
 
 /***/ }),
 
+/***/ "./node_modules/babel-loader/lib/index.js?!./node_modules/vue-loader/lib/index.js?!./resources/js/components/baseComponents/PhonePrice.vue?vue&type=script&lang=js&":
+/*!************************************************************************************************************************************************************************************!*\
+  !*** ./node_modules/babel-loader/lib??ref--4-0!./node_modules/vue-loader/lib??vue-loader-options!./resources/js/components/baseComponents/PhonePrice.vue?vue&type=script&lang=js& ***!
+  \************************************************************************************************************************************************************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+//
+//
+//
+//
+//
+/* harmony default export */ __webpack_exports__["default"] = ({
+  name: "price",
+  props: {
+    productId: {
+      required: true
+    }
+  },
+  data: function data() {
+    return {
+      price: ''
+    };
+  },
+  mounted: function mounted() {
+    var _this = this;
+
+    this.lang = document.getElementsByTagName("html")[0].getAttribute("lang");
+    var form = new FormData(); // the array contains the product ids
+    // form.append("products", "[ 30, 40, 50 ]");
+
+    form.append("products", "[".concat(this.productId, "]"));
+    form.append("currency", this.$root.$data.info.currencies[this.lang]);
+    form.append("lang", this.lang);
+    axios.post("/api/product", form).then(function (response) {
+      console.log('api', response); // product detials from OpenCart
+
+      _this.price = response.data.products[0].price;
+    }).catch(function (error) {
+      console.log(error);
+    });
+  }
+});
+
+/***/ }),
+
 /***/ "./node_modules/babel-loader/lib/index.js?!./node_modules/vue-loader/lib/index.js?!./resources/js/components/shoppingCart/BaseBuyButton.vue?vue&type=script&lang=js&":
 /*!*************************************************************************************************************************************************************************************!*\
   !*** ./node_modules/babel-loader/lib??ref--4-0!./node_modules/vue-loader/lib??vue-loader-options!./resources/js/components/shoppingCart/BaseBuyButton.vue?vue&type=script&lang=js& ***!
@@ -47018,6 +47066,30 @@ render._withStripped = true
 
 /***/ }),
 
+/***/ "./node_modules/vue-loader/lib/loaders/templateLoader.js?!./node_modules/vue-loader/lib/index.js?!./resources/js/components/baseComponents/PhonePrice.vue?vue&type=template&id=a91814b0&":
+/*!****************************************************************************************************************************************************************************************************************************!*\
+  !*** ./node_modules/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!./node_modules/vue-loader/lib??vue-loader-options!./resources/js/components/baseComponents/PhonePrice.vue?vue&type=template&id=a91814b0& ***!
+  \****************************************************************************************************************************************************************************************************************************/
+/*! exports provided: render, staticRenderFns */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "render", function() { return render; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "staticRenderFns", function() { return staticRenderFns; });
+var render = function() {
+  var _vm = this
+  var _h = _vm.$createElement
+  var _c = _vm._self._c || _h
+  return _c("strong", [_vm._v("\n    " + _vm._s(this.price) + "\n")])
+}
+var staticRenderFns = []
+render._withStripped = true
+
+
+
+/***/ }),
+
 /***/ "./node_modules/vue-loader/lib/loaders/templateLoader.js?!./node_modules/vue-loader/lib/index.js?!./resources/js/components/shoppingCart/BaseBuyButton.vue?vue&type=template&id=a0aec26a&":
 /*!*****************************************************************************************************************************************************************************************************************************!*\
   !*** ./node_modules/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!./node_modules/vue-loader/lib??vue-loader-options!./resources/js/components/shoppingCart/BaseBuyButton.vue?vue&type=template&id=a0aec26a& ***!
@@ -59925,7 +59997,8 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var locutus_php_url_http_build_query__WEBPACK_IMPORTED_MODULE_11__ = __webpack_require__(/*! locutus/php/url/http_build_query */ "./node_modules/locutus/php/url/http_build_query.js");
 /* harmony import */ var locutus_php_url_http_build_query__WEBPACK_IMPORTED_MODULE_11___default = /*#__PURE__*/__webpack_require__.n(locutus_php_url_http_build_query__WEBPACK_IMPORTED_MODULE_11__);
 /* harmony import */ var _components_accessories_accessoriesData_js__WEBPACK_IMPORTED_MODULE_12__ = __webpack_require__(/*! ./components/accessories/accessoriesData.js */ "./resources/js/components/accessories/accessoriesData.js");
-/* harmony import */ var _components_accessories_accessoriesSection_vue__WEBPACK_IMPORTED_MODULE_13__ = __webpack_require__(/*! ./components/accessories/accessoriesSection.vue */ "./resources/js/components/accessories/accessoriesSection.vue");
+/* harmony import */ var _components_baseComponents_PhonePrice__WEBPACK_IMPORTED_MODULE_13__ = __webpack_require__(/*! ./components/baseComponents/PhonePrice */ "./resources/js/components/baseComponents/PhonePrice.vue");
+/* harmony import */ var _components_accessories_accessoriesSection_vue__WEBPACK_IMPORTED_MODULE_14__ = __webpack_require__(/*! ./components/accessories/accessoriesSection.vue */ "./resources/js/components/accessories/accessoriesSection.vue");
 __webpack_require__(/*! ./bootstrap */ "./resources/js/bootstrap.js");
 
 __webpack_require__(/*! ./vendor/svgxuse/svgxuse.min.js */ "./resources/js/vendor/svgxuse/svgxuse.min.js");
@@ -59973,6 +60046,7 @@ $(document).ready(function () {
 
 
 
+
  // the following is used to be able to use laravel lang resources in JS
 // it will be used to have a funcional localization in this app
 
@@ -59989,7 +60063,8 @@ var app = new Vue({
     shoppingCartIcon: _components_shoppingCart_ShoppingCartIcon_vue__WEBPACK_IMPORTED_MODULE_8__["default"],
     checkoutPage: _components_shoppingCart_Checkout_vue__WEBPACK_IMPORTED_MODULE_9__["default"],
     baseCardMessage: _components_shoppingCart_BaseCardMessage_vue__WEBPACK_IMPORTED_MODULE_10__["default"],
-    accessoriesSection: _components_accessories_accessoriesSection_vue__WEBPACK_IMPORTED_MODULE_13__["default"]
+    accessoriesSection: _components_accessories_accessoriesSection_vue__WEBPACK_IMPORTED_MODULE_14__["default"],
+    price: _components_baseComponents_PhonePrice__WEBPACK_IMPORTED_MODULE_13__["default"]
   },
   data: {
     info: {
@@ -60069,7 +60144,8 @@ var app = new Vue({
         quantity: 1,
         stock: 100
       }],
-      openCartData: []
+      openCartData: [],
+      phonePrice: ''
     },
     isOptionsPopupOpen: false,
     isShoppingCartOpen: false,
@@ -60300,7 +60376,6 @@ var app = new Vue({
     immediate: true
   }
 });
-console.log(document.domain);
 
 /***/ }),
 
@@ -60775,6 +60850,75 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "render", function() { return _node_modules_vue_loader_lib_loaders_templateLoader_js_vue_loader_options_node_modules_vue_loader_lib_index_js_vue_loader_options_accessoriesSection_vue_vue_type_template_id_c52a0442_scoped_true___WEBPACK_IMPORTED_MODULE_0__["render"]; });
 
 /* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "staticRenderFns", function() { return _node_modules_vue_loader_lib_loaders_templateLoader_js_vue_loader_options_node_modules_vue_loader_lib_index_js_vue_loader_options_accessoriesSection_vue_vue_type_template_id_c52a0442_scoped_true___WEBPACK_IMPORTED_MODULE_0__["staticRenderFns"]; });
+
+
+
+/***/ }),
+
+/***/ "./resources/js/components/baseComponents/PhonePrice.vue":
+/*!***************************************************************!*\
+  !*** ./resources/js/components/baseComponents/PhonePrice.vue ***!
+  \***************************************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var _PhonePrice_vue_vue_type_template_id_a91814b0___WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./PhonePrice.vue?vue&type=template&id=a91814b0& */ "./resources/js/components/baseComponents/PhonePrice.vue?vue&type=template&id=a91814b0&");
+/* harmony import */ var _PhonePrice_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./PhonePrice.vue?vue&type=script&lang=js& */ "./resources/js/components/baseComponents/PhonePrice.vue?vue&type=script&lang=js&");
+/* empty/unused harmony star reexport *//* harmony import */ var _node_modules_vue_loader_lib_runtime_componentNormalizer_js__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../../../../node_modules/vue-loader/lib/runtime/componentNormalizer.js */ "./node_modules/vue-loader/lib/runtime/componentNormalizer.js");
+
+
+
+
+
+/* normalize component */
+
+var component = Object(_node_modules_vue_loader_lib_runtime_componentNormalizer_js__WEBPACK_IMPORTED_MODULE_2__["default"])(
+  _PhonePrice_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_1__["default"],
+  _PhonePrice_vue_vue_type_template_id_a91814b0___WEBPACK_IMPORTED_MODULE_0__["render"],
+  _PhonePrice_vue_vue_type_template_id_a91814b0___WEBPACK_IMPORTED_MODULE_0__["staticRenderFns"],
+  false,
+  null,
+  null,
+  null
+  
+)
+
+/* hot reload */
+if (false) { var api; }
+component.options.__file = "resources/js/components/baseComponents/PhonePrice.vue"
+/* harmony default export */ __webpack_exports__["default"] = (component.exports);
+
+/***/ }),
+
+/***/ "./resources/js/components/baseComponents/PhonePrice.vue?vue&type=script&lang=js&":
+/*!****************************************************************************************!*\
+  !*** ./resources/js/components/baseComponents/PhonePrice.vue?vue&type=script&lang=js& ***!
+  \****************************************************************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var _node_modules_babel_loader_lib_index_js_ref_4_0_node_modules_vue_loader_lib_index_js_vue_loader_options_PhonePrice_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! -!../../../../node_modules/babel-loader/lib??ref--4-0!../../../../node_modules/vue-loader/lib??vue-loader-options!./PhonePrice.vue?vue&type=script&lang=js& */ "./node_modules/babel-loader/lib/index.js?!./node_modules/vue-loader/lib/index.js?!./resources/js/components/baseComponents/PhonePrice.vue?vue&type=script&lang=js&");
+/* empty/unused harmony star reexport */ /* harmony default export */ __webpack_exports__["default"] = (_node_modules_babel_loader_lib_index_js_ref_4_0_node_modules_vue_loader_lib_index_js_vue_loader_options_PhonePrice_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_0__["default"]); 
+
+/***/ }),
+
+/***/ "./resources/js/components/baseComponents/PhonePrice.vue?vue&type=template&id=a91814b0&":
+/*!**********************************************************************************************!*\
+  !*** ./resources/js/components/baseComponents/PhonePrice.vue?vue&type=template&id=a91814b0& ***!
+  \**********************************************************************************************/
+/*! exports provided: render, staticRenderFns */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var _node_modules_vue_loader_lib_loaders_templateLoader_js_vue_loader_options_node_modules_vue_loader_lib_index_js_vue_loader_options_PhonePrice_vue_vue_type_template_id_a91814b0___WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! -!../../../../node_modules/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!../../../../node_modules/vue-loader/lib??vue-loader-options!./PhonePrice.vue?vue&type=template&id=a91814b0& */ "./node_modules/vue-loader/lib/loaders/templateLoader.js?!./node_modules/vue-loader/lib/index.js?!./resources/js/components/baseComponents/PhonePrice.vue?vue&type=template&id=a91814b0&");
+/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "render", function() { return _node_modules_vue_loader_lib_loaders_templateLoader_js_vue_loader_options_node_modules_vue_loader_lib_index_js_vue_loader_options_PhonePrice_vue_vue_type_template_id_a91814b0___WEBPACK_IMPORTED_MODULE_0__["render"]; });
+
+/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "staticRenderFns", function() { return _node_modules_vue_loader_lib_loaders_templateLoader_js_vue_loader_options_node_modules_vue_loader_lib_index_js_vue_loader_options_PhonePrice_vue_vue_type_template_id_a91814b0___WEBPACK_IMPORTED_MODULE_0__["staticRenderFns"]; });
 
 
 

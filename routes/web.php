@@ -15,6 +15,7 @@ Route::get('/test', function() {
     return view('pages.test.index');
 });
 Route::post('/api', 'ProductsController@index');
+Route::post('/api/product', 'ProductsController@product');
 
 Route::prefix('{locale}')->group(function() {
     Route::get('/', 'PagesController@home')->name('home');

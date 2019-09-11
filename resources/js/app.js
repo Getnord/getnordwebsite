@@ -47,7 +47,8 @@ import shoppingCartIcon from "./components/shoppingCart/ShoppingCartIcon.vue";
 import checkoutPage from "./components/shoppingCart/Checkout.vue";
 import baseCardMessage from "./components/shoppingCart/BaseCardMessage.vue";
 import http_build_query from "locutus/php/url/http_build_query";
-import {accessoriesData} from './components/accessories/accessoriesData.js'
+import {accessoriesData} from './components/accessories/accessoriesData.js';
+import price from './components/baseComponents/PhonePrice';
 
 import accessoriesSection from "./components/accessories/accessoriesSection.vue";
 // the following is used to be able to use laravel lang resources in JS
@@ -64,7 +65,8 @@ const app = new Vue({
         shoppingCartIcon,
         checkoutPage,
         baseCardMessage,
-        accessoriesSection
+        accessoriesSection,
+        price
     },
 
     data: {
@@ -149,7 +151,8 @@ const app = new Vue({
                     stock: 100
                 }
             ],
-            openCartData: []
+            openCartData: [],
+            phonePrice: ''
         },
         isOptionsPopupOpen: false,
         isShoppingCartOpen: false,
@@ -200,6 +203,8 @@ const app = new Vue({
             .catch(function (error) {
                 console.log(error);
             });
+
+
     },
     methods: {
         buybtnclicked(product_id, productHasOptions) {
@@ -392,4 +397,4 @@ const app = new Vue({
 });
 
 
-console.log(document.domain)
+

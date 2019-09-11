@@ -13,11 +13,15 @@
                         <li>{{ __('onyx.productScreen') }}</li>
                         <li>{{ __('onyx.productBattery') }}</li>
                         <li>{{ __('onyx.productGlass') }}</li>
-                        <li>{{ __('onyx.productPrice') }} <strong>{{ __('onyx.productPriceValue') }}</strong></li>
+                        <li>{{ __('onyx.productPrice') }}{{-- <strong>{{ __('onyx.productPriceValue') }}</strong>--}}
+                       <price product-id="67"></price>
+                        </li>
                         </ul>
                     </div>
                     <div class="section_form">
-                        <a href="#product_section2" class="button button_yellow button--full-width">{{ __('onyx.addToCart') }}</a>
+                        <buy-btn product-id="68" @buy-btn-clicked="buybtnclicked" :product-has-options="false" class="button button_yellow button--full-width">
+                            {{ __('onyx.addToCart') }}
+                        </buy-btn>
                         <p class="product_section--onyx_or-text">{{ __('onyx.or') }}</p>
                     </div>
                 </div>
@@ -38,3 +42,9 @@
         </div>
     </div>
 </section>
+<script>
+    import Price from "../../../js/components/baseComponents/PhonePrice";
+    export default {
+        components: {Price}
+    }
+</script>

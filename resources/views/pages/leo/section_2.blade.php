@@ -14,7 +14,9 @@
                             <li>{{ __('leo.productProcessor') }}</li>
                             <li>{{ __('leo.productOs') }}</li>
                             <li>{{ __('leo.productBattery') }}</li>
-                            <li>{{ __('leo.productPrice') }} <strong>{{ __('leo.productPriceValue') }}</strong></li>
+                            <li>{{ __('leo.productPrice') }} {{--<strong>{{ __('leo.productPriceValue') }}</strong>--}}
+                            <price product-id="68"></price>
+                            </li>
                         </ul>
                     </div>
                     <div class="section_form">
@@ -42,3 +44,9 @@
         </div>
     </div>
 </section>
+<script>
+    import Price from "../../../js/components/baseComponents/PhonePrice";
+    export default {
+        components: {Price}
+    }
+</script>

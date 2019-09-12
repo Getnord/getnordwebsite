@@ -42,9 +42,3 @@
         </div>
     </div>
 </section>
-<script>
-    import Price from "../../../js/components/baseComponents/PhonePrice";
-    export default {
-        components: {Price}
-    }
-</script>

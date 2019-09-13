@@ -21,8 +21,8 @@ OUTSTANDING.
     "or" => "OR",
     "marketPlaces" => "BUY ON POPULAR MARKETPLACES",
 
-    "leoAmazonLink" => "https://www.amazon.co.uk/dp/B07JJBQP4Q",
-    "leoEbayLink" => "https://www.ebay.co.uk/sch/i.html?_from=R40&_trksid=p2380057.m570.l1311.R2.TR2.TRC0.A0.H0.Xgetnord+onyx.TRS0&_nkw=getnord+onyx&_sacat=0",
+    "leoAmazonLink" => "https://www.amazon.co.uk/dp/B07WVCCGBN",
+    "leoEbayLink" => "https://www.amazon.co.uk/dp/B07WVCCGBN",
     'leoWalmartLink' => '',
     'leoSearsLink' => '',
     'leoJetLink' => '',

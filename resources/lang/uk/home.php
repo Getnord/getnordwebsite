@@ -67,8 +67,8 @@ return [
     'lynxPrice' => '$299',
 
     // store links
-    'amazonLink' => 'https://www.amazon.com/gp/product/B07MMTFHBX',
-    'ebayLink' => 'https://www.ebay.com/sch/i.html?_from=R40&_trksid=m570.l1313&_nkw=getnord+lynx&_sacat=0&LH_TitleDesc=0&_osacat=0&_odkw=getnord',
+    'amazonLink' => 'https://www.amazon.co.uk/dp/B07MMTFHBX',
+    'ebayLink' => 'https://www.ebay.co.uk/sch/i.html?_from=R40&_trksid=m570.l1313&_nkw=getnord+lynx&_sacat=0',
 
     // Common
     'pageTitle' => 'Lynx Getnord',

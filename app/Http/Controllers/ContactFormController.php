@@ -41,7 +41,7 @@ class ContactFormController extends Controller
             return response()->json(['errors' => $validator->errors()->getMessageBag()]);
         } else {
 
-            Mail::to('admin@getnord.com')
+            Mail::to('support3@getnord.com')
                 ->send(new ContactRequest($request));
             if (!Mail::failures()) {
                 // we add the user to mailchimp

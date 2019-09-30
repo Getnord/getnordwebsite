@@ -11,6 +11,7 @@ return [
     "productSoftware" => "Android 8.1 Oreo",
     "productPrice" => "Preis",
     "productPriceValue" => "299 EURO",
+    "addToCart" => "IN DEN EINKAUFSWAGEN",
     "or" => "ODER",
     "marketPlaces" => "BEI BEKANNTEN HÄNDLERN KAUFEN",
 

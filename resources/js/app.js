@@ -37,6 +37,7 @@ $(document).ready(function () {
     contactForm();
     videosControllers();
 });
+document.domain = 'getnord.com';
 // We use another vue instance to pass data between components and not
 // between the child and the parent component
 // shopping cart

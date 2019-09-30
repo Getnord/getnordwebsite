@@ -20,6 +20,7 @@ class ContactFormController extends Controller
 
     public function __invoke(Request $request)
     {
+        return response($request);
         /**
          * laravel uses the current local to determine what
          * error message to send.
@@ -36,6 +37,7 @@ class ContactFormController extends Controller
             'email' => 'required|email',
             'subject' => 'required',
             'message' => 'required',
+
         ]);
         if ($validator->fails()) {
             return response()->json(['errors' => $validator->errors()->getMessageBag()]);

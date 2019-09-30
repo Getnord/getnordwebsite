@@ -19,7 +19,7 @@
                         </ul>
                     </div>
                     <div class="section_form">
-                        <buy-btn product-id="68" @buy-btn-clicked="buybtnclicked" :product-has-options="false" class="button button_yellow button--full-width">
+                        <buy-btn product-id="67" @buy-btn-clicked="buybtnclicked" :product-has-options="false" class="button button_yellow button--full-width">
                             {{ __('onyx.addToCart') }}
                         </buy-btn>
                         <p class="product_section--onyx_or-text">{{ __('onyx.or') }}</p>

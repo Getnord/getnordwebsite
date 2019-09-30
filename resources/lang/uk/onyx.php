@@ -40,7 +40,8 @@ return [
     "scratchProofParagraph" => "If you somehow manage to scratch Asahi glass (which is next to impossible, so congratulations are in order if you do), you can change the protector by simply removing it and applying a new one. Inside the original Getnord Screen Protector Kit, you will find all the necessary tools and instructions to switch out your Asahi tempered glass. Before you know it, your screen will be like new again.",
 
     // section 8 - accessories
-    'accessoriesTitle' => 'Accessories'
+    'accessoriesTitle' => 'Accessories',
+    "comparisonTitleSmall" => "Tech-specs and comparison",
 
 
 ];

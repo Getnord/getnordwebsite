@@ -33,9 +33,11 @@
         left: 0
         right: 0
         bottom: 0
-        z-index: 100
         background-color: #fff
         z-index: 10000
+        overflow: auto
+        -webkit-overflow-scrolling: touch
+
 
         &__hide
             font-size: 26px

@@ -180,11 +180,15 @@
                                 <div class="label_wrapper">
                                     <label class="form_label" for="message">{{ __('contact.form_message')}}*</label>
                                 </div>
-                                <textarea class="textarea" name="message" placeholder="{{ __('contact.form_message_placeholder')}}"></textarea></div>
+                                <textarea class="textarea" name="message"
+                                          placeholder="{{ __('contact.form_message_placeholder')}}"></textarea></div>
                         </div>
                         <div class="form_row clearfix">
+                            <div class="g-recaptcha" data-sitekey="{{env('RECAPTCHA_KEY')}}"></div>
                             <div class="form_col col_1 bbox">
-                                <button type="button" id="send_button" class="button">{{ __('contact.form_button_text')}}</button>
+                                <button type="button" id="send_button" class="button g-recaptcha"
+                                        data-sitekey="6LfeHx4UAAAAAAKUx5rO5nfKMtc9-syDTdFLftnm"
+                                        data-callback="onSubmit">{{ __('contact.form_button_text')}}</button>
                             </div>
                         </div>
                     </div>

@@ -20,7 +20,6 @@ class ContactFormController extends Controller
 
     public function __invoke(Request $request)
     {
-        return response($request);
         /**
          * laravel uses the current local to determine what
          * error message to send.
@@ -37,7 +36,7 @@ class ContactFormController extends Controller
             'email' => 'required|email',
             'subject' => 'required',
             'message' => 'required',
-
+            'recaptcha' => 'required'
         ]);
         if ($validator->fails()) {
             return response()->json(['errors' => $validator->errors()->getMessageBag()]);
@@ -47,7 +46,7 @@ class ContactFormController extends Controller
                 ->send(new ContactRequest($request));
             if (!Mail::failures()) {
                 // we add the user to mailchimp
-                Newsletter::subscribe($request->input('email'), ['FNAME'=> $request->input('name'), 'lastName'=>''], 'list_' . app()->getLocale());
+                Newsletter::subscribe($request->input('email'), ['FNAME' => $request->input('name'), 'lastName' => ''], 'list_' . app()->getLocale());
                 return response()->json(['success' => Lang::get('contact.email_sent')]);
             }
         };

@@ -144,6 +144,7 @@
                     @if (session('error'))
                         <div class="alert alert-danger w-100">
                             {{ session('error') }}
+
                         </div>
                     @endif
                     <div class="form_data">
@@ -186,8 +187,7 @@
                         <div class="form_row clearfix">
                             <div class="g-recaptcha" data-sitekey="{{env('RECAPTCHA_KEY')}}"></div>
                             <div class="form_col col_1 bbox">
-                                <button type="button" id="send_button" class="button g-recaptcha"
-                                        data-sitekey="6LfeHx4UAAAAAAKUx5rO5nfKMtc9-syDTdFLftnm"
+                                <button type="button" id="send_button" class="button "
                                         data-callback="onSubmit">{{ __('contact.form_button_text')}}</button>
                             </div>
                         </div>

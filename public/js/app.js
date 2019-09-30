@@ -60960,10 +60960,16 @@ function form_response(data, form_id) {
 
 function formSubmit() {
   $('#send_button').click(function () {
+    var forms = $('#contact_form').serializeArray();
+    forms.push({
+      name: 'recaptcha',
+      value: $('#g-recaptcha-response').val()
+    });
+    var values = jQuery.param(forms);
     $.ajax({
       type: 'POST',
       url: '/contact',
-      data: $('#contact_form').serialize(),
+      data: values,
       async: true,
       success: function success(data) {
         form_response(data, 'contact_form');

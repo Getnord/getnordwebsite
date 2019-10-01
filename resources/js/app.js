@@ -368,9 +368,17 @@ const app = new Vue({
                     lang: this.lang,
                     currency: this.currency
                 });
+                let currency = '';
+                if (this.lang === 'us'){
+                    currency = 'USD'
+                }else if(this.lang === 'de'){
+                    currency = 'EUR'
+                }else{
+                    currency = 'GBP'
+                }
                 this.isCheckoutPageOpen = true;
                 //this.orderUrl = `https://store.getnord.com/index.php?route=checkout/checkout`;
-                this.orderUrl = `https://store.getnord.com/index.php?route=checkout/cart/addToCart&${cartUrl}`;
+                this.orderUrl = `https://store.getnord.com/index.php?route=checkout/cart/addToCart&${cartUrl}${currency}`;
                 // this.orderUrl = `http://localhost/opencart/index.php?route=checkout/cart/addToCart&${cartUrl}`;
             }
         },

@@ -2903,6 +2903,21 @@ items_section .product_info button:hover {
   border-radius: 5px;
 }
 
+.section_contact #contact_form {
+  max-width: -webkit-max-content;
+  max-width: -moz-max-content;
+  max-width: max-content;
+}
+
+.section_contact #contact_form .g-recaptcha {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: end;
+      -ms-flex-pack: end;
+          justify-content: flex-end;
+}
+
 .section_contact #contact_form .label_wrapper {
   width: 200px;
   display: inline-block;

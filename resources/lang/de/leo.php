@@ -18,8 +18,8 @@ return [
     "productBattery" => "5000mAh Akku",
     "productPrice" => "Preis",
     "productPriceValue" => "€369",
-    "addToCart" => "ADD TO CART",
-    "or" => "OR",
+    "addToCart" => "IN DEN EINKAUFSWAGEN",
+    "or" => "ODER",
     "marketPlaces" => "BUY ON POPULAR MARKETPLACES",
 
     "leoAmazonLink" => "http://www.amazon.de/dp/B07WVCCGBN",

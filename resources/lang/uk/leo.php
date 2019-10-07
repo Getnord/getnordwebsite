@@ -82,7 +82,7 @@ OUTSTANDING.
 
     // section 10
 
-    'fingerprintTitle' => 'EXTRA<br>SECURITY.<br>ADDED<br>CONVENIENCE.',
+    'fingerprintTitle' => 'EXTRA <span class="word_breake"></span> SECURITY.<span class="line_breake word_breake"></span> ADDED <span class="word_breake"></span> CONVENIENCE.',
     'fingerprintParagraph' => 'Touch the sensor. Unlock your phone - that\'s convenient! Your fingerprint can’t be leaked “over the shoulder" - feel secure Forgetting a PIN is annoying - you won\'t forget your fingerprint.',
     'fingerprintText' => 'FINGERPRINT SENSOR',
 
@@ -94,6 +94,7 @@ OUTSTANDING.
     'varietyGeomagnetic' => 'Geomagnetic<br>Sensor',
     'varietyGyroscope' => 'Gyroscope',
     'varietyGps' => 'GPS sensor',
+    'moreInfo' => 'MORE INFO'
 
 ];
 

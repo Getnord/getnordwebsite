@@ -34,6 +34,11 @@
         img
             margin: 0
             height: 50vh
+            @include breakpoint(s)
+                height: auto
+
+
+
 
 .lightbox_section
     display: flex
@@ -41,6 +46,8 @@
     @include breakpoint(s)
         height: 200px
         flex-wrap: wrap
+    @include breakpoint(xs)
+        height: calc(100vw / 3)
     img
         position: absolute
         top: 0

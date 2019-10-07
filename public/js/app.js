@@ -1786,6 +1786,10 @@ __webpack_require__.r(__webpack_exports__);
     name: {
       type: String,
       required: true
+    },
+    moreInfo: {
+      type: String,
+      required: true
     }
   },
   methods: {
@@ -1845,6 +1849,10 @@ __webpack_require__.r(__webpack_exports__);
   name: "details-window",
   props: {
     activeAccessorie: {
+      type: Object,
+      required: true
+    },
+    addToCart: {
       type: Object,
       required: true
     }
@@ -1992,6 +2000,7 @@ __webpack_require__.r(__webpack_exports__);
 //
 //
 //
+//
 
 
 
@@ -2023,6 +2032,14 @@ __webpack_require__.r(__webpack_exports__);
     },
     openCartData: {
       type: Array,
+      required: true
+    },
+    moreInfo: {
+      type: String,
+      required: true
+    },
+    addToCart: {
+      type: String,
       required: true
     }
   },
@@ -46763,7 +46780,7 @@ var render = function() {
       _c(
         "button",
         { staticClass: "card__btn", on: { click: _vm.openDetailsWindow } },
-        [_vm._v("More info")]
+        [_vm._v(_vm._s(_vm.moreInfo))]
       )
     ])
   ])
@@ -46859,7 +46876,7 @@ var render = function() {
             staticClass: "modal__cols__right__btn",
             on: { click: _vm.addToCart }
           },
-          [_vm._v("Add To Cart")]
+          [_vm._v("{{}}")]
         )
       ])
     ])
@@ -46947,7 +46964,10 @@ var render = function() {
             _vm._v(" "),
             _vm.isDetailsWindowOpen
               ? _c("details-window", {
-                  attrs: { "active-accessorie": _vm.activeAccessorie }
+                  attrs: {
+                    "active-accessorie": _vm.activeAccessorie,
+                    "add-to-cart": _vm.addToCart
+                  }
                 })
               : _vm._e()
           ],
@@ -46966,7 +46986,8 @@ var render = function() {
                         attrs: {
                           id: accessorie.id,
                           "main-img": accessorie.mainImg,
-                          name: accessorie.name
+                          name: accessorie.name,
+                          "more-info": _vm.moreInfo
                         },
                         on: { "open-details-window": _vm.openDetailsWindow }
                       })
@@ -46976,7 +46997,10 @@ var render = function() {
                   _vm._v(" "),
                   _vm.isDetailsWindowOpen
                     ? _c("details-window", {
-                        attrs: { "active-accessorie": _vm.activeAccessorie }
+                        attrs: {
+                          "active-accessorie": _vm.activeAccessorie,
+                          "add-to-cart": _vm.addToCart
+                        }
                       })
                     : _vm._e(),
                   _vm._v(" "),
@@ -47050,7 +47074,10 @@ var render = function() {
                   _vm._v(" "),
                   _vm.isDetailsWindowOpen
                     ? _c("details-window", {
-                        attrs: { "active-accessorie": _vm.activeAccessorie }
+                        attrs: {
+                          "active-accessorie": _vm.activeAccessorie,
+                          "add-to-cart": _vm.addToCart
+                        }
                       })
                     : _vm._e()
                 ],
@@ -60344,21 +60371,25 @@ var app = new Vue({
             quantity: element.quantity
           });
         });
-        var cartUrl = locutus_php_url_http_build_query__WEBPACK_IMPORTED_MODULE_11___default()({
-          products: cartSlim,
-          lang: this.lang,
-          currency: this.currency
-        });
         var currency = '';
+        var lang = '';
 
         if (this.lang === 'us') {
           currency = 'USD';
+          lang = 'en-gb';
         } else if (this.lang === 'de') {
           currency = 'EUR';
+          lang = this.lang + '-' + this.lang;
         } else {
           currency = 'GBP';
+          lang = lang = 'en-gb';
         }
 
+        var cartUrl = locutus_php_url_http_build_query__WEBPACK_IMPORTED_MODULE_11___default()({
+          products: cartSlim,
+          lang: lang,
+          currency: this.currency
+        });
         this.isCheckoutPageOpen = true; //this.orderUrl = `https://store.getnord.com/index.php?route=checkout/checkout`;
 
         this.orderUrl = "https://store.getnord.com/index.php?route=checkout/cart/addToCart&".concat(cartUrl).concat(currency); // this.orderUrl = `http://localhost/opencart/index.php?route=checkout/cart/addToCart&${cartUrl}`;

@@ -85,7 +85,7 @@ return [
 
     // section 10
 
-    'fingerprintTitle' => 'ZUSÄTZLICHE<br>SICHERHEIT.<br>UND<br>BEQUEMLICHKEIT.',
+    'fingerprintTitle' => 'ZUSÄTZLICHE<span class="word_breake"></span>SICHERHEIT.<span class="word_breake"></span>UND<span class="word_breake"></span> BEQUEMLICHKEIT.',
     'fingerprintParagraph' => 'Ihr Handy entsperrt sich ganz bequem durch die Berührung des Sensors. Ihr Fingerabdruck kann nicht kopiert werden, und niemand kann durch einen Blick über Ihre Schulter Ihr Passwort herausfinden. Fühlen Sie sich sicher. Den Passcode zu vergessen ist lästig - Ihren Fingerabdruck können Sie nicht vergessen. ',
     'fingerprintText' => 'FINGERABDRUCK SENSOR',
 
@@ -97,6 +97,8 @@ return [
     'varietyGeomagnetic' => 'Geomagnetischer <br>Sensor',
     'varietyGyroscope' => 'Gyroskop',
     'varietyGps' => 'GPS Sensor',
+
+    'moreInfo' => 'MEHR ERFAHREN'
 
 ];
 

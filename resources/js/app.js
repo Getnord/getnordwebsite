@@ -363,19 +363,24 @@ const app = new Vue({
                         quantity: element.quantity
                     });
                 });
-                const cartUrl = http_build_query({
-                    products: cartSlim,
-                    lang: this.lang,
-                    currency: this.currency
-                });
                 let currency = '';
+                let lang = '';
                 if (this.lang === 'us'){
                     currency = 'USD'
+                    lang = 'en-gb'
                 }else if(this.lang === 'de'){
                     currency = 'EUR'
+                    lang = this.lang + '-' + this.lang
                 }else{
                     currency = 'GBP'
+                    lang = lang = 'en-gb'
                 }
+                const cartUrl = http_build_query({
+                    products: cartSlim,
+                    lang: lang,
+                    currency: this.currency
+                });
+
                 this.isCheckoutPageOpen = true;
                 //this.orderUrl = `https://store.getnord.com/index.php?route=checkout/checkout`;
                 this.orderUrl = `https://store.getnord.com/index.php?route=checkout/cart/addToCart&${cartUrl}${currency}`;

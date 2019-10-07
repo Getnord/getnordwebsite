@@ -42,6 +42,6 @@ return [
     // section 8 - accessories
     'accessoriesTitle' => 'Accessories',
     "comparisonTitleSmall" => "Tech-specs and comparison",
-
+    'moreInfo' => 'MORE INFO'
 
 ];

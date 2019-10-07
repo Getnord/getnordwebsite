@@ -37,6 +37,11 @@
                     <a href="{{ __('onyx.onyxEbayLink') }}" class="store_cta store_cta--ebay" target="_blank">
                         <img src="{{ url('/') }}/img/ebay.png" alt="">
                     </a>
+                    @if(app()->getLocale() === 'de')
+                        <a href="{{ __('leo.leoConradLink') }}" class="store_cta store_cta--ebay" target="_blank">
+                            <img src="{{ url('/') }}/img/conrad.png" alt="">
+                        </a>
+                    @endif
                 </div>
             </div>
         </div>

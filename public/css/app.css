@@ -2546,7 +2546,7 @@ items_section .product_info button:hover {
 		line-height: 32px;
 	}
 	.mount_section .section_text {
-		margin: 35px 0 15px 0;
+		margin: 10px 0 5px 0;
 	}
 	.ram_section {
 		padding: 30px 0;
@@ -3921,7 +3921,7 @@ body h1 {
 
 @media (max-width: 750px) {
   .intro_section--leo {
-    min-height: 70vh;
+    min-height: auto;
   }
 }
 
@@ -4020,9 +4020,8 @@ body h1 {
 
 @media (max-width: 750px) {
   .product_section--leo_stores .product_section--onyx_stores_list .store_cta {
-    max-width: none;
+    max-width: 120px;
     width: 30%;
-    margin: 20px auto;
   }
 }
 
@@ -4085,13 +4084,13 @@ body h1 {
 
 @media (max-width: 750px) {
   .getnord_leo--technology .technology_bg {
-    height: 80vh;
+    height: 350px;
   }
 }
 
 @media (max-width: 480px) {
   .getnord_leo--technology .technology_bg {
-    height: 50vh;
+    height: 160px;
   }
 }
 
@@ -4395,6 +4394,12 @@ body h1 {
   height: 50vh;
 }
 
+@media (max-width: 750px) {
+  .camera .camera_image img {
+    height: auto;
+  }
+}
+
 .lightbox_section {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -4407,6 +4412,12 @@ body h1 {
     height: 200px;
     -ms-flex-wrap: wrap;
         flex-wrap: wrap;
+  }
+}
+
+@media (max-width: 480px) {
+  .lightbox_section {
+    height: calc(100vw / 3);
   }
 }
 
@@ -4669,6 +4680,26 @@ body h1 {
 
 .fingerprint_section .section_heading {
   margin: 0 0 5px;
+}
+
+@media (max-width: 750px) {
+  .fingerprint_section .section_heading {
+    line-height: 40px;
+  }
+}
+
+.fingerprint_section .word_breake {
+  display: block;
+}
+
+@media (max-width: 750px) {
+  .fingerprint_section .word_breake {
+    display: initial;
+  }
+}
+
+.fingerprint_section .line_breake {
+  display: block;
 }
 
 @media (max-width: 750px) {

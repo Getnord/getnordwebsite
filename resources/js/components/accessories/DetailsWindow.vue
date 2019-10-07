@@ -28,7 +28,7 @@
           v-html="activeAccessorie.description"
         ></div>
         <h2 class="modal__cols__right__price">{{ activeAccessorie.price }}</h2>
-        <button class="modal__cols__right__btn" @click="addToCart">Add To Cart</button>
+        <button class="modal__cols__right__btn" @click="addToCart">{{}}</button>
       </div>
     </div>
   </div>
@@ -41,7 +41,11 @@ export default {
     activeAccessorie: {
       type: Object,
       required: true
-    }
+    },
+      addToCart: {
+          type: Object,
+          required: true
+      }
   },
 
   watch: {

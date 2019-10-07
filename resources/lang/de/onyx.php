@@ -40,5 +40,7 @@ return [
     // section 8 - accessories
     'accessoriesTitle' => 'Accessories',
     "comparisonTitleSmall" => "Technische Daten und Vergleich",
-    "comparisonTitleBig" => "Technische Daten und Vergleich"
+    "comparisonTitleBig" => "Technische Daten und Vergleich",
+    'moreInfo' => 'MEHR ERFAHREN'
+
 ];

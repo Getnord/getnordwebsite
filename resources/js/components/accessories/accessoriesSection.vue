@@ -11,6 +11,7 @@
                         :id="accessorie.id"
                         :name="accessorie.name"
                         :main-img="accessorie.mainImg"
+                        :more-info="moreInfo"
                         @open-details-window="openDetailsWindow">
                     </base-accessorie-card>
                 </slide>
@@ -36,6 +37,7 @@
                         v-for="(accessorie, index) in splitedArray[1]"
                         :id="accessorie.id"
                         :main-img="accessorie.mainImg"
+                        :more-info="moreInfo"
                         :key="index"
                         :name="accessorie.name"
                         @open-details-window="openDetailsWindow"></base-accessorie-card>
@@ -46,6 +48,7 @@
                         v-for="(accessorie, index) in splitedArray[2]"
                         :id="accessorie.id"
                         :main-img="accessorie.mainImg"
+                        :more-info="moreInfo"
                         :key="index"
                         :name="accessorie.name"
                         @open-details-window="openDetailsWindow"></base-accessorie-card>
@@ -58,6 +61,7 @@
                         v-for="(accessorie, index) in validAccessories"
                         :id="accessorie.id"
                         :main-img="accessorie.mainImg"
+                        :more-info="moreInfo"
                         :key="index"
                         @open-details-window="openDetailsWindow"
                         :name="accessorie.name"

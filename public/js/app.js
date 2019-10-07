@@ -2001,6 +2001,10 @@ __webpack_require__.r(__webpack_exports__);
 //
 //
 //
+//
+//
+//
+//
 
 
 
@@ -46951,7 +46955,8 @@ var render = function() {
                       attrs: {
                         id: accessorie.id,
                         name: accessorie.name,
-                        "main-img": accessorie.mainImg
+                        "main-img": accessorie.mainImg,
+                        "more-info": _vm.moreInfo
                       },
                       on: { "open-details-window": _vm.openDetailsWindow }
                     })
@@ -47017,6 +47022,7 @@ var render = function() {
                         attrs: {
                           id: accessorie.id,
                           "main-img": accessorie.mainImg,
+                          "more-info": _vm.moreInfo,
                           name: accessorie.name
                         },
                         on: { "open-details-window": _vm.openDetailsWindow }
@@ -47042,6 +47048,7 @@ var render = function() {
                             attrs: {
                               id: accessorie.id,
                               "main-img": accessorie.mainImg,
+                              "more-info": _vm.moreInfo,
                               name: accessorie.name
                             },
                             on: { "open-details-window": _vm.openDetailsWindow }
@@ -47064,6 +47071,7 @@ var render = function() {
                         attrs: {
                           id: accessorie.id,
                           "main-img": accessorie.mainImg,
+                          "more-info": _vm.moreInfo,
                           name: accessorie.name
                         },
                         on: { "open-details-window": _vm.openDetailsWindow }

@@ -3,7 +3,7 @@
     <div class="section_body clearfix">
         <accessories-section :accessories-to-load="[56, 66, 64, 65, 60, 61, 63, 62]"
                              :open-cart-data="info.openCartData"
-                             :more-info="'{{__('leo.moreInfo')}}'"
-                             :add-to-cart="'{{__('leo.addToCart')}}'"></accessories-section>
+                             more-info="{{__('leo.moreInfo')}}"
+                             add-to-cart="{{__('leo.addToCart')}}"></accessories-section>
     </div>
 </section>

@@ -42,7 +42,7 @@ return [
 
     // section 8 - accessories
     'accessoriesTitle' => 'ACCESSOIRES',
-    "comparisonTitleSmall" => "Tech-specs and comparison",
+    "comparisonTitleSmall" => "Spécifications Techniques et Comparaison",
 
     'moreInfo' => 'PLUS D\'INFOS'
 

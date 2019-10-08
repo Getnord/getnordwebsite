@@ -39,7 +39,15 @@
                     </a>
                     @if(app()->getLocale() === 'de')
                         <a href="{{ __('leo.leoConradLink') }}" class="store_cta store_cta--ebay" target="_blank">
-                            <img src="{{ url('/') }}/img/conrad.png" alt="">
+                            <img src="{{ url('/') }}/img/conrad_logo.png" alt="">
+                        </a>
+                    @endif
+                    @if(app()->getLocale() === 'fr')
+                        <a href="{{ __('home.bolLink') }}" class="store_cta store_cta--ebay logo_img" target="_blank">
+                            <img src="{{ url('/') }}/img/bol_logo.png" alt="" >
+                        </a>
+                        <a href="{{ __('home.back2BuzzLink') }}" class="store_cta store_cta--ebay logo_img" target="_blank">
+                            <img src="{{ url('/') }}/img/back2buzz_logo.png" >
                         </a>
                     @endif
                 </div>

@@ -16,7 +16,7 @@ return [
     'text_unhappy' => 'Notre équipe de support professionnelle et amicale travaille dur pour remettre un sourire sur votre visage. Laissez-nous savoir ce qui tracasse Voici comment nous joindre.',
     'click_here' => '-<a href="#contact_form">-Cliquez ici</a>,pour nous envoyer un message et nous seront en contact avec vous dès que possible.',
 
-    'rmaLinkText' => 'Si votre téléphone fonctionne mal, inscrivez-vous pour une réparation en utilisant ce  <a href="http://rma.getnord.com/"
+    'rmaLinkText' => 'Si votre téléphone fonctionne mal, inscrivez-vous pour une réparation en utilisant ce  <a href="http://rma.getnord.com/?lang=fr"
               target="_blank">formulaire en ligne</a>
               . L\'équipe traitera votre demande et enverra quelqu\'un pour récupérer votre téléphone.
               Pour des répérations durant la garantie, nous vous rendrons votre téléphone réparé gratuitement.

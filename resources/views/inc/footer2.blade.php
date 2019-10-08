@@ -2,7 +2,7 @@
     <div class="footer--gray">
         <div class="page_center">
             <div class="footer__instagram">
-                <h1>{{ __('footer.feed') }}: <a href="https://www.instagram.com/getnord/" class="footer__instagram__link">@GETNORD</a></h1>
+                <h1>{{--{{ __('footer.feed') }}: --}}<a href="https://www.instagram.com/getnord/" class="footer__instagram__link">@GETNORD</a></h1>
                 <div class="footer__feed">
                     <div class="footer__feed__elt">
                         <a href="https://www.youtube.com/watch?v=17l4iMLB0BY" target="_blank">

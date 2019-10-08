@@ -354,7 +354,7 @@ a.hover:hover {
 
 /* page */
 .page_center {
-	margin: 0px auto;
+	margin: 0 auto;
 	max-width: 1200px;
 }
 .page_content {
@@ -2843,6 +2843,9 @@ items_section .product_info button:hover {
 .ul1{
     letter-spacing: 1px;
 }
+.logo_img{
+    margin: 0 15px;
+}
 @charset "UTF-8";
 
 .section_contact {
@@ -3361,9 +3364,9 @@ body h1 {
 
 @media (max-width: 480px) {
   .mount_section .section_icons {
-    padding-bottom: 1em;
+    padding-bottom: 0;
     padding-top: 1em;
-    margin-bottom: 0px;
+    margin-bottom: 0;
   }
 }
 
@@ -4020,8 +4023,16 @@ body h1 {
 
 @media (max-width: 750px) {
   .product_section--leo_stores .product_section--onyx_stores_list .store_cta {
-    max-width: 120px;
+    max-width: 200px;
     width: 30%;
+  }
+}
+
+@media (max-width: 750px) {
+  .product_section--leo_stores .product_section--onyx_stores_list .store_cta {
+    margin: 5px !important;
+    max-width: 150px;
+    width: 45%;
   }
 }
 

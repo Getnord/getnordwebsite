@@ -16,7 +16,7 @@
                     </base-accessorie-card>
                 </slide>
             </carousel>
-            <details-window v-if="isDetailsWindowOpen" :active-accessorie="activeAccessorie" :add-to-cart="addToCart">
+            <details-window v-if="isDetailsWindowOpen" :active-accessorie="activeAccessorie" :add-to-cart-text="addToCart">
             </details-window>
         </div>
         <div v-else>
@@ -30,7 +30,7 @@
                         :more-info="moreInfo"
                         @open-details-window="openDetailsWindow"></base-accessorie-card>
                 </accessories-row>
-                <details-window v-if="isDetailsWindowOpen" :active-accessorie="activeAccessorie" :add-to-cart="addToCart" >
+                <details-window v-if="isDetailsWindowOpen" :active-accessorie="activeAccessorie" :add-to-cart-text="addToCart" >
                 </details-window>
                 <accessories-row :class="{'center-elts': isMoreThanOneRowsOfAccessories}">
                     <base-accessorie-card
@@ -68,7 +68,7 @@
                     >
                     </base-accessorie-card>
                 </accessories-row>
-                <details-window v-if="isDetailsWindowOpen" :active-accessorie="activeAccessorie" :add-to-cart="addToCart">
+                <details-window v-if="isDetailsWindowOpen" :active-accessorie="activeAccessorie" :add-to-cart-text="addToCart">
                 </details-window>
             </div>
         </div>

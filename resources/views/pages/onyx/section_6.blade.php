@@ -10,7 +10,7 @@
                         @if (strtolower($phone_name) != 'walrus' AND strtolower($phone_name) != 'onyx')
                             <div class="specs__col specs__col--42">
                                 <img src="{{ url('/') . '/img/' . strtolower($phone_name) .'/phone_'. strtolower($phone_name) . '.jpg'}}" alt="" class="specs__phone">
-                            </div>    
+                            </div>
                         @endif
                     @endforeach
                 </div>
@@ -32,7 +32,7 @@
             </div>
             <div class="specs--responsive" id="specs--responsive">
                 <h2 class="specs--responsive__title">
-                    {{ __('onyx.getnordPhonesComparison') }}
+                  {{--  {{ __('onyx.getnordPhonesComparison') }}--}}
                 </h2>
                 <div class="specs__dots"></div>
                 <div class="specs__slider">
@@ -79,7 +79,7 @@
                         @endforeach
                     </div>
                 @endforeach
-                    
+
 
                 {{-- add to cart rows --}}
                 <div class="row">
@@ -108,11 +108,11 @@
                             @endif
                         </div>
                     @endforeach
-                </div>   
+                </div>
             </div>
             <div class="specs--responsive" id="specs--responsive">
                 <h2 class="specs--responsive__title">
-                    {{ __('onyx.getnordPhonesComparison') }}
+                  {{--  {{ __('onyx.getnordPhonesComparison') }}--}}
                 </h2>
                 <div class="specs__dots"></div>
                 <div class="specs__slider">
@@ -156,7 +156,7 @@
                         </div>
                     @endforeach
                 </div>
-            </div> 
+            </div>
         @endif
     </div>
 </section>

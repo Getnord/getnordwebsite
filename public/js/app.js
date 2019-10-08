@@ -1852,8 +1852,8 @@ __webpack_require__.r(__webpack_exports__);
       type: Object,
       required: true
     },
-    addToCart: {
-      type: Object,
+    addToCartText: {
+      type: String,
       required: true
     }
   },
@@ -46880,7 +46880,7 @@ var render = function() {
             staticClass: "modal__cols__right__btn",
             on: { click: _vm.addToCart }
           },
-          [_vm._v("{{}}")]
+          [_vm._v(_vm._s(_vm.addToCartText))]
         )
       ])
     ])
@@ -46971,7 +46971,7 @@ var render = function() {
               ? _c("details-window", {
                   attrs: {
                     "active-accessorie": _vm.activeAccessorie,
-                    "add-to-cart": _vm.addToCart
+                    "add-to-cart-text": _vm.addToCart
                   }
                 })
               : _vm._e()
@@ -47004,7 +47004,7 @@ var render = function() {
                     ? _c("details-window", {
                         attrs: {
                           "active-accessorie": _vm.activeAccessorie,
-                          "add-to-cart": _vm.addToCart
+                          "add-to-cart-text": _vm.addToCart
                         }
                       })
                     : _vm._e(),
@@ -47084,7 +47084,7 @@ var render = function() {
                     ? _c("details-window", {
                         attrs: {
                           "active-accessorie": _vm.activeAccessorie,
-                          "add-to-cart": _vm.addToCart
+                          "add-to-cart-text": _vm.addToCart
                         }
                       })
                     : _vm._e()
@@ -61076,7 +61076,7 @@ function scrollReveal() {
   /**
    * Currently we only these animations to trigger on the home page
    * for that we can check if the element we are trying to animate exists in the first place
-   * $('#ram_section').length != 0 
+   * $('#ram_section').length != 0
    */
   if (true) {
     var sm_controller = new scrollmagic__WEBPACK_IMPORTED_MODULE_1___default.a.Controller();
@@ -61100,14 +61100,11 @@ function scrollReveal() {
       ease: gsap__WEBPACK_IMPORTED_MODULE_0__["Linear"].easeNone
     }).addTo(sm_controller);
   }
-
-  ;
 }
-
-;
 /**
  * Public methodes
  */
+
 
 function startAnimations() {
   sectionToSection();

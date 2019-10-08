@@ -94,6 +94,7 @@ OUTSTANDING.
     'varietyGeomagnetic' => 'Geomagnetic<br>Sensor',
     'varietyGyroscope' => 'Gyroscope',
     'varietyGps' => 'GPS sensor',
+    'moreInfo' => 'MORE INFO'
 
 ];
 

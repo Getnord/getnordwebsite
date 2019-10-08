@@ -69,6 +69,8 @@ return [
     // store links
     'amazonLink' => 'https://www.amazon.co.uk/dp/B07MMTFHBX',
     'ebayLink' => 'https://www.ebay.co.uk/sch/i.html?_from=R40&_trksid=m570.l1313&_nkw=getnord+lynx&_sacat=0',
+    'bolLink' => 'https://www.bol.com/nl/b/getnord/599536456/',
+    'back2BuzzLink' => 'https://www.back2buzz.be/product-category/smartphones/getnord/',
 
     // Common
     'pageTitle' => 'Lynx Getnord',

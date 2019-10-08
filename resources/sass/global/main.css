@@ -334,7 +334,7 @@ a.hover:hover {
 
 /* page */
 .page_center {
-	margin: 0px auto;
+	margin: 0 auto;
 	max-width: 1200px;
 }
 .page_content {
@@ -2580,4 +2580,7 @@ items_section .product_info button:hover {
 }
 .ul1{
     letter-spacing: 1px;
+}
+.logo_img{
+    margin: 0 15px;
 }

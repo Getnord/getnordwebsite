@@ -371,6 +371,9 @@ const app = new Vue({
                 }else if(this.lang === 'de'){
                     currency = 'EUR'
                     lang = this.lang + '-' + this.lang
+                }else if(this.lang === 'fr'){
+                    currency = 'EUR'
+                    lang = this.lang + '-' + this.lang
                 }else{
                     currency = 'GBP'
                     lang = lang = 'en-gb'

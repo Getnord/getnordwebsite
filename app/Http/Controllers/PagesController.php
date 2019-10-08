@@ -33,9 +33,11 @@ class PagesController extends Controller
                 elseif ($countryCode == 'us') {
                     app()->setLocale('us');
                 }
-                elseif ($countryCode == 'fr') {
+                /*elseif ($countryCode == 'fr') {
                     app()->setLocale('fr');
-                }
+                }elseif ($countryCode == 'nl') {
+                    app()->setLocale('nl');
+                }*/
                 else {
                     app()->setLocale('uk');
                 }

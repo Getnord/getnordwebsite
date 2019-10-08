@@ -2388,6 +2388,49 @@ __webpack_require__.r(__webpack_exports__);
 //
 //
 //
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
 /* harmony default export */ __webpack_exports__["default"] = ({
   props: {
     productsInCart: {
@@ -2428,6 +2471,13 @@ __webpack_require__.r(__webpack_exports__);
     },
     isGerman: function isGerman() {
       if (this.localeLang === 'de') {
+        return true;
+      } else {
+        return false;
+      }
+    },
+    isFrench: function isFrench() {
+      if (this.localeLang === 'fr') {
         return true;
       } else {
         return false;
@@ -47384,6 +47434,157 @@ var render = function() {
               _c("p", [_vm._v("German(Your cart is empty)")])
             ])
       ])
+    : _vm.isFrench
+    ? _c("div", { staticClass: "cart" }, [
+        _c("h2", [_vm._v("Panier")]),
+        _vm._v(" "),
+        _c("div", { staticClass: "cart__hide", on: { click: _vm.hideCart } }, [
+          _c("i", { staticClass: "fa fa-times" })
+        ]),
+        _vm._v(" "),
+        _vm.productsInCart.length !== 0
+          ? _c("div", { staticClass: "cart__table" }, [
+              _c("table", { staticClass: "table" }, [
+                _vm._m(1),
+                _vm._v(" "),
+                _c(
+                  "tbody",
+                  _vm._l(_vm.productsInCart, function(product, index) {
+                    return _c("tr", { key: index }, [
+                      _c("td", { staticClass: "cart_item_img" }, [
+                        _c("img", { attrs: { src: product.img } })
+                      ]),
+                      _vm._v(" "),
+                      _c("td", [_vm._v(_vm._s(product.name))]),
+                      _vm._v(" "),
+                      _c("td", { staticClass: "cart_item_qty" }, [
+                        _c(
+                          "a",
+                          {
+                            staticClass: "num_minus",
+                            attrs: { href: "" },
+                            on: {
+                              click: function($event) {
+                                $event.preventDefault()
+                                return _vm.countQty(index, -1)
+                              }
+                            }
+                          },
+                          [_vm._v("-")]
+                        ),
+                        _vm._v(" "),
+                        _c("input", {
+                          directives: [
+                            {
+                              name: "model",
+                              rawName: "v-model",
+                              value: product.quantity,
+                              expression: "product.quantity"
+                            }
+                          ],
+                          attrs: { type: "number", min: "1" },
+                          domProps: { value: product.quantity },
+                          on: {
+                            input: function($event) {
+                              if ($event.target.composing) {
+                                return
+                              }
+                              _vm.$set(product, "quantity", $event.target.value)
+                            }
+                          }
+                        }),
+                        _vm._v(" "),
+                        _c(
+                          "a",
+                          {
+                            staticClass: "num_plus",
+                            attrs: { href: "" },
+                            on: {
+                              click: function($event) {
+                                $event.preventDefault()
+                                return _vm.countQty(index, 1)
+                              }
+                            }
+                          },
+                          [_vm._v("+")]
+                        )
+                      ]),
+                      _vm._v(" "),
+                      _c("td", { staticClass: "cart_item_price" }, [
+                        _vm._v(
+                          _vm._s(_vm.currentCurrencySymbole) +
+                            _vm._s(parseFloat(product.price))
+                        )
+                      ]),
+                      _vm._v(" "),
+                      _c("td", { staticClass: "cart_item_tprice" }, [
+                        _vm._v(
+                          _vm._s(_vm.currentCurrencySymbole) +
+                            _vm._s(product.quantity * product.price)
+                        )
+                      ]),
+                      _vm._v(" "),
+                      _c("td", [
+                        _c(
+                          "a",
+                          {
+                            staticClass: "list_item_del",
+                            attrs: { href: "" },
+                            on: {
+                              click: function($event) {
+                                $event.preventDefault()
+                                return _vm.delCartItem(
+                                  $event.currentTarget,
+                                  index
+                                )
+                              }
+                            }
+                          },
+                          [_c("i", { staticClass: "fa fa-trash" })]
+                        )
+                      ])
+                    ])
+                  }),
+                  0
+                ),
+                _vm._v(" "),
+                _c("tfoot", [
+                  _c("tr", [
+                    _c("td", { attrs: { colspan: "4" } }, [_vm._v("Total")]),
+                    _vm._v(" "),
+                    _c("td", { staticClass: "cart_item_tprice" }, [
+                      _vm._v(
+                        _vm._s(_vm.currentCurrencySymbole) +
+                          _vm._s(_vm.total.toFixed(2))
+                      )
+                    ]),
+                    _vm._v(" "),
+                    _c("td", [_vm._v(" ")])
+                  ])
+                ])
+              ]),
+              _vm._v(" "),
+              _c("p", { staticClass: "page-btn" }, [
+                _c(
+                  "a",
+                  {
+                    staticClass: "btn",
+                    attrs: { href: "#" },
+                    on: {
+                      click: function($event) {
+                        $event.preventDefault()
+                        return _vm.checkout($event)
+                      }
+                    }
+                  },
+                  [_vm._v("Caisse")]
+                )
+              ])
+            ])
+          : _c("div", { staticClass: "cart__empty" }, [
+              _c("p", [_vm._v("French(Your cart is empty)")])
+            ])
+      ])
     : _c("div", { staticClass: "cart" }, [
         _c("h2", [_vm._v("Cart")]),
         _vm._v(" "),
@@ -47394,7 +47595,7 @@ var render = function() {
         _vm.productsInCart.length !== 0
           ? _c("div", { staticClass: "cart__table" }, [
               _c("table", { staticClass: "table" }, [
-                _vm._m(1),
+                _vm._m(2),
                 _vm._v(" "),
                 _c(
                   "tbody",
@@ -47548,6 +47749,22 @@ var staticRenderFns = [
       _c("th", { staticClass: "cart_item_price" }, [_vm._v("Stückpreis")]),
       _vm._v(" "),
       _c("th", { staticClass: "cart_item_tprice" }, [_vm._v("Zwischensumme")]),
+      _vm._v(" "),
+      _c("th", [_vm._v(" ")])
+    ])
+  },
+  function() {
+    var _vm = this
+    var _h = _vm.$createElement
+    var _c = _vm._self._c || _h
+    return _c("thead", [
+      _c("th", { attrs: { colspan: "2" } }, [_vm._v("Produit")]),
+      _vm._v(" "),
+      _c("th", { staticClass: "cart_item_qty" }, [_vm._v("Quantité")]),
+      _vm._v(" "),
+      _c("th", { staticClass: "cart_item_price" }, [_vm._v("Prix par unité")]),
+      _vm._v(" "),
+      _c("th", { staticClass: "cart_item_tprice" }, [_vm._v("Total Partiel")]),
       _vm._v(" "),
       _c("th", [_vm._v(" ")])
     ])
@@ -60386,6 +60603,9 @@ var app = new Vue({
           currency = 'USD';
           lang = 'en-gb';
         } else if (this.lang === 'de') {
+          currency = 'EUR';
+          lang = this.lang + '-' + this.lang;
+        } else if (this.lang === 'fr') {
           currency = 'EUR';
           lang = this.lang + '-' + this.lang;
         } else {

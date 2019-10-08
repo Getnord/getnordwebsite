@@ -42,6 +42,49 @@
 			<p>German(Your cart is empty)</p>
 		</div>
     </div>
+    <div class="cart"  v-else-if="isFrench">
+        <h2>Panier</h2>
+		<div class="cart__hide" @click="hideCart">
+			<i class="fa fa-times"></i>
+		</div>
+        <div class="cart__table" v-if="productsInCart.length !== 0">
+            <table class="table">
+                <thead>
+                    <th colspan="2">Produit</th>
+                    <th class="cart_item_qty">Quantité</th>
+                    <th class="cart_item_price">Prix par unité</th>
+                    <th class="cart_item_tprice">Total Partiel</th>
+                    <th>&nbsp;</th>
+                </thead>
+                <tbody>
+                    <tr v-for="(product, index) in productsInCart" :key="index">
+                        <td class="cart_item_img"><img :src="product.img" /></td>
+                        <td>{{ product.name }}</td>
+                        <td class="cart_item_qty">
+							<a class="num_minus" href="" @click.prevent="countQty(index, -1)">-</a>
+                        	<input type="number" v-model="product.quantity" min="1"/>
+                       		<a class="num_plus" href="" @click.prevent="countQty(index, 1)">+</a>
+						</td>
+                        <td class="cart_item_price">{{ currentCurrencySymbole }}{{ parseFloat(product.price)  }}</td>
+                        <td class="cart_item_tprice">{{ currentCurrencySymbole }}{{  product.quantity * product.price }}</td>
+                        <td><a class="list_item_del" href="" @click.prevent="delCartItem($event.currentTarget, index)"><i class="fa fa-trash"></i></a></td>
+                    </tr>
+                </tbody>
+                <tfoot>
+                    <tr>
+                        <td colspan="4">Total</td>
+                        <td class="cart_item_tprice">{{ currentCurrencySymbole }}{{ total.toFixed(2) }}</td>
+                        <td>&nbsp;</td>
+                    </tr>
+
+                </tfoot>
+            </table>
+            <p class="page-btn"><a class="btn" href="#" @click.prevent="checkout">Caisse</a></p>
+        </div>
+		<div v-else class="cart__empty">
+			<p>French(Your cart is empty)</p>
+		</div>
+    </div>
     <div class="cart" v-else>
         <h2>Cart</h2>
 		<div class="cart__hide" @click="hideCart">
@@ -135,6 +178,13 @@ export default {
 		        return true
             } else{
 		        return false
+            }
+        },
+        isFrench(){
+            if (this.localeLang === 'fr'){
+                return true
+            } else{
+                return false
             }
         }
 	},

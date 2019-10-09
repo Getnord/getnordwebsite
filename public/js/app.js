@@ -1845,6 +1845,10 @@ __webpack_require__.r(__webpack_exports__);
 //
 //
 //
+//
+//
+//
+//
 /* harmony default export */ __webpack_exports__["default"] = ({
   name: "details-window",
   props: {
@@ -1856,6 +1860,9 @@ __webpack_require__.r(__webpack_exports__);
       type: String,
       required: true
     }
+  },
+  mounted: function mounted() {
+    this.isDutch();
   },
   watch: {
     activeAccessorie: function activeAccessorie() {
@@ -1876,7 +1883,8 @@ __webpack_require__.r(__webpack_exports__);
   },
   data: function data() {
     return {
-      currentImageUrl: this.activeAccessorie.images[0]
+      currentImageUrl: this.activeAccessorie.images[0],
+      isDutchLang: false
     };
   },
   methods: {
@@ -1885,6 +1893,16 @@ __webpack_require__.r(__webpack_exports__);
     },
     addToCart: function addToCart() {
       Event.$emit("add-accessorie-to-cart", this.activeAccessorie.id);
+    },
+    isDutch: function isDutch() {
+      var currentLang = document.getElementsByTagName('html')[0].getAttribute('lang');
+      console.log(currentLang);
+
+      if (currentLang === 'nl') {
+        this.isDutchLang = true;
+      } else {
+        return false;
+      }
     }
   }
 });
@@ -2203,7 +2221,17 @@ __webpack_require__.r(__webpack_exports__);
 //
 //
 //
+//
+//
+//
+//
+//
 /* harmony default export */ __webpack_exports__["default"] = ({
+  data: function data() {
+    return {
+      isDutchLang: false
+    };
+  },
   props: {
     productId: {
       type: String,
@@ -2220,7 +2248,20 @@ __webpack_require__.r(__webpack_exports__);
     clicked: function clicked() {
       console.log(this.productId);
       this.$emit('buy-btn-clicked', this.productId, this.productHasOptions);
+    },
+    isDutch: function isDutch() {
+      var currentLang = document.getElementsByTagName('html')[0].getAttribute('lang');
+      console.log(currentLang);
+
+      if (currentLang === 'nl') {
+        this.isDutchLang = true;
+      } else {
+        return false;
+      }
     }
+  },
+  mounted: function mounted() {
+    this.isDutch();
   }
 });
 
@@ -2646,6 +2687,12 @@ __webpack_require__.r(__webpack_exports__);
 //
 //
 //
+//
+//
+//
+//
+//
+//
 /* harmony default export */ __webpack_exports__["default"] = ({
   props: {
     allProductsInCartQuantity: {
@@ -2653,10 +2700,28 @@ __webpack_require__.r(__webpack_exports__);
       required: true
     }
   },
+  data: function data() {
+    return {
+      isDutchLang: false
+    };
+  },
   methods: {
     openShoppingCart: function openShoppingCart() {
       this.$emit('open-shopping-cart');
+    },
+    isDutch: function isDutch() {
+      var currentLang = document.getElementsByTagName('html')[0].getAttribute('lang');
+      console.log(currentLang);
+
+      if (currentLang === 'nl') {
+        this.isDutchLang = true;
+      } else {
+        return false;
+      }
     }
+  },
+  mounted: function mounted() {
+    this.isDutch();
   }
 });
 
@@ -2693,7 +2758,7 @@ exports = module.exports = __webpack_require__(/*! ../../../../node_modules/css-
 
 
 // module
-exports.push([module.i, ".modal[data-v-b3297a50] {\n  width: 100%;\n  background: #fff;\n  padding: 16px 0;\n}\n@media (max-width: 768px) {\n.modal[data-v-b3297a50] {\n    min-height: none;\n}\n}\n.modal__cols[data-v-b3297a50] {\n  display: -webkit-box;\n  display: -ms-flexbox;\n  display: flex;\n  -webkit-box-orient: horizontal;\n  -webkit-box-direction: normal;\n      -ms-flex-direction: row;\n          flex-direction: row;\n  -webkit-box-align: stretch;\n      -ms-flex-align: stretch;\n          align-items: stretch;\n}\n@media (max-width: 768px) {\n.modal__cols[data-v-b3297a50] {\n    -webkit-box-orient: vertical;\n    -webkit-box-direction: normal;\n        -ms-flex-direction: column;\n            flex-direction: column;\n}\n}\n.modal__cols__right[data-v-b3297a50] {\n  width: 28.4%;\n  padding-top: 100px;\n  padding-left: 60px;\n  padding-right: 60px;\n}\n@media (max-width: 768px) {\n.modal__cols__right[data-v-b3297a50] {\n    background-color: #f2f3f3;\n    max-width: 100%;\n    padding-top: 10px;\n    padding-left: 10px;\n    padding-right: 10px;\n    width: auto;\n}\n}\n.modal__cols__right__name[data-v-b3297a50] {\n  padding: 0px;\n  margin-left: 0px;\n  font-size: 55px;\n  line-height: 60px;\n  font-weight: bold;\n  text-transform: uppercase;\n  text-align: left;\n}\n@media (max-width: 768px) {\n.modal__cols__right__name[data-v-b3297a50] {\n    font-size: 24px;\n    padding: 0 10px 0 10px;\n    text-align: left;\n}\n}\n@media (max-width: 480px) {\n.modal__cols__right__name[data-v-b3297a50] {\n    text-align: center;\n}\n}\n.modal__cols__right__imgs[data-v-b3297a50] {\n  margin: 2em 0 2em 0;\n}\n@media (max-width: 480px) {\n.modal__cols__right__imgs[data-v-b3297a50] {\n    display: -webkit-box;\n    display: -ms-flexbox;\n    display: flex;\n    -webkit-box-orient: vertical;\n    -webkit-box-direction: normal;\n        -ms-flex-direction: column;\n            flex-direction: column;\n    -webkit-box-pack: center;\n        -ms-flex-pack: center;\n            justify-content: center;\n}\n}\n.modal__cols__right__imgs__icon[data-v-b3297a50] {\n  margin-right: 2em;\n}\n@media (max-width: 480px) {\n.modal__cols__right__imgs__icon[data-v-b3297a50] {\n    margin-right: 0;\n}\n}\n.modal__cols__right__description[data-v-b3297a50] {\n  font-size: 1.25em !important;\n  line-height: 1.5em !important;\n}\n@media (max-width: 468px) {\n.modal__cols__right__description[data-v-b3297a50] {\n    text-align: center;\n    font-size: 1em;\n    padding: 0 16px;\n}\n}\n.modal__cols__right__price[data-v-b3297a50] {\n  font-size: 1.5em;\n  font-weight: 700;\n  margin: 1em 0 0 0;\n  text-align: left;\n  color: #272727;\n}\n@media (max-width: 480px) {\n.modal__cols__right__price[data-v-b3297a50] {\n    text-align: center;\n}\n}\n.modal__cols__right__btn[data-v-b3297a50] {\n  margin-top: 3em;\n  margin-right: auto;\n  margin-left: auto;\n  display: inline-block;\n  padding: 17px 10px;\n  width: 200px;\n  height: 70px;\n  font-size: 18px;\n  line-height: 30px;\n  font-weight: bold;\n  text-align: center;\n  text-decoration: none;\n  text-transform: uppercase;\n  cursor: pointer;\n  background-color: #ffe401;\n  color: #272727;\n  border-width: 0px;\n  height: 66px;\n  margin-bottom: 4em;\n}\n@media (max-width: 480px) {\n.modal__cols__right__btn[data-v-b3297a50] {\n    display: block;\n    margin: 1em auto;\n}\n}\n.modal__cols__left[data-v-b3297a50] {\n  width: 50%;\n  height: 70vh;\n  margin-top: 100px;\n  background: white;\n  background-size: contain;\n  background-position: center;\n  background-repeat: no-repeat;\n}\n@media (max-width: 768px) {\n.modal__cols__left[data-v-b3297a50] {\n    width: 100%;\n    height: 640px;\n}\n}\n.modal__cols__left__imgs[data-v-b3297a50] {\n  display: -webkit-box;\n  display: -ms-flexbox;\n  display: flex;\n  -webkit-box-orient: vertical;\n  -webkit-box-direction: normal;\n      -ms-flex-direction: column;\n          flex-direction: column;\n  margin-left: 20px;\n  margin-top: 20px;\n  list-style: none;\n}\n.modal__cols__left__imgs__img[data-v-b3297a50] {\n  width: 100px;\n  margin-bottom: 20px;\n  cursor: pointer;\n}\n@media (max-width: 768px) {\n.modal__cols__left__imgs__img[data-v-b3297a50] {\n    width: 80px;\n}\n}\n@media (max-width: 480px) {\n.modal__cols__left__imgs__img[data-v-b3297a50] {\n    width: 50px;\n}\n}", ""]);
+exports.push([module.i, ".modal[data-v-b3297a50] {\n  width: 100%;\n  background: #fff;\n  padding: 16px 0;\n}\n@media (max-width: 768px) {\n.modal[data-v-b3297a50] {\n    min-height: none;\n}\n}\n.modal__cols[data-v-b3297a50] {\n  display: -webkit-box;\n  display: -ms-flexbox;\n  display: flex;\n  -webkit-box-orient: horizontal;\n  -webkit-box-direction: normal;\n      -ms-flex-direction: row;\n          flex-direction: row;\n  -webkit-box-align: stretch;\n      -ms-flex-align: stretch;\n          align-items: stretch;\n}\n@media (max-width: 768px) {\n.modal__cols[data-v-b3297a50] {\n    -webkit-box-orient: vertical;\n    -webkit-box-direction: normal;\n        -ms-flex-direction: column;\n            flex-direction: column;\n}\n}\n.modal__cols__right[data-v-b3297a50] {\n  width: 28.4%;\n  padding-top: 100px;\n  padding-left: 60px;\n  padding-right: 60px;\n}\n@media (max-width: 768px) {\n.modal__cols__right[data-v-b3297a50] {\n    background-color: #f2f3f3;\n    max-width: 100%;\n    padding-top: 10px;\n    padding-left: 10px;\n    padding-right: 10px;\n    width: auto;\n}\n}\n.modal__cols__right__name[data-v-b3297a50] {\n  padding: 0px;\n  margin-left: 0px;\n  font-size: 55px;\n  line-height: 60px;\n  font-weight: bold;\n  text-transform: uppercase;\n  text-align: left;\n}\n@media (max-width: 768px) {\n.modal__cols__right__name[data-v-b3297a50] {\n    font-size: 24px;\n    padding: 0 10px 0 10px;\n    text-align: left;\n}\n}\n@media (max-width: 480px) {\n.modal__cols__right__name[data-v-b3297a50] {\n    text-align: center;\n}\n}\n.modal__cols__right__imgs[data-v-b3297a50] {\n  margin: 2em 0 2em 0;\n}\n@media (max-width: 480px) {\n.modal__cols__right__imgs[data-v-b3297a50] {\n    display: -webkit-box;\n    display: -ms-flexbox;\n    display: flex;\n    -webkit-box-orient: vertical;\n    -webkit-box-direction: normal;\n        -ms-flex-direction: column;\n            flex-direction: column;\n    -webkit-box-pack: center;\n        -ms-flex-pack: center;\n            justify-content: center;\n}\n}\n.modal__cols__right__imgs__icon[data-v-b3297a50] {\n  margin-right: 2em;\n}\n@media (max-width: 480px) {\n.modal__cols__right__imgs__icon[data-v-b3297a50] {\n    margin-right: 0;\n}\n}\n.modal__cols__right__description[data-v-b3297a50] {\n  font-size: 1.25em !important;\n  line-height: 1.5em !important;\n}\n@media (max-width: 468px) {\n.modal__cols__right__description[data-v-b3297a50] {\n    text-align: center;\n    font-size: 1em;\n    padding: 0 16px;\n}\n}\n.modal__cols__right__price[data-v-b3297a50] {\n  font-size: 1.5em;\n  font-weight: 700;\n  margin: 1em 0 0 0;\n  text-align: left;\n  color: #272727;\n}\n@media (max-width: 480px) {\n.modal__cols__right__price[data-v-b3297a50] {\n    text-align: center;\n}\n}\n.modal__cols__right__btn[data-v-b3297a50] {\n  margin-top: 3em;\n  margin-right: auto;\n  margin-left: auto;\n  display: inline-block;\n  padding: 17px 10px;\n  width: auto;\n  font-size: 18px;\n  line-height: 30px;\n  font-weight: bold;\n  text-align: center;\n  text-decoration: none;\n  text-transform: uppercase;\n  cursor: pointer;\n  background-color: #ffe401;\n  color: #272727;\n  border-width: 0px;\n  height: auto;\n  margin-bottom: 4em;\n}\n@media (max-width: 480px) {\n.modal__cols__right__btn[data-v-b3297a50] {\n    display: block;\n    margin: 1em auto;\n}\n}\n.modal__cols__left[data-v-b3297a50] {\n  width: 50%;\n  height: 70vh;\n  margin-top: 100px;\n  background: white;\n  background-size: contain;\n  background-position: center;\n  background-repeat: no-repeat;\n}\n@media (max-width: 768px) {\n.modal__cols__left[data-v-b3297a50] {\n    width: 100%;\n    height: 640px;\n}\n}\n.modal__cols__left__imgs[data-v-b3297a50] {\n  display: -webkit-box;\n  display: -ms-flexbox;\n  display: flex;\n  -webkit-box-orient: vertical;\n  -webkit-box-direction: normal;\n      -ms-flex-direction: column;\n          flex-direction: column;\n  margin-left: 20px;\n  margin-top: 20px;\n  list-style: none;\n}\n.modal__cols__left__imgs__img[data-v-b3297a50] {\n  width: 100px;\n  margin-bottom: 20px;\n  cursor: pointer;\n}\n@media (max-width: 768px) {\n.modal__cols__left__imgs__img[data-v-b3297a50] {\n    width: 80px;\n}\n}\n@media (max-width: 480px) {\n.modal__cols__left__imgs__img[data-v-b3297a50] {\n    width: 50px;\n}\n}", ""]);
 
 // exports
 
@@ -2807,7 +2872,7 @@ exports = module.exports = __webpack_require__(/*! ../../../../node_modules/css-
 
 
 // module
-exports.push([module.i, ".cart__icon[data-v-6713b5ad] {\n  height: 35px;\n  width: 35px;\n  position: relative;\n  text-align: center;\n  cursor: pointer;\n}\n.cart__icon img[data-v-6713b5ad] {\n  width: 100%;\n}\n.cart__icon__num[data-v-6713b5ad] {\n  font-weight: 700;\n  font-size: 16px;\n  padding: 4px;\n  position: absolute;\n  top: -10px;\n  right: -16px;\n  background: #0080ff;\n  color: #f7f7f7;\n  height: 22px;\n  width: 22px;\n  -webkit-box-shadow: 0px 2px 10px rgba(0, 0, 0, 0.2);\n          box-shadow: 0px 2px 10px rgba(0, 0, 0, 0.2);\n  border-radius: 22px;\n}", ""]);
+exports.push([module.i, ".cart__icon[data-v-6713b5ad] {\n  height: 35px;\n  width: 35px;\n  position: relative;\n  text-align: center;\n  cursor: pointer;\n}\n.cart__icon--disabled[data-v-6713b5ad] {\n  cursor: no-drop;\n  opacity: 0.5;\n}\n.cart__icon img[data-v-6713b5ad] {\n  width: 100%;\n}\n.cart__icon__num[data-v-6713b5ad] {\n  font-weight: 700;\n  font-size: 16px;\n  padding: 4px;\n  position: absolute;\n  top: -10px;\n  right: -16px;\n  background: #0080ff;\n  color: #f7f7f7;\n  height: 22px;\n  width: 22px;\n  -webkit-box-shadow: 0px 2px 10px rgba(0, 0, 0, 0.2);\n          box-shadow: 0px 2px 10px rgba(0, 0, 0, 0.2);\n  border-radius: 22px;\n}", ""]);
 
 // exports
 
@@ -46924,14 +46989,32 @@ var render = function() {
           _vm._v(_vm._s(_vm.activeAccessorie.price))
         ]),
         _vm._v(" "),
-        _c(
-          "button",
-          {
-            staticClass: "modal__cols__right__btn",
-            on: { click: _vm.addToCart }
-          },
-          [_vm._v(_vm._s(_vm.addToCartText))]
-        )
+        _vm.isDutchLang
+          ? _c(
+              "a",
+              {
+                staticClass: "button button_yellow",
+                attrs: {
+                  href: "https://www.trendmarq.com/c-4123311/getnord-shop/",
+                  target: "_blank"
+                }
+              },
+              [
+                _vm._v(
+                  "\n                " +
+                    _vm._s(_vm.addToCartText) +
+                    "\n            "
+                )
+              ]
+            )
+          : _c(
+              "button",
+              {
+                staticClass: "modal__cols__right__btn",
+                on: { click: _vm.addToCart }
+              },
+              [_vm._v(_vm._s(_vm.addToCartText))]
+            )
       ])
     ])
   ])
@@ -47190,12 +47273,25 @@ var render = function() {
   var _vm = this
   var _h = _vm.$createElement
   var _c = _vm._self._c || _h
-  return _c(
-    "button",
-    { staticClass: "button button_yellow", on: { click: _vm.clicked } },
-    [_vm._t("default")],
-    2
-  )
+  return _vm.isDutchLang
+    ? _c(
+        "a",
+        {
+          staticClass: "button button_yellow",
+          attrs: {
+            href: "https://www.trendmarq.com/c-4123311/getnord-shop/",
+            target: "_blank"
+          }
+        },
+        [_vm._t("default")],
+        2
+      )
+    : _c(
+        "button",
+        { staticClass: "button button_yellow", on: { click: _vm.clicked } },
+        [_vm._t("default")],
+        2
+      )
 }
 var staticRenderFns = []
 render._withStripped = true
@@ -48020,33 +48116,57 @@ var render = function() {
   var _vm = this
   var _h = _vm.$createElement
   var _c = _vm._self._c || _h
-  return _c(
-    "div",
-    { staticClass: "cart__icon", on: { click: _vm.openShoppingCart } },
-    [
-      _c("img", { attrs: { src: "/img/shopping-cart.png", alt: "" } }),
-      _vm._v(" "),
-      _c(
-        "p",
-        {
-          directives: [
-            {
-              name: "show",
-              rawName: "v-show",
-              value: _vm.allProductsInCartQuantity > 0,
-              expression: "allProductsInCartQuantity > 0"
-            }
-          ],
-          staticClass: "cart__icon__num"
-        },
+  return !_vm.isDutchLang
+    ? _c(
+        "div",
+        { staticClass: "cart__icon", on: { click: _vm.openShoppingCart } },
         [
-          _vm._v(
-            "\n        " + _vm._s(_vm.allProductsInCartQuantity) + "\n    "
+          _c("img", { attrs: { src: "/img/shopping-cart.png", alt: "" } }),
+          _vm._v(" "),
+          _c(
+            "p",
+            {
+              directives: [
+                {
+                  name: "show",
+                  rawName: "v-show",
+                  value: _vm.allProductsInCartQuantity > 0,
+                  expression: "allProductsInCartQuantity > 0"
+                }
+              ],
+              staticClass: "cart__icon__num"
+            },
+            [
+              _vm._v(
+                "\n        " + _vm._s(_vm.allProductsInCartQuantity) + "\n    "
+              )
+            ]
           )
         ]
       )
-    ]
-  )
+    : _c("div", { staticClass: "cart__icon cart__icon--disabled" }, [
+        _c("img", { attrs: { src: "/img/shopping-cart.png", alt: "" } }),
+        _vm._v(" "),
+        _c(
+          "p",
+          {
+            directives: [
+              {
+                name: "show",
+                rawName: "v-show",
+                value: _vm.allProductsInCartQuantity > 0,
+                expression: "allProductsInCartQuantity > 0"
+              }
+            ],
+            staticClass: "cart__icon__num"
+          },
+          [
+            _vm._v(
+              "\n        " + _vm._s(_vm.allProductsInCartQuantity) + "\n    "
+            )
+          ]
+        )
+      ])
 }
 var staticRenderFns = []
 render._withStripped = true

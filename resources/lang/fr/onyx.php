@@ -16,8 +16,8 @@ return [
     "addToCart" => "AJOUTER AU PANIER",
     "or" => "OU",
     "marketPlaces" => "ACHETER SUR D'AUTRES BOUTIQUES POPULAIRES",
-    "onyxAmazonLink" => "https://www.amazon.co.uk/dp/B07JJBQP4Q",
-    "onyxEbayLink" => "https://www.ebay.co.uk/sch/i.html?_from=R40&_trksid=p2380057.m570.l1311.R2.TR2.TRC0.A0.H0.Xgetnord+onyx.TRS0&_nkw=getnord+onyx&_sacat=0",
+    "onyxAmazonLink" => "https://www.amazon.fr/dp/B07JJBQP4Q",
+    "onyxEbayLink" => "https://www.ebay.fr/sch/i.html?_from=R40&_trksid=p2380057.m570.l1313.TR11.TRC1.A0.H0.Xgetnord.TRS0&_nkw=getnord&_sacat=0",
 
     "metalReinforced" => "RENFORCE EN METAL",
     "metalReinforcedParagraph" => "Getnord Onyx est un smartphone robuste étanche avec un noyau en alliage d'aluminium. Nous incluons toutes les fonctions indispensables du téléphone dans ce noyau : circuit principal, affichage LCD, caméra, antennes etc. Avec ça, les deux parties en forme de L sur les côtés sont designées pour conserver la résistance aux flexions du téléphone.",

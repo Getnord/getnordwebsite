@@ -22,8 +22,8 @@ SUPERIEUR.
     "or" => "OU",
     "marketPlaces" => "ACHETER SUR D'AUTRES BOUTIQUES POPULAIRES",
 
-    "leoAmazonLink" => "https://www.amazon.co.uk/dp/B07WVCCGBN",
-    "leoEbayLink" => "https://www.amazon.co.uk/dp/B07WVCCGBN",
+    "leoAmazonLink" => "https://www.amazon.fr/dp/B07WVCCGBN",
+    "leoEbayLink" => "https://www.ebay.fr/sch/i.html?_from=R40&_trksid=p2380057.m570.l1313.TR11.TRC1.A0.H0.Xgetnord.TRS0&_nkw=getnord&_sacat=0",
     'leoWalmartLink' => '',
     'leoSearsLink' => '',
     'leoJetLink' => '',

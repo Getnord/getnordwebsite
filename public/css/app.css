@@ -4499,6 +4499,16 @@ body h1 {
   }
 }
 
+.product_section--leo_stores .product_section--onyx_stores_list .store_cta--bol {
+  margin-top: -25px;
+}
+
+.stores_list-nl {
+  -webkit-box-align: baseline;
+      -ms-flex-align: baseline;
+          align-items: baseline;
+}
+
 .getnord_leo--technology {
   background: #161616;
   color: #fff;

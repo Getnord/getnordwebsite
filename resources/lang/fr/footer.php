@@ -19,7 +19,7 @@ return [
     // footer - social media
     'socialMedia' => 'Rejoignez-nous sur les réseaux sociaux !',
     'youtube' => 'https://www.youtube.com/channel/UCxWUiWFcqE3-b0C3zTgu9JQ',
-    'facebook' => 'https://www.facebook.com/getnordinternational/',
+    'facebook' => 'https://www.facebook.com/Téléphones-étanches-Getnord-402801463243716/',
     'instagram' => 'https://www.instagram.com/getnord/',
     'pinterest' => 'https://www.pinterest.com/getnord/getnord-phones/',
     'twitter' => 'https://twitter.com/getnord?lang=en',

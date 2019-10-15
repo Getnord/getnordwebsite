@@ -32,23 +32,22 @@
         <div class="row">
             <div class="product_section--onyx_stores">
                 <h2>{{ __('home.marketPlaces') }}</h2>
-                <div class="product_section--onyx_stores_list">
+                <div class="product_section--onyx_stores_list @if(app()->getLocale() === 'nl') stores_list-nl @endif">
                     @if(app()->getLocale() !== 'nl')
-                        <a href="{{ __('home.amazonLink') }}" class="store_cta store_cta--amazon" target="_blank">
+                        <a href="{{ __('leo.leoAmazonLink') }}" class="store_cta store_cta--amazon" target="_blank">
                             <img src="{{ url('/') }}/img/amazon.png" alt="">
                         </a>
-                        <a href="{{ __('home.ebayLink') }}" class="store_cta store_cta--ebay" target="_blank">
+                        <a href="{{ __('leo.leoEbayLink') }}" class="store_cta store_cta--ebay" target="_blank">
                             <img src="{{ url('/') }}/img/ebay.png" alt="">
                         </a>
                     @endif
-
                     @if(app()->getLocale() === 'de')
-                        <a href="{{ __('leo.leoConradLink') }}" class="store_cta store_cta--ebay" target="_blank">
+                        <a href="{{ __('leo.leoConradLink') }}" class="store_cta" target="_blank">
                             <img src="{{ url('/') }}/img/conrad_logo.png" alt="">
                         </a>
                     @endif
                     @if(app()->getLocale() === 'fr')
-                        <a href="{{ __('home.bolLink') }}" class="store_cta store_cta--ebay logo_img" target="_blank">
+                        <a href="{{ __('home.bolLink') }}" class="store_cta store_cta--bol logo_img" target="_blank">
                             <img src="{{ url('/') }}/img/bol_logo.png" alt="">
                         </a>
                         <a href="{{ __('home.back2BuzzLink') }}" class="store_cta store_cta--ebay logo_img"
@@ -56,14 +55,16 @@
                             <img src="{{ url('/') }}/img/back2buzz_logo.png">
                         </a>
                     @endif
-                        @if(app()->getLocale() === 'nl')
-                            <a href="{{ __('home.bolLink') }}" class="store_cta store_cta--ebay logo_img" target="_blank">
-                                <img src="{{ url('/') }}/img/bol_logo.png" alt="">
-                            </a>
-                            <a href="{{ __('home.trendmarqLink') }}" class="store_cta store_cta--ebay logo_img" target="_blank">
-                                <img src="{{ url('/') }}/img/trendmarq_logo.png" alt="">
-                            </a>
-                        @endif
+                    @if(app()->getLocale() === 'nl')
+                        <a href="{{ __('home.bolLink') }}" class="store_cta  logo_img" target="_blank">
+                            <img src="{{ url('/') }}/img/bol_logo.png" alt="">
+                        </a>
+                        <a href="{{ __('home.trendmarqLink') }}" class="store_cta store_cta--ebay logo_img"
+                           target="_blank">
+                            <img src="{{ url('/') }}/img/trendmarq_logo.png" alt="">
+                        </a>
+                    @endif
+
                 </div>
             </div>
         </div>

@@ -67,8 +67,8 @@ return [
     'lynxPrice' => '$299',
 
     // store links
-    'amazonLink' => 'https://www.amazon.co.uk/dp/B07MMTFHBX',
-    'ebayLink' => 'https://www.ebay.co.uk/sch/i.html?_from=R40&_trksid=m570.l1313&_nkw=getnord+lynx&_sacat=0',
+    'amazonLink' => 'https://www.amazon.fr/dp/B07MMTFHBX',
+    'ebayLink' => 'https://www.ebay.fr/sch/i.html?_from=R40&_trksid=p2380057.m570.l1313.TR11.TRC1.A0.H0.Xgetnord.TRS0&_nkw=getnord&_sacat=0',
     'bolLink' => 'https://www.bol.com/nl/b/getnord/599536456/',
     'back2BuzzLink' => 'https://www.back2buzz.be/product-category/smartphones/getnord/',
 

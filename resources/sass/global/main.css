@@ -3047,3 +3047,8 @@ items_section .product_info button:hover {
 .product_section--onyx_stores .product_section--onyx_stores_list .store_cta--bol {
     margin-top: -25px;
 }
+span.line_breake {
+    display: block;
+}
+
+

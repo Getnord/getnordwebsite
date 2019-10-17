@@ -112,7 +112,7 @@
             </div>
             <div class="specs--responsive" id="specs--responsive">
                 <h2 class="specs--responsive__title">
-                    {{--{{ __('onyx.getnordPhonesCompar--}}ison') }}
+                    {{--{{ __('onyx.getnordPhonesComparison')}} --}}
                 </h2>
                 <div class="specs__dots"></div>
                 <div class="specs__slider">

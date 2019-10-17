@@ -4,8 +4,8 @@ return [
     // Hero Section
     'pageTitle' => 'Leo Getnord',
     "heroPhoneName" => "GETNORD LEO",
-    "heroPhoneTitle" => "SANS LIMITE.<br>
-EXTREME.<br>
+    "heroPhoneTitle" => "SANS LIMITE.<span class='line_breake'></span>
+EXTREME.<span class='line_breake'></span>
 SUPERIEUR.
 ",
     "heroFindOutMore" => "EN SAVOIR PLUS",

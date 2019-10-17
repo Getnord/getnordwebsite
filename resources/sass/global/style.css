@@ -1,0 +1,95 @@
+
+@media (max-width: 1400px) {
+    .page_center {
+        max-width: 1000px;
+    }
+    .product_section  .section_heading {
+        margin: 0 0 25px 0;
+        font-size: 20px;
+        line-height: 28px;
+    }
+    .product_section .section_text {
+        font-size: 20px;
+        line-height: 26px;
+    }
+    body .getnord_leo--technology .section_heading {
+        padding: 50px 0 80px;
+    }
+    .mount_section .section_heading{
+        font-size: 45px;
+        line-height: 50px;
+    }
+    body .getnord_leo--technology img {
+        height: 60px;
+    }
+    body .getnord_leo--technology p,body .scratch_section_col--right p{
+        font-size: 17px;
+    }
+    body .shock_proof_section .section_heading , body .water__proof .section_heading {
+        margin: 50px 0 25px;
+    }
+    body .scratch_section_col--right .section_heading {
+        font-size: 45px;
+    }
+    body .water__proof .section_content span {
+         padding-bottom:0;
+    }
+    body .getnord_leo--technology .lightbox_section img{
+        height: 100%
+    }
+    body .scratch_section_col--right .section_heading span{
+        font-size: 60px !important;
+    }
+    body .battery_info_section .scratch_section_col--right .info_content{
+        align-items: flex-end;
+    }
+    body .info_points span{
+        font-size: 40px;
+    }
+    .gallery_section .section_header{
+        font-size: 45px;
+        padding: 60px 0;
+    }
+
+}
+
+@media (max-width: 999px) {
+    .product_section .section_content{
+        margin-top: 30px;
+    }
+    body .getnord_leo--technology .leo_features{
+        width: 130px;
+
+    }
+    body .getnord_leo--technology .section_text{
+        justify-content: space-around;
+    }
+    body .camera .section_heading {
+        padding: 50px 0 25px;
+    }
+    body .battery_info_section .scratch_section_col--right .info_content{
+        align-items: center;
+    }
+    .battery_info_section .scratch_section_col--right .info_item .sub_heading{
+        padding: 0;
+    }
+}
+@media (max-width: 750px) {
+    body .line_breake{
+        display: none;
+    }
+    body .getnord_leo--technology .section_heading {
+        padding: 30px 0 ;
+    }
+    body .shock_proof_section .section_heading, body .water__proof .section_heading {
+        margin: 25px 0;
+    }
+    .variety_section{
+        min-height: unset !important;
+    }
+}
+@media (max-width: 450px) {
+    body .product_section--leo_stores .product_section--onyx_stores_list .store_cta{
+        max-width: 100px;
+    }
+}

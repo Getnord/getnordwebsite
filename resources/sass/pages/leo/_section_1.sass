@@ -1,19 +1,20 @@
 .intro_section--leo
-    min-height: 100vh
     background-size: cover !important
     @include breakpoint(s)
         min-height: auto
     @include breakpoint(xs)
         min-height: initial
 
-
-
     .section_center
         width: 50%
         text-align: right
+        position: absolute
+        top: 50%
+        transform: translateY(-50%)
         @include breakpoint(s)
             width: 100%
             text-align: center
+            position: relative
         @include breakpoint(xs)
             display: none
 
@@ -26,13 +27,14 @@
         @include breakpoint(xs)
             padding: 0
     .section_form
-        @include breakpoint(s)
+        @include breakpoint(m)
             display: block
         @include breakpoint(xs)
             display: none
 
     .section_phone
         position: absolute
+        width: 30%
         top: 50%
         right: 0
         transform: translateY(-50%)
@@ -41,7 +43,7 @@
 
         img
             display: block
-            height: 75vh
+            max-height: 75vh
             @include breakpoint(s)
                 display: none
 

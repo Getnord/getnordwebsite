@@ -5,7 +5,7 @@ return [
     // Hero Section
     'pageTitle' => 'Leo Getnord',
     "heroPhoneName" => "GETNORD LEO",
-    "heroPhoneTitle" => "FÜR ANSPRUCHSVOLLE<br>BENUTZUNG GESCHAFFEN",
+    "heroPhoneTitle" => "FÜR ANSPRUCHSVOLLE<span class='line_breake'></span>BENUTZUNG GESCHAFFEN",
 
 
     "heroFindOutMore" => "MEHR ERFAHREN",

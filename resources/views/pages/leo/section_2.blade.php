@@ -2,7 +2,7 @@
     <div class="page_center">
         <div class="row anim">
             <div class="col_2_3_xl col_1_m">
-                {{-- add  anim3 class to section_figure in order to start the animations --}}
+                {{-- add  anim3 class to section_figure in order to start the animations--}}
                 <figure class="section_figure anim3"><img alt="Product"
                                                           src="{{ url('/') }}/img/leo/getnord_leo_all_sides.png"/>
                 </figure>
@@ -16,7 +16,7 @@
                             <li>{{ __('leo.productProcessor') }}</li>
                             <li>{{ __('leo.productOs') }}</li>
                             <li>{{ __('leo.productBattery') }}</li>
-                            <li>{{ __('leo.productPrice') }} {{--<strong>{{ __('leo.productPriceValue') }}</strong>--}}
+                            <li>{{ __('leo.productPrice') }} <strong>{{ __('leo.productPriceValue') }}</strong>
                                 <price product-id="68"></price>
                             </li>
                         </ul>
@@ -73,3 +73,36 @@
     </div>
 </section>
 
+{{--<section class="page__center">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-6">
+                <img class="img--full_width" alt="Product"
+                     src="{{ url('/') }}/img/leo/getnord_leo_all_sides.png">
+            </div>
+            <div class="col-md-6 ">
+                <div class="product__section d-flex  flex-column">
+                    <h3 class="text__heading">
+                        {{ __('leo.productTitle') }}
+                    </h3>
+                    <ul class="product__info">
+                        <li>{{ __('leo.productScreen') }}</li>
+                        <li>{{ __('leo.productProcessor') }}</li>
+                        <li>{{ __('leo.productOs') }}</li>
+                        <li>{{ __('leo.productBattery') }}</li>
+                        <li>{{ __('leo.productPrice') }}
+                            <strong>{{ __('leo.productPriceValue') }}</strong>
+                                <price product-id="68"></price>
+                            </li>
+                    </ul>
+                    <buy-btn product-id="68" @buy-btn-clicked="buybtnclicked" :product-has-options="false"
+                             class="btn btn-yellow btn-yellow--full-width">
+                        {{ __('leo.addToCart') }}
+                    </buy-btn>
+
+                </div>
+
+            </div>
+        </div>
+    </div>
+</section>--}}

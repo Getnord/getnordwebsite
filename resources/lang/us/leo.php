@@ -3,8 +3,8 @@ return [
     // Hero Section
     'pageTitle' => 'Leo Getnord',
     "heroPhoneName" => "GETNORD LEO",
-    "heroPhoneTitle" => "LIMITLESS.<br>
-EXTREME.<br>
+    "heroPhoneTitle" => "LIMITLESS.<span class='line_breake'></span>
+EXTREME.<span class='line_breake'></span>
 OUTSTANDING.
 ",
     "heroFindOutMore" => "FIND OUT MORE",

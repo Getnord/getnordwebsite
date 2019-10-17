@@ -166,9 +166,9 @@
                     @if (app()->getLocale() != 'us')
                         <a href="{{ route('onyx', ['locale' => app()->getLocale()]) }}">{{ __('header.onyx') }}</a>
                     @endif
-                    @if (app()->getLocale() != 'de')
+
                         <a href="{{ route('leo', ['locale' => app()->getLocale()]) }}">{{ __('header.leo') }}</a>
-                    @endif
+
                 </div>
             </li>
 <!--			<li><a href="javascript:void(0);" onclick="popup_open();">CONTACT</a></li>-->

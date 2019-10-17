@@ -34,7 +34,7 @@
                 <h2>{{ __('home.marketPlaces') }}</h2>
                 <div class="product_section--onyx_stores_list @if(app()->getLocale() === 'nl') stores_list-nl @endif">
                     @if(app()->getLocale() !== 'nl')
-                        <a href="{{ __('leo.leoAmazonLink') }}" class="store_cta store_cta--amazon" target="_blank">
+                        <a href="{{ __('home.amazonLink') }}" class="store_cta store_cta--amazon" target="_blank">
                             <img src="{{ url('/') }}/img/amazon.png" alt="">
                         </a>
                         <a href="{{ __('leo.leoEbayLink') }}" class="store_cta store_cta--ebay" target="_blank">

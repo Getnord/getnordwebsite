@@ -21,8 +21,8 @@ OUTSTANDING.
     "or" => "OR",
     "marketPlaces" => "BUY ON POPULAR MARKETPLACES",
 
-    "leoAmazonLink" => "https://www.amazon.co.uk/dp/B07JJBQP4Q",
-    "leoEbayLink" => "https://www.ebay.co.uk/sch/i.html?_from=R40&_trksid=p2380057.m570.l1311.R2.TR2.TRC0.A0.H0.Xgetnord+onyx.TRS0&_nkw=getnord+onyx&_sacat=0",
+    "leoAmazonLink" => "https://www.amazon.com/dp/B07WVCCGBN",
+    "leoEbayLink" => "https://www.amazon.com/dp/B07WVCCGBN",
     'leoWalmartLink' => '',
     'leoSearsLink' => '',
     'leoJetLink' => '',
@@ -82,7 +82,7 @@ OUTSTANDING.
 
     // section 10
 
-    'fingerprintTitle' => 'EXTRA<br>SECURITY.<br>ADDED<br>CONVENIENCE.',
+    'fingerprintTitle' => 'EXTRA<span class="word_breake"></span>SECURITY.<span class="word_breake line_breake"></span>ADDED<span class="word_breake"></span> CONVENIENCE.',
     'fingerprintParagraph' => 'Touch the sensor. Unlock your phone - that\'s convenient! Your fingerprint can’t be leaked “over the shoulder" - feel secure Forgetting a PIN is annoying - you won\'t forget your fingerprint.',
     'fingerprintText' => 'FINGERPRINT SENSOR',
 
@@ -94,6 +94,7 @@ OUTSTANDING.
     'varietyGeomagnetic' => 'Geomagnetic<br>Sensor',
     'varietyGyroscope' => 'Gyroscope',
     'varietyGps' => 'GPS sensor',
+    'moreInfo' => 'MORE INFO'
 
 ];
 

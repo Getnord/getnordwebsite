@@ -37,6 +37,7 @@ $(document).ready(function () {
     contactForm();
     videosControllers();
 });
+ document.domain = 'getnord.com';
 // We use another vue instance to pass data between components and not
 // between the child and the parent component
 // shopping cart
@@ -47,7 +48,8 @@ import shoppingCartIcon from "./components/shoppingCart/ShoppingCartIcon.vue";
 import checkoutPage from "./components/shoppingCart/Checkout.vue";
 import baseCardMessage from "./components/shoppingCart/BaseCardMessage.vue";
 import http_build_query from "locutus/php/url/http_build_query";
-import {accessoriesData} from './components/accessories/accessoriesData.js'
+import {accessoriesData} from './components/accessories/accessoriesData.js';
+import price from './components/baseComponents/PhonePrice';
 
 import accessoriesSection from "./components/accessories/accessoriesSection.vue";
 // the following is used to be able to use laravel lang resources in JS
@@ -64,7 +66,8 @@ const app = new Vue({
         shoppingCartIcon,
         checkoutPage,
         baseCardMessage,
-        accessoriesSection
+        accessoriesSection,
+        price
     },
 
     data: {
@@ -149,7 +152,8 @@ const app = new Vue({
                     stock: 100
                 }
             ],
-            openCartData: []
+            openCartData: [],
+            phonePrice: ''
         },
         isOptionsPopupOpen: false,
         isShoppingCartOpen: false,
@@ -193,12 +197,15 @@ const app = new Vue({
         axios
             .post("/api", form)
             .then(response => {
+                console.log(response)
                 // product detials from OpenCart
                 this.info.openCartData = response.data.products;
             })
             .catch(function (error) {
                 console.log(error);
             });
+
+
     },
     methods: {
         buybtnclicked(product_id, productHasOptions) {
@@ -356,14 +363,30 @@ const app = new Vue({
                         quantity: element.quantity
                     });
                 });
+                let currency = '';
+                let lang = '';
+                if (this.lang === 'us'){
+                    currency = 'USD'
+                    lang = 'en-gb'
+                }else if(this.lang === 'de'){
+                    currency = 'EUR'
+                    lang = this.lang + '-' + this.lang
+                }else if(this.lang === 'fr'){
+                    currency = 'EUR'
+                    lang = this.lang + '-' + this.lang
+                }else{
+                    currency = 'GBP'
+                    lang = lang = 'en-gb'
+                }
                 const cartUrl = http_build_query({
                     products: cartSlim,
-                    lang: this.lang,
+                    lang: lang,
                     currency: this.currency
                 });
+
                 this.isCheckoutPageOpen = true;
                 //this.orderUrl = `https://store.getnord.com/index.php?route=checkout/checkout`;
-                this.orderUrl = `https://store.getnord.com/index.php?route=checkout/cart/addToCart&${cartUrl}`;
+                this.orderUrl = `https://store.getnord.com/index.php?route=checkout/cart/addToCart&${cartUrl}${currency}`;
                 // this.orderUrl = `http://localhost/opencart/index.php?route=checkout/cart/addToCart&${cartUrl}`;
             }
         },
@@ -391,4 +414,4 @@ const app = new Vue({
 });
 
 
-console.log(document.domain)
+

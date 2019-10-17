@@ -1,6 +1,7 @@
 <div class="camera variety_section"
      style="background: url({{asset('img/leo/variety.png')}}) center no-repeat;background-size: cover;min-height: 120vh">
     <section class="getnord_leo--technology mount_section camera_section">
+        <div class="variety__img"><img src="{{asset('img/leo/variety.png')}}" alt=""></div>
         <div class="page_center">
             <div class="section_heading">{{ __('leo.varietyTitle') }}</div>
             <div class="section_text anim ">

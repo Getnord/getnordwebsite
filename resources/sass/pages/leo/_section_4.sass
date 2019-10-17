@@ -1,40 +1,48 @@
 .shock_proof_section
     background: #fff
     @include breakpoint(s)
-        padding: 30px 30px 0
+        padding: 70px 70px 0
+    @include breakpoint(xs)
+        padding: 20px 20px 0
     .section_heading
         color: #000 !important
         margin: 80px 0 35px
+        @include breakpoint(s)
+            margin: 60px 0 5px
+        @include breakpoint(xs)
+            margin: 30px 0 5px
 
     .section_text
         p
             color: #000 !important
 
 
-.section_content_icons
-    display: flex
-    justify-content: space-around
-    width: 100%
-    margin: 50px  0
-    @include breakpoint(xs)
-        margin: 0
-
-    .shock_proof_icon
+    .section_content_icons
         display: flex
-        flex-flow: column
-        align-items: center
+        justify-content: space-around
+        width: 100%
+        margin: 50px  0
+        @include breakpoint(s)
+            margin: 0
+        @include breakpoint(xs)
+            flex-direction: column
 
-        .item__img
-            height: 100%
+        .shock_proof_icon
             display: flex
-            @include breakpoint(s)
-                justify-content: center
+            flex-flow: column
+            align-items: center
 
-        img
-            max-width: 150px
-            max-height: 80px
-            margin-bottom: 30px
-        p
+            .item__img
+                height: 100%
+                display: flex
+                @include breakpoint(s)
+                    justify-content: center
 
-            margin-top: auto
-            text-align: center
+            img
+                max-width: 150px
+                max-height: 80px
+                margin-bottom: 30px
+            p
+
+                margin-top: auto
+                text-align: center

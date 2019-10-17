@@ -14,8 +14,10 @@ Route::get('/clear-cache', function() {
 Route::get('/test', function() {
     return view('pages.test.index');
 });
+Route::post('/api', 'ProductsController@index');
+Route::post('/api/product', 'ProductsController@product');
 
-Route::prefix('{locale?}')->group(function() {
+Route::prefix('{locale}')->group(function() {
     Route::get('/', 'PagesController@home')->name('home');
     Route::get('/onyx', 'PagesController@onyx')->name('onyx');
     Route::get('/contact', 'PagesController@contact')->name('contact');
@@ -26,10 +28,11 @@ Route::prefix('{locale?}')->group(function() {
     Route::get('/legal', 'PagesController@legal')->name('legal');
     Route::get('/leo', 'PagesController@leo')->name('leo');
     Route::get('/leo/{image}', 'PagesController@leoImage')->name('leoImage');
+    Route::get('/test', 'PagesController@test')->name('test');
 });
-
+Route::get('/', 'PagesController@index')->name('index');
 // Get data from OpenCart
-Route::post('/api', 'ProductsController@index');
+
 
 
 /**

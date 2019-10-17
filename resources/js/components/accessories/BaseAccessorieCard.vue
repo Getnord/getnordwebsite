@@ -3,7 +3,7 @@
         <img class="card__img" :src="mainImg" :alt="name">
         <div>
             <h1 class="card__title">{{ name }}</h1>
-            <button class="card__btn" @click="openDetailsWindow">More info</button>
+            <button class="card__btn" @click="openDetailsWindow">{{moreInfo}}</button>
         </div>
     </div>
 </template>
@@ -23,6 +23,10 @@ export default {
             required: true
         },
         name: {
+            type: String,
+            required: true
+        },
+        moreInfo: {
             type: String,
             required: true
         }

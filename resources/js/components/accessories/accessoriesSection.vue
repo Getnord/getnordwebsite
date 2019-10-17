@@ -11,11 +11,12 @@
                         :id="accessorie.id"
                         :name="accessorie.name"
                         :main-img="accessorie.mainImg"
+                        :more-info="moreInfo"
                         @open-details-window="openDetailsWindow">
                     </base-accessorie-card>
                 </slide>
             </carousel>
-            <details-window v-if="isDetailsWindowOpen" :active-accessorie="activeAccessorie" >
+            <details-window v-if="isDetailsWindowOpen" :active-accessorie="activeAccessorie" :add-to-cart-text="addToCart">
             </details-window>
         </div>
         <div v-else>
@@ -26,15 +27,17 @@
                         :id="accessorie.id" :main-img="accessorie.mainImg"
                         :name="accessorie.name"
                         :key="index"
+                        :more-info="moreInfo"
                         @open-details-window="openDetailsWindow"></base-accessorie-card>
                 </accessories-row>
-                <details-window v-if="isDetailsWindowOpen" :active-accessorie="activeAccessorie" >
+                <details-window v-if="isDetailsWindowOpen" :active-accessorie="activeAccessorie" :add-to-cart-text="addToCart" >
                 </details-window>
                 <accessories-row :class="{'center-elts': isMoreThanOneRowsOfAccessories}">
                     <base-accessorie-card
                         v-for="(accessorie, index) in splitedArray[1]"
                         :id="accessorie.id"
                         :main-img="accessorie.mainImg"
+                        :more-info="moreInfo"
                         :key="index"
                         :name="accessorie.name"
                         @open-details-window="openDetailsWindow"></base-accessorie-card>
@@ -45,6 +48,7 @@
                         v-for="(accessorie, index) in splitedArray[2]"
                         :id="accessorie.id"
                         :main-img="accessorie.mainImg"
+                        :more-info="moreInfo"
                         :key="index"
                         :name="accessorie.name"
                         @open-details-window="openDetailsWindow"></base-accessorie-card>
@@ -57,13 +61,14 @@
                         v-for="(accessorie, index) in validAccessories"
                         :id="accessorie.id"
                         :main-img="accessorie.mainImg"
+                        :more-info="moreInfo"
                         :key="index"
                         @open-details-window="openDetailsWindow"
                         :name="accessorie.name"
                     >
                     </base-accessorie-card>
                 </accessories-row>
-                <details-window v-if="isDetailsWindowOpen" :active-accessorie="activeAccessorie" >
+                <details-window v-if="isDetailsWindowOpen" :active-accessorie="activeAccessorie" :add-to-cart-text="addToCart">
                 </details-window>
             </div>
         </div>
@@ -105,7 +110,16 @@ export default {
         openCartData: {
             type: Array,
             required: true
+        },
+        moreInfo: {
+            type: String,
+            required: true
+        },
+        addToCart: {
+            type: String,
+            required: true
         }
+
     },
 
     computed: {

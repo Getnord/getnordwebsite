@@ -14,9 +14,11 @@ class Localize{
      */
     public function handle($request, Closure $next)
     {
+
+
         app()->setLocale($request->getPreferredLanguage(config('app.locales')));
 
-        
+
         return $next($request);
     }
 }

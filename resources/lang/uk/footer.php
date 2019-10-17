@@ -23,4 +23,14 @@ return [
     'instagram' => 'https://www.instagram.com/getnord/',
     'pinterest' => 'https://www.pinterest.com/getnord/getnord-phones/',
     'twitter' => 'https://twitter.com/getnord?lang=en',
+
+    // footer - links
+    'deliveryAndReturns' => 'Delivery and returns',
+    'warranty' => 'Warranty',
+    'legalNotes' => 'Legal notes',
+    'privacyAndCookies' => 'Privacy and cookies',
+
+    // footer - titles
+    'paymentsMethodes' => 'Payments Methods',
+    'securedWith' => 'Secured with'
 ];

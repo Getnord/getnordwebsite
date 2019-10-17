@@ -1,7 +1,6 @@
 /**
  * private methodes
  */
-
 // Handle the form response
 function form_response(data, form_id) {
     if (data.errors) {
@@ -26,10 +25,16 @@ function form_response(data, form_id) {
 
 function formSubmit() {
     $('#send_button').click(function() {
+        let forms = $('#contact_form').serializeArray()
+        forms.push({
+            name:'recaptcha',
+            value:$('#g-recaptcha-response').val()
+        });
+        let values = jQuery.param(forms)
         $.ajax({
             type: 'POST',
             url: '/contact',
-            data: $('#contact_form').serialize(),
+            data: values,
             async: true,
             success: function(data) {
                 form_response(data, 'contact_form');

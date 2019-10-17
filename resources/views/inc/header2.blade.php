@@ -79,14 +79,14 @@
                     <h3>UK</h3>
                 </div>
             @endif
-            {{-- @if (app()->getLocale() != 'fr' )
+             @if (app()->getLocale() != 'fr' )
                 <div class="lang-select">
                     <a href="{{ route('home', ['locale' => 'fr']) }}">
                         <img src="{{ url('/') }}/img/france.svg" alt="">
                     </a>
                     <h3>FR</h3>
                 </div>
-            @endif --}}
+            @endif
             @if ( app()->getLocale() != 'de' )
                 <div class="lang-select">
                     <a href="{{ route('home', ['locale' => 'de']) }}">
@@ -111,14 +111,14 @@
                     <h3>IT</h3>
                 </div>
             @endif --}}
-            {{-- @if ( app()->getLocale() != 'nl' )
+             @if ( app()->getLocale() != 'nl' )
                 <div class="lang-select">
                     <a href="{{ route('home', ['locale' => 'nl']) }}">
                         <img src="{{ url('/') }}/img/netherlands.svg" alt="">
                     </a>
                     <h3>Nederland</h3>
                 </div>
-            @endif --}}
+            @endif
             {{-- @if ( app()->getLocale() != 'pl' )
                 <div class="lang-select">
                     <a href="{{ route('home', ['locale' => 'pl']) }}">
@@ -166,6 +166,9 @@
                     @if (app()->getLocale() != 'us')
                         <a href="{{ route('onyx', ['locale' => app()->getLocale()]) }}">{{ __('header.onyx') }}</a>
                     @endif
+
+                        <a href="{{ route('leo', ['locale' => app()->getLocale()]) }}">{{ __('header.leo') }}</a>
+
                 </div>
             </li>
 <!--			<li><a href="javascript:void(0);" onclick="popup_open();">CONTACT</a></li>-->

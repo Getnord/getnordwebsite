@@ -1,7 +1,11 @@
 .panel_section
     padding: 40px 0 0
+    @include breakpoint(xs)
+        padding:  0
     .section_heading
         margin: 80px 0 35px
+        @include breakpoint(s)
+            margin: 20px 0 5px
         span
             @include breakpoint(s)
                 font-size: 50px !important

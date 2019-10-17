@@ -2,13 +2,13 @@
 
 @section('content')
 <div class="page_content">
-    <div class="main-container" id="legal-notes">
+    <div class="main_container" id="legal-notes">
         <section class="heading">
             <div class="text-container">
                 <p>CONDITIONS GÉNÉRALES DE VENTE ET D'UTILISATION DU SITE INTERNET GETNORD.COM</p>
             </div>
         </section>
-        
+
         <section class="theme">
             <div class="section-title">
                 <h1>ARTICLE 1. MENTIONS LEGALES</h1>
@@ -20,10 +20,10 @@
                 <p>Le Site est hébergé par Proservis, Savanorių pr. 192, LT-44151 Kaunas, www.proservis.eu, info@proservis.eu.</p>
             </div>
         </section>
-        
-        
 
-        
+
+
+
         <section class="theme">
             <div class="section-title">
                 <h1>ARTICLE 2. DEFINITIONS</h1>
@@ -36,7 +36,7 @@
                 <p>« Site » : Site internet accessible à l'URL www.getnord.com, ainsi que les sous-sites, sites miroirs, portail et variations d'URL y afférant.</p>
             </div>
         </section>
-        
+
         <section class="theme">
             <div class="section-title">
                 <h1>ARTICLE 3. CHAMP D'APPLICATION</h1>
@@ -49,7 +49,7 @@
                 <p>L'acceptation des présentes conditions générales suppose de la part des Internautes qu'ils jouissent de la capacité juridique nécessaire pour cela, ou à défaut qu'ils en aient l'autorisation d'un tuteur ou d'un curateur s'ils sont incapables, de leur représentant légal s'ils sont mineurs, ou encore qu'ils soient titulaires d'un mandat s'ils agissent pour le compte d'une personne morale.</p>
             </div>
         </section>
-        
+
         <section class="theme">
             <div class="section-title">
                 <h1>ARTICLE 4. OBJET DU SITE</h1>
@@ -58,7 +58,7 @@
                 <p>Getnord.com propose aux Internautes sur son Site la vente en ligne de Téléphones portables, smartphones, appareils électroniques, accessoires</p>
             </div>
         </section>
-        
+
         <section class="theme">
             <div class="section-title">
                 <h1>ARTICLE 5. ETAPE DE LA COMMANDE</h1>
@@ -66,7 +66,7 @@
             <div class="text-container">
                 <h3>5.1 Commande</h3>
                 <p>Afin de passer commande, les Internautes pourront sélectionner un ou plusieurs Produits et les ajouter à leur panier. La disponibilité des Produits est indiquée sur le Site, dans la fiche descriptive de chaque article. Lorsque leur commande sera complète, ils pourront accéder à leur panier en cliquant sur le bouton prévu à cet effet.</p>
-                
+
                 <h3>5.2 Validation de la commande par l'Internaute</h3>
                 <p>En consultant leur panier, les Internautes auront la faculté de vérifier le nombre ainsi que la nature des Produits qu'ils auront choisis et pourront vérifier leur prix unitaire, ainsi que leur prix global. Ils auront la possibilité de retirer un ou plusieurs Produits de leur panier.
                 </p>
@@ -77,10 +77,10 @@
                 <p>Une fois le paiement effectivement reçu par Getonord.com, ce dernier s'engage à en accuser réception au Client par voie électronique, dans un délai maximal de 24 heures. Dans le même délai, Getnord.com s'engage à adresser au Client un courrier électronique récapitulatif de la commande, lui en confirmant le traitement et reprenant toutes les informations y afférant.</p>
                 <h3>5.5 Conditions d’utilisation des codes promotionnels</h3>
                 <p>Les codes promotionnels officiels de Getnord France sont utilisables exclusivement sur les commandes en ligne du site www.gernord.com France. En consultant leur panier, les internautes pourront rentrer leur code promotionnel dans la case prévue à cet effet faisant suite à la question « Avez-vous un code promo ? ». Un seul code promotionnel peut être utilisé par commande. Les codes promotionnels sont non cumulable avec d'autres opérations promotionnelles ou offres en cours, ni en pourcentage, ni en valeur. Les codes promotionnels sont spécifiques à chaque pays. Aucun versement en espèces ou autre alternative ne sera fourni. Les codes promotionnels et les offres associées ne sont pas ouverts aux employés de la société Getnord. Cette dernière se réserve le droit de retirer et/ou de refuser et/ou de limiter toute commande à tout moment. Les codes promotionnels sont valables uniquement dans le pays pour lequel ils sont édités et s’appliquent exclusivement aux règlements dans la devise du pays. Par exemple, les codes promotionnels valables en France sont uniquement valables sur des règlements faits en Euros sur le site Getnord France. Veuillez vérifier les conditions de chaque code promotionnel pour connaître le pays dans lequel le code est utilisable.</p>
-                
+
             </div>
         </section>
-        
+
         <section class="theme">
             <div class="section-title">
                 <h1>ARTICLE 6. PRIX - PAIEMENT</h1>
@@ -97,10 +97,10 @@
                 <p>Getnord.com adressera ou mettra à disposition du Client une facture par voie électronique après chaque paiement. Le Client accepte expressément de recevoir les factures par voie électronique.</p>
                 <h3>6.4 Réserve de propriété</h3>
                 <p>Les Produits vendus restent la propriété de Getnord.com jusqu'à complet paiement de leur prix, conformément à la présente clause de réserve de propriété.</p>
-                
+
             </div>
         </section>
-        
+
         <section class="theme">
             <div class="section-title">
                 <h1>ARTICLE 7. DROITS DES CONSOMMATEURS</h1>
@@ -121,8 +121,8 @@
                 <p>La résiliation du contrat au tort du Client est sans préjudice des éventuels dommages-intérêts auxquels Getnord.com pourrait prétendre du fait du manquement du Client.</p>
             </div>
         </section>
-        
-        
+
+
         <section class="theme">
             <div class="section-title">
                 <h1>ARTICLE 8. GARANTIES</h1>
@@ -138,7 +138,7 @@
                 <p>Afin d'exercer l'un de ces droits, il appartient au Client de retourner le produit à l'adresse du siège de Getnord.com, accompagné d'une lettre explicative en demandant le remboursement. Les frais de retour du Produit seront alors remboursés au Client par chèque bancaire ou par virement, dans un délai maximal de trente jours.</p>
             </div>
         </section>
-        
+
         <section class="theme">
             <div class="section-title">
                 <h1>ARTICLE 9. LIVRAISON</h1>
@@ -154,7 +154,7 @@
                 <p>En cas de livraison d'un colis manifestement et visiblement détérioré, il appartient au Client de le refuser afin de jouir de la garantie offerte par le transporteur. Le Client devra par ailleurs en informer Getnord.com sans délai, afin qu'un nouveau colis lui soit préparé, puis expédié dès réception du colis détérioré en retour. Dans pareil cas, les délais de livraison indiqués plus haut dans les présentes conditions générales ne seront plus applicables.</p>
             </div>
         </section>
-        
+
         <section class="theme">
             <div class="section-title">
                 <h1>ARTICLE 10. ESPACE PERSONNEL</h1>
@@ -173,7 +173,7 @@
                 <p>Cette exclusion est sans préjudice de la possibilité, pour Getnord.com, d'entreprendre des poursuites d'ordre judiciaire à l'encontre du Client, lorsque les faits l'auront justifié.</p>
             </div>
         </section>
-        
+
         <section class="theme">
             <div class="section-title">
                 <h1>ARTICLE 11. RESPONSABILITE DE getnoird.COM</h1>
@@ -196,7 +196,7 @@
                 <p>De même et dans les mêmes limites, le montant des dommages et intérêts mis à la charge de Getnord.com ne pourront en tout état de cause excéder le prix du Produit commandé.</p>
             </div>
         </section>
-        
+
         <section class="theme">
             <div class="section-title">
                 <h1>ARTICLE 12. PROPRIETE INTELLECTUELLE</h1>
@@ -208,7 +208,7 @@
                 <p>Les informations publiées sur le présent Site le sont à titre indicatif, sans garantie d'exactitude. Getnord.com ne peut en aucun cas être tenue responsable du fait d'une omission, d'une inexactitude ou de toute erreur contenue dans ces informations et qui serait à l'origine d'un dommage direct ou indirect causé à l'Internaute.</p>
             </div>
         </section>
-        
+
         <section class="theme">
             <div class="section-title">
                 <h1>ARTICLE 13. DISPOSITIONS GENERALES</h1>
@@ -228,26 +228,26 @@
                 <p>Les stipulations des présentes conditions générales s'appliquent sous réserve du respect des dispositions impératives du Code de la consommation concernant les clauses abusives dans les contrats conclus entre un professionnel et un consommateur.</p>
                 <a href="https://www.drmartens.com/fr/fr/cancellation">Formulaire de rétractation</a>
                 <p> La législation européenne oblige tous les sites marchands à inclure le lien suivant vers l'European Commission’s Online Dispute Resolution platform (Plateforme de la Commission Européenne de résolution des litiges en ligne): <a href="ec.europa.eu/consumers/odr/">http://ec.europa.eu/consumers/odr/</a></p>
-            </div>    
+            </div>
         </section>
-        
+
          <section class="theme">
             <div class="section-title">
                 <h1></h1>
             </div>
             <div class="text-container">
-                
+
             </div>
         </section>
-        
+
          <section class="theme">
             <div class="section-title">
                 <h1></h1>
             </div>
             <div class="text-container">
-                
+
             </div>
         </section>
     </div>
-</div>   
+</div>
 @endsection

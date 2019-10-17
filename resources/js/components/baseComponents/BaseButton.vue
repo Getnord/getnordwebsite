@@ -30,7 +30,10 @@ export default {
     color: #272727
     border-width: 0px
     height: 66px
-        
+
+
+
+
 </style>
 
 

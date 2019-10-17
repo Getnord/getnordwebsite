@@ -6,8 +6,14 @@
         flex-wrap: wrap
         .store_cta
             @include breakpoint(s)
-                max-width: none
+                max-width: 200px
                 width: 30%
-                margin: 20px auto
-
+            @include breakpoint(s)
+                margin: 5px!important
+                max-width: 150px
+                width: 45%
+            &--bol
+                margin-top: -25px
+.stores_list-nl
+    align-items: baseline
 

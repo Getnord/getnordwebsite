@@ -80,7 +80,7 @@ return [
     |
     */
 
-    'locale' => 'us',
+    'locale' => '',
 
     /*
     |--------------------------------------------------------------------------
@@ -93,19 +93,19 @@ return [
     |
     */
 
-    'fallback_locale' => 'us',
+    'fallback_locale' => '',
 
     /**
      * ------------------------------------------------------------------------
      * Application supported locals
      * ------------------------------------------------------------------------
-     * 
+     *
      * The application supported locals lists all the locals we have, these
      * will be used to auto serve the aproriate local depending on the user
      * default browser language
      */
 
-    'locales' => ['fr','de','us', 'uk', 'ca', 'es', 'it', 'pl', 'nl', 'lt'],
+    'locales' => ['uk','de','us','fr','nl'],
 
     /*
     |--------------------------------------------------------------------------
@@ -118,7 +118,7 @@ return [
     |
     */
 
-    'faker_locale' => 'en_US',
+    'faker_locale' => 'uk_UK',
 
     /*
     |--------------------------------------------------------------------------
@@ -177,7 +177,7 @@ return [
         /*
          * Package Service Providers...
          */
-
+        \Torann\GeoIP\GeoIPServiceProvider::class,
         /*
          * Application Service Providers...
          */
@@ -238,6 +238,8 @@ return [
         'URL' => Illuminate\Support\Facades\URL::class,
         'Validator' => Illuminate\Support\Facades\Validator::class,
         'View' => Illuminate\Support\Facades\View::class,
+        'GeoIP' => \Torann\GeoIP\Facades\GeoIP::class,
+
 
     ],
 

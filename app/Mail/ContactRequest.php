@@ -13,7 +13,7 @@ class ContactRequest extends Mailable
 
     /**
      * The request instance
-     * 
+     *
      * @var request
      */
 
@@ -36,7 +36,7 @@ class ContactRequest extends Mailable
      */
     public function build()
     {
-        return $this->from('support@getnord.live')
+        return $this->from('support3@getnord.com')
             ->view('mail.contact')
             ->subject($this->request->input('subject'))
             ->replyTo($this->request->input('email'))

@@ -1,5 +1,5 @@
 <div class="image_content">
-    <img src="{{asset('img/leo/camera').'/'.$image.'.png'}}" alt="Leo Camera Image">
+    <img src="{{asset('img/leo/camera').'/'.$image.'.jpg'}}" alt="Leo Camera Image">
 </div>
 
 <style>
@@ -8,14 +8,10 @@
         padding: 0;
     }
 
-    .image_content {
-        width: 100%;
-        height: 100vh
-    }
 
     .image_content img {
-        height: 100%;
-        width: auto;
+
+        width: 100%;
         margin: 0 auto;
         display: block;
     }

@@ -3430,12 +3430,13 @@ span.line_breake {
         -webkit-box-pack: justify;
             -ms-flex-pack: justify;
                 justify-content: space-between;
+        margin-top: 20px;
 
     }
     body .product_section--onyx_stores_list .store_cta{
         max-width: 45% !important;
         width: 45%;
-        padding: 15px 0;
+        padding: 15px 0 10px;
         margin-bottom: 10px;
     }
     body .product_section--onyx_stores_list .store_cta--bol,
@@ -3456,6 +3457,12 @@ span.line_breake {
         max-width: 45% !important;
 
         margin: -15px 0 10px;
+    }
+    body .product_section--onyx_stores{
+        padding: 25px 30px 0;
+    }
+    body .logo_img{
+        margin: 0;
     }
 }
 @charset "UTF-8";

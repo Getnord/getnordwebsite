@@ -42,7 +42,7 @@
                         </a>
                     @endif
                     @if(app()->getLocale() === 'de')
-                        <a href="{{ __('leo.leoConradLink') }}" class="store_cta" target="_blank">
+                        <a href="{{ __('leo.leoConradLink') }}" class="store_cta store_cta--ebay" target="_blank">
                             <img src="{{ url('/') }}/img/conrad_logo.png" alt="">
                         </a>
                     @endif

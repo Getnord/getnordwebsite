@@ -15,9 +15,15 @@
     body .getnord_leo--technology .section_heading {
         padding: 50px 0 80px;
     }
-    .mount_section .section_heading{
+    body .mount_section .section_heading ,
+    .screen_section .section_heading ,
+    .battery_section .section_heading ,
+    .charging_section .section_heading,
+    .ram_section .section_heading
+    {
         font-size: 45px;
         line-height: 50px;
+
     }
     body .getnord_leo--technology img {
         height: 60px;
@@ -49,6 +55,7 @@
     .gallery_section .section_header{
         font-size: 45px;
         padding: 60px 0;
+        line-height: 50px;
     }
 
 }
@@ -87,9 +94,40 @@
     .variety_section{
         min-height: unset !important;
     }
+    body .product_section--onyx_stores .product_section--onyx_stores_list .store_cta--bol {
+        margin-top: -15px;
+    }
+    body .product_section--onyx_stores_list .store_cta--ebay {
+        margin-top: -9px;
+    }
+    body .product_section--onyx_stores_list{
+        flex-wrap: wrap;
+        justify-content: space-between;
+
+    }
+    body .product_section--onyx_stores_list .store_cta{
+        max-width: 45% !important;
+        width: 45%;
+        padding: 15px 0;
+        margin-bottom: 10px;
+    }
+    body .product_section--onyx_stores_list .store_cta--bol,
+    body .product_section--onyx_stores_list .store_cta--ebay{
+        max-width: 45% !important;
+        margin: -25px 0 10px;
+    }
+    .gallery_section .section_header {
+        padding: 30px 0;
+        line-height: 35px;
+    }
 }
 @media (max-width: 450px) {
     body .product_section--leo_stores .product_section--onyx_stores_list .store_cta{
         max-width: 100px;
+    }
+    body .product_section--onyx_stores_list .store_cta--bol, body .product_section--onyx_stores_list .store_cta--ebay {
+        max-width: 45% !important;
+
+        margin: -15px 0 10px;
     }
 }

@@ -103,7 +103,7 @@
     body .product_section--onyx_stores_list{
         flex-wrap: wrap;
         justify-content: space-between;
-        margin-top: 20px;
+        margin-top: 30px;
 
     }
     body .product_section--onyx_stores_list .store_cta{

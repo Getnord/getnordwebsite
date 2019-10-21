@@ -3430,7 +3430,7 @@ span.line_breake {
         -webkit-box-pack: justify;
             -ms-flex-pack: justify;
                 justify-content: space-between;
-        margin-top: 20px;
+        margin-top: 30px;
 
     }
     body .product_section--onyx_stores_list .store_cta{
@@ -4657,7 +4657,6 @@ body h1 {
   .product_section--leo_stores .product_section--onyx_stores_list .store_cta {
     max-width: 150px;
     width: 45%;
-    padding: 10px;
   }
 }
 

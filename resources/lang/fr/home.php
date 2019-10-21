@@ -42,10 +42,10 @@ return [
     "workAndAdventure12Text" => "Placez votre téléphone devant vous, attachez-le. Pas besoin de câble.",
 
     "mountConcept" => "CONCEPT DE TERMINAL DE RECHARGE",
-    "mountConceptParagraph" => "Wireless charging cradle with magnetic lock. Patented RAM ball and socket system. Tough and Waterproof. Can be used for off road, ATV and UTV.",
+    "mountConceptParagraph" => "Nacelle de recharge sans fil avec fermeture magnétique. Balle RAM brevetée et système de socle.",
 
-    "ramMount" => "PARTNERSHIP WITH RAM MOUNTS",
-    "ramMountParagraph" => "We do what we do best and we partnership with those who know best. RAM is the revolutionary universal ball and socket mounting SYSTEM that allows you to mount practically anything anywhere. RAM's family of more than 900 interchangeable accessories will provide you solutions to your most challenging mounting problems. Recognized and accepted by the U.S. Patent Office, RAM is the only universal ball-and-socket SYSTEM that will hold tremendous amounts of weight in high vibration applications for military, commercial and private use.",
+    "ramMount" => "EN PARTENARIAT AVEC LES TERMINAUX RAM",
+    "ramMountParagraph" => "Nous faisons ce que nous savons faire de mieux et nous sommes en partenariat avec ceux qui savent le mieux. Ram est la balle universelle révolutionnaire et son SYSTEME de socle-terminal vous permet de recharger pratiquement partout. La famille de RAM de plus de 900 accessoires interchangeables vous fournissent des solutions à vos problèmes de recharge les plus difficiles. Reconnus et acceptés par l’U.S Patent Office, RAM est le seul SYSTEME balle-et-socle qui tiendra des poids gigantesques pour des utilisations dans tous les domaines : militaires, commerciales et personnelles. ",
     "ramMountJustRamIt" => 'Just RAM It!',
 
     "screenStrength" => "STRONGEST SCREEN",

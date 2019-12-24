@@ -4653,10 +4653,11 @@ body h1 {
   }
 }
 
-@media (max-width: 750px) {
+@media (max-width: 480px) {
   .product_section--leo_stores .product_section--onyx_stores_list .store_cta {
     max-width: 150px;
     width: 45%;
+    padding: 0 10px;
   }
 }
 

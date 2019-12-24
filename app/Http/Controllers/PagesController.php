@@ -2,10 +2,14 @@
 
 namespace App\Http\Controllers;
 
+use App\Mail\CouponRequest;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Cache;
+use Illuminate\Support\Facades\Lang;
+use Illuminate\Support\Facades\Mail;
+use Spatie\Newsletter\NewsletterFacade as Newsletter;
 use Torann\GeoIP\Facades\GeoIP;
-
+use Validator;
 
 class PagesController extends Controller
 {
@@ -275,10 +279,45 @@ class PagesController extends Controller
         ]);
     }
 
-    public function test()
+    public function test($locale)
     {
+        if (isset($locale)) {
+            app()->setLocale($locale);
+        } else {
+            app()->setLocale('uk');
+            $locale = 'uk';
+        }
+       return view('pages.test.index')->with([
+               'onHomePage' => false,
+           ]
+       );
+    }
+    public function couponSubscribe(Request $request){
+        $loc = '';
+        if (session()->has('locale')) {
+            app()->setLocale(session()->get('locale'));
+        } else {
+            app()->setLocale('uk');
+        };
+        if (app()->getLocale() === 'us'){
+            $loc = 'uk';
+        }else{
+            $loc = app()->getLocale();
+        }
+        $validator = Validator::make($request->all(), [
+            'email' => 'required|email',
+        ]);
+        if ($validator->fails()) {
+            return response()->json(['errors' => $validator->errors()->getMessageBag()]);
+        } else {
 
-        $data = geoip($_SERVER['REMOTE_ADDR']);
-        dd(strtolower($data->iso_code));
+            Mail::to('support1@getnord.com')
+                ->send(new CouponRequest($request));
+            if (!Mail::failures()) {
+                // we add the user to mailchimp
+                Newsletter::subscribe($request->input('email'), [], 'coupon_' .$loc);
+                return response()->json(['success' => Lang::get('contact.email_sent')]);
+            }
+        };
     }
 }

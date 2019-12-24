@@ -64,6 +64,12 @@ return [
         'list_de' => [
             'id' => 'b4661f1e2f'
         ],
+        'coupon_uk' => [
+            'id' => '80434252a0'
+        ],
+        'coupon_de' => [
+            'id' => '059aa1def7'
+        ],
     ],
 
     /*

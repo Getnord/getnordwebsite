@@ -29,7 +29,7 @@ class ContactFormController extends Controller
         if (session()->has('locale')) {
             app()->setLocale(session()->get('locale'));
         } else {
-            app()->setLocale('us');
+            app()->setLocale('uk');
         };
         $validator = Validator::make($request->all(), [
             'name' => 'required|max:255',

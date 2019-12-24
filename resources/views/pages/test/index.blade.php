@@ -1,9 +1,6 @@
 @extends('layouts.app')
 
 @section('content')
-    <video autoplay loop muted playsinline >
-        <source src="{{asset('img/intro.mp4')}}" type="video/mp4">
-    </video>
 
 <div>
     <!-- The Modal -->

@@ -47,6 +47,7 @@
 @include('inc.footer2')
 <script src="{{ asset('js/app.js') }}"></script>
 <script src="{{ asset('js/lightbox.min.js') }}"></script>
+<script src="{{ asset('js/modal.js') }}"></script>
 <script src="{{ url('/') }}/js/lang-{{ app()->getLocale() }}.js"></script>
 </body>
 </html>

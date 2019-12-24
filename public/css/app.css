@@ -6291,8 +6291,6 @@ body h1 {
 /* The Modal (background) */
 
 .modal {
-  display: none;
-  /* Hidden by default */
   position: fixed;
   /* Stay in place */
   z-index: 99999999;

@@ -28,7 +28,7 @@ Route::prefix('{locale}')->group(function() {
     Route::get('/legal', 'PagesController@legal')->name('legal');
     Route::get('/leo', 'PagesController@leo')->name('leo');
     Route::get('/leo/{image}', 'PagesController@leoImage')->name('leoImage');
-    Route::get('/test', 'PagesController@test')->name('test');
+    Route::get('/coupon', 'PagesController@test')->name('test');
     Route::post('/coupon', 'PagesController@couponSubscribe')->name('coupon');
 });
 Route::get('/', 'PagesController@index')->name('index');

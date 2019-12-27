@@ -29,24 +29,24 @@ class PagesController extends Controller
         $data = geoip($_SERVER['REMOTE_ADDR']);
         $countryCode = strtolower($data->iso_code);
 
-            if (isset($countryCode)) {
-                if ($countryCode == 'de' || $countryCode == 'at') {
+        if (isset($countryCode)) {
+            if ($countryCode == 'de' || $countryCode == 'at') {
 
-                    app()->setLocale('de');
-                }
-                elseif ($countryCode == 'us') {
-                    app()->setLocale('us');
-                }
-                /*elseif ($countryCode == 'fr') {
-                    app()->setLocale('fr');
-                }elseif ($countryCode == 'nl') {
-                    app()->setLocale('nl');
-                }*/
-                else {
-                    app()->setLocale('uk');
-                }
-
+                app()->setLocale('de');
             }
+            elseif ($countryCode == 'us') {
+                app()->setLocale('us');
+            }
+            /*elseif ($countryCode == 'fr') {
+                app()->setLocale('fr');
+            }elseif ($countryCode == 'nl') {
+                app()->setLocale('nl');
+            }*/
+            else {
+                app()->setLocale('uk');
+            }
+
+        }
         $locale = app()->getLocale();
 
         return redirect('/' . $locale);
@@ -287,10 +287,10 @@ class PagesController extends Controller
             app()->setLocale('uk');
             $locale = 'uk';
         }
-       return view('pages.test.index')->with([
-               'onHomePage' => false,
-           ]
-       );
+        return view('pages.test.index')->with([
+                'onHomePage' => false,
+            ]
+        );
     }
     public function couponSubscribe($locale,Request $request){
         $loc = '';
@@ -316,7 +316,7 @@ class PagesController extends Controller
             if (!Mail::failures()) {
                 // we add the user to mailchimp
                 Newsletter::subscribe($request->input('email'), [], 'coupon_' .$loc);
-                return response()->json(['success' => Lang::get('contact.email_sent')]);
+                return response()->json(['success' => __('contact.email_sent')]);
             }
         };
     }

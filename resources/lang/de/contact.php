@@ -33,7 +33,7 @@ return [
     /**
      * The following is used in validation success
      */
-    'email_sent' => 'Thank you! Your email has been received.',
+    'email_sent' => 'Danke! Wir haben Ihre E-Mail erhalten',
 
 
     // Rma link

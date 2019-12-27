@@ -292,17 +292,17 @@ class PagesController extends Controller
            ]
        );
     }
-    public function couponSubscribe(Request $request){
+    public function couponSubscribe($locale,Request $request){
         $loc = '';
         if (session()->has('locale')) {
             app()->setLocale(session()->get('locale'));
         } else {
             app()->setLocale('uk');
         };
-        if (app()->getLocale() === 'us'){
+        if ($locale === 'us'){
             $loc = 'uk';
         }else{
-            $loc = app()->getLocale();
+            $loc = $locale;
         }
         $validator = Validator::make($request->all(), [
             'email' => 'required|email',

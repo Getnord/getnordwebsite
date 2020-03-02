@@ -1,0 +1,72 @@
+#scalefusion-section
+    padding: 130px 0 100px
+    background: #f2f3f3
+    @include breakpoint(xxl)
+        padding: 80px 0 50px
+    @include breakpoint(xs)
+        padding: 50px 0
+    .section__items
+        display: flex
+        @include breakpoint(m)
+            flex-direction: column
+    .section__container
+        max-width: 1200px
+        margin: 0 auto
+        @include breakpoint(xl)
+            max-width: 95%
+    .section__item
+        width: 50%
+        padding-right: 50px
+        @include breakpoint(m)
+            width: 100%
+        .scalefusion-logo
+            margin-bottom: 90px
+            display: block
+            @include breakpoint(xs)
+                margin-bottom: 30px
+                width: 95%
+        p
+            font-size: 20px
+            color: #272727
+            line-height: 1.4
+            @include breakpoint(m)
+                line-height: 1.1
+            @include breakpoint(xs)
+                font-size: 16px
+                text-align: center
+        .first--item
+            margin-bottom: 30px
+
+    h3
+        text-align: center
+        font-size: 62px
+        color: #272727
+        font-weight: 700
+        margin: 0 auto 70px
+        @include breakpoint(xxl)
+            font-size: 50px
+        @include breakpoint(xl)
+            font-size: 40px
+        @include breakpoint(xs)
+            font-size: 24px
+            margin: 0 auto 30px
+    h4
+        font-size: 20px
+        color: #272727
+        text-transform: uppercase
+        margin-bottom: 40px
+        font-weight: 700
+        @include breakpoint(m)
+            text-align: center
+
+    .company--section
+        display: flex
+        justify-content: space-between
+        flex-wrap: wrap
+        @include breakpoint(xs)
+            margin-bottom: 15px
+        .company--logo
+            width: 30%
+            img
+                display: block
+                width: 100%

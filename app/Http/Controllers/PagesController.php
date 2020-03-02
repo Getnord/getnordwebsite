@@ -292,6 +292,19 @@ class PagesController extends Controller
             ]
         );
     }
+    public function lock($locale)
+    {
+        if (isset($locale)) {
+            app()->setLocale($locale);
+        } else {
+            app()->setLocale('uk');
+            $locale = 'uk';
+        }
+        return view('pages.lock.index')->with([
+                'onHomePage' => false,
+            ]
+        );
+    }
     public function couponSubscribe($locale,Request $request){
         $loc = '';
         if (session()->has('locale')) {

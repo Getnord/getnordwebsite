@@ -1,0 +1,55 @@
+#icons-section
+    padding: 130px 0 0
+    background: #0080ff
+    @include breakpoint(xxl)
+        padding: 80px 0 0
+    @include breakpoint(xs)
+        padding: 50px 0 0
+    .section__container
+        max-width: 1200px
+        margin: 0 auto
+        @include breakpoint(xxl)
+            max-width: 95%
+    h3
+        text-align: center
+        font-size: 62px
+        color: #ffffff
+        font-weight: 700
+        margin: 0 auto 100px
+        @include breakpoint(xxl)
+            margin: 0 auto 80px
+            font-size: 50px
+        @include breakpoint(xxl)
+            font-size: 50px
+            margin: 0 auto 80px
+
+        @include breakpoint(xs)
+            font-size: 24px
+            margin: 0 auto 30px
+    .icons__wrapper
+        display: flex
+        flex-wrap: wrap
+        justify-content: center
+    .icons__item
+        display: flex
+        flex-direction: column
+        align-items: center
+        width: 20%
+        margin-bottom: 90px
+        @include breakpoint(m)
+            width: 30%
+        @include breakpoint(xs)
+            width: 50%
+            margin-bottom: 50px
+        svg
+            height: 80px
+
+        span
+            font-size: 20px
+            color: #ffffff
+            text-transform: uppercase
+            margin-top: 40px
+            text-align: center
+            .line_break
+                display: block
+                margin: 0

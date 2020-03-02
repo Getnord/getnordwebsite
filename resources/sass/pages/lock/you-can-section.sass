@@ -1,0 +1,102 @@
+#you-can__section
+    padding: 130px 0 90px
+    background: #f2f3f3
+    @include breakpoint(xxl)
+        padding: 80px 0 50px
+    @include breakpoint(xs)
+        padding: 50px 0 50px
+    .section__container
+        max-width: 1200px
+        width: 100%
+        margin: 0 auto
+        @include breakpoint(xl)
+            max-width: 95%
+        .can__item
+            margin-bottom: 20px
+            background: #ffffff
+            &.active
+                .can__item-description
+                    height: 100%
+                    padding: 40px
+                    @include breakpoint(xs)
+                        padding: 20px
+                .icon--plus
+                    display: none
+                .icon--minus
+                    display: block
+    .you-can__title
+        text-align: center
+        font-size: 62px
+        color: #272727
+        font-weight: 700
+        margin: 0 auto 100px
+        @include breakpoint(xxl)
+            font-size: 50px
+            margin: 0 auto 80px
+        @include breakpoint(xl)
+            font-size: 40px
+            margin: 0 auto 60px
+        @include breakpoint(xs)
+            font-size: 24px
+            margin-bottom: 25px
+    .can__item-top
+        display: flex
+        @include breakpoint(m)
+            flex-direction: column-reverse
+        img
+            width: 33.3%
+            @include breakpoint(xl)
+                width: 40%
+            @include breakpoint(m)
+                width: 100%
+    .can__item-text
+
+        width: 66.6%
+        display: flex
+        flex-direction: column
+        @include breakpoint(xl)
+            width: 60%
+        @include breakpoint(m)
+            width: 100%
+        p
+            padding: 20px 40px 0
+            font-size: 24px
+            color: #272727
+            @include breakpoint(m)
+                padding: 20px 40px
+            @include breakpoint(xs)
+                font-size: 20px
+                padding: 10px 0
+                text-align: center
+        .show-button
+            margin-top: auto
+            font-size: 20px
+            font-weight: 700
+            height: auto
+            align-items: center
+            padding: 25px 40px
+            cursor: pointer
+            text-align: left
+            display: flex
+            @include breakpoint(xs)
+                align-items: center
+                padding: 15px
+            .icon
+                width: 30px
+                height: 30px
+                margin-right: 20px
+                @include breakpoint(xs)
+                    min-height: 30px
+                    min-width: 30px
+            .icon--plus
+                display: block
+            .icon--minus
+                display: none
+            .bold-text
+                font-weight: 900
+
+    .can__item-description
+        height: 0
+        overflow: hidden
+
+

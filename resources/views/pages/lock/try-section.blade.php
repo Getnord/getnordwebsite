@@ -1,0 +1,5 @@
+<section id="try-section">
+    <h3>@lang('lock.tryTitle')</h3>
+    <p>@lang('lock.trySubtitle')</p>
+    <button class="button_yellow">@lang('lock.tryButton')</button>
+</section>

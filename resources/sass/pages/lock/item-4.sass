@@ -1,0 +1,59 @@
+.item-4
+    max-width: none
+    width: 100%
+    .desc-section
+        margin-bottom: 60px
+    h3
+        font-size: 32px
+        color: rgba(0,0,0,0.8)
+        line-height: 42px
+        font-weight: 400
+        padding: 30px 0
+        text-align: center
+        @include breakpoint(xs)
+            font-size: 25px
+            line-height: 32px
+    p
+        font-size: 15px
+        font-weight: 500
+        line-height: 24px
+        text-align: center
+    .dive-image-top
+        img
+            display: block
+            margin: 0 auto
+    .deep-dive__bg
+        margin-top: -50px
+        position: relative
+        background: #f6f9fc
+        padding-top: 130px
+        padding-bottom: 30px
+        @include breakpoint(xs)
+            padding: 30px 10px
+
+    .deep-bottom-section
+        margin: 0 auto
+        max-width: 945px
+        display: flex
+        justify-content: flex-end
+        @include breakpoint(s)
+            justify-content: space-around
+        .deep-bottom-section-img
+            margin-right: 100px
+            @include breakpoint(s)
+                margin: 0
+                width: 30%
+            @include breakpoint(xs)
+                display: none
+        .deep-bottom-section--text
+            max-width: 380px
+            @include breakpoint(s)
+                width: 50%
+            @include breakpoint(xs)
+                width: 100%
+        h4
+            font-size: 18px
+            font-weight: 700
+            margin-bottom: 30px
+        p
+            text-align: left

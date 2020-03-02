@@ -30,6 +30,7 @@ Route::prefix('{locale}')->group(function() {
     Route::get('/leo/{image}', 'PagesController@leoImage')->name('leoImage');
     Route::get('/coupon', 'PagesController@test')->name('test');
     Route::post('/coupon', 'PagesController@couponSubscribe')->name('coupon');
+    Route::get('/lock', 'PagesController@lock')->name('lock');
 });
 Route::get('/', 'PagesController@index')->name('index');
 // Get data from OpenCart

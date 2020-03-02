@@ -1,0 +1,132 @@
+.item-6
+    width: 100%
+    max-width: none
+    .item-6-container
+        max-width: 975px
+        margin: 0 auto
+    .item-6-bottom
+        padding-top: 50px
+        background: #F6F9FC
+    .tab-2
+        max-width: 1100px
+        width: 100%
+        display: flex
+        justify-content: space-between
+        align-items: center
+        margin-bottom: 30px
+        @include breakpoint(s)
+            flex-direction: column
+        .tab-content
+            @include breakpoint(s)
+                width: 40%
+            @include breakpoint(xs)
+                display: none
+        .tab-2-header
+            max-width: 280px
+            width: 100%
+            @include breakpoint(s)
+                max-width: none
+                display: flex
+                margin-top: 20px
+            @include breakpoint(xs)
+                flex-direction: column
+
+            h4
+                font-size: 16px
+                font-weight: 700
+                line-height: 24px
+                color: #5d5d5d
+                margin-bottom: 30px
+
+            p
+                text-align: left
+                transition: all ease .3s
+                font-size: 15px
+                color: #5d5d5d
+            .tab-2-header--item
+                padding: 25px
+                cursor: pointer
+                margin-bottom: 30px
+                @include breakpoint(s)
+                    padding: 15px
+                &:hover
+                    background: #ffffff
+                    box-shadow: 0 2px 28px -5px rgba(0,0,0,0.08)
+                &.active
+                    box-shadow: 0 2px 28px -5px rgba(0,0,0,0.08)
+                    border-top: 5px solid #003580
+                    transition: ease 0.5s
+                    p
+                        color: rgba(0,0,0,0.75)
+                    h4
+                        color: rgba(0,0,0,0.75)
+
+        .tab-content--image
+            img
+                display: none
+            &.active
+                img
+                    display: block
+    .tab-1
+        max-width: 780px
+        width: 100%
+        margin: 0 auto 100px
+        display: flex
+        justify-content: space-between
+        align-items: center
+        @include breakpoint(s)
+            margin: 0 auto 30px
+        .tab-item
+            box-shadow: 0 2px 28px -5px rgba(0,0,0,0.08)
+            margin-bottom: 20px
+            border-radius: 3px
+            cursor: pointer
+            padding: 4px 10px
+            &.active
+                border-top: 5px solid #003580
+                transition: 0.3s ease all
+                i
+                    transform: rotate(180deg)
+                p
+                    height: auto
+                    display: block
+                    padding: 10px
+
+
+        .tab-left
+            width: 100%
+            max-width: 310px
+            @include breakpoint(s)
+                max-width: none
+            .tab-item--header
+                padding: 10px
+                position: relative
+                i
+                    content: '\f078'
+                    position: absolute
+                    font-size: 14px
+                    top: 15px
+                    right: 10px
+            h4
+                font-size: 16px
+                font-weight: 700
+                line-height: 24px
+                color: rgba(0,0,0,0.8)
+            p
+                height: 0
+                display: none
+                text-align: left
+                transition: all ease .3s
+                font-size: 15px
+
+        .tab-right
+            @include breakpoint(s)
+                display: none
+            .tab-image
+                img
+                    margin-right: 80px
+                    display: none
+                &.active
+                    img
+                        display: block
+

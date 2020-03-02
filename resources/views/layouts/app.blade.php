@@ -49,5 +49,40 @@
 <script src="{{ asset('js/lightbox.min.js') }}"></script>
 <script src="{{ asset('js/modal.js') }}"></script>
 <script src="{{ url('/') }}/js/lang-{{ app()->getLocale() }}.js"></script>
+<script>
+    $('.show-button').on('click',function () {
+        $(this).closest(".can__item").toggleClass('active');
+
+    })
+    $('.vmodal--open').on('click',function () {
+        $('.modal-wrapper').addClass('modal--open')
+    })
+    if ($(window).width() >= 480){
+        console.log('asd')
+        $('#lock__banner video').attr('muted')
+    }
+    $(document).on('click',function (e) {
+        if (e.target.classList.contains('modal-wrapper')) {
+            $('.modal-wrapper').removeClass('modal--open')
+            $('.modal-wrapper video').trigger('pause')
+        }
+    })
+    $('.tab-item').on('click',function () {
+        let idx = $(this).data('idx');
+        let img = $('.tab-image')
+        $('.tab-item').removeClass('active');
+        $(this).addClass('active');
+        img.removeClass('active');
+        img[idx].classList.add('active')
+    })
+    $('.tab-2-header--item').on('click',function () {
+        let index = $(this).data('index');
+        let image = $('.tab-content--image')
+        $('.tab-2-header--item').removeClass('active');
+        $(this).addClass('active');
+        image.removeClass('active');
+        image[index].classList.add('active')
+    })
+</script>
 </body>
 </html>

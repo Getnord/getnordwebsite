@@ -1,0 +1,18 @@
+.modal-wrapper
+    position: fixed
+    top: 0
+    left: -110vw
+    width: 100vw
+    height: 100vh
+    display: none
+    justify-content: center
+    align-items: center
+    background: rgba(0, 0, 0, 0.50)
+    transition: all ease .3s
+    z-index: 9999
+    .video-modal
+        width: 60%
+    &.modal--open
+        left: 0
+        display: flex
+

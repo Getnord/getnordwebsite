@@ -1,0 +1,44 @@
+.item-3
+    .item-list
+        display: flex
+        justify-content: center
+        @include breakpoint(s)
+            flex-wrap: wrap
+        .single-item
+            max-width: 350px
+            width: 100%
+            margin: 0 25px
+            box-shadow: 0 2px 12px 0 #d9e4ef
+            @include breakpoint(s)
+                max-width: none
+                margin: 0 0 20px
+            .item-header
+                padding: 23px 25px
+                background: #003580
+                color: #ffffff
+                img
+                    margin-bottom: 10px
+                p
+                    font-size: 15px
+                    font-weight: bold
+                    text-transform: capitalize
+            .item-content
+                padding: 20px
+                font-size: 15px
+                line-height: 24px
+                color: rgba(0, 0, 0, 0.75)
+                font-weight: 500
+                p
+                    margin-bottom: 30px
+                ul
+                    list-style: none
+                    padding-left: 40px
+                li
+                    margin-bottom: 20px
+                    position: relative
+                    &:before
+                        content: "\2022"
+                        color: #003580
+                        position: absolute
+                        left: -30px
+                        display: inline-block

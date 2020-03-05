@@ -62,22 +62,30 @@
             padding: 20px 40px 0
             font-size: 24px
             color: #272727
+            @include breakpoint(xxl)
+                font-size: 20px
+            @include breakpoint(xl)
+                font-size: 18px
             @include breakpoint(m)
                 padding: 20px 40px
+                font-size: 16px
             @include breakpoint(xs)
-                font-size: 20px
-                padding: 10px 0
+                padding: 15px 0
                 text-align: center
         .show-button
             margin-top: auto
             font-size: 20px
-            font-weight: 700
+            font-weight: 500
             height: auto
             align-items: center
             padding: 25px 40px
             cursor: pointer
             text-align: left
             display: flex
+            @include breakpoint(xxl)
+                padding: 15px 35px
+            @include breakpoint(l)
+                font-size: 16px
             @include breakpoint(xs)
                 align-items: center
                 padding: 15px
@@ -93,7 +101,7 @@
             .icon--minus
                 display: none
             .bold-text
-                font-weight: 900
+                font-weight: 700
 
     .can__item-description
         height: 0

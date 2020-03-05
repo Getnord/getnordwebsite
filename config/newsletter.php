@@ -69,7 +69,9 @@ return [
         ],
         'coupon_de' => [
             'id' => '059aa1def7'
-        ],
+        ],'getnord_lock' => [
+            'id' => 'cd6d890278'
+        ]
     ],
 
     /*

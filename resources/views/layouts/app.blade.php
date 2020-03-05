@@ -50,24 +50,36 @@
 <script src="{{ asset('js/modal.js') }}"></script>
 <script src="{{ url('/') }}/js/lang-{{ app()->getLocale() }}.js"></script>
 <script>
-    $('.show-button').on('click',function () {
+    $('.show-button').on('click', function () {
         $(this).closest(".can__item").toggleClass('active');
 
     })
-    $('.vmodal--open').on('click',function () {
-        $('.modal-wrapper').addClass('modal--open')
-    })
-    if ($(window).width() >= 480){
+    if ($(window).width() <= 480) {
         console.log('asd')
-        $('#lock__banner video').attr('muted')
+        $('#lock__banner video').trigger('play')
     }
-    $(document).on('click',function (e) {
+
+    if ($(window).width() > 480) {
+
+        $('.lock__banner-text').on('click', function () {
+            $('#lock__banner').toggleClass('banner--active')
+            $('#lock__banner video').trigger('play')
+        })
+        $('.banner__video').on('click', function () {
+            $('#lock__banner').toggleClass('banner--active')
+            $('#lock__banner video').trigger('pause')
+        })
+    }
+    $(document).on('click', function (e) {
         if (e.target.classList.contains('modal-wrapper')) {
             $('.modal-wrapper').removeClass('modal--open')
             $('.modal-wrapper video').trigger('pause')
+            $('.modal-wrapper input').val('')
+            $('.modal-wrapper textarea').val('')
+            $('.modal-wrapper span').remove('')
         }
     })
-    $('.tab-item').on('click',function () {
+    $('.tab-item').on('click', function () {
         let idx = $(this).data('idx');
         let img = $('.tab-image')
         $('.tab-item').removeClass('active');
@@ -75,7 +87,7 @@
         img.removeClass('active');
         img[idx].classList.add('active')
     })
-    $('.tab-2-header--item').on('click',function () {
+    $('.tab-2-header--item').on('click', function () {
         let index = $(this).data('index');
         let image = $('.tab-content--image')
         $('.tab-2-header--item').removeClass('active');
@@ -83,6 +95,68 @@
         image.removeClass('active');
         image[index].classList.add('active')
     })
+    $('.try--button').on('click', function () {
+        $('#contact--modal').addClass('modal--open')
+    })
+
+    $.ajaxSetup({
+        headers: {
+            'X-CSRF-TOKEN': $('meta[name="csrf-token"]').attr('content')
+        }
+    });
+    // email regex
+    const mailformat = /^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/;
+
+    // input validation function
+    function validateInput(target, isRequired = false) {
+        let valid = true
+
+        if (target.type === 'email' && !target.value.match(mailformat)) {
+            console.log('asdasd')
+            $(target).siblings('span').text(`Please enter valid email`)
+            valid = false
+        }
+        if (isRequired && target.value === '') {
+            $(target).siblings('span').text(`${target.name.replace(/-/g, ' ')} field is required`)
+            valid = false
+        }
+        return valid
+    }
+
+    // submitting contact form
+    $('.contact-submit').on('click', function (e) {
+        e.preventDefault()
+        let ok = [];
+        let data = {}
+        const inputs = $('#contact--form input')
+        $('.error').text('')
+        $.each(inputs, function (idx, input) {
+            let isRequired = false
+            if (input.hasAttribute('required')) {
+                isRequired = true
+            }
+            ok.push(validateInput(input, isRequired))
+            data[input.name] = $(input).val()
+        })
+        if (!ok.includes(false)) {
+            data[$('#contact--form textarea').attr('name')] = $('#contact--form textarea').val()
+            console.log(data)
+            $.ajax({
+                type:'POST',
+                url:$('#contact--form').attr('action'),
+                data:data,
+                success:function(data){
+                    $('#contact--form').append(`<span class="success">Thank you for contacting us! <br> We will contact you back soon</span>`)
+                    setTimeout(function () {
+                        $('.modal-wrapper').removeClass('modal--open')
+                    },3000)
+                }
+
+            });
+        }
+    })
+
+
 </script>
 </body>
 </html>

@@ -66,16 +66,6 @@
                 <p>@lang('lock.it-1-desc-item-3-text')</p>
             </div>
         </div>
-        <div class="why-choose">
-            <div class="choose-img">
-                <img src="{{asset('img/lock/item-1-9.svg')}}" alt="">
-            </div>
-            <div class="choose-text">
-                <h5>@lang('lock.choose-title')</h5>
-                <p>
-                    @lang('lock.choose-text')
-                </p>
-            </div>
-        </div>
+
     </div>
 </div>

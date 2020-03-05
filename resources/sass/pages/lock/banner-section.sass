@@ -1,10 +1,23 @@
 #lock__banner
     .banner__video
         display: none
+        position: absolute
+        height: calc( 100vh - 80px )
+        width: 100%
+        margin: 0 auto
+        @include breakpoint(xl)
+            height: calc( 100vh - 60px )
         video
             display: none
+            height: 100%
+            margin: 0 auto
+            @include breakpoint(m)
+                height: auto
+                width: 100%
         @include breakpoint(xs)
             display: block
+            position: relative
+            height: auto
             video
                 display: block
                 width: 100%
@@ -12,11 +25,11 @@
         padding: 270px 0
         background: #99bfbe
         @include breakpoint(xxl)
-            padding: 150px 0
-        @include breakpoint(xl)
             padding: 130px 0
+        @include breakpoint(xl)
+            padding: 100px 0
         @include breakpoint(m)
-            padding: 200px 0 0
+            padding: 50px 0 0
         @include breakpoint(xs)
             background: #f2f3f3
             padding: 30px
@@ -33,10 +46,11 @@
             @include breakpoint(xxl)
                 font-size: 20px
                 margin: 80px auto 0
+                padding: 15px 35px
             @include breakpoint(xl)
                 font-size: 18px
                 margin: 60px auto 0
-                padding: 18px 35px
+                padding: 13px 35px
             @include breakpoint(xs)
                 display: none
             svg
@@ -75,3 +89,10 @@
 
 
 
+    &.banner--active
+        .banner__video
+            display: block
+            video
+                display: block
+        .lock__banner-text
+            visibility: hidden

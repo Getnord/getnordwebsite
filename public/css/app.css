@@ -5395,15 +5395,36 @@ body h1 {
 
 #lock__banner .banner__video {
   display: none;
+  position: absolute;
+  height: calc( 100vh - 80px );
+  width: 100%;
+  margin: 0 auto;
+}
+
+@media (max-width: 1300px) {
+  #lock__banner .banner__video {
+    height: calc( 100vh - 60px );
+  }
 }
 
 #lock__banner .banner__video video {
   display: none;
+  height: 100%;
+  margin: 0 auto;
+}
+
+@media (max-width: 999px) {
+  #lock__banner .banner__video video {
+    height: auto;
+    width: 100%;
+  }
 }
 
 @media (max-width: 480px) {
   #lock__banner .banner__video {
     display: block;
+    position: relative;
+    height: auto;
   }
 
   #lock__banner .banner__video video {
@@ -5419,19 +5440,19 @@ body h1 {
 
 @media (max-width: 1600px) {
   #lock__banner .lock__banner-text {
-    padding: 150px 0;
+    padding: 130px 0;
   }
 }
 
 @media (max-width: 1300px) {
   #lock__banner .lock__banner-text {
-    padding: 130px 0;
+    padding: 100px 0;
   }
 }
 
 @media (max-width: 999px) {
   #lock__banner .lock__banner-text {
-    padding: 200px 0 0;
+    padding: 50px 0 0;
   }
 }
 
@@ -5464,6 +5485,7 @@ body h1 {
   #lock__banner .lock__banner-text button {
     font-size: 20px;
     margin: 80px auto 0;
+    padding: 15px 35px;
   }
 }
 
@@ -5471,7 +5493,7 @@ body h1 {
   #lock__banner .lock__banner-text button {
     font-size: 18px;
     margin: 60px auto 0;
-    padding: 18px 35px;
+    padding: 13px 35px;
   }
 }
 
@@ -5543,6 +5565,18 @@ body h1 {
   #lock__banner .lock__banner-text .img path {
     fill: #272727;
   }
+}
+
+#lock__banner.banner--active .banner__video {
+  display: block;
+}
+
+#lock__banner.banner--active .banner__video video {
+  display: block;
+}
+
+#lock__banner.banner--active .lock__banner-text {
+  visibility: hidden;
 }
 
 #manage__section {
@@ -5769,16 +5803,28 @@ body h1 {
   color: #272727;
 }
 
+@media (max-width: 1600px) {
+  #you-can__section .can__item-text p {
+    font-size: 20px;
+  }
+}
+
+@media (max-width: 1300px) {
+  #you-can__section .can__item-text p {
+    font-size: 18px;
+  }
+}
+
 @media (max-width: 999px) {
   #you-can__section .can__item-text p {
     padding: 20px 40px;
+    font-size: 16px;
   }
 }
 
 @media (max-width: 480px) {
   #you-can__section .can__item-text p {
-    font-size: 20px;
-    padding: 10px 0;
+    padding: 15px 0;
     text-align: center;
   }
 }
@@ -5786,7 +5832,7 @@ body h1 {
 #you-can__section .can__item-text .show-button {
   margin-top: auto;
   font-size: 20px;
-  font-weight: 700;
+  font-weight: 500;
   height: auto;
   -webkit-box-align: center;
       -ms-flex-align: center;
@@ -5797,6 +5843,18 @@ body h1 {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+}
+
+@media (max-width: 1600px) {
+  #you-can__section .can__item-text .show-button {
+    padding: 15px 35px;
+  }
+}
+
+@media (max-width: 1199px) {
+  #you-can__section .can__item-text .show-button {
+    font-size: 16px;
+  }
 }
 
 @media (max-width: 480px) {
@@ -5830,7 +5888,7 @@ body h1 {
 }
 
 #you-can__section .can__item-text .show-button .bold-text {
-  font-weight: 900;
+  font-weight: 700;
 }
 
 #you-can__section .can__item-description {
@@ -5946,6 +6004,12 @@ body h1 {
   text-align: center;
 }
 
+@media (max-width: 480px) {
+  #icons-section .icons__item span {
+    font-size: 18px;
+  }
+}
+
 #icons-section .icons__item span .line_break {
   display: block;
   margin: 0;
@@ -6042,6 +6106,8 @@ body h1 {
 #scalefusion-section {
   padding: 130px 0 100px;
   background: #f2f3f3;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
 }
 
 @media (max-width: 1600px) {
@@ -6078,7 +6144,7 @@ body h1 {
 
 @media (max-width: 1300px) {
   #scalefusion-section .section__container {
-    max-width: 95%;
+    max-width: 90%;
   }
 }
 
@@ -6089,6 +6155,7 @@ body h1 {
 
 @media (max-width: 999px) {
   #scalefusion-section .section__item {
+    padding: 20px 0;
     width: 100%;
   }
 }
@@ -6096,6 +6163,12 @@ body h1 {
 #scalefusion-section .section__item .scalefusion-logo {
   margin-bottom: 90px;
   display: block;
+}
+
+@media (max-width: 999px) {
+  #scalefusion-section .section__item .scalefusion-logo {
+    margin: 0 auto 60px;
+  }
 }
 
 @media (max-width: 480px) {
@@ -6113,7 +6186,7 @@ body h1 {
 
 @media (max-width: 999px) {
   #scalefusion-section .section__item p {
-    line-height: 1.1;
+    line-height: 1.7;
   }
 }
 
@@ -6224,6 +6297,180 @@ body h1 {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+}
+
+.modal-wrapper .contact-modal {
+  width: 100%;
+  max-width: 600px;
+  background: #ffffff;
+  padding: 30px;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+@media (max-width: 750px) {
+  .modal-wrapper .contact-modal {
+    width: 85%;
+    padding: 10px 15px;
+  }
+}
+
+@media (max-width: 750px) {
+  .modal-wrapper .contact-modal form {
+    width: 100%;
+  }
+}
+
+.modal-wrapper .contact-modal h2 {
+  text-align: center;
+  font-size: 20px;
+  margin-bottom: 20px;
+}
+
+.modal-wrapper .contact-modal input {
+  display: block;
+  width: 90%;
+  margin: 0 auto 20px;
+  padding: 10px 15px;
+  border: 1px solid #9e9e9e;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+@media (max-width: 750px) {
+  .modal-wrapper .contact-modal input {
+    width: 100%;
+    margin: 0 auto 10px;
+    padding: 8px 15px;
+  }
+}
+
+.modal-wrapper .contact-modal input::-webkit-input-placeholder {
+  color: #9e9e9e;
+}
+
+.modal-wrapper .contact-modal input:-ms-input-placeholder {
+  color: #9e9e9e;
+}
+
+.modal-wrapper .contact-modal input::-ms-input-placeholder {
+  color: #9e9e9e;
+}
+
+.modal-wrapper .contact-modal input::placeholder {
+  color: #9e9e9e;
+}
+
+.modal-wrapper .contact-modal input[type=number] {
+  -moz-appearance: textfield;
+}
+
+.modal-wrapper .contact-modal input[type=number]::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+}
+
+.modal-wrapper .contact-modal input[type=number]::-webkit-outer-spin-button {
+  -webkit-appearance: none;
+}
+
+.modal-wrapper .contact-modal textarea {
+  width: 90%;
+  display: block;
+  height: 100px;
+  margin: 0 auto;
+  border: 1px solid #9e9e9e;
+  color: #9e9e9e;
+  padding: 10px 15px;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+@media (max-width: 750px) {
+  .modal-wrapper .contact-modal textarea {
+    width: 100%;
+  }
+}
+
+.modal-wrapper .contact-modal .contact-submit {
+  font-size: 18px;
+  padding: 10px 40px;
+  margin: 30px auto 0;
+  background: #ffe401;
+  border: none;
+  display: block;
+  font-weight: 500;
+  text-transform: uppercase;
+  cursor: pointer;
+}
+
+@media (max-width: 750px) {
+  .modal-wrapper .contact-modal .contact-submit {
+    margin: 15px auto 0;
+  }
+}
+
+.modal-wrapper .contact-modal .input--group {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  width: 90%;
+  margin: 0 auto;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+@media (max-width: 750px) {
+  .modal-wrapper .contact-modal .input--group {
+    width: 100%;
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+  }
+}
+
+.modal-wrapper .contact-modal .input--group .input-item {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  width: 48%;
+  margin: 0;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: end;
+      -ms-flex-pack: end;
+          justify-content: flex-end;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+@media (max-width: 750px) {
+  .modal-wrapper .contact-modal .input--group .input-item {
+    width: 100%;
+  }
+}
+
+.modal-wrapper .contact-modal .input--group .input-item .error {
+  color: #ff0c05;
+  font-size: 14px;
+  padding: 0 0 5px 5px;
+}
+
+.modal-wrapper .contact-modal .input--group .input-item input {
+  width: 100%;
+  display: block;
+}
+
+.modal-wrapper .success {
+  color: #10cd1f;
+  font-size: 16px;
+  display: block;
+  text-align: center;
+  margin-top: 20px;
+  line-height: 25px;
 }
 
 .item-1 .resolve-items {

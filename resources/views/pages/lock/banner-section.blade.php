@@ -1,8 +1,8 @@
 <section id="lock__banner">
     <div class="banner__video">
-        <video src="{{asset('img/GETNORD-LOCK.mp4')}}" autoplay muted loop type="video/mp4"></video>
+        <video src="{{asset('img/GETNORD-LOCK.mp4')}}"  loop type="video/mp4"></video>
     </div>
-    <div class="lock__banner-text">
+    <div class="lock__banner-text" >
         <svg class="img" version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
              width="544px" height="144.3969727px" viewBox="0 0 544 144.3969727" enable-background="new 0 0 544 144.3969727"
              xml:space="preserve">

@@ -31,6 +31,7 @@ Route::prefix('{locale}')->group(function() {
     Route::get('/coupon', 'PagesController@test')->name('test');
     Route::post('/coupon', 'PagesController@couponSubscribe')->name('coupon');
     Route::get('/lock', 'PagesController@lock')->name('lock');
+    Route::post('/lock', 'PagesController@lockPost')->name('lockPost');
 });
 Route::get('/', 'PagesController@index')->name('index');
 // Get data from OpenCart

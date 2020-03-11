@@ -133,4 +133,18 @@ return [
     'rightText-top' => 'Als ontwikkelaar van een op maat gesneden oplossing voor robuuste toestellen zoals GETNORD BEVEILIGING, staat Scalefusion bekend als een wereldwijd toonaangevend bedrijf dat innovatieve oplossingen creëert waarmee organisaties hun toestellen en apparatuur kunnen beveiligen en beheren. Ze richten zich op zowel smartphones, tablets, laptops, robuuste apparaten, mPOS als digitale reclameborden en ze kijken daarbij naar zowel de apps als de inhoud.',
     'rightText-bottom' => 'Meer dan 4.500 bedrijven over de hele wereld, in diverse industrieën zoals transport en logistiek, detailhandel, onderwijs, gezondheidszorg, productie, bouw & vastgoed, hospitality, software en telecom, financiële dienstverlening en andere, ontsluiten hun ware potentieel met behulp van Scalefusion. ',
 
+
+    /* start contact form  */
+    'contact-us' => 'Neem contact met ons op',
+    'name' => 'Voornaam',
+    'last-name' => 'Achternaam',
+    'email' => 'e-mail',
+    'number' => 'Telefoonnummer',
+    'company' => 'Bedrijfsnaam',
+    'business' => 'Type bedrijf',
+    'website' => 'Bedrijf website',
+    'info' => 'Aanvullende informatie',
+    'send' => 'NU VERSTUREN',
+
+    /* end contact form */
 ];

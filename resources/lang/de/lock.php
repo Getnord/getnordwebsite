@@ -133,4 +133,18 @@ return [
     'rightText-top' => 'Als Entwickler der maßgeschneiderten Lösung für robuste Geräte GETNORD LOCK ist Scalefusion ein weltweit führendes Unternehmen, welches innovative Lösungen entwickelt, mit denen Unternehmen Endgeräte wie Smartphones, Tablets, Laptops, robuste Geräte, mPOS und digitale Beschilderungen sowie Apps und Inhalte sichern und verwalten können .',
     'rightText-bottom' => 'Mehr als 4500 Unternehmen weltweit schöpfen mit Scalefusion ihr wahres Potenzial aus und sind in verschiedenen Branchen wie Transport und Logistik, Einzelhandel, Bildung, Gesundheitswesen, Fertigung, Bau und Gewerbe, Immobilien, Gastgewerbe, Software und Telekommunikation, Finanzdienstleistungen und anderen im Einsatz.',
 
+
+    /* start contact form  */
+    'contact-us' => 'KONTAKT',
+    'name' => 'Name',
+    'last-name' => 'Nachname',
+    'email' => 'Email',
+    'number' => 'Telefonnummer',
+    'company' => 'Unternehmen',
+    'business' => 'Geschäftsart',
+    'website' => 'Unternehmenswebseite',
+    'info' => 'Zusätzliche Information',
+    'send' => 'Senden',
+
+    /* end contact form */
 ];

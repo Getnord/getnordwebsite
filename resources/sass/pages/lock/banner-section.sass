@@ -1,4 +1,6 @@
 #lock__banner
+    @include breakpoint(xs)
+        background: none !important
     .banner__video
         display: none
         position: absolute
@@ -21,9 +23,20 @@
             video
                 display: block
                 width: 100%
+        .play-button
+            display: none
+            @include breakpoint(xs)
+                display: block
+                width: 50px
+                height: 50px
+                position: absolute
+                top: 50%
+                left: 50%
+                transform: translate(-50%,-50%)
+
     .lock__banner-text
         padding: 270px 0
-        background: #99bfbe
+        background: rgba(0, 97, 194, .75)
         @include breakpoint(xxl)
             padding: 130px 0
         @include breakpoint(xl)
@@ -90,9 +103,15 @@
 
 
     &.banner--active
+        background: none !important
         .banner__video
             display: block
             video
                 display: block
         .lock__banner-text
             visibility: hidden
+            @include breakpoint(xs)
+                visibility: visible
+        .play-button
+            @include breakpoint(xs)
+                display: none

@@ -1,6 +1,7 @@
-<section id="lock__banner">
+<section id="lock__banner" style="background: url({{asset('img/lock/lock.png')}})">
     <div class="banner__video">
-        <video src="{{asset('img/GETNORD-LOCK.mp4')}}"  loop type="video/mp4"></video>
+        <video src="{{asset('img/GETNORD-LOCK.mp4')}}"   loop type="video/mp4"></video>
+        <img src="{{asset('img/lock/play-button-overlay-png.png')}}" alt="" class="play-button">
     </div>
     <div class="lock__banner-text" >
         <svg class="img" version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"

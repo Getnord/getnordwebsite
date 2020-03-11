@@ -5393,6 +5393,12 @@ body h1 {
   }
 }
 
+@media (max-width: 480px) {
+  #lock__banner {
+    background: none !important;
+  }
+}
+
 #lock__banner .banner__video {
   display: none;
   position: absolute;
@@ -5433,9 +5439,27 @@ body h1 {
   }
 }
 
+#lock__banner .banner__video .play-button {
+  display: none;
+}
+
+@media (max-width: 480px) {
+  #lock__banner .banner__video .play-button {
+    display: block;
+    width: 50px;
+    height: 50px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    -webkit-transform: translate(-50%, -50%);
+        -ms-transform: translate(-50%, -50%);
+            transform: translate(-50%, -50%);
+  }
+}
+
 #lock__banner .lock__banner-text {
   padding: 270px 0;
-  background: #99bfbe;
+  background: rgba(0, 97, 194, 0.75);
 }
 
 @media (max-width: 1600px) {
@@ -5567,6 +5591,10 @@ body h1 {
   }
 }
 
+#lock__banner.banner--active {
+  background: none !important;
+}
+
 #lock__banner.banner--active .banner__video {
   display: block;
 }
@@ -5577,6 +5605,18 @@ body h1 {
 
 #lock__banner.banner--active .lock__banner-text {
   visibility: hidden;
+}
+
+@media (max-width: 480px) {
+  #lock__banner.banner--active .lock__banner-text {
+    visibility: visible;
+  }
+}
+
+@media (max-width: 480px) {
+  #lock__banner.banner--active .play-button {
+    display: none;
+  }
 }
 
 #manage__section {
@@ -5949,7 +5989,7 @@ body h1 {
 @media (max-width: 480px) {
   #icons-section h3 {
     font-size: 24px;
-    margin: 0 auto 30px;
+    margin: 0 auto 60px;
   }
 }
 

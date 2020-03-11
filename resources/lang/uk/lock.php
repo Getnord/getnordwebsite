@@ -133,4 +133,18 @@ return [
     'rightText-top' => 'Developer of a Taylor made solution for Rugged devices GETNORD LOCK, Scalefusion is a world leading company that creates innovative solutions allowing organizations to secure and manage endpoints including smartphones, tablets, laptops, rugged devices, mPOS, and digital signages, along with apps and content.',
     'rightText-bottom' => 'More than 4500 companies across the world are unlocking their true potential using Scalefusion, which is used across various industries such as Transportation & Logistics, Retail, Education, Healthcare, Manufacturing, Construction & RealEstate, Hospitality, Software & Telecom, Financial Services & other.',
 
+
+    /* start contact form  */
+    'contact-us' => 'Contact us',
+    'name' => 'Name',
+    'last-name' => 'Last name',
+    'email' => 'Email',
+    'number' => 'Phone number',
+    'company' => 'Company',
+    'business' => 'Type of business',
+    'website' => 'Company website',
+    'info' => 'Additional information ',
+    'send' => 'SEND',
+
+    /* end contact form */
 ];

@@ -1,4 +1,4 @@
-<section id="lock__banner" style="background: url({{asset('img/lock/lock.png')}})">
+<section id="lock__banner" style="background: url({{asset('img/lock/lock.png')}}) center no-repeat">
     <div class="banner__video">
         <video src="{{asset('img/GETNORD-LOCK.mp4')}}"   loop type="video/mp4"></video>
         <img src="{{asset('img/lock/play-button-overlay-png.png')}}" alt="" class="play-button">

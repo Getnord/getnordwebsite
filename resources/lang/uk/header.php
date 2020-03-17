@@ -7,5 +7,6 @@ return [
     'onyx' => 'Getnord Onyx',
     'leo' => 'Getnord Leo',
     'contactAndSupport' => 'CONTACTS&SUPPORT',
-    'compatibility' => 'COMPATIBILITY'
+    'compatibility' => 'COMPATIBILITY',
+    'forBusiness' => 'Getnord For Business',
 ];

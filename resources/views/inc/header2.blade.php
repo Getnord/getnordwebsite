@@ -174,6 +174,7 @@
 <!--			<li><a href="javascript:void(0);" onclick="popup_open();">CONTACT</a></li>-->
             <li><a href="{{ route('contact', ['locale' => app()->getLocale()]) }}">{{ __('header.contactAndSupport') }}</a></li>
             <li><a href="{{ route('compatibility', ['locale' => app()->getLocale()]) }}">{{ __('header.compatibility') }}</a></li>
+            <li><a href="{{ route('lock', ['locale' => app()->getLocale()]) }}">{{ __('header.forBusiness') }}</a></li>
         </ul>
     </nav>
 </header>

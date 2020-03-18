@@ -8,5 +8,5 @@ return [
     'leo' => 'Getnord Leo',
     'contactAndSupport' => 'CONTACT & ONDERSTEUNING',
     'compatibility' => 'COMPATIBILITEIT',
-    'forBusiness' => 'Oplossingen voor bedrijven',
+    'forBusiness' => 'Voor bedrijven',
 ];

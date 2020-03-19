@@ -1,11 +1,17 @@
 <section id="lock__banner" style="background: url({{asset('img/lock/lock.png')}}) center no-repeat">
     <div class="banner__video">
-        <video src="{{asset('img/GETNORD-LOCK.mp4')}}"   loop type="video/mp4"></video>
+        @if(app()->getLocale() === 'uk')
+            <video src="{{asset('img/lock/GETNORD-LOCK-us.mp4')}}" loop type="video/mp4"></video>
+        @else
+            <video src="{{asset('img/lock/GETNORD-LOCK-'.app()->getLocale().'.mp4')}}" loop type="video/mp4"></video>
+        @endif
         <img src="{{asset('img/lock/play-button-overlay-png.png')}}" alt="" class="play-button">
     </div>
-    <div class="lock__banner-text" >
-        <svg class="img" version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
-             width="544px" height="144.3969727px" viewBox="0 0 544 144.3969727" enable-background="new 0 0 544 144.3969727"
+    <div class="lock__banner-text">
+        <svg class="img" version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg"
+             xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+             width="544px" height="144.3969727px" viewBox="0 0 544 144.3969727"
+             enable-background="new 0 0 544 144.3969727"
              xml:space="preserve">
 <path fill="#FFFFFF" d="M156.2851563,81.105957h0.0317383c2.4233398,0,4.4755859-0.8486328,6.1674805-2.546875
 	c0.7871094-0.7910156,1.4082031-1.6972656,1.8574219-2.7128906c0.4511719-1.0195313,0.6743164-2.1533203,0.6743164-3.3945313

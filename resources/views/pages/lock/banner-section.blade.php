@@ -5,7 +5,9 @@
         @else
             <video src="{{asset('img/lock/GETNORD-LOCK-'.app()->getLocale().'.mp4')}}" loop type="video/mp4"></video>
         @endif
-        <img src="{{asset('img/lock/play-button-overlay-png.png')}}" alt="" class="play-button">
+        <div class="mobile--play">
+            <img src="{{asset('img/lock/play-button-overlay-png.png')}}" alt="" class="play-button">
+        </div>
     </div>
     <div class="lock__banner-text">
         <svg class="img" version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg"

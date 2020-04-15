@@ -359,4 +359,16 @@ class PagesController extends Controller
             }
         };
     }
+
+    public function discount($locale)
+    {
+
+        $data = geoip($_SERVER['REMOTE_ADDR']);
+        $countryCode = strtolower($data->iso_code);
+        dd($countryCode);
+        return view('pages.coupon.index')->with([
+                'onHomePage' => false,
+            ]
+        );
+    }
 }

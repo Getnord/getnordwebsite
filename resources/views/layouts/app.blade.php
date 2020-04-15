@@ -49,6 +49,8 @@
 <script src="{{ asset('js/lightbox.min.js') }}"></script>
 <script src="{{ asset('js/modal.js') }}"></script>
 <script src="{{ url('/') }}/js/lang-{{ app()->getLocale() }}.js"></script>
+
+@yield('scripts')
 <script>
     $(document).ready(function () {
         $('.show-button').on('click', function () {

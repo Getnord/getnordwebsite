@@ -17,6 +17,7 @@ Vue.config.productTip = false;
 // const files = require.context('./', true, /\.vue$/i);
 // files.keys().map(key => Vue.component(key.split('/').pop().split('.')[0], files(key).default));
 
+
 import NavInit from "./components/global/header";
 import contactForm from "./components/contactForm/form";
 import startAnimations from "./components/global/animations";

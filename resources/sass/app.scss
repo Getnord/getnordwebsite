@@ -58,15 +58,19 @@
 .modal {
     position: fixed; /* Stay in place */
     z-index: 99999999; /* Sit on top */
-    left: 0;
+    left: -100vw;
     top: 0;
     width: 100%; /* Full width */
     height: 100%; /* Full height */
     overflow: auto; /* Enable scroll if needed */
     background-color: rgb(0, 0, 0); /* Fallback color */
     background-color: rgba(0, 0, 0, 0.4); /* Black w/ opacity */
+    transition: all ease .3s
 }
-
+.modal.modal--opened {
+    left: 0;
+    transition: all ease .3s
+}
 /* Modal Content/Box */
 .modal-content {
     background-color: #ffffff;
@@ -200,4 +204,26 @@
     color: green;
     text-align: center;
     margin-bottom: 10px;
+}
+@media ( max-width: 480px ) {
+    .modal-content {
+        max-width: 300px;
+    }
+    .header__text {
+        font-size: 23px;
+    }
+    .modal-raw {
+        align-items: center;
+    }
+    .modal-form input {
+        height: 40px;
+    }
+    .modal-form button {
+        padding: 15px 0;
+        font-size: 15px;
+    }
+    .modal-form small {
+        width: 100%;
+        text-align: center;
+    }
 }

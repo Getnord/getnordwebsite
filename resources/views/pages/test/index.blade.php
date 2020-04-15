@@ -4,7 +4,7 @@
 
 <div>
     <!-- The Modal -->
-    <div id="myModal" class="modal">
+    <div id="myModal" class="modal modal--opened">
 
         <!-- Modal content -->
         <div class="modal-content">

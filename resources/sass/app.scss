@@ -205,6 +205,76 @@
     text-align: center;
     margin-bottom: 10px;
 }
+.coupon-overlay {
+    top: 0;
+    position: fixed;
+    right: -100vw;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 100%;
+    overflow-y: scroll;
+    z-index: 9999999999999999999999;
+    background: rgba(0, 0, 0, 0.4);
+    transition: all ease .3s;
+    opacity: 0;
+}
+
+.coupon-overlay.active {
+
+    right: 0;
+    transition: all ease .3s;
+    opacity: 1;
+}
+
+.coupon-form {
+    padding: 20px;
+    background: #231f20;
+    color: #fff;
+    max-width: 500px;
+    width: 95%;
+}
+
+.body--text h4 {
+    color: #fff;
+    text-transform: uppercase;
+    font-size: 1.5rem;
+    text-align: center;
+    line-height: 1.7rem;
+}
+
+.body--text {
+    margin-bottom: 20px;
+}
+
+.form--button button {
+    background: transparent;
+    color: #fff;
+    text-transform: uppercase;
+    font-size: .9rem;
+    text-align: center;
+    margin: 0 auto 10px;
+    display: block;
+    padding: 15px 0;
+    width: 100%;
+    border: 1px solid transparent;
+    transition: all ease .3s;
+}
+
+.form--button button:hover {
+    border: 1px solid #fff;
+    transition: all ease .3s;
+}
+#myModal .btn-close{
+    background: #c8232c;
+    color: #FFFFFF;
+}
+@media ( max-width: 480px ){
+    .coupon-form {
+        max-width: 300px;
+    }
+}
 @media ( max-width: 480px ) {
     .modal-content {
         max-width: 300px;

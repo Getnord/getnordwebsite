@@ -333,6 +333,8 @@ class PagesController extends Controller
     }
     public function couponSubscribe($locale,Request $request){
         $loc = '';
+        $data = geoip($_SERVER['REMOTE_ADDR']);
+        $countryCode = strtolower($data->iso_code);
         if (session()->has('locale')) {
             app()->setLocale(session()->get('locale'));
         } else {
@@ -342,6 +344,11 @@ class PagesController extends Controller
             $loc = 'uk';
         }else{
             $loc = $locale;
+        }
+        if ($countryCode === 'fr'){
+            $loc = $countryCode;
+        }elseif ($countryCode === 'be'){
+            $loc = $countryCode;
         }
         $validator = Validator::make($request->all(), [
             'email' => 'required|email',
@@ -362,10 +369,6 @@ class PagesController extends Controller
 
     public function discount($locale)
     {
-
-        $data = geoip($_SERVER['REMOTE_ADDR']);
-        $countryCode = strtolower($data->iso_code);
-        dd($countryCode);
         return view('pages.coupon.index')->with([
                 'onHomePage' => false,
             ]

@@ -38,6 +38,6 @@ class CouponRequest extends Mailable
         return $this->from('support1@getnord.com')
             ->view('mail.contact')
             ->replyTo($this->request->input('email'))
-            ->with('request');
+            ->with('request',['message' => 'Request for Coupon code from '.$this->request->input('email') .'']);
     }
 }

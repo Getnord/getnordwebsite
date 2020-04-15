@@ -359,6 +359,7 @@ class PagesController extends Controller
 
             Mail::to('support1@getnord.com')
                 ->send(new CouponRequest($request));
+
             if (!Mail::failures()) {
                 // we add the user to mailchimp
                 Newsletter::subscribe($request->input('email'), [], 'coupon_' .$loc);

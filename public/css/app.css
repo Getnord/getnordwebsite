@@ -8468,11 +8468,6 @@ body h1 {
   transition: all ease 0.3s;
 }
 
-#myModal .btn-close {
-  background: #c8232c;
-  color: #FFFFFF;
-}
-
 @media (max-width: 480px) {
   .coupon-form {
     max-width: 300px;

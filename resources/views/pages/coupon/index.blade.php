@@ -6,15 +6,15 @@
         <div class="coupon-form-body">
             <div class="body--text">
                 <h4>
-                    extra 20% off
+                    {{__('cupon.discountTitle1')}}
                 </h4>
                 <h4>
-                    one week only
+                    {{__('cupon.discountTitle2')}}
                 </h4>
             </div>
             <div class="form--button">
-                <button class="btn-send">send me my discount code</button>
-                <button class="btn-cancel">No thanks, I prefer to pay full price for GETNORD phone</button>
+                <button class="btn-send">{{__('cupon.sendBtn')}}</button>
+                <button class="btn-cancel">{{__('cupon.cancelBtn')}}</button>
             </div>
         </div>
     </div>
@@ -48,7 +48,7 @@
                                    name="email">
                         </div>
                         <button id="formSubmit">{{__('cupon.buttonText')}}</button>
-                        <button  class="btn-close" type="button">No thanks, I prefer to pay full price for GETNORD phone</button>
+                        <button  class="btn-close" type="button">{{__('cupon.cancelBtn')}}</button>
                         <small>{{__('cupon.smallText')}}</small>
                     </form>
 

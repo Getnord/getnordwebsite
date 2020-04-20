@@ -8,4 +8,7 @@
 @include('pages.active_track.monitoring')
 
 @include('pages.active_track.section_4')
+
+@include('pages.active_track.software')
+
 @endsection

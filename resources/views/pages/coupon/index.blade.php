@@ -1,6 +1,6 @@
-@extends('layouts.app')
+{{--@extends('layouts.app')
 
-@section('content')<!--Start pop-op for coupon-->
+@section('content')<!--Start pop-op for coupon-->--}}
 <div class="coupon-overlay">
     <div class="coupon-form">
         <div class="coupon-form-body">
@@ -60,5 +60,7 @@
     </div>
 </div>
 
+{{--
 @endsection
+--}}
 

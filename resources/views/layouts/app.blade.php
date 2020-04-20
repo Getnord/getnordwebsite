@@ -43,6 +43,10 @@
 
     @yield('content')
     @include('inc.shopping_cart')
+
+    @if(app()->getLocale() === 'nl' || app()->getLocale() === 'fr')
+        @include('pages.coupon.index')
+    @endif
 </div>
 @include('inc.footer2')
 <script src="{{ asset('js/app.js') }}"></script>
@@ -69,7 +73,7 @@
                 $('#lock__banner').toggleClass('banner--active')
                 $('#lock__banner video').trigger('pause')
             })
-        }else{
+        } else {
             $('.banner__video').on('click', function () {
                 $('#lock__banner').toggleClass('banner--active')
                 let video = $('#lock__banner video')
@@ -148,21 +152,20 @@
                 data[$('#contact--form textarea').attr('name')] = $('#contact--form textarea').val()
                 console.log(data)
                 $.ajax({
-                    type:'POST',
-                    url:$('#contact--form').attr('action'),
-                    data:data,
-                    success:function(data){
+                    type: 'POST',
+                    url: $('#contact--form').attr('action'),
+                    data: data,
+                    success: function (data) {
                         $('#contact--form').append(`<span class="success">Thank you for contacting us! <br> We will contact you back soon</span>`)
                         setTimeout(function () {
                             $('.modal-wrapper').removeClass('modal--open')
-                        },3000)
+                        }, 3000)
                     }
 
                 });
             }
         })
     })
-
 
 
 </script>

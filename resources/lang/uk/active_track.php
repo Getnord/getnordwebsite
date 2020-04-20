@@ -46,4 +46,7 @@ return [
     'section4Parking' => 'PARKING INSPECTORS ROUTES ',
 
 
+    'softwareTitle' => 'Software',
+    'softwareSubtitle' => 'Active View offers unlimited control over employees and protected objects from any place in the world to be done in <span class="line_break"></span> real time. All you need is access to the internet.',
+
 ];

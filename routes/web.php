@@ -33,7 +33,7 @@ Route::prefix('{locale}')->group(function() {
     Route::get('/lock', 'PagesController@lock')->name('lock');
     Route::post('/lock', 'PagesController@lockPost')->name('lockPost');
 
-    Route::get('/discount', 'PagesController@discount')->name('discount');
+/*    Route::get('/discount', 'PagesController@discount')->name('discount');*/
     Route::get('/active-track', 'PagesController@activeTrack')->name('track');
 });
 Route::get('/', 'PagesController@index')->name('index');

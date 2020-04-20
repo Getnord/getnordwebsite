@@ -34,6 +34,7 @@ Route::prefix('{locale}')->group(function() {
     Route::post('/lock', 'PagesController@lockPost')->name('lockPost');
 
     Route::get('/discount', 'PagesController@discount')->name('discount');
+    Route::get('/active-track', 'PagesController@activeTrack')->name('track');
 });
 Route::get('/', 'PagesController@index')->name('index');
 // Get data from OpenCart

@@ -341,11 +341,10 @@ class PagesController extends Controller
         }else{
             $loc = $locale;
         }
-        if ($countryCode === 'fr'){
-            $loc = 'be';
-        }elseif ($countryCode === 'be'){
-            $loc = 'be';
+        if ($countryCode === 'be' && $locale === 'nl'){
+            $loc = 'nl_be';
         }
+
         $validator = Validator::make($request->all(), [
             'email' => 'required|email',
         ]);
@@ -373,6 +372,19 @@ class PagesController extends Controller
             $locale = 'uk';
         }
         return view('pages.coupon.index')->with([
+                'onHomePage' => false,
+            ]
+        );
+    }
+    public function activeTrack($locale)
+    {
+        if (isset($locale)) {
+            app()->setLocale($locale);
+        } else {
+            app()->setLocale('uk');
+            $locale = 'uk';
+        }
+        return view('pages.active_track.index')->with([
                 'onHomePage' => false,
             ]
         );

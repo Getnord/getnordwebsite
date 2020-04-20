@@ -75,6 +75,12 @@ return [
         ],
         'coupon_de' => [
             'id' => '059aa1def7'
+        ],
+        'coupon_fr' => [
+            'id' => '7c30b40e9a'
+        ],
+        'coupon_nl_be' => [
+            'id' => '4b4d66afaf'
         ],'getnord_lock' => [
             'id' => 'cd6d890278'
         ]

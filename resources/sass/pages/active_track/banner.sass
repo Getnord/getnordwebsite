@@ -5,12 +5,32 @@
         z-index: 99
         max-width: 70%
         width: 100%
+        @include breakpoint(xl)
+            max-width: 95%
+        @include breakpoint(s)
+            max-width: 100%
+
+
         h1
             font-size: 4.5rem
             color: #FFFFFF
             margin: 0 0 4rem
             text-align: center
             text-transform: uppercase
+            @include breakpoint(l)
+                font-size: 4rem
+            @include breakpoint(m)
+                font-size: 3rem
+            @include breakpoint(s)
+                margin: 0 0 1rem
+                font-size: 2.5rem
+            @include breakpoint(xs)
+                font-size: 2rem
+                color: #272727
+            span
+                @include breakpoint(xs)
+                    display: block
+
         p
             font-size: 3.9rem
             color: #FFFFFF
@@ -18,8 +38,18 @@
             text-align: center
             font-weight: 700
             text-transform: uppercase
+            @include breakpoint(l)
+                font-size: 3rem
+            @include breakpoint(m)
+                font-size: 2.5rem
+            @include breakpoint(s)
+                font-size: 1.7rem
+            @include breakpoint(xs)
+                font-size: 1.5rem
+                color: #272727
         .line_break
             display: block
+
     .video_section
         width: 100%
         height: 100%
@@ -38,3 +68,7 @@
         display: flex
         justify-content: center
         align-items: center
+        @include breakpoint(xs)
+            position: relative
+            background: #f2f3f3
+            padding: 1.5rem 0

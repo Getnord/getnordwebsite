@@ -11,4 +11,12 @@
 
 @include('pages.active_track.software')
 
+@include('pages.active_track.how_it_works')
+
+@include('pages.active_track.interested')
+
+@include('pages.active_track.about_lock')
+
+@include('pages.active_track.contact-modal')
+
 @endsection

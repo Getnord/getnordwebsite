@@ -44,7 +44,7 @@
     @yield('content')
     @include('inc.shopping_cart')
 
-    @if(app()->getLocale() === 'nl' || app()->getLocale() === 'fr')
+    @if(app()->getLocale() === 'nl')
         @include('pages.coupon.index')
     @endif
 </div>

@@ -331,6 +331,32 @@ class PagesController extends Controller
             }
         };
     }
+    public function activeTrackPost(Request $request,$locale)
+    {
+        $validator = Validator::make($request->all(), [
+            'name' => 'required|max:255',
+            'email' => 'required|email',
+        ]);
+        if ($validator->fails()) {
+            return response()->json(['errors' => $validator->errors()->getMessageBag()]);
+        } else {
+
+            Mail::to('support3@getnord.com')
+                ->send(new CouponRequest($request));
+            if (!Mail::failures()) {
+                // we add the user to mailchimp
+                Newsletter::subscribe($request->input('email'),
+                    ['FNAME' => $request->input('name'),
+                        'LNAME' => $request->input('last-name'),
+                        'PHONE' => $request->input('phone-number'),
+                        'COMPANY' => $request->input('company'),
+                        'BUSINESS' => $request->input('business'),
+                    ],
+                    'getnord_track');
+                return response()->json(['success' => Lang::get('contact.email_sent')]);
+            }
+        };
+    }
     public function couponSubscribe($locale,Request $request){
         $loc = '';
         $data = geoip($_SERVER['REMOTE_ADDR']);

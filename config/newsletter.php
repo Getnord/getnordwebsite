@@ -81,8 +81,12 @@ return [
         ],
         'coupon_nl_be' => [
             'id' => '4b4d66afaf'
-        ],'getnord_lock' => [
+        ],
+        'getnord_lock' => [
             'id' => 'cd6d890278'
+        ],
+        'getnord_track' => [
+            'id' => 'dbc8111754'
         ]
     ],
 

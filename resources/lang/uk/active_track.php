@@ -11,8 +11,8 @@ return [
     'productScreen' => 'A screen that\'s the thickest on the market',
     'productBattery' => 'Extra long lasting 6000mAh battery ',
     'productCharge' => 'Wireless charging',
-    'monitoringTitle' => 'Guard Tour System.<span class="line_break">
-                            Lone Worker Monitoring</span>',
+    'monitoringTitle' => 'Guard Tour System.<span class="line_break"></span>
+                            Lone Worker Monitoring',
     'monitoringItems' => [
         ['img' => 'nfc.svg', 'text' => 'NFC'],
         ['img' => 'gsm.svg', 'text' => 'GSM/GPRS/LTE network - 2G / 3G / 4G'],

@@ -1,10 +1,18 @@
 #active-interested
     padding: 7rem 0 6rem
     background: #0080ff
+    @include breakpoint(m)
+        padding: 4rem 0 3rem
+    @include breakpoint(xs)
+        padding: 3rem 0
     .interested__wrapper
         max-width: 62rem
         width: 90%
         margin: 0 auto
+        @include breakpoint(m)
+            max-width: 80%
+        @include breakpoint(xs)
+            max-width: 90%
         h2
             font-size: 3.5rem
             text-transform: uppercase
@@ -12,12 +20,24 @@
             font-weight: 700
             margin: 0 0 3rem
             text-align: center
+            @include breakpoint(m)
+                font-size: 2.5rem
+                margin: 0 0 2rem
+            @include breakpoint(xs)
+                font-size: 1.5rem
+                margin: 0 0 1rem
         p
             font-size: 1.25rem
             color: #FFFFFF
             line-height: 2rem
             text-align: center
             margin: 0 0 6rem
+            @include breakpoint(m)
+                margin: 0 0 3rem
+            @include breakpoint(xs)
+                font-size: 1rem
+                margin: 0 0 1.5rem
+                line-height: 1.5rem
         .button--yellow
             font-size: 1.5rem
             font-weight: 700
@@ -25,10 +45,12 @@
             display: block
             text-align: center
             max-width: 460px
-            width: 50%
+            width: 100%
             margin: 0 auto
             background: #ffe401
             border: none
             cursor: pointer
+            @include breakpoint(xs)
+                max-width: 280px
             &:hover
                 background-color: #cdb700

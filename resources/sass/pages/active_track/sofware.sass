@@ -5,8 +5,17 @@
             width: 100%
             margin: 0 auto
             border-bottom: 1px solid #80c0ff
+            @include breakpoint(m)
+                max-width: 95%
+                box-sizing: border-box
+                padding: 0 5%
+            @include breakpoint(xs)
+                padding: 0
+                max-width: 90%
             .section-title
                 margin: 0 0 2.5rem
+                @include breakpoint(m)
+                    margin: 0 0 1.5rem
 
         .section-subtitle
             font-size: 1.25rem
@@ -14,8 +23,12 @@
             text-align: center
             line-height: 1.9rem
             margin: 0 0 5rem
+            @include breakpoint(m)
+                margin: 0 0 3rem
             .line_break
                 display: block
+                @include breakpoint(m)
+                    display: none
         .software_items-header
             width: 100%
             margin: 0 auto 5.5rem
@@ -23,11 +36,15 @@
             align-items: center
             img
                 margin-right: 2rem
+                @include breakpoint(xs)
+                    margin-right: 1rem
             h3
                 color: #FFFFFF
                 text-transform: uppercase
                 font-size: 2.2rem
                 font-weight: 700
+                @include breakpoint(xs)
+                    font-size: 1.5rem
 
         .monitoring__items
             margin: 4rem auto 0
@@ -37,4 +54,3 @@
                 .item__text
                     p
                         text-transform: initial
-                        font-size: 1.25rem

@@ -2,22 +2,51 @@
     .section_text
         background: #161616
         padding: 5.7rem 0 3rem
+        @include breakpoint(m)
+            padding: 4rem 0 3rem
         .text__wrapper
             max-width: 60rem
             width: 90%
             margin: 0 auto
+            @include breakpoint(m)
+                max-width: 80%
+            @include breakpoint(m)
+                max-width: 90%
         h2
             font-size: 3.5rem
             color: #FFFFFF
             font-weight: 700
             text-align: center
             margin: 0 0 2rem
+            text-transform: uppercase
+            @include breakpoint(m)
+                font-size: 2.5rem
+            @include breakpoint(xs)
+                font-size: 1.5rem
         p
             margin-bottom: 1.7rem
             color: #FFFFFF
             text-align: center
             font-size: 1.25rem
             line-height: 1.8rem
+            @include breakpoint(xs)
+                font-size: 1rem
+                line-height: 1.5rem
     .image_section
-        img
-            width: 100%
+        display: flex
+        flex-wrap: wrap
+        background: #232323
+        .section--half
+            width: 50%
+            @include breakpoint(m)
+                width: 100%
+            img
+                width: 100%
+        .image--centered
+            display: flex
+            justify-content: center
+            align-items: center
+            @include breakpoint(m)
+                padding: 2rem 0
+            img
+                max-width: 85%

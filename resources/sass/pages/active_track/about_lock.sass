@@ -1,7 +1,11 @@
 #about-lock
     display: flex
+    @include breakpoint(m)
+        flex-wrap: wrap
     .section__img
         width: 50%
+        @include breakpoint(m)
+            width: 100%
         img
             width: 100%
     .section__text
@@ -11,23 +15,48 @@
         align-items: center
         padding-left: 4.5rem
         box-sizing: border-box
+        @include breakpoint(m)
+            width: 100%
+            padding: 4rem 0
+        @include breakpoint(xs)
+            padding: 3rem 0
         .text__wrapper
             width: 100%
             max-width: 520px
+            @include breakpoint(m)
+                max-width: 80%
+                margin: 0 auto
+            @include breakpoint(xs)
+                max-width: 90%
             .line_break
                 display: block
+                @include breakpoint(m)
+                    display: none
             h3
                 font-size: 3.5rem
                 text-align: right
                 text-transform: uppercase
                 font-weight: 700
                 margin: 0 0 2.7rem
+                @include breakpoint(m)
+                    text-align: center
+                    font-size: 2.5rem
+                    margin: 0 0 2rem
+                @include breakpoint(xs)
+                    font-size: 1.5rem
+                    margin: 0 0 1rem
             p
                 font-size: 1.25rem
                 line-height: 1.8rem
                 text-align: right
                 margin: 0 0 5.5rem
                 word-spacing: 1px
+                @include breakpoint(m)
+                    text-align: center
+                    margin: 0 0 3rem
+                @include breakpoint(xs)
+                    font-size: 1rem
+                    line-height: 1.5rem
             .button--yellow
                 font-size: 1.5rem
                 font-weight: 700
@@ -42,5 +71,10 @@
                 cursor: pointer
                 color: #272727
                 text-decoration: none
+                @include breakpoint(m)
+                    max-width: 480px
+                @include breakpoint(xs)
+                    max-width: 280px
                 &:hover
                     background-color: #cdb700
+

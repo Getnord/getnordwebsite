@@ -1,6 +1,11 @@
 <section id="how_works">
     <div class="image_section">
-        <img src="{{asset('img/track/how-it-works.png')}}" alt="">
+        <div class="image--centered section--half">
+            <img src="{{asset('img/track/mac-phones.png')}}" alt="" class="img-centered">
+        </div>
+        <div class="section--half">
+            <img src="{{asset('img/track/man.png')}}" alt="">
+        </div>
     </div>
     <div class="section_text">
         <div class="text__wrapper">

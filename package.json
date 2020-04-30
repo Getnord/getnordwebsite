@@ -34,7 +34,7 @@
   "dependencies": {
     "gsap": "^2.1.2",
     "he": "^1.2.0",
-    "jquery": "^3.4.1",
+    "jquery": "^3.5.0",
     "locutus": "^2.0.10",
     "pug": "^2.0.3",
     "scrollmagic": "^2.0.6",

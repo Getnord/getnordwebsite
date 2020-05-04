@@ -1,53 +1,53 @@
 <?php
 
 return [
-    'bannerTitle' => '<span>Getnord</span> Active Track',
-    'bannerText' => 'Guard Tour System.<span class="line_break"></span>
-                        Track your guards/personell<span class="line_break"></span>
-                        in nearly any business<span class="line_break"></span>
-                        environment.',
-    'productTitle' => 'Rugged Waterproof Security phone',
-    'productProcessor' => 'IP68 and MIL-STD-810 rated',
-    'productScreen' => 'A screen that\'s the thickest on the market',
-    'productBattery' => 'Extra long lasting 6000mAh battery ',
-    'productCharge' => 'Wireless charging',
-    'monitoringTitle' => 'Guard Tour System.<span class="line_break"></span>
-                            Lone Worker Monitoring',
+    'bannerTitle' => '<span>Getnord </span>Actief Volgen',
+    'bannerText' => 'Medewerker volgsysteem.<span class="line_break"></span>
+                        Volg je bewakers/personeel <span class="line_break"></span>
+                        in vrijwel elke <span class="line_break"></span>
+                        omgeving.',
+    'productTitle' => 'Robuuste en waterdichte telefoon voor beveiligers',
+    'productProcessor' => 'IP68 en MIL-STD-810 beoordeeld',
+    'productScreen' => 'Een scherm dat het dikste is dat verkrijgbaar is',
+    'productBattery' => 'Extra lang werkende 6000mAh batterij',
+    'productCharge' => 'Draadloos opladen',
+    'monitoringTitle' => 'Guard Tour Systeem.<span class="line_break"></span>
+                            EENZAME ARBEIDERSBEWAKING',
     'monitoringItems' => [
         ['img' => 'nfc.svg', 'text' => 'NFC'],
-        ['img' => 'gsm.svg', 'text' => 'GSM/GPRS/LTE network - 2G / 3G / 4G'],
-        ['img' => 'battery.svg', 'text' => 'Rechargable (battery) <span class="line_break"></span><span class="lowercase">- approx. every 48 hrs</span>'],
-        ['img' => 'panic.svg', 'text' => 'Panic function'],
-        ['img' => 'two-way.svg', 'text' => 'Two-way voice communication <span class="line_break"></span><span class="lowercase">(telephone function)</span>'],
-        ['img' => 'man-down.svg', 'text' => 'Man-down function'],
-        ['img' => 'complete.svg', 'text' => 'Complete solution'],
-        ['img' => 'platform.svg', 'text' => 'Cloud based platform / possible <span class="line_break"></span>local access',
+        ['img' => 'gsm.svg', 'text' => 'GSM/GPRS/LTE netwerk - 2G / 3G / 4G'],
+        ['img' => 'battery.svg', 'text' => 'Oplaadbaar (batterij) <span class="line_break"></span><span class="lowercase">- gemiddeld elke 48 uur</span>'],
+        ['img' => 'panic.svg', 'text' => 'Noodknop'],
+        ['img' => 'two-way.svg', 'text' => 'Wederzijdse spraakcommunicatie <span class="line_break"></span><span class="lowercase">(telefoonfunctie)</span>'],
+        ['img' => 'man-down.svg', 'text' => '\'Gewond\' functie'],
+        ['img' => 'complete.svg', 'text' => 'Complete oplossing'],
+        ['img' => 'platform.svg', 'text' => 'Op de cloud gebaseerd platform/lokale <span class="line_break"></span>toegang mogelijk',
             'subItems' => true,
             'subItem1Text' => 'ebs <span class="line_break"></span><span class="font-small">activeview</span>',
             'subItem2Text' => 'ebs <span class="line_break"></span><span class="font-small">activeview ENTERPRISE</span>'],
-        ['img' => 'user_friendly.svg', 'text' => 'Advanced and user friendly <span class="line_break"></span><span class="lowercase">reporting system</span>'],
-        ['img' => 'automatic.svg', 'text' => 'Automatic reports and <span class="line_break"></span>
-                                                information<span class="lowercase"> for decision makers,</span>
-                                                <span class="line_break"></span><span class="lowercase">supervisors and security personnel</span>'],
-        ['img' => 'range.svg', 'text' => 'Full range
-                                            <span class="line_break"></span><span class="lowercase">of the end user terminals </span>'],
-        ['img' => 'integrate.svg', 'text' => 'Easy to integrate
-                                            <span class="line_break"></span><span class="lowercase">with other systems</span>'],
+        ['img' => 'user_friendly.svg', 'text' => 'Gebruiksvriendelijk en geavanceerd  <span class="line_break"></span><span class="lowercase">rapportagesysteem</span>'],
+        ['img' => 'automatic.svg', 'text' => 'Automatische rapporten en  l<span class="line_break"></span>
+                                                information<span class="lowercase">informatie voor beleidsbepalers,</span>
+                                                <span class="line_break"></span><span class="lowercase"> managers en beveiligingspersonee</span>'],
+        ['img' => 'range.svg', 'text' => 'Volledig assortiment
+                                            <span class="line_break"></span><span class="lowercase">eindgebruikersterminals </span>'],
+        ['img' => 'integrate.svg', 'text' => 'Eenvoudig te integreren
+                                            <span class="line_break"></span><span class="lowercase">in andere systemen</span>'],
     ],
-    'section4Title' => 'Where can it be Used',
-    'section4Security' => 'SECURITY GUARD PATROL',
-    'section4Housekeeping' => 'Hotel and hospital housekeeping',
-    'section4Cleaning' => 'CLEANING SERVICES',
-    'section4Equipment' => 'EQUIPMENT MAINTENANCE ',
-    'section4Fleet' => 'FLEET CONTROL ',
-    'section4Delivery' => 'DELIVERY COURIERS',
-    'section4Postage' => 'POSTAGE ROUTES',
-    'section4Lawn' => 'LAWN SERVICES ROUTES ',
-    'section4Parking' => 'PARKING INSPECTORS ROUTES ',
+    'section4Title' => 'Waar kan het worden gebruikt?',
+    'section4Security' => 'Patrouilles door beveiligers',
+    'section4Housekeeping' => 'Volgen van schoonmakers in hotels en ziekenhuizen',
+    'section4Cleaning' => 'SCHOONMAAKDIENSTEN',
+    'section4Equipment' => 'MATERIAALONDERHOUD',
+    'section4Fleet' => 'VOERTUIGBEHEER',
+    'section4Delivery' => 'BEZORGERS',
+    'section4Postage' => 'PAKKETTRANSPORTEN',
+    'section4Lawn' => 'ROUTES VAN HOVENIERS',
+    'section4Parking' => 'ROUTES VAN BOA’s',
 
 
     'softwareTitle' => 'Software',
-    'softwareSubtitle' => 'Active View offers unlimited control over employees and protected objects from any place in the world to be done in <span class="line_break"></span> real time. All you need is access to the internet.',
+    'softwareSubtitle' => 'Actief Beeld biedt een onbeperkt beheer van medewerkers en beschermde objecten overal ter wereld en <span class="line_break"></span> in real-time. Het enige dat je nodig hebt is toegang tot het internet.',
     'softwareActiveViewTitle' => 'ebs ACTIVE VIEW',
     'softwareActiveViewImg' => 'ebs_activeview2.svg',
     'softwareActiveViewItems' => [
@@ -77,14 +77,14 @@ return [
         ['img' => 'ability.svg', 'text' => 'The ability to take photos on demand<span class="line_break"></span>by the end user and browse them<span class="line_break"></span>in the app'],
         ['img' => 'opportunity.svg', 'text' => 'Opportunity to set up a server<span class="line_break"></span>at the client’s security agency –<span class="line_break"></span>photos will be managed on<span class="line_break"></span>their own resources'],
     ],
-    'worksTitle' => 'How it works?',
-    'worksText1' => 'Getnord Active Track is a system based on Android Smartphone technologies for logging the rounds of employees in a variety of situations, for example: security guards patrolling property, technicians monitoring climate-controlled environments, and correctional officers checking prisoner living areas. It helps to ensure that the employee makes his or her appointed rounds at the correct intervals and can offer a record for legal or insurance reasons. ',
-    'worksText2' => 'Getnord Active Track can monitor the activities of patrol guards in real time, leaving little room for disobedience or straying from actual duty. Each guard or personnel member will be given a tool - i.e a smartphone installed with a Patrol App - and he must perform his round by tapping on the NFC tags or QR labels scattered along the assigned route. During a guard\'s patrol duty he can receive additional tasks from the control room; send notes and photos to report any incidences he observes in real time; and, in case of emergency, the mobile App is equipped with an SOS feature.',
-    'interestedTitle' => 'interested? wanna try?',
-    'interestedText' => 'Tell us about your business and we will arrange you a free sample of GETNORD phone with Enterprise version of GETNORD ACTIVE TACK preinstalled',
-    'interestedButtonText' => 'TRY GETNORD',
+    'worksTitle' => 'Hoe werkt het?',
+    'worksText1' => 'Getnord Actief Volgen is een systeem dat is gebaseerd op Android Smartphone technologieën voor het bijhouden van patrouilles of rondes door medewerkers in verschillende situaties. Bijvoorbeeld: beveiligingspersoneel dat vastgoed beschermt, technici die omgevingen monitoren waarvan de temperatuur wordt beheerd of gevangenismedewerkers die de dagruimtes van gevangenen controleren. Het helpt te garanderen dat de medewerker, op het juiste moment, zijn of haar toegewezen ronde maakt en biedt een overzicht dat gebruikt kan worden voor verzekerings- of juridische doeleinden. ',
+    'worksText2' => 'Getnord Actief Volgen volgt de activiteiten van bewakers in realtime waardoor er weinig ruimte is voor ongehoorzaamheid of het verlaten van de toegewezen route. Elke bewaker of medewerker ontvangt een hulpmiddel – bv. een smartphone met daarop een Patrol App geïnstalleerd – en wordt geacht de route te voltooien door daarbij op de NFC tags of QR labels te raken die verspreidt langs de route zijn aangebracht. Tijdens de ronde kan de bewaker aanvullende opdrachten ontvangen vanuit de controlekamer; notities en foto’s versturen om observaties in realtime vast te leggen; en, in geval van nood is de mobiele App voorzien van een SOS functie.',
+    'interestedTitle' => 'Geïnteresseerd? Wil je het uitproberen?',
+    'interestedText' => 'Vertel ons meer over je organisatie en wij zullen je een gratis proefmodel van het GETNORD telefoon sturen waarop de Enterprise versie van de GETNORD ACTIEF VOLG-functie al geïnstalleerd is',
+    'interestedButtonText' => 'PROBEER  GETNORD',
 
-    'lockTitle' => 'Worried<span class="line_break"></span> about improper usage of the Smartphone? ',
-    'lockText' => 'We have a solution which locks the phone and allows you to centrally control your employees phones. You can allow or restrict certain functions like apps, websites, downloads, internet connectivity, emails and other.',
-    'lockButtonText' => 'Read more about Getnord Lock',
+    'lockTitle' => 'Bezorgd over<span class="line_break"></span>  oneigenlijk gebruik van het toestel? ',
+    'lockText' => 'Wij hebben een oplossing die de telefoon afsluit en het mogelijk maakt om de telefoons van je medewerkers centraal te beheren. Sommige functies zoals apps, websites, downloads, internetverbinding, emails en andere, kun je centraal afsluiten of beheren.',
+    'lockButtonText' => 'Lees meer over Getnord Lock',
 ];

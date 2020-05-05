@@ -8,6 +8,7 @@ function navWatcher() {
         const isLanguageSelectorOpen = $('.float-languages').hasClass('active');
         const isNavOpen = $('.top_menu').hasClass('on');
         const isDropDownOpen = $('.dropdown').hasClass('active');
+        let isDropDownOpen2 = $('.dropdown-2').hasClass('active');
 
         //change the header background to transparent on scroll
         if ($(window).scrollTop() > 50) {
@@ -23,14 +24,17 @@ function navWatcher() {
         };
 
         //close the nav menu dropdown and the links dropdown on scroll
-        
+
         if(isNavOpen) {
-            $(".top_menu").removeClass("on"); 
+            $(".top_menu").removeClass("on");
             $(".page_header").removeClass("on");
         };
 
         if(isDropDownOpen) {
             $('.dropdown').removeClass('active');
+        };
+        if(isDropDownOpen2) {
+            $('.dropdown-2').removeClass('active');
         };
 
         //Make country flag names clickable
@@ -74,8 +78,10 @@ function languageSelectorWatcher() {
  * Dropdown
  */
 function toggleDropDown() {
+
     $('.dropdown__btn').on('click', function(e) {
         e.preventDefault();
+        $('.dropdown-2').removeClass('active')
         $('.dropdown__btn').parent().toggleClass('active');
     });
     //nav toggle for mobile
@@ -85,6 +91,20 @@ function toggleDropDown() {
         $('.page_header').toggleClass('on');
     });
 };
+function toggleDropDown2() {
+
+    $('.dropdown__btn-2').on('click', function(e) {
+        $('.dropdown').removeClass('active')
+        e.preventDefault();
+        $('.dropdown__btn-2').parent().toggleClass('active');
+    });
+    //nav toggle for mobile
+    $('.top_menu_toggle').click(function(e) {
+        e.preventDefault();
+        $('.top_menu').toggleClass('on');
+        $('.page_header').toggleClass('on');
+    });
+}
 
 /**
  * public methodes
@@ -94,7 +114,8 @@ function NavInit() {
     navWatcher();
     languageSelectorWatcher();
     toggleDropDown();
-};
+    toggleDropDown2();
+}
 
 export default NavInit;
 

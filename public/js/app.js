@@ -61472,7 +61472,8 @@ function navWatcher() {
   $(window).on("scroll", function () {
     var isLanguageSelectorOpen = $('.float-languages').hasClass('active');
     var isNavOpen = $('.top_menu').hasClass('on');
-    var isDropDownOpen = $('.dropdown').hasClass('active'); //change the header background to transparent on scroll
+    var isDropDownOpen = $('.dropdown').hasClass('active');
+    var isDropDownOpen2 = $('.dropdown-2').hasClass('active'); //change the header background to transparent on scroll
 
     if ($(window).scrollTop() > 50) {
       $(".page_header").addClass("active");
@@ -61500,6 +61501,12 @@ function navWatcher() {
 
     if (isDropDownOpen) {
       $('.dropdown').removeClass('active');
+    }
+
+    ;
+
+    if (isDropDownOpen2) {
+      $('.dropdown-2').removeClass('active');
     }
 
     ; //Make country flag names clickable
@@ -61553,6 +61560,7 @@ function languageSelectorWatcher() {
 function toggleDropDown() {
   $('.dropdown__btn').on('click', function (e) {
     e.preventDefault();
+    $('.dropdown-2').removeClass('active');
     $('.dropdown__btn').parent().toggleClass('active');
   }); //nav toggle for mobile
 
@@ -61564,17 +61572,32 @@ function toggleDropDown() {
 }
 
 ;
+
+function toggleDropDown2() {
+  $('.dropdown__btn-2').on('click', function (e) {
+    $('.dropdown').removeClass('active');
+    e.preventDefault();
+    $('.dropdown__btn-2').parent().toggleClass('active');
+  }); //nav toggle for mobile
+
+  $('.top_menu_toggle').click(function (e) {
+    e.preventDefault();
+    $('.top_menu').toggleClass('on');
+    $('.page_header').toggleClass('on');
+  });
+}
 /**
  * public methodes
  */
+
 
 function NavInit() {
   navWatcher();
   languageSelectorWatcher();
   toggleDropDown();
+  toggleDropDown2();
 }
 
-;
 /* harmony default export */ __webpack_exports__["default"] = (NavInit);
 
 /***/ }),

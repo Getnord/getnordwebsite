@@ -174,7 +174,16 @@
 <!--			<li><a href="javascript:void(0);" onclick="popup_open();">CONTACT</a></li>-->
             <li><a href="{{ route('contact', ['locale' => app()->getLocale()]) }}">{{ __('header.contactAndSupport') }}</a></li>
             <li><a href="{{ route('compatibility', ['locale' => app()->getLocale()]) }}">{{ __('header.compatibility') }}</a></li>
-            <li><a href="{{ route('lock', ['locale' => app()->getLocale()]) }}">{{ __('header.forBusiness') }}</a></li>
+            <li class="dropdown-2"><a href="#" class="dropdown__btn-2">
+
+                    <p>{{ __('header.forBusiness') }}</p></a>
+                <div class="dropdown__list-2">
+                    <a href="{{ route('lock', ['locale' => app()->getLocale()]) }}">Getnord Lock</a>
+
+                    <a href="{{ route('track', ['locale' => app()->getLocale()]) }}">Getnord Active Track</a>
+
+                </div>
+            </li>
         </ul>
     </nav>
 </header>

@@ -1,11 +1,11 @@
 .page_header
     box-shadow: 0px 0px 6px rgba(0,0,0,0.2)
     .top_menu
-        li.dropdown
-            position: relative 
+        li.dropdown,li.dropdown-2
+            position: relative
 
             &.active
-                .dropdown__btn
+                .dropdown__btn,.dropdown__btn-2
                     p
 
                         &::after
@@ -24,11 +24,11 @@
                         display: block
                         background-color: #f2f3f3
 
-                .dropdown__list
+                .dropdown__list,.dropdown__list-2
                     display: flex !important
 
-            .dropdown__btn
-                p 
+            .dropdown__btn,.dropdown__btn-2
+                p
                     padding: 0
                     font-size: 17px
                     line-height: 23px
@@ -51,7 +51,7 @@
                 &:hover p
                     color: $getnord-blue
 
-                    &::after 
+                    &::after
                         border-top: 7px solid $getnord-blue
 
                 &.active
@@ -69,8 +69,8 @@
                         width: 110%
                         display: block
                         background-color: #f2f3f3
-            
-            .dropdown__list
+
+            .dropdown__list,.dropdown__list-2
                 display: none
                 flex-direction: column
                 position: absolute
@@ -84,10 +84,10 @@
                 a
                     padding: 20px 20px
                     color: $getnord-blue
-                    background-color: transparent 
+                    background-color: transparent
                     text-transform: capitalize
 
-                    &:hover 
+                    &:hover
                         background-color: $getnord-blue
                         color: $white
                         text-transform: capitalize
@@ -101,18 +101,18 @@
 
                     a
                         text-align: center
-                
+
 @include breakpoint(l)
-    .page_header 
+    .page_header
         .top_menu
-            li.dropdown.active 
+            li.dropdown.active,li.dropdown-2.active
                 padding-bottom: 0
 
-                .dropdown__btn
+                .dropdown__btn,.dropdown__btn-2
                     &::before
                         display: none
 
-                .dropdown__list
+                .dropdown__list,.dropdown__list-2
                     margin-top: 10px
 
                     a:nth-child(2)

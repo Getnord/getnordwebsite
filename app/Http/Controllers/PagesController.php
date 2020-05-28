@@ -415,4 +415,43 @@ class PagesController extends Controller
             ]
         );
     }
+    public function agriculture($locale)
+    {
+        if (isset($locale)) {
+            app()->setLocale($locale);
+        } else {
+            app()->setLocale('uk');
+            $locale = 'uk';
+        }
+        return view('pages.agriculture.index')->with([
+                'onHomePage' => false,
+            ]
+        );
+    }
+    public function agriculturePost(Request $request,$locale)
+    {
+        $validator = Validator::make($request->all(), [
+            'name' => 'required|max:255',
+            'email' => 'required|email',
+        ]);
+        if ($validator->fails()) {
+            return response()->json(['errors' => $validator->errors()->getMessageBag()]);
+        } else {
+
+            Mail::to('support3@getnord.com')
+                ->send(new CouponRequest($request));
+            if (!Mail::failures()) {
+                // we add the user to mailchimp
+                Newsletter::subscribe($request->input('email'),
+                    ['FNAME' => $request->input('name'),
+                        'LNAME' => $request->input('last-name'),
+                        'PHONE' => $request->input('phone-number'),
+                        'COMPANY' => $request->input('company'),
+                        'BUSINESS' => $request->input('business'),
+                    ],
+                    'getnord_agriculture');
+                return response()->json(['success' => Lang::get('contact.email_sent')]);
+            }
+        };
+    }
 }

@@ -181,6 +181,7 @@
                     <a href="{{ route('lock', ['locale' => app()->getLocale()]) }}">Getnord Lock</a>
 
                     <a href="{{ route('track', ['locale' => app()->getLocale()]) }}">Getnord Active Track</a>
+                  {{--  <a href="{{ route('agriculture', ['locale' => app()->getLocale()]) }}">Getnord Agriculture</a>--}}
 
                 </div>
             </li>

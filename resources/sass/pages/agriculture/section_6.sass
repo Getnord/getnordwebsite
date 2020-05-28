@@ -1,0 +1,47 @@
+.housing
+    padding: 130px 0 10px
+    background: #0080ff
+    color: #ffffff
+    @include breakpoint(m)
+        padding: 60px 0 0
+    .housing-wrapper
+        max-width: 990px
+        width: 100%
+        margin: 0 auto
+        text-align: center
+        text-transform: uppercase
+        @include breakpoint(m)
+            padding: 0 30px
+        h3
+            font-size: 55px
+            line-height: 60px
+            margin-bottom: 90px
+            @include breakpoint(m)
+                font-size: 40px
+                line-height: 45px
+                margin: 0 0 3rem
+            @include breakpoint(xs)
+                font-size: 24px
+                line-height: 2rem
+        .housing-items
+            display: flex
+            flex-wrap: wrap
+            justify-content: center
+            .housing-item
+                width: 25%
+                display: flex
+                flex-direction: column
+                margin-bottom: 90px
+                @include breakpoint(m)
+                    margin-bottom: 50px
+                    width: 33.3%
+                @include breakpoint(xs)
+                    width: 50%
+                img
+                    margin-bottom: 25px
+
+                p
+                    font-size: 20px
+                    text-transform: uppercase
+                    .line_break
+                        display: block

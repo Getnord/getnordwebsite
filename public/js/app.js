@@ -61578,12 +61578,6 @@ function toggleDropDown2() {
     $('.dropdown').removeClass('active');
     e.preventDefault();
     $('.dropdown__btn-2').parent().toggleClass('active');
-  }); //nav toggle for mobile
-
-  $('.top_menu_toggle').click(function (e) {
-    e.preventDefault();
-    $('.top_menu').toggleClass('on');
-    $('.page_header').toggleClass('on');
   });
 }
 /**

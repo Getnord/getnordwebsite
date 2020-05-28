@@ -36,6 +36,9 @@ Route::prefix('{locale}')->group(function() {
 /*    Route::get('/discount', 'PagesController@discount')->name('discount');*/
     Route::get('/active-track', 'PagesController@activeTrack')->name('track');
     Route::post('/active-track', 'PagesController@activeTrackPost')->name('trackPost');
+    // Agriculture page
+    Route::get('/agriculture', 'PagesController@agriculture')->name('agriculture');
+    Route::post('/agriculture', 'PagesController@agriculturePost')->name('agriculturePost');
 });
 Route::get('/', 'PagesController@index')->name('index');
 // Get data from OpenCart

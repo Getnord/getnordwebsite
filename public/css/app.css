@@ -8223,7 +8223,7 @@ body h1 {
 }
 
 .role-section .role-section-wrapper {
-  max-width: 990px;
+  max-width: 1010px;
   width: 100%;
   margin: 0 auto;
 }
@@ -8245,6 +8245,7 @@ body h1 {
   margin-bottom: 40px;
   text-transform: uppercase;
   line-height: 60px;
+  font-weight: bold;
 }
 
 @media (max-width: 999px) {
@@ -8289,6 +8290,10 @@ body h1 {
   .agriculture-gallery .section_header h2 {
     line-height: 45px;
   }
+}
+
+.many-others img {
+  width: 100%;
 }
 
 .many-others h5 {
@@ -8366,7 +8371,7 @@ body h1 {
 }
 
 .housing .housing-wrapper {
-  max-width: 990px;
+  max-width: 1010px;
   width: 100%;
   margin: 0 auto;
   text-align: center;
@@ -8383,6 +8388,7 @@ body h1 {
   font-size: 55px;
   line-height: 60px;
   margin-bottom: 90px;
+  font-weight: bold;
 }
 
 @media (max-width: 999px) {

@@ -37,7 +37,7 @@ return [
     'housingItem_9' => 'Geomagnetic<span class="line_break"></span>Sensor',
     'housingItem_10' => 'Gyroscope',
     'housingItem_11' => 'GPS sensor',
-    'phoneTitle' => 'LOREM IPSUM IPSUM',
+    'phoneTitle' => 'GETNORD TECHNOLOGY',
     'phoneItem_1_title' => 'Strongest screen',
     'phoneItem_1_text' => 'Lynx has the thickest <b>(1.8mm)</b> hence the strongest screen in the market + Asahi Glass protector.<br>* We don\'t believe in any special technology when it comes to the strength of a breakable screen - <b>thickness is essential</b>.',
     'phoneItem_2_title' => 'Extra Large Battery',

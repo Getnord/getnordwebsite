@@ -8281,6 +8281,12 @@ body h1 {
   }
 }
 
+@media (max-width: 480px) {
+  .agriculture-gallery .section_header {
+    padding: 30px;
+  }
+}
+
 .agriculture-gallery .section_header h2 {
   max-width: 1000px;
   margin: 0 auto;
@@ -8289,6 +8295,12 @@ body h1 {
 @media (max-width: 999px) {
   .agriculture-gallery .section_header h2 {
     line-height: 45px;
+  }
+}
+
+@media (max-width: 480px) {
+  .agriculture-gallery .section_header h2 {
+    line-height: 30px;
   }
 }
 
@@ -8322,6 +8334,7 @@ body h1 {
   background: #272727;
   color: #ffffff;
   text-align: center;
+  font-weight: bold;
 }
 
 @media (max-width: 999px) {
@@ -8704,22 +8717,26 @@ body h1 {
 }
 
 .partnership .partnership-wrapper .partnership-right {
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
+  width: 51%;
   height: 100%;
-  background-repeat: no-repeat;
-  background-position: right;
-  background-size: cover;
-  z-index: 0;
+}
+
+.partnership .partnership-wrapper .partnership-right img {
+  height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+
+@media (max-width: 999px) {
+  .partnership .partnership-wrapper .partnership-right img {
+    width: 100%;
+    height: auto;
+  }
 }
 
 @media (max-width: 999px) {
   .partnership .partnership-wrapper .partnership-right {
-    position: relative;
-    height: 650px;
-    background-size: initial;
+    width: 100%;
   }
 }
 

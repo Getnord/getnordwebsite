@@ -38,10 +38,9 @@
 {{-- Get locale to use in js--}}
 <input type="hidden" class="locale_input" value="@if(app()->getLocale()){{app()->getLocale()}}@endif">
 <div class="page_content" id="app">
-    @include('inc.header2')
+    @include('inc.headerSub')
 
     @yield('content')
-    @include('inc.shopping_cart')
 
     @if(app()->getLocale() === 'nl')
         @include('pages.coupon.index')
@@ -49,7 +48,6 @@
 </div>
 @include('inc.footer2')
 <script src="{{ asset('js/app.js') }}"></script>
-<script src="{{ asset('js/lightbox.min.js') }}"></script>
 <script src="{{ asset('js/modal.js') }}"></script>
 <script src="{{ url('/') }}/js/lang-{{ app()->getLocale() }}.js"></script>
 

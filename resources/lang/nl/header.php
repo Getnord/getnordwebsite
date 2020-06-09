@@ -9,4 +9,9 @@ return [
     'contactAndSupport' => 'CONTACT & ONDERSTEUNING',
     'compatibility' => 'COMPATIBILITEIT',
     'forBusiness' => 'Voor bedrijven',
+    'agriculture' => 'Landbouw',
+
+    /* for subdomains*/
+    'lock' => 'GETNORD LOCK',
+    'moreAbout' => 'MEER OVER GETNORD',
 ];

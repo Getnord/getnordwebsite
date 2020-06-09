@@ -6,18 +6,22 @@
 Route::get('/csv/{lang}/{name}', 'CsvFilesController@csv_to_array');
 
 // to clear the cache from a route
-Route::get('/clear-cache', function() {
+Route::get('/clear-cache', function () {
     Artisan::call('cache:clear');
     return "Cache is cleared";
 });
 
-Route::get('/test', function() {
+Route::get('/test', function () {
     return view('pages.test.index');
 });
 Route::post('/api', 'ProductsController@index');
 Route::post('/api/product', 'ProductsController@product');
 
-Route::prefix('{locale}')->group(function() {
+Route::prefix('{locale}')->group(function () {
+    Route::domain('{account}.getnord.com')->group(function () {
+        Route::get('/', 'SubDomainController@index');
+    });
+
     Route::get('/', 'PagesController@home')->name('home');
     Route::get('/onyx', 'PagesController@onyx')->name('onyx');
     Route::get('/contact', 'PagesController@contact')->name('contact');
@@ -33,7 +37,7 @@ Route::prefix('{locale}')->group(function() {
     Route::get('/lock', 'PagesController@lock')->name('lock');
     Route::post('/lock', 'PagesController@lockPost')->name('lockPost');
 
-/*    Route::get('/discount', 'PagesController@discount')->name('discount');*/
+    /*    Route::get('/discount', 'PagesController@discount')->name('discount');*/
     Route::get('/active-track', 'PagesController@activeTrack')->name('track');
     Route::post('/active-track', 'PagesController@activeTrackPost')->name('trackPost');
     // Agriculture page
@@ -42,7 +46,6 @@ Route::prefix('{locale}')->group(function() {
 });
 Route::get('/', 'PagesController@index')->name('index');
 // Get data from OpenCart
-
 
 
 /**
@@ -54,7 +57,7 @@ Route::get('/', 'PagesController@index')->name('index');
 Route::get('js/lang-{locale}.js', function ($locale) {
     $localeExists = !array_key_exists($locale, config('app.locales'));
     // config('app.locales') gives all supported locales
-    if (!$localeExists ) {
+    if (!$localeExists) {
         $locale = config('app.fallback_locale');
     };
 
@@ -69,7 +72,7 @@ Route::get('js/lang-{locale}.js', function ($locale) {
         $strings = [];
 
         foreach ($files as $file) {
-            $name           = basename($file, '.php');
+            $name = basename($file, '.php');
             $strings[$name] = require $file;
         }
 

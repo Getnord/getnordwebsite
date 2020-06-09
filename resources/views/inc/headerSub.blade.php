@@ -107,7 +107,7 @@
     <nav class="top_menu clearfix">
         <ul>
             <li><a href="http://getnord.com/{{ app()->getLocale()}}/lock" target="_blank">{{ __('header.lock') }}</a></li>
-            <li><a href="http://www.getnord.com" target="_blank">{{ __('header.moreAbout') }}</a></li>
+            <li><a href="http://getnord.com" target="_blank">{{ __('header.moreAbout') }}</a></li>
         </ul>
     </nav>
 </header>

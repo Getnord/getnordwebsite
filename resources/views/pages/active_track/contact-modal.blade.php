@@ -2,7 +2,7 @@
     <div class="contact-modal">
         <div class="contact--content">
             <h2>@lang('lock.contact-us')</h2>
-            <form action="{{route('trackPost',[app()->getLocale()])}}" id="contact--form" method="post">
+            <form action="{{route('lockPost',[app()->getLocale()])}}" id="contact--form" method="post">
                 <div class="input--group">
                     <div class="input-item">
                         <span class="error"></span>

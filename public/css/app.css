@@ -4457,7 +4457,7 @@ body h1 {
   text-align: left;
 }
 
-@media (max-width: 1199px) {
+@media (max-width: 1440px) {
   .scratch_section_col--right .section_heading {
     margin: 70px 0 35px 0;
   }
@@ -5407,7 +5407,7 @@ body h1 {
   margin: 0 auto;
 }
 
-@media (max-width: 1300px) {
+@media (max-width: 1500px) {
   #lock__banner .banner__video {
     height: calc( 100vh - 60px );
   }
@@ -5475,7 +5475,7 @@ body h1 {
   }
 }
 
-@media (max-width: 1300px) {
+@media (max-width: 1500px) {
   #lock__banner .lock__banner-text {
     padding: 100px 0;
   }
@@ -5520,7 +5520,7 @@ body h1 {
   }
 }
 
-@media (max-width: 1300px) {
+@media (max-width: 1500px) {
   #lock__banner .lock__banner-text button {
     font-size: 18px;
     margin: 60px auto 0;
@@ -5552,7 +5552,7 @@ body h1 {
   }
 }
 
-@media (max-width: 1300px) {
+@media (max-width: 1500px) {
   #lock__banner .lock__banner-text h2 {
     font-size: 40px;
   }
@@ -5577,7 +5577,7 @@ body h1 {
   }
 }
 
-@media (max-width: 1300px) {
+@media (max-width: 1500px) {
   #lock__banner .lock__banner-text .img {
     width: 250px;
     margin: 0 auto 30px;
@@ -5652,7 +5652,7 @@ body h1 {
   }
 }
 
-@media (max-width: 1300px) {
+@media (max-width: 1500px) {
   #manage__section h3 {
     font-size: 40px;
     margin: 0 auto 60px;
@@ -5677,7 +5677,7 @@ body h1 {
   }
 }
 
-@media (max-width: 1300px) {
+@media (max-width: 1500px) {
   #manage__section img {
     width: 70%;
   }
@@ -5696,7 +5696,7 @@ body h1 {
   text-align: center;
 }
 
-@media (max-width: 1300px) {
+@media (max-width: 1500px) {
   #manage__section p {
     width: 75%;
   }
@@ -5731,7 +5731,7 @@ body h1 {
   margin: 0 auto;
 }
 
-@media (max-width: 1300px) {
+@media (max-width: 1500px) {
   #you-can__section .section__container {
     max-width: 95%;
   }
@@ -5776,7 +5776,7 @@ body h1 {
   }
 }
 
-@media (max-width: 1300px) {
+@media (max-width: 1500px) {
   #you-can__section .you-can__title {
     font-size: 40px;
     margin: 0 auto 60px;
@@ -5809,7 +5809,7 @@ body h1 {
   width: 33.3%;
 }
 
-@media (max-width: 1300px) {
+@media (max-width: 1500px) {
   #you-can__section .can__item-top img {
     width: 40%;
   }
@@ -5832,7 +5832,7 @@ body h1 {
           flex-direction: column;
 }
 
-@media (max-width: 1300px) {
+@media (max-width: 1500px) {
   #you-can__section .can__item-text {
     width: 60%;
   }
@@ -5856,7 +5856,7 @@ body h1 {
   }
 }
 
-@media (max-width: 1300px) {
+@media (max-width: 1500px) {
   #you-can__section .can__item-text p {
     font-size: 18px;
   }
@@ -5898,7 +5898,7 @@ body h1 {
   }
 }
 
-@media (max-width: 1199px) {
+@media (max-width: 1440px) {
   #you-can__section .can__item-text .show-button {
     font-size: 16px;
   }
@@ -6093,7 +6093,7 @@ body h1 {
   }
 }
 
-@media (max-width: 1300px) {
+@media (max-width: 1500px) {
   #try-section h3 {
     font-size: 40px;
   }
@@ -6189,7 +6189,7 @@ body h1 {
   margin: 0 auto;
 }
 
-@media (max-width: 1300px) {
+@media (max-width: 1500px) {
   #scalefusion-section .section__container {
     max-width: 90%;
   }
@@ -6262,7 +6262,7 @@ body h1 {
   }
 }
 
-@media (max-width: 1300px) {
+@media (max-width: 1500px) {
   #scalefusion-section h3 {
     font-size: 40px;
   }
@@ -7329,7 +7329,7 @@ body h1 {
   width: 100%;
 }
 
-@media (max-width: 1300px) {
+@media (max-width: 1500px) {
   #track_banner .banner_text {
     max-width: 95%;
   }
@@ -7349,7 +7349,7 @@ body h1 {
   text-transform: uppercase;
 }
 
-@media (max-width: 1199px) {
+@media (max-width: 1440px) {
   #track_banner .banner_text h1 {
     font-size: 4rem;
   }
@@ -7390,7 +7390,7 @@ body h1 {
   text-transform: uppercase;
 }
 
-@media (max-width: 1199px) {
+@media (max-width: 1440px) {
   #track_banner .banner_text p {
     font-size: 3rem;
   }
@@ -9335,7 +9335,7 @@ body h1 {
   text-transform: capitalize;
 }
 
-@media (max-width: 1300px) {
+@media (max-width: 1500px) {
   .page_header .top_menu li.dropdown .dropdown__list,
   .page_header .top_menu li.dropdown .dropdown__list-2,
   .page_header .top_menu li.dropdown-2 .dropdown__list,
@@ -9356,7 +9356,7 @@ body h1 {
   }
 }
 
-@media (max-width: 1300px) {
+@media (max-width: 1500px) {
   .page_header .top_menu li.dropdown.active,
   .page_header .top_menu li.dropdown-2.active {
     padding-bottom: 0;

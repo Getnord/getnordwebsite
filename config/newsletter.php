@@ -89,7 +89,7 @@ return [
             'id' => 'dbc8111754'
         ],
         'getnord_agriculture' => [
-            'id' => 'dbc8111754'
+            'id' => 'b7be3277ee'
         ]
     ],
 

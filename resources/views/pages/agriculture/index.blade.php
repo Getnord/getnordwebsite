@@ -1,4 +1,4 @@
-@extends('layouts.subdomain')
+@extends('layouts.app')
 
 @section('content')
     <div class="agriculture-page">

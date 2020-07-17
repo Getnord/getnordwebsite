@@ -2,6 +2,8 @@
 
 namespace App\Http\Controllers;
 
+use App\Mail\BussinessContactRequest;
+use App\Mail\ContactRequest;
 use App\Mail\CouponRequest;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Cache;
@@ -315,8 +317,9 @@ class PagesController extends Controller
             return response()->json(['errors' => $validator->errors()->getMessageBag()]);
         } else {
 
+            $request['page'] = 'Lock';
             Mail::to('support3@getnord.com')
-                ->send(new CouponRequest($request));
+                ->send(new BussinessContactRequest($request));
             if (!Mail::failures()) {
                 // we add the user to mailchimp
                 Newsletter::subscribe($request->input('email'),
@@ -341,8 +344,9 @@ class PagesController extends Controller
             return response()->json(['errors' => $validator->errors()->getMessageBag()]);
         } else {
 
+            $request['page'] = 'Security';
             Mail::to('support3@getnord.com')
-                ->send(new CouponRequest($request));
+                ->send(new BussinessContactRequest($request));
             if (!Mail::failures()) {
                 // we add the user to mailchimp
                 Newsletter::subscribe($request->input('email'),
@@ -437,9 +441,9 @@ class PagesController extends Controller
         if ($validator->fails()) {
             return response()->json(['errors' => $validator->errors()->getMessageBag()]);
         } else {
-
+        $request['page'] = 'Agriculture';
             Mail::to('support3@getnord.com')
-                ->send(new CouponRequest($request));
+                ->send(new BussinessContactRequest($request));
             if (!Mail::failures()) {
                 // we add the user to mailchimp
                 Newsletter::subscribe($request->input('email'),

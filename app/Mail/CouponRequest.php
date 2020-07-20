@@ -35,7 +35,7 @@ class CouponRequest extends Mailable
      */
     public function build()
     {
-        return $this->from('support1@getnord.com')
+        return $this->from('info@getnord.com')
             ->view('mail.contact')
             ->replyTo($this->request->input('email'))
             ->with('request',['message' => 'Request for Coupon code from '.$this->request->input('email') .'']);

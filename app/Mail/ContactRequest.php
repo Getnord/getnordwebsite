@@ -36,7 +36,7 @@ class ContactRequest extends Mailable
      */
     public function build()
     {
-        return $this->from('support3@getnord.com')
+        return $this->from('info@getnord.com')
             ->view('mail.contact')
             ->subject($this->request->input('subject'))
             ->replyTo($this->request->input('email'))

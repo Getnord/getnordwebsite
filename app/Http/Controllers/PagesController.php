@@ -318,7 +318,7 @@ class PagesController extends Controller
         } else {
 
             $request['page'] = 'Lock';
-            Mail::to('support3@getnord.com')
+            Mail::to('info@getnord.com')
                 ->send(new BussinessContactRequest($request));
             if (!Mail::failures()) {
                 // we add the user to mailchimp
@@ -345,7 +345,7 @@ class PagesController extends Controller
         } else {
 
             $request['page'] = 'Security';
-            Mail::to('support3@getnord.com')
+            Mail::to('info@getnord.com')
                 ->send(new BussinessContactRequest($request));
             if (!Mail::failures()) {
                 // we add the user to mailchimp
@@ -382,7 +382,7 @@ class PagesController extends Controller
             return response()->json(['errors' => $validator->errors()->getMessageBag()]);
         } else {
 
-            Mail::to('support1@getnord.com')
+            Mail::to('info@getnord.com')
                 ->send(new CouponRequest($request));
 
             if (!Mail::failures()) {
@@ -442,7 +442,7 @@ class PagesController extends Controller
             return response()->json(['errors' => $validator->errors()->getMessageBag()]);
         } else {
         $request['page'] = 'Agriculture';
-            Mail::to('support3@getnord.com')
+            Mail::to('info@getnord.com')
                 ->send(new BussinessContactRequest($request));
             if (!Mail::failures()) {
                 // we add the user to mailchimp

@@ -36,7 +36,7 @@ class BussinessContactRequest extends Mailable
      */
     public function build()
     {
-        return $this->from('info@getnord.com')
+        return $this->from('business@getnord.com')
             ->view('mail.bussiness_contact')
             ->subject($this->request->input('subject'))
             ->replyTo($this->request->input('email'))

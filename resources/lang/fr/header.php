@@ -10,7 +10,7 @@ return [
     'compatibility' => 'COMPATIBILITE',
     'forBusiness' => 'Solutions d’affaires',
     'agriculture' => 'Agriculture ',
-    'active_track' => 'Service De Securite',
+    'active_track' => 'Service de sécurité',
 
     /* for subdomains*/
     'lock' => 'GETNORD LOCK',

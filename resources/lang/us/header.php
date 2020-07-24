@@ -10,7 +10,7 @@ return [
     'compatibility' => 'COMPATIBILITY',
     'forBusiness' => 'Getnord For Business',
     'agriculture' => 'agriculture',
-    'active_track' => 'Security Service',
+    'active_track' => 'Security Services',
 
     /* for subdomains*/
     'lock' => 'GETNORD LOCK',

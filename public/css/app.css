@@ -6469,6 +6469,20 @@ body h1 {
           box-sizing: border-box;
 }
 
+.modal-wrapper .contact-modal .input--group.g-input {
+  margin-top: 20px;
+}
+
+.modal-wrapper .contact-modal .input--group.g-input .input-item {
+  width: 96%;
+}
+
+@media (max-width: 750px) {
+  .modal-wrapper .contact-modal .input--group.g-input .input-item {
+    width: 100%;
+  }
+}
+
 @media (max-width: 750px) {
   .modal-wrapper .contact-modal .input--group {
     width: 100%;

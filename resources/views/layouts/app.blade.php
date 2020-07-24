@@ -19,7 +19,7 @@
 
     <link rel="stylesheet" href="{{ asset('css/app.css') }}">
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
-    <script src="https://www.google.com/recaptcha/api.js" async defer></script>
+
     {{-- <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css" integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous"> --}}
     {{-- title --}}
     <title>@yield('pageTitle')</title>
@@ -43,7 +43,7 @@
     @yield('content')
     @include('inc.shopping_cart')
 
-    @if(app()->getLocale() === 'nl')
+    @if(app()->getLocale() === 'nl' && isset($popup))
         @include('pages.coupon.index')
     @endif
 </div>
@@ -52,9 +52,26 @@
 <script src="{{ asset('js/lightbox.min.js') }}"></script>
 <script src="{{ asset('js/modal.js') }}"></script>
 <script src="{{ url('/') }}/js/lang-{{ app()->getLocale() }}.js"></script>
+<script src="https://www.google.com/recaptcha/api.js?onload=reCaptchaCallback" async defer></script>
+<script >
 
+
+</script>
 @yield('scripts')
 <script>
+    function reCaptchaCallback () {
+        /* this must be in the global scope for google to get access */
+        grecaptcha.render('g--recaptcha', {
+            'sitekey': '{{env('RECAPTCHA_KEY')}}',
+            'callback': reCaptchaVerify,
+        });
+    }
+    let doSubmit = false;
+    function reCaptchaVerify(response) {
+        if (response === document.querySelector('.g-recaptcha-response').value) {
+            doSubmit = true;
+        }
+    }
     $(document).ready(function () {
         $('.show-button').on('click', function () {
             $(this).closest(".can__item").toggleClass('active');
@@ -132,6 +149,10 @@
             return valid
         }
 
+
+
+
+
         // submitting contact form
         $('.contact-submit').on('click', function (e) {
             e.preventDefault()
@@ -147,9 +168,13 @@
                 ok.push(validateInput(input, isRequired))
                 data[input.name] = $(input).val()
             })
-            if (!ok.includes(false)) {
+            if(!doSubmit){
+                $('.g-input .error').text('Captcha field is required , please verify')
+            }else{
+                $('.g-input .error').text('')
+            }
+            if (!ok.includes(false) && doSubmit) {
                 data[$('#contact--form textarea').attr('name')] = $('#contact--form textarea').val()
-                console.log(data)
                 $.ajax({
                     type: 'POST',
                     url: $('#contact--form').attr('action'),
@@ -165,6 +190,7 @@
             }
         })
     })
+
 
 
 </script>

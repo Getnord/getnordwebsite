@@ -81,6 +81,7 @@ class PagesController extends Controller
         $specs_section_rows_names = Cache::get('specs_section_rows_names');
         return view('pages.home.index')->with([
             'onHomePage' => $onHomePage,
+            'popup' => true,
             'specs_section_rows_names' => $specs_section_rows_names,
             'phones' => $phones
         ]);
@@ -110,6 +111,7 @@ class PagesController extends Controller
         $specs_section_rows_names = Cache::get('specs_section_rows_names');
         return view('pages.onyx.index')->with([
             'onHomePage' => $onHomePage,
+            'popup' => true,
             'specs_section_rows_names' => $specs_section_rows_names,
             'phones' => $phones
         ]);
@@ -260,6 +262,7 @@ class PagesController extends Controller
         ];
         return view('pages.leo.index')->with([
             'onHomePage' => $onHomePage,
+            'popup' => true,
             'specs_section_rows_names' => $specs_section_rows_names,
             'phones' => $phones,
             'images' => $images

@@ -42,9 +42,6 @@
 
     @yield('content')
 
-    @if(app()->getLocale() === 'nl')
-        @include('pages.coupon.index')
-    @endif
 </div>
 @include('inc.footer2')
 <script src="{{ asset('js/app.js') }}"></script>

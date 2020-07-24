@@ -180,7 +180,7 @@
                 <div class="dropdown__list-2">
                     <a href="{{ route('lock', ['locale' => app()->getLocale()]) }}">Getnord Lock</a>
 
-                    <a href="{{ route('track', ['locale' => app()->getLocale()]) }}">Getnord Active Track</a>
+                    <a href="{{ route('track', ['locale' => app()->getLocale()]) }}">{{ __('header.active_track') }}</a>
                     <a href="{{ route('agriculture', ['locale' => app()->getLocale()]) }}">{{ __('header.agriculture') }}</a>
 
                 </div>

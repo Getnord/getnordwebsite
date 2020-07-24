@@ -39,6 +39,17 @@
                     <input type="text" name="website" placeholder="@lang('lock.website')">
                 </div>
                 <textarea name="info" id="info">@lang('lock.info')</textarea>
+                <div class="input--group  g-input">
+                    <div class="input-item">
+                        <span class="error"></span>
+                        <style>
+                            #g--recaptcha > div {
+                                margin: 0 auto ;
+                            }
+                        </style>
+                        <div id="g--recaptcha"></div>
+                    </div>
+                </div>
                 <button type="submit" class="contact-submit">@lang('lock.send')</button>
             </form>
         </div>

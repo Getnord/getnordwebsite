@@ -10,6 +10,7 @@ return [
     'compatibility' => 'KOMPATIBILITÄT',
     'forBusiness' => 'Business-Lösungen',
     'agriculture' => 'Landwirtschaft',
+    'active_track' => 'Sicherheitsdienst',
 
 
     /* for subdomains*/

@@ -1,7 +1,6 @@
 <?php
 return [
-    'bannerText' => 'E-agriculture bespaard <span class="line_break"></span>
-                        E-agriculture bespaard .<span class="line_break"></span>
+    'bannerText' => 'E-agriculture bespaart .<span class="line_break"></span>
                         Wij beschermen telefoons <span class="line_break"></span>
                         in een agrarische omgeving.',
 
@@ -45,11 +44,11 @@ return [
 
     'phoneTitle' => 'GETNORD-TECHNOLOGIE',
     'phoneItem_1_title' => 'Sterkste scherm',
-    'phoneItem_1_text' => 'Lynx has the thickest <b>(1.8mm)</b> hence the strongest screen in the market + Asahi Glass protector.<br>* We don\'t believe in any special technology when it comes to the strength of a breakable screen - <b>thickness is essential</b>.',
+    'phoneItem_1_text' => 'Lynx heeft het dikste<b>(1.8mm)</b> en daarmee het sterkste scherm in de markt + Asahi Glas beschermer.<br>We geloven niet in speciale technologie als het gaat om de sterkte van een breekbaar scherm - <b>dikte is essentieel</b>.',
     'phoneItem_2_title' => 'Extra grote batterij',
-    'phoneItem_2_text' => '<b>6000mAh</b> - the battery capacity that will give many hours of battery live even when doing the most energy consuming tasks. Will last for days without charging when used normally and provides weeks of standby connectivity.',
+    'phoneItem_2_text' => '<b>6000mAh</b>  - de capaciteit van de accu die vele uren levensduur zal geven, zelfs wanneer u de meest energieverslindende taken uitvoert. Gaat bij normaal gebruik dagen mee zonder op te laden en biedt weken standby-connectiviteit.',
     'phoneItem_3_title' => 'Draadloos opladen',
-    'phoneItem_3_text' => 'Charge the phone wirelessly. Qi certified. You can buy geuine Getnord charging pad in accessories or use any Qi certified charging device with <b>no less than 2A output.</b>',
+    'phoneItem_3_text' => 'Draadloos oplaadstation met magnetisch slot. Gepatenteerd RAM-kogelgewrichtsysteem. Stevig en waterdicht. Kan worden gebruikt voor offroad, ATV en UTV.',
 
     'partnershipTitle' => 'Samenwerking met Ram Mounts',
     'partnershipText1' => 'Trillingen van de tractor zullen waarschijnlijk nooit helemaal verdwijnen - daarom gaat een standaard telefoonhouder nooit erg lang mee. Wanneer je je telefoon achter het stuur oplaadt, schudt de oplaadpoort in een mum van tijd los. Wij hebben een speciale houder ontwikkeld die de telefoon stevig binnen 4 geleidingselementen houdt (dat is het doel van de 4 gaten in de hoeken) terwijl een magnetische kracht de telefoon op zijn plek houdt. Tegelijkertijd laadt de telefoon draadloos op met behulp van Qi-technologie.',

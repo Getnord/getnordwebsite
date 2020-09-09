@@ -67,6 +67,9 @@ return [
         'coupon_uk' => [
             'id' => '80434252a0'
         ],
+        'coupon_us' => [
+            'id' => 'e30b70984a'
+        ],
         'coupon_be' => [
             'id' => '8124b5a12c'
         ],

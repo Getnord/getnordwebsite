@@ -369,11 +369,7 @@ class PagesController extends Controller
         $data = geoip($_SERVER['REMOTE_ADDR']);
         $countryCode = strtolower($data->iso_code);
 
-        if ($locale === 'us'){
-            $loc = 'uk';
-        }else{
-            $loc = $locale;
-        }
+
         if ($countryCode === 'be' && $locale === 'nl'){
             $loc = 'nl_be';
         }

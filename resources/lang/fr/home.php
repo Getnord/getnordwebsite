@@ -48,7 +48,7 @@ return [
     "ramMountParagraph" => "Nous faisons ce que nous savons faire de mieux et nous sommes en partenariat avec ceux qui savent le mieux. Ram est la balle universelle révolutionnaire et son SYSTEME de socle-terminal vous permet de recharger pratiquement partout. La famille de RAM de plus de 900 accessoires interchangeables vous fournissent des solutions à vos problèmes de recharge les plus difficiles. Reconnus et acceptés par l’U.S Patent Office, RAM est le seul SYSTEME balle-et-socle qui tiendra des poids gigantesques pour des utilisations dans tous les domaines : militaires, commerciales et personnelles. ",
     "ramMountJustRamIt" => 'Just RAM It!',
 
-    "screenStrength" => "STRONGEST SCREEN",
+    "screenStrength" => "L’écran le plus dur",
     "screenStrengthParagraph1" => "La nacelle de recharge sans fil avec sécurité magnétique. Durable et étanche. Peut être utilisée pour du offroad. ATV et UTV. ",
     "screenStrengthParagraph2" => "Balle RAM brevetée et système de prise",
     "screenStrengthParagraph3" => " Durable et étanche. Peut être utilisée pour du offroad",
@@ -58,8 +58,8 @@ return [
     "batteryParagraph" => "6000mAH – la capacité de la batterie vous donnera beaucoup d'heures d'utilisation même avec une consommation d'énergie très poussée. Elle durera des jours entiers sans recharge avec une utilisation normale et fourni des semaines de connectivité en veille. ",
 
     "wirelessCharging" => "CHARGEMENT SANS FIL",
-    "wirelssChargingParagraph1" => "Chargez le téléphone sans fil. Certifié Qi. Vous pouvez acheter un support de recharge Getnord certifié dans les accessoires ou utilisez n'importe quel appareil de recharg certifié ",
-    "wirelssChargingParagraph2" => "Qi avec une sortie d'au moins 2A.",
+    "wirelssChargingParagraph1" => "Chargez le téléphone sans fil. Certifié Qi. Vous pouvez acheter un véritable chargeur d‘origine Getnord ou utiliser n’importe quel chargeur certifié  ",
+    "wirelssChargingParagraph2" => "Qi avec 2A minimum en sortie.",
 
     "designedInBarcelona" => "FAIT A BARCELONE",
 

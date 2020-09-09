@@ -43,7 +43,7 @@
     @yield('content')
     @include('inc.shopping_cart')
 
-    @if(app()->getLocale() === 'nl' && isset($popup))
+    @if(app()->getLocale() === 'nl' || app()->getLocale() === 'us' && isset($popup))
         @include('pages.coupon.index')
     @endif
 </div>

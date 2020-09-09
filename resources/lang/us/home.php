@@ -13,7 +13,7 @@ return [
     "productPriceValue" => "EUR299",
     "addToCart" => "ADD TO CART",
     "or" => "OR",
-    "marketPlaces" => "BUY ON POPULAR MARKETPLACES",
+    "marketPlaces" => "Don’t like our online store? Place your order on Amazon.com",
 
     "workAndAdventure" => "MADE FOR WORK AND ADVENTURES",
     "workAndAdventure1" => "MIL-STD-810G",

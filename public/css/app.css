@@ -9702,6 +9702,16 @@ body h1 {
   opacity: 0.75;
 }
 
+/* US marketplace items*/
+
+.store_cta_right {
+  margin-left: 30px;
+}
+
+.product_section--onyx_stores_list .store_cta.store_cta_us {
+  max-width: 140px;
+}
+
 /* The Modal (background) */
 
 .modal {

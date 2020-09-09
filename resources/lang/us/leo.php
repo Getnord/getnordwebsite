@@ -19,7 +19,7 @@ OUTSTANDING.
     "productPriceValue" => "€369",
     "addToCart" => "ADD TO CART",
     "or" => "OR",
-    "marketPlaces" => "BUY ON POPULAR MARKETPLACES",
+    "marketPlaces" => "Don’t like our online store? Place your order on Amazon.com",
 
     "leoAmazonLink" => "https://www.amazon.com/dp/B07WVCCGBN",
     "leoEbayLink" => "https://www.amazon.com/dp/B07WVCCGBN",

@@ -1,38 +1,38 @@
 <template>
-    <div class="modal">
-        <div class="modal__cols">
-            <div class="modal__cols__left" :style="{ backgroundImage: 'url(' + currentImageUrl + ')' }">
-                <ul class="modal__cols__left__imgs">
+    <div class="modal____accessories">
+        <div class="modal____accessories__cols">
+            <div class="modal____accessories__cols__left" :style="{ backgroundImage: 'url(' + currentImageUrl + ')' }">
+                <ul class="modal____accessories__cols__left__imgs">
                     <li
                         v-for="(imgUrl, index) in imagesList"
                         :key="index"
                         @click="switchCurrentImage(imgUrl)"
                     >
-                        <img :src="imgUrl" alt class="modal__cols__left__imgs__img">
+                        <img :src="imgUrl" alt class="modal____accessories__cols__left__imgs__img">
                     </li>
                 </ul>
             </div>
-            <div class="modal__cols__right">
-                <h1 class="modal__cols__right__name">{{ activeAccessorie.name }}</h1>
-                <div class="modal__cols__right__imgs">
+            <div class="modal____accessories__cols__right">
+                <h1 class="modal____accessories__cols__right__name">{{ activeAccessorie.name }}</h1>
+                <div class="modal____accessories__cols__right__imgs">
                     <img
                         v-for="(icon, index ) in activeAccessorie.icons"
                         :src="icon"
                         alt
                         :key="index"
-                        class="modal__cols__right__imgs__icon"
+                        class="modal____accessories__cols__right__imgs__icon"
                     >
                 </div>
                 <div
                     class="madal__cols__right__description"
                     v-html="activeAccessorie.description"
                 ></div>
-                <h2 class="modal__cols__right__price">{{ activeAccessorie.price }}</h2>
+                <h2 class="modal____accessories__cols__right__price">{{ activeAccessorie.price }}</h2>
                 <a href="https://www.trendmarq.com/c-4123311/getnord-shop/" target="_blank" v-if="isDutchLang" class="button button_yellow"
                    >
                     {{addToCartText}}
                 </a>
-                <button v-else class="modal__cols__right__btn" @click="addToCart">{{addToCartText}}</button>
+                <button v-else class="modal____accessories__cols__right__btn" @click="addToCart">{{addToCartText}}</button>
             </div>
         </div>
     </div>
@@ -88,7 +88,6 @@
             },
             isDutch() {
                 let currentLang = document.getElementsByTagName('html')[0].getAttribute('lang');
-                console.log(currentLang)
                 if (currentLang === 'nl') {
                     this.isDutchLang = true
                 } else {
@@ -101,7 +100,7 @@
 
 </script>
 <style lang="sass" scoped>
-    .modal
+    .modal____accessories
         width: 100%
         background: #fff
         padding: 16px 0

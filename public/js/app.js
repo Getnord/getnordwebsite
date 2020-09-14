@@ -1896,7 +1896,6 @@ __webpack_require__.r(__webpack_exports__);
     },
     isDutch: function isDutch() {
       var currentLang = document.getElementsByTagName('html')[0].getAttribute('lang');
-      console.log(currentLang);
 
       if (currentLang === 'nl') {
         this.isDutchLang = true;
@@ -1946,6 +1945,10 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var vue_carousel__WEBPACK_IMPORTED_MODULE_4___default = /*#__PURE__*/__webpack_require__.n(vue_carousel__WEBPACK_IMPORTED_MODULE_4__);
 /* harmony import */ var he__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! he */ "./node_modules/he/he.js");
 /* harmony import */ var he__WEBPACK_IMPORTED_MODULE_5___default = /*#__PURE__*/__webpack_require__.n(he__WEBPACK_IMPORTED_MODULE_5__);
+//
+//
+//
+//
 //
 //
 //
@@ -2097,7 +2100,6 @@ __webpack_require__.r(__webpack_exports__);
 
         ;
       });
-      console.log(result);
       return result;
     },
     // if we have more than 3 accessories to show
@@ -2137,12 +2139,14 @@ __webpack_require__.r(__webpack_exports__);
       this.activeAccessorie = _.find(this.accessoriesData, function (o) {
         return o.id == id;
       });
+      console.log(this.activeAccessorie, this.isDetailsWindowOpen);
       /**
        * some validation that the accessorie exist
        */
 
       if (!_.isEmpty(this.activeAccessorie)) {
         this.isDetailsWindowOpen = true;
+        console.log('open', this.isDetailsWindowOpen);
       } else {
         console.log('the accessorie could not be found on our db');
       }
@@ -2758,7 +2762,7 @@ exports = module.exports = __webpack_require__(/*! ../../../../node_modules/css-
 
 
 // module
-exports.push([module.i, ".modal[data-v-b3297a50] {\n  width: 100%;\n  background: #fff;\n  padding: 16px 0;\n}\n@media (max-width: 768px) {\n.modal[data-v-b3297a50] {\n    min-height: none;\n}\n}\n.modal__cols[data-v-b3297a50] {\n  display: -webkit-box;\n  display: -ms-flexbox;\n  display: flex;\n  -webkit-box-orient: horizontal;\n  -webkit-box-direction: normal;\n      -ms-flex-direction: row;\n          flex-direction: row;\n  -webkit-box-align: stretch;\n      -ms-flex-align: stretch;\n          align-items: stretch;\n}\n@media (max-width: 768px) {\n.modal__cols[data-v-b3297a50] {\n    -webkit-box-orient: vertical;\n    -webkit-box-direction: normal;\n        -ms-flex-direction: column;\n            flex-direction: column;\n}\n}\n.modal__cols__right[data-v-b3297a50] {\n  width: 28.4%;\n  padding-top: 100px;\n  padding-left: 60px;\n  padding-right: 60px;\n}\n@media (max-width: 768px) {\n.modal__cols__right[data-v-b3297a50] {\n    background-color: #f2f3f3;\n    max-width: 100%;\n    padding-top: 10px;\n    padding-left: 10px;\n    padding-right: 10px;\n    width: auto;\n}\n}\n.modal__cols__right__name[data-v-b3297a50] {\n  padding: 0px;\n  margin-left: 0px;\n  font-size: 55px;\n  line-height: 60px;\n  font-weight: bold;\n  text-transform: uppercase;\n  text-align: left;\n}\n@media (max-width: 768px) {\n.modal__cols__right__name[data-v-b3297a50] {\n    font-size: 24px;\n    padding: 0 10px 0 10px;\n    text-align: left;\n}\n}\n@media (max-width: 480px) {\n.modal__cols__right__name[data-v-b3297a50] {\n    text-align: center;\n}\n}\n.modal__cols__right__imgs[data-v-b3297a50] {\n  margin: 2em 0 2em 0;\n}\n@media (max-width: 480px) {\n.modal__cols__right__imgs[data-v-b3297a50] {\n    display: -webkit-box;\n    display: -ms-flexbox;\n    display: flex;\n    -webkit-box-orient: vertical;\n    -webkit-box-direction: normal;\n        -ms-flex-direction: column;\n            flex-direction: column;\n    -webkit-box-pack: center;\n        -ms-flex-pack: center;\n            justify-content: center;\n}\n}\n.modal__cols__right__imgs__icon[data-v-b3297a50] {\n  margin-right: 2em;\n}\n@media (max-width: 480px) {\n.modal__cols__right__imgs__icon[data-v-b3297a50] {\n    margin-right: 0;\n}\n}\n.modal__cols__right__description[data-v-b3297a50] {\n  font-size: 1.25em !important;\n  line-height: 1.5em !important;\n}\n@media (max-width: 468px) {\n.modal__cols__right__description[data-v-b3297a50] {\n    text-align: center;\n    font-size: 1em;\n    padding: 0 16px;\n}\n}\n.modal__cols__right__price[data-v-b3297a50] {\n  font-size: 1.5em;\n  font-weight: 700;\n  margin: 1em 0 0 0;\n  text-align: left;\n  color: #272727;\n}\n@media (max-width: 480px) {\n.modal__cols__right__price[data-v-b3297a50] {\n    text-align: center;\n}\n}\n.modal__cols__right__btn[data-v-b3297a50] {\n  margin-top: 3em;\n  margin-right: auto;\n  margin-left: auto;\n  display: inline-block;\n  padding: 17px 10px;\n  width: auto;\n  font-size: 18px;\n  line-height: 30px;\n  font-weight: bold;\n  text-align: center;\n  text-decoration: none;\n  text-transform: uppercase;\n  cursor: pointer;\n  background-color: #ffe401;\n  color: #272727;\n  border-width: 0px;\n  height: auto;\n  margin-bottom: 4em;\n}\n@media (max-width: 480px) {\n.modal__cols__right__btn[data-v-b3297a50] {\n    display: block;\n    margin: 1em auto;\n}\n}\n.modal__cols__left[data-v-b3297a50] {\n  width: 50%;\n  height: 70vh;\n  margin-top: 100px;\n  background: white;\n  background-size: contain;\n  background-position: center;\n  background-repeat: no-repeat;\n}\n@media (max-width: 768px) {\n.modal__cols__left[data-v-b3297a50] {\n    width: 100%;\n    height: 640px;\n}\n}\n.modal__cols__left__imgs[data-v-b3297a50] {\n  display: -webkit-box;\n  display: -ms-flexbox;\n  display: flex;\n  -webkit-box-orient: vertical;\n  -webkit-box-direction: normal;\n      -ms-flex-direction: column;\n          flex-direction: column;\n  margin-left: 20px;\n  margin-top: 20px;\n  list-style: none;\n}\n.modal__cols__left__imgs__img[data-v-b3297a50] {\n  width: 100px;\n  margin-bottom: 20px;\n  cursor: pointer;\n}\n@media (max-width: 768px) {\n.modal__cols__left__imgs__img[data-v-b3297a50] {\n    width: 80px;\n}\n}\n@media (max-width: 480px) {\n.modal__cols__left__imgs__img[data-v-b3297a50] {\n    width: 50px;\n}\n}", ""]);
+exports.push([module.i, ".modal____accessories[data-v-b3297a50] {\n  width: 100%;\n  background: #fff;\n  padding: 16px 0;\n}\n@media (max-width: 768px) {\n.modal____accessories[data-v-b3297a50] {\n    min-height: none;\n}\n}\n.modal____accessories__cols[data-v-b3297a50] {\n  display: -webkit-box;\n  display: -ms-flexbox;\n  display: flex;\n  -webkit-box-orient: horizontal;\n  -webkit-box-direction: normal;\n      -ms-flex-direction: row;\n          flex-direction: row;\n  -webkit-box-align: stretch;\n      -ms-flex-align: stretch;\n          align-items: stretch;\n}\n@media (max-width: 768px) {\n.modal____accessories__cols[data-v-b3297a50] {\n    -webkit-box-orient: vertical;\n    -webkit-box-direction: normal;\n        -ms-flex-direction: column;\n            flex-direction: column;\n}\n}\n.modal____accessories__cols__right[data-v-b3297a50] {\n  width: 28.4%;\n  padding-top: 100px;\n  padding-left: 60px;\n  padding-right: 60px;\n}\n@media (max-width: 768px) {\n.modal____accessories__cols__right[data-v-b3297a50] {\n    background-color: #f2f3f3;\n    max-width: 100%;\n    padding-top: 10px;\n    padding-left: 10px;\n    padding-right: 10px;\n    width: auto;\n}\n}\n.modal____accessories__cols__right__name[data-v-b3297a50] {\n  padding: 0px;\n  margin-left: 0px;\n  font-size: 55px;\n  line-height: 60px;\n  font-weight: bold;\n  text-transform: uppercase;\n  text-align: left;\n}\n@media (max-width: 768px) {\n.modal____accessories__cols__right__name[data-v-b3297a50] {\n    font-size: 24px;\n    padding: 0 10px 0 10px;\n    text-align: left;\n}\n}\n@media (max-width: 480px) {\n.modal____accessories__cols__right__name[data-v-b3297a50] {\n    text-align: center;\n}\n}\n.modal____accessories__cols__right__imgs[data-v-b3297a50] {\n  margin: 2em 0 2em 0;\n}\n@media (max-width: 480px) {\n.modal____accessories__cols__right__imgs[data-v-b3297a50] {\n    display: -webkit-box;\n    display: -ms-flexbox;\n    display: flex;\n    -webkit-box-orient: vertical;\n    -webkit-box-direction: normal;\n        -ms-flex-direction: column;\n            flex-direction: column;\n    -webkit-box-pack: center;\n        -ms-flex-pack: center;\n            justify-content: center;\n}\n}\n.modal____accessories__cols__right__imgs__icon[data-v-b3297a50] {\n  margin-right: 2em;\n}\n@media (max-width: 480px) {\n.modal____accessories__cols__right__imgs__icon[data-v-b3297a50] {\n    margin-right: 0;\n}\n}\n.modal____accessories__cols__right__description[data-v-b3297a50] {\n  font-size: 1.25em !important;\n  line-height: 1.5em !important;\n}\n@media (max-width: 468px) {\n.modal____accessories__cols__right__description[data-v-b3297a50] {\n    text-align: center;\n    font-size: 1em;\n    padding: 0 16px;\n}\n}\n.modal____accessories__cols__right__price[data-v-b3297a50] {\n  font-size: 1.5em;\n  font-weight: 700;\n  margin: 1em 0 0 0;\n  text-align: left;\n  color: #272727;\n}\n@media (max-width: 480px) {\n.modal____accessories__cols__right__price[data-v-b3297a50] {\n    text-align: center;\n}\n}\n.modal____accessories__cols__right__btn[data-v-b3297a50] {\n  margin-top: 3em;\n  margin-right: auto;\n  margin-left: auto;\n  display: inline-block;\n  padding: 17px 10px;\n  width: auto;\n  font-size: 18px;\n  line-height: 30px;\n  font-weight: bold;\n  text-align: center;\n  text-decoration: none;\n  text-transform: uppercase;\n  cursor: pointer;\n  background-color: #ffe401;\n  color: #272727;\n  border-width: 0px;\n  height: auto;\n  margin-bottom: 4em;\n}\n@media (max-width: 480px) {\n.modal____accessories__cols__right__btn[data-v-b3297a50] {\n    display: block;\n    margin: 1em auto;\n}\n}\n.modal____accessories__cols__left[data-v-b3297a50] {\n  width: 50%;\n  height: 70vh;\n  margin-top: 100px;\n  background: white;\n  background-size: contain;\n  background-position: center;\n  background-repeat: no-repeat;\n}\n@media (max-width: 768px) {\n.modal____accessories__cols__left[data-v-b3297a50] {\n    width: 100%;\n    height: 640px;\n}\n}\n.modal____accessories__cols__left__imgs[data-v-b3297a50] {\n  display: -webkit-box;\n  display: -ms-flexbox;\n  display: flex;\n  -webkit-box-orient: vertical;\n  -webkit-box-direction: normal;\n      -ms-flex-direction: column;\n          flex-direction: column;\n  margin-left: 20px;\n  margin-top: 20px;\n  list-style: none;\n}\n.modal____accessories__cols__left__imgs__img[data-v-b3297a50] {\n  width: 100px;\n  margin-bottom: 20px;\n  cursor: pointer;\n}\n@media (max-width: 768px) {\n.modal____accessories__cols__left__imgs__img[data-v-b3297a50] {\n    width: 80px;\n}\n}\n@media (max-width: 480px) {\n.modal____accessories__cols__left__imgs__img[data-v-b3297a50] {\n    width: 50px;\n}\n}", ""]);
 
 // exports
 
@@ -46926,18 +46930,18 @@ var render = function() {
   var _vm = this
   var _h = _vm.$createElement
   var _c = _vm._self._c || _h
-  return _c("div", { staticClass: "modal" }, [
-    _c("div", { staticClass: "modal__cols" }, [
+  return _c("div", { staticClass: "modal____accessories" }, [
+    _c("div", { staticClass: "modal____accessories__cols" }, [
       _c(
         "div",
         {
-          staticClass: "modal__cols__left",
+          staticClass: "modal____accessories__cols__left",
           style: { backgroundImage: "url(" + _vm.currentImageUrl + ")" }
         },
         [
           _c(
             "ul",
-            { staticClass: "modal__cols__left__imgs" },
+            { staticClass: "modal____accessories__cols__left__imgs" },
             _vm._l(_vm.imagesList, function(imgUrl, index) {
               return _c(
                 "li",
@@ -46951,7 +46955,7 @@ var render = function() {
                 },
                 [
                   _c("img", {
-                    staticClass: "modal__cols__left__imgs__img",
+                    staticClass: "modal____accessories__cols__left__imgs__img",
                     attrs: { src: imgUrl, alt: "" }
                   })
                 ]
@@ -46962,18 +46966,18 @@ var render = function() {
         ]
       ),
       _vm._v(" "),
-      _c("div", { staticClass: "modal__cols__right" }, [
-        _c("h1", { staticClass: "modal__cols__right__name" }, [
+      _c("div", { staticClass: "modal____accessories__cols__right" }, [
+        _c("h1", { staticClass: "modal____accessories__cols__right__name" }, [
           _vm._v(_vm._s(_vm.activeAccessorie.name))
         ]),
         _vm._v(" "),
         _c(
           "div",
-          { staticClass: "modal__cols__right__imgs" },
+          { staticClass: "modal____accessories__cols__right__imgs" },
           _vm._l(_vm.activeAccessorie.icons, function(icon, index) {
             return _c("img", {
               key: index,
-              staticClass: "modal__cols__right__imgs__icon",
+              staticClass: "modal____accessories__cols__right__imgs__icon",
               attrs: { src: icon, alt: "" }
             })
           }),
@@ -46985,7 +46989,7 @@ var render = function() {
           domProps: { innerHTML: _vm._s(_vm.activeAccessorie.description) }
         }),
         _vm._v(" "),
-        _c("h2", { staticClass: "modal__cols__right__price" }, [
+        _c("h2", { staticClass: "modal____accessories__cols__right__price" }, [
           _vm._v(_vm._s(_vm.activeAccessorie.price))
         ]),
         _vm._v(" "),
@@ -47010,7 +47014,7 @@ var render = function() {
           : _c(
               "button",
               {
-                staticClass: "modal__cols__right__btn",
+                staticClass: "modal____accessories__cols__right__btn",
                 on: { click: _vm.addToCart }
               },
               [_vm._v(_vm._s(_vm.addToCartText))]

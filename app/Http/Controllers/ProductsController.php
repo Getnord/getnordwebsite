@@ -25,6 +25,8 @@ class ProductsController extends Controller
         return $response->getBody();
     }
     function product(Request $request) {
+
+
         //return response("http://store.getnord.live/index.php?route=product/product/stock".'&lng='.$request->input('lang').'-'.$request->input('lang'));
         // dd($request->all());
         $client = new \GuzzleHttp\Client();

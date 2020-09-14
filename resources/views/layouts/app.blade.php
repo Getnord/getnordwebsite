@@ -61,7 +61,7 @@
 <script>
     function reCaptchaCallback () {
         /* this must be in the global scope for google to get access */
-        grecaptcha.render('g--recaptcha', {
+        grecaptcha.render('#g--recaptcha', {
             'sitekey': '{{env('RECAPTCHA_KEY')}}',
             'callback': reCaptchaVerify,
         });

@@ -3438,6 +3438,7 @@ span.line_breake {
         width: 45%;
         padding: 15px 0 10px;
         margin-bottom: 10px;
+        margin-left: 0;
     }
     body .product_section--onyx_stores_list .store_cta--bol,
     body .product_section--onyx_stores_list .store_cta--ebay{

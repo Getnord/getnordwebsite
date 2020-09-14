@@ -372,6 +372,8 @@ class PagesController extends Controller
 
         if ($countryCode === 'be' && $locale === 'nl'){
             $loc = 'nl_be';
+        }else{
+            $loc = $locale ;
         }
 
         $validator = Validator::make($request->all(), [
